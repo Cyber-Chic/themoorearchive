@@ -58,5 +58,5 @@ TMA is a solo operation. These records exist through a labor of love. If you fin
 ---
 
 **Archivist:** Angela N. Moore  
-**Status:** Signal Active.  
+**Status:** Signal Inactive.  
 *© 2026 All Rights Reserved.*
