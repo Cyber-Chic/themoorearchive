@@ -1,9 +1,6 @@
 # 📡 THE MOORE ARCHIVE (TMA)
 ### A Social-Performance Experiment in Physical-Digital Entanglement
 
-![System Status](https://img.shields.io)
-![Signal](https://img.shields.io)
-
 > **"You are standing at the threshold of a living experiment."**
 
 The Moore Archive is a metadata archive documenting the journey of a custom geocaching trackable and its accompanying art drops. It is a moving entity, tethered to the physical world through human interaction and the thrill of the hunt.
