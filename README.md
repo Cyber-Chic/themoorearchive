@@ -34,7 +34,7 @@ This repository contains the front-end archival structure for TMA.
 * **Status:** Best-effort hobby project.
 
 ## ☕ Mission Sustenance
-TMA is a solo operation. These records exist through a labor of love. If you find value in the hunt, consider providing Mission Sustenance to support the continued broadcast.
+ These contributions are personal gifts intended to support the Archivist’s life and creative happiness—whether that’s a cup of coffee, fuel for the next art drop, or life’s small joys. They are personal gifts, not tax-deductible donations, and are given without expectation of any goods in return. They simply keep the signal—and the person behind it—moving forward.
 
 ➡️ [Support Me via PayPal](URL_HERE)
 
