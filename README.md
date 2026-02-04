@@ -1,9 +1,13 @@
 # 📡 THE MOORE ARCHIVE (TMA)
 > **“SEEKING THE QUIET SIGNAL WHERE THE DIGITAL CODE MEETS THE PHYSICAL EARTH.”**
 
+### 📡 OPERATIONAL DATA
+
 | SYSTEM STATUS | MISSION TYPE | THE QUIET ECHO |
 | :--- | :--- | :--- |
-| ![Status](https://img.shields.io) | ![Mission](https://img.shields.io) | ![Kindness](https://img.shields.io) |
+| 🟢 **NOMINAL** | 🧪 **LIVING EXPERIMENT** | 🕯️ **ANONYMOUS ACT** |
+| 📡 **SIGNAL ACTIVE** | 🧩 **SOCIAL PERFORMANCE** | 🌊 **REFRESH SIGNAL** |
+| 🔒 **VAULT SECURED** | 🗺️ **GEOSPATIAL HUNT** | 🤐 **KEEP THE SECRET** |
 
 ---
 
