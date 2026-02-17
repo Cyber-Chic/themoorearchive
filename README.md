@@ -28,7 +28,7 @@ The Archive is a **decoupled subsystem** designed to bridge physical artifacts w
 
 *   **AESTHETIC:** Neo-Brutalism. A "Museum Cardstock" palette optimized for high-contrast focus.
 *   **PRIVACY SIGNAL:** Zero-tracking architecture. This portal does not collect, store, or transmit user metadata.
-*   **CORE LOGIC:** Specialized alphanumeric decryption, eye-comfort frequency toggles, and a desktop-locked interface.
+*   **CORE LOGIC:**  Specialized alphanumeric decryption, eye-comfort frequency toggles, and the "Positive Zero" Principle (High-integrity anonymous social handshake).
 *   **THE PROTOCOL:** Participation requires a **"Signal Refresh."** For every artifact found or month held, a secret act of kindness must be performed.
 
 ---
