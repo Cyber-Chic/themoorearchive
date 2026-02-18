@@ -33,6 +33,17 @@ The Archive is a **decoupled subsystem** designed to bridge physical artifacts w
 
 ---
 
+### 🛠️ PHYSICAL ARTIFACT SPECIFICATIONS: #TMA-001
+> **"Bridging digital code with the weight of the hand."**
+
+
+| VIEW: FRONT | VIEW: BACK | VIEW: INTERIOR |
+| :--- | :--- | :--- |
+| <img src="https://github.com/Cyber-Chic/themoorearchive/blob/main/img/Key%20Front_TMA.jpeg?raw=true" width="200"> | <img src="https://github.com/Cyber-Chic/themoorearchive/blob/main/img/Key%20Back_TMA.jpeg?raw=true" width="200"> | <img src="https://github.com/Cyber-Chic/themoorearchive/blob/main/img/Key%20in%20Case_TMA.jpeg?raw=true" width="200"> |
+| **[SIGNAL_FACE]** | **[ENCRYPTION_KEY]** | **[STABILIZATION_CASE]** |
+
+---
+
 ### [ ☕ MISSION SUSTENANCE ]
 **Status: A LABOR OF LOVE**
 
