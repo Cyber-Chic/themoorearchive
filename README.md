@@ -4,6 +4,7 @@
 ---
 
 ### 🛰️ OPERATIONAL DATA
+
 | SYSTEM STATUS | MISSION TYPE | THE QUIET ECHO |
 | :--- | :--- | :--- |
 | 🟢 **NOMINAL** | 🧪 **LIVING EXPERIMENT** | 🕯️ **ANONYMOUS ACT** |
@@ -20,16 +21,17 @@ This portal serves as the primary terminal for a global artifact hunt—a moving
 ---
 
 ### [ 🖥️ SYSTEM ARCHITECTURE ]
-**ROLE:** Creative Technologist / Lead Curator  
+**ROLE:** Principal Investigator / Creative Technologist  
 **ENGINE:** HTML5 / CSS3 / Vanilla JavaScript  
 **STATUS:** 🟢 OPERATIONAL
 
 The Archive is a **decoupled subsystem** designed to bridge physical artifacts with digital verification. The technical stack prioritizes "User-End Discovery" over backend harvesting.
 
 *   **AESTHETIC:** Neo-Brutalism. A "Museum Cardstock" palette optimized for high-contrast focus.
-*   **PRIVACY SIGNAL:** Zero-tracking architecture. This portal does not collect, store, or transmit user metadata.
-*   **CORE LOGIC:**  Specialized alphanumeric decryption, eye-comfort frequency toggles, and the "Positive Zero" Principle (High-integrity anonymous social handshake).
-*   **THE PROTOCOL:** Participation requires a **"Signal Refresh."** For every artifact found or month held, a secret act of kindness must be performed.
+*   **CORE LOGIC:** The **"Positive Zero" Principle**. It is hypothesized that Signal Integrity (S) reaches its highest potential as Visibility (V) approaches zero.
+    *   **Formula:** *Signal Integrity (S) = Kindness / Visibility*
+*   **THE PROTOCOL:** Participation requires a **"Signal Refresh."** To stabilize the Archive’s frequency, one anonymous act of kindness must be performed for every artifact found or month held.
+*   **RESEARCH INQUIRY:** A [Geospatial Performance Study](https://www.researchgate.net/publication/400799383_The_Moore_Archive_TMA_An_Inquiry_into_Digital-Physical_Handshake_Protocols_and_Geospatial_Signal_Persistence) into how "Intentional Friction" and decentralized, human-tethered networks can maintain signal integrity without digital surveillance.
 
 ---
 
@@ -38,7 +40,7 @@ The Archive is a **decoupled subsystem** designed to bridge physical artifacts w
 
 | VIEW: FRONT | VIEW: BACK | VIEW: INTERIOR |
 | :---: | :---: | :---: |
-| <img src="https://github.com/Cyber-Chic/themoorearchive/blob/main/img/Key%20Front_TMA.jpeg?raw=true" width="320" style="image-rendering: smooth; display: block; border: 1px solid #eee;"> | <img src="https://github.com/Cyber-Chic/themoorearchive/blob/main/img/Key%20Back_TMA.jpeg?raw=true" width="320" style="display: block; border: 1px solid #eee;"> | <img src="https://github.com/Cyber-Chic/themoorearchive/blob/main/img/Key%20in%20Case_TMA.jpeg?raw=true" width="320" style="display: block; border: 1px solid #eee;"> |
+| <img src="https://github.com/Cyber-Chic/themoorearchive/blob/main/img/Key%20Front_TMA.jpeg?raw=true" width="320" style="image-rendering: smooth; display: block; border: 1px solid #eee;"> | <img src="https://github.com/Cyber-Chic/themoorearchive/raw/main/img/Key%20Back_TMA.jpeg?raw=true" width="320" style="display: block; border: 1px solid #eee;"> | <img src="https://github.com/Cyber-Chic/themoorearchive/raw/main/img/Key%20in%20Case_TMA.jpeg?raw=true" width="320" style="display: block; border: 1px solid #eee;"> |
 | **[SIGNAL_FACE]** | **[ENCRYPTION_KEY]** | **[STABILIZATION_CASE]** |
 
 ---
@@ -50,7 +52,7 @@ The Archive is a solo operation. If this signal has sparked your curiosity, you 
 
 > **OFFICIAL DISCLOSURE:** These are personal gifts—fuel for the next art drop—given without expectation of return. Refer to the [Official Protocol](https://www.irs.gov) regarding gifts.
 
-[ **➡️ PROVIDE MISSION SUSTENANCE** ](https://www.paypal.com/donate/?hosted_button_id=CJVWS45KF46ZE)
+[ **➡️ PROVIDE MISSION SUSTENANCE** ](https://www.paypal.com)
 
 ---
 
@@ -68,11 +70,10 @@ To prove that a single **"Nominal Signal"**—persistent, ethical, and creative�
 
 ---
 
-
 ### [ 🛰️ SYNTHETIC CO-PILOT ]
 **Technical Architecture:** This Archive was manifest through an iterative rhythmic exchange between **Angela N. Moore** and the **Gemini Neural Models**.
 
-The vertical rhythm, specialized legal terminology, and eye-comfort logic were developed collaboratively—blending AI precision with human creative vision, analytical research, and design soul.
+The vertical rhythm, specialized mathematical framing ($S=K/V$), specialized legal terminology, and eye-comfort logic were developed collaboratively—blending AI precision with human creative vision, analytical praxis, and design soul.
 
 **ANGELA N. MOORE // © 2026 // ALL RIGHTS RESERVED**
 
