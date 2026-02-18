@@ -58,7 +58,7 @@ The Archive is a solo operation. If this signal has sparked your curiosity, you 
 > *“To architect a life where data has a soul, and science has a signature.”*
 
 **The Strategic Edge: The Bridge**  
-While others master one language, we translate across many. We don't just solve equations; we find the poetry in the **"Positive Zero."** We don't just map exoplanets; we turn that data into a physical treasure hunt. 
+While others master one language, we translate across many. We don't just solve equations; we find the poetry in the **"Positive Zero."** We don't just map exoplanets; we turn raw data into a physical treasure hunt. 
 
 **The Philosophy: Signal Persistence**  
 We are defined by the **Signals** we leave behind. By operating outside traditional institutional silos, we maintain the freedom to be **Recursive, Whimsical, and Unstoppable.** This is not a hobby; it is a specialized inquiry into the nature of human-tethered tracking and geospatial persistence.
