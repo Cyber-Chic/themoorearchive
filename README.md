@@ -31,7 +31,7 @@ The Archive is a **decoupled subsystem** designed to bridge physical artifacts w
 *   **CORE LOGIC:** The **"Positive Zero" Principle**. It is hypothesized that Signal Integrity (S) reaches its highest potential as Visibility (V) approaches zero.
     *   **Formula:** *Signal Integrity (S) = Kindness / Visibility*
 *   **THE PROTOCOL:** Participation requires a **"Signal Refresh."** To stabilize the Archive’s frequency, one anonymous act of kindness must be performed for every artifact found or month held.
-*   **RESEARCH INQUIRY:** A [Geospatial Performance Study](https://www.researchgate.net/publication/400799383_The_Moore_Archive_TMA_An_Inquiry_into_Digital-Physical_Handshake_Protocols_and_Geospatial_Signal_Persistence) into how "Intentional Friction" and decentralized, human-tethered networks can maintain signal integrity without digital surveillance.
+*   **RESEARCH INQUIRY:** A [Geospatial Performance Study](https://www.researchgate.net/publication/400971211_The_Moore_Archive_TMA_An_Inquiry_into_Digital-Physical_Handshake_Protocols_and_Geospatial_Signal_Persistence) into how "Intentional Friction" and decentralized, human-tethered networks can maintain signal integrity without digital surveillance.
 
 ---
 
