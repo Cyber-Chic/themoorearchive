@@ -52,7 +52,7 @@ The Archive is a solo operation. If this signal has sparked your curiosity, you 
 
 > **OFFICIAL DISCLOSURE:** These are personal gifts—fuel for the next art drop—given without expectation of return. Refer to the [Official Protocol](https://www.irs.gov) regarding gifts.
 
-[ **➡️ PROVIDE MISSION SUSTENANCE** ](https://www.paypal.com)
+[ **➡️ PROVIDE MISSION SUSTENANCE** ](https://www.paypal.com/donate/?hosted_button_id=CJVWS45KF46ZE)
 
 ---
 
