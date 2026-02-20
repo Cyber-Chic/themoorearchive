@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE MOORE ARCHIVE // TERMINAL</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <style>
+        body {
+            background-color: #050505;
+            color: #00ff41; 
+            font-family: 'Fira Code', monospace;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .terminal {
+            max-width: 800px;
+            width: 100%;
+            border: 2px solid #00ff41;
+            padding: 30px;
+            background: rgba(0, 10, 0, 0.95);
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
+        }
+
+        h1 { font-size: 1.6rem; border-bottom: 2px solid #00ff41; padding-bottom: 15px; margin-top: 0; color: #fff; text-shadow: 0 0 10px #00ff41; }
+        
+        .alert-box {
+            background: #440000;
+            color: #ffcccc;
+            border: 1px solid #ff0000;
+            padding: 15px;
+            margin: 20px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px dashed #00ff41;
+        }
+
+        .highlight { color: #fff; font-weight: bold; background: #006600; padding: 2px 6px; border-radius: 3px; }
+        
+        /* High-Readability Tech Section */
+        .tech-support {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 5px solid #00ff41;
+        }
+
+        .tech-support h2 { font-size: 1.1rem; margin-top: 0; color: #00ff41; text-transform: uppercase; }
+        
+        .tech-support ul { list-style: none; padding: 0; }
+        .tech-support li { margin-bottom: 15px; color: #e0ffe0; line-height: 1.5; }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 40px;
+            border: 2px solid #00ff41;
+            color: #00ff41;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            background: transparent;
+        }
+
+        .btn:hover { background: #00ff41; color: #000; }
+
+        .glitch-text { animation: flicker 3s infinite; }
+        @keyframes flicker { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } 95% { opacity: 0.8; } }
+    </style>
+</head>
+<body>
+
+<div class="terminal">
+    <h1 class="glitch-text">>> SYSTEM_INITIALIZING: THE MOORE ARCHIVE</h1>
+    
+    <p>This is a <span class="highlight">Social Performance Experiment</span>. To access the 3D Vault, you must participate in the hunt for a physical artifact roaming the Geocaching network.</p>
+
+    <div class="alert-box">
+        ⚠️ HARDWARE LOCK: MOBILE DEVICES INCOMPATIBLE.<br>
+        Access requires a Desktop Terminal. Mobile attempts will be blocked.
+    </div>
+
+    <div class="status-grid">
+        <div>PROTOCOL: <strong>TREASURE HUNT</strong></div>
+        <div>SIGNAL: <strong>LIVE ARCHIVE</strong></div>
+    </div>
+
+    <div class="tech-support">
+        <h2>📡 CONNECTION PROTOCOLS</h2>
+        <ul>
+            <li><strong>1. THE DUAL HANDSHAKE:</strong> If your first entry redirects to a generic page, <strong>re-enter the full URL a second time</strong>. This stabilizes the frequency and bypasses the redirection shield.</li>
+            <li><strong>2. BROWSER FREQUENCY:</strong> The archive is heavy. If the signal glitches on Chrome, <strong>switch to Firefox or Edge</strong>. Every machine receives the signal differently.</li>
+            <li><strong>3. ATMOSPHERIC DISTORTION:</strong> If the 3D rendering freezes, refresh your terminal immediately to re-sync.</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="YOUR_MAIN_PAGE_URL_HERE" class="btn">ENTER DATA STREAM</a>
+    </div>
+</div>
+
+</body>
+</html>
