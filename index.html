@@ -230,19 +230,16 @@
     <div class="signal-block">
         The Archive acts as a passive carrier for your personal journey. If you have performed an anonymous act of kindness, you are invited to "anchor" that memory here. 
         <p style="margin-top: 0.5rem; font-style: italic; opacity: 0.9; font-size: 0.85rem;">
-            *Archivist’s Privacy Note: This is a "Stateless Terminal." This box contains no tracking scripts or data-capture logic. Clicking broadcast simply clears the frequency.*
+            *Archivist’s Privacy Note: This is a "Stateless Terminal." This button is empty and contains no tracking scripts or data-capture logic. Clicking this simply serves as a way to mentally anchor the frequency.*
         </p>
         
-        <!-- THE NO-JS FORM -->
-        <form action="">
-            <textarea name="signal" placeholder="Enter your secret signal..." required style="width: 100%; height: 80px; background: rgba(0,0,0,0.3); color: #CC5500; border: 1px solid #CC5500; padding: 10px; font-family: 'Space Mono', monospace; margin-top: 10px; outline: none; resize: none;"></textarea>
-            
-            <div style="margin-top: 10px;">
-                <button type="submit" style="background: #CC5500; color: #000; border: none; padding: 8px 15px; font-weight: bold; cursor: pointer; font-family: 'Space Mono', monospace; text-transform: uppercase;">
-                    [ ⏳ BROADCAST TO THE FUTURE ]
-                </button>
-            </div>
-        </form>
+        <!-- Updated Button: Added a simple 'Success' toggle so they know it worked -->
+        <button 
+            type="button" 
+            onclick="this.innerText='[ ✅ FREQUENCY ANCHORED ]'; this.style.background='#55CC00'; setTimeout(() => { this.innerText='[ ⏳ ANCHOR KIND MEMORY ]'; this.style.background='#CC5500'; }, 3000);" 
+            style="background: #CC5500; color: #000; border: none; padding: 8px 15px; font-weight: bold; cursor: pointer; font-family: 'Space Mono', monospace; text-transform: uppercase; transition: 0.3s;">
+            [ ⏳ ANCHOR KIND MEMORY ]
+        </button>
     </div>
 </li>
 
