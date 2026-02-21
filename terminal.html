@@ -6,9 +6,17 @@
     <title>THE MOORE ARCHIVE // TERMINAL</title>
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     <style>
+        :root {
+            --phosphor-green: #22ee55; 
+            --electric-red: #ff3333;   /* Brighter red for accents only */
+            --muted-red-bg: #2a0000;   /* Deep, comfortable background */
+            --amber-gold: #ffaa00;     
+            --bg-terminal: #050505;
+        }
+
         body {
-            background-color: #050505;
-            color: #00ff41; 
+            background-color: #000;
+            color: var(--phosphor-green); 
             font-family: 'Fira Code', monospace;
             margin: 0;
             padding: 15px;
@@ -23,28 +31,28 @@
         .terminal {
             max-width: 800px;
             width: 95%;
-            border: 2px solid #00ff41;
+            border: 2px solid var(--phosphor-green);
             padding: 35px;
-            background: rgba(0, 10, 0, 0.98);
-            box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
+            background: var(--bg-terminal);
+            box-shadow: 0 0 20px rgba(34, 238, 85, 0.15);
             box-sizing: border-box;
         }
 
-        h1 { font-size: 1.4rem; border-bottom: 2px solid #00ff41; padding-bottom: 15px; margin: 0 0 30px 0; color: #fff; text-shadow: 0 0 10px #00ff41; }
+        h1 { font-size: 1.4rem; border-bottom: 2px solid var(--phosphor-green); padding-bottom: 15px; margin: 0 0 30px 0; color: #fff; text-shadow: 0 0 10px var(--phosphor-green); }
         
-        /* ENHANCED SPACING AROUND THE RED BOX */
+        /* THE "ELECTRIC" RED BOX - PROTECTIVE BUT VIBRANT */
         .alert-box {
-            background: #440000;
-            color: #ffcccc;
-            border: 1px solid #ff0000;
-            padding: 25px 15px; /* Increased internal vertical space */
-            margin: 45px 0;      /* Increased external vertical space for breathing room */
+            background: var(--muted-red-bg);
+            color: #ff9999; /* Softer pinkish-red text is easier to read than pure red */
+            border: 2px solid var(--electric-red);
+            padding: 25px 15px;
+            margin: 45px 0;
             font-weight: bold;
             text-align: center;
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            box-shadow: 0 0 20px #ff0000;
+            box-shadow: 0 0 15px rgba(255, 51, 51, 0.3); /* Adds the "Life" back without the glare */
         }
 
         .status-grid {
@@ -53,125 +61,151 @@
             gap: 15px;
             margin-bottom: 30px;
             padding: 15px;
-            border: 1px dashed #00ff41;
+            border: 1px dashed var(--phosphor-green);
             font-size: 0.85rem;
         }
 
-        .highlight { color: #fff; font-weight: bold; background: #004400; padding: 2px 6px; border-radius: 3px; }
+        .highlight { color: #fff; font-weight: bold; background: #004411; padding: 2px 6px; border-radius: 3px; }
         
         .tech-support {
             margin: 40px 0;
             padding: 25px;
-            background: rgba(255, 255, 255, 0.07);
-            border-left: 5px solid #00ff41;
+            background: rgba(255, 255, 255, 0.04);
+            border-left: 5px solid var(--phosphor-green);
         }
 
-        .tech-support h2 { font-size: 1.25rem; margin: 0 0 20px 0; color: #00ff41; text-transform: uppercase; font-weight: 700; }
+        .tech-support h2 { font-size: 1.25rem; margin: 0 0 20px 0; color: var(--phosphor-green); text-transform: uppercase; font-weight: 700; }
         
-        .btn-container { text-align: center; margin-top: 20px; font-weight: 700; }
+        /* BOTTOM ANCHOR - PREVENTS EYE WANDERING */
+        .btn-container { 
+            text-align: center; 
+            margin-top: 20px; 
+            padding: 30px 10px;
+            background: rgba(34, 238, 85, 0.03); /* Subtle green tint to "hold" the eye */
+            border-radius: 4px;
+        }
 
         .btn {
             display: inline-block;
             padding: 20px 50px;
-            border: 2px solid #00ff41;
-            color: #00ff41;
+            border: 2px solid var(--phosphor-green);
+            color: #fff; /* White text on the button pops better */
             text-decoration: none;
             transition: 0.3s;
-            background: transparent;
+            background: rgba(34, 238, 85, 0.1);
             text-transform: uppercase;
             letter-spacing: 2px;
-            max-width: 100%;
-            box-sizing: border-box;
+            font-weight: bold;
         }
 
-        .btn:hover { background: #00ff41; color: #000; }
+        .btn:hover { background: var(--phosphor-green); color: #000; box-shadow: 0 0 15px var(--phosphor-green); }
 
-        .sub-label { color: #fff; font-size: 0.95rem; margin-top: 15px; }
+        .sub-label { color: #fff; font-size: 0.95rem; margin-top: 15px; text-shadow: 0 0 5px rgba(255,255,255,0.3); }
 
         /* RESPONSIVE SCALING */
         @media (max-width: 600px) {
             .terminal { padding: 20px 15px; }
             h1 { font-size: 1.15rem; }
-            .alert-box { margin: 35px 0; padding: 20px 10px; font-size: 0.85rem; letter-spacing: 1px; }
+            .alert-box { margin: 35px 0; padding: 20px 10px; font-size: 0.85rem; }
             .status-grid { grid-template-columns: 1fr; text-align: center; }
-            .btn { padding: 15px 25px; font-size: 0.9rem; width: 100%; }
-            .access-banner { font-size: 0.7rem !important; letter-spacing: 1px !important; }
+            .btn { padding: 15px 25px; width: 100%; box-sizing: border-box; }
         }
 
         /* ANIMATIONS */
         .glitch-header { animation: flicker 3s infinite; }
         .glitch-alert { animation: heartbeat-glitch 6s infinite; }
 
-        @keyframes flicker { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+        @keyframes flicker { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
         @keyframes heartbeat-glitch {
-            0%, 80%, 100% { opacity: 1; transform: scale(1); }
-            82% { opacity: 0.6; transform: scale(0.995); }
-            84% { opacity: 1; transform: scale(1.002); }
-            86% { opacity: 0.8; }
-            88% { opacity: 1; }
+            0%, 80%, 100% { opacity: 1; border-color: var(--electric-red); }
+            82% { opacity: 0.7; border-color: #fff; } /* Border flashes white for a split second */
+            84% { opacity: 1; border-color: var(--electric-red); }
         }
     </style>
 </head>
 <body>
 
 <div class="terminal">
-    <h1 class="glitch-header">>> SYSTEM_INITIALIZING: THE MOORE ARCHIVE</h1>
-
-    <div style="width: 100%; text-align: center; margin-bottom: 30px; border-bottom: 1px dashed #00ff41; padding-bottom: 15px;">
-        <span class="access-banner" style="color: #fff; background: #004400; padding: 5px 12px; font-size: 0.85rem; letter-spacing: 2px; box-shadow: 0 0 12px #004400; display: inline-block;"> 
+<!-- HEADER ANCHOR ZONE WITH DESATURATED GREEN -->
+<div style="background: rgba(29, 185, 84, 0.03); padding: 25px 20px; border-bottom: 2px solid #1db954; margin: -35px -35px 35px -35px; border-radius: 4px 4px 0 0;">
+    
+    <h1 class="glitch-header" style="margin: 0; border: none; padding: 0; text-align: center; color: #fff; text-shadow: 0 0 8px #1db954; font-size: 1.4rem;">
+        >> SYSTEM_INITIALIZING: THE MOORE ARCHIVE
+    </h1>
+    
+    <div style="height: 20px;"></div> 
+    
+    <div style="text-align: center;">
+        <span style="color: #fff; background: #003311; padding: 6px 18px; font-size: 0.85rem; letter-spacing: 2px; box-shadow: 0 0 10px rgba(29, 185, 84, 0.4); display: inline-block; border: 1px solid #1db954; border-radius: 2px;"> 
             [ ACCESS GRANTED: KEY-HOLDERS & ASPIRING AGENTS ] 
         </span>
     </div>
+</div>
 
-    <p style="font-size: 1rem; margin-bottom: 25px;">This is a <span class="highlight">Social Performance Experiment</span>. To access the 3D Vault, you must participate in the hunt for a physical artifact roaming the Geocaching network.</p>
+<!-- HIGH-READABILITY RED ALERT BOX -->
+<div class="alert-box glitch-alert" style="background: #1a0000; border: 2px solid #ff3333; box-shadow: 0 0 20px rgba(255, 51, 51, 0.2); padding: 30px 20px;">
+    <span style="color: #ff4444; font-size: 1.1rem; letter-spacing: 2px; display: block; margin-bottom: 12px; text-shadow: 0 0 5px rgba(255, 68, 68, 0.3);">
+        ⚠️ HARDWARE LOCK: MOBILE DEVICES INCOMPATIBLE
+    </span>
+    
+    <span style="color: #ffffff; font-size: 0.9rem; font-weight: normal; text-transform: none; display: block; line-height: 1.5; opacity: 1;">
+        The 3D Gallery <strong>cannot</strong> be unlocked on mobile devices.
+    </span>
+    
+    <span style="color: #ffcccc; font-size: 0.85rem; font-weight: normal; text-transform: none; display: block; margin-top: 12px; border-top: 1px solid rgba(255, 204, 204, 0.1); padding-top: 10px;">
+        [MOBILE USERS: Proceed below to view the Field Briefing only.]
+    </span>
+</div>
 
-    <div class="alert-box glitch-alert">
-        ⚠️ HARDWARE LOCK: MOBILE DEVICES INCOMPATIBLE.<br>
-        <span style="font-size: 0.85rem; font-weight: normal; text-transform: none; display: block; margin-top: 10px;">
-            The 3D Gallery cannot be unlocked on mobile devices. <br>
-            [MOBILE USERS: Proceed below to view the Field Briefing only.]
-        </span>
+
+    <!-- UPDATED STATUS GRID: ANCHORED FOR FOCUS -->
+    <div class="status-grid" style="background: rgba(34, 238, 85, 0.03); border: 1px solid rgba(34, 238, 85, 0.2); padding: 20px;">
+        <div style="border-right: 1px solid rgba(34, 238, 85, 0.2); padding-right: 15px;">
+            <span style="color: #fff; font-size: 0.7rem; display: block; opacity: 0.6; margin-bottom: 4px; letter-spacing: 1px;">PROTOCOL:</span>
+            <strong style="font-size: 1rem; color: var(--phosphor-green); letter-spacing: 1px;">TREASURE HUNT</strong>
+        </div>
+        <div style="padding-left: 15px;">
+            <span style="color: #fff; font-size: 0.7rem; display: block; opacity: 0.6; margin-bottom: 4px; letter-spacing: 1px;">SIGNAL:</span>
+            <strong style="font-size: 1rem; color: var(--phosphor-green); letter-spacing: 1px;">LIVE ARCHIVE</strong>
+        </div>
     </div>
 
-    <div class="status-grid">
-        <div>PROTOCOL: <strong>TREASURE HUNT</strong></div>
-        <div>SIGNAL: <strong>LIVE ARCHIVE</strong></div>
-    </div>
-
-    <div class="tech-support">
-        <h2>📡 3D ART GALLERY ACCESS (DESKTOP ONLY)</h2>
+    <div class="tech-support" style="margin: 40px 0; padding: 25px; background: rgba(255, 255, 255, 0.04); border-left: 5px solid var(--phosphor-green);">
+        <h2 style="font-size: 1.25rem; margin: 0 0 20px 0; color: #fff; text-shadow: 0 0 8px var(--phosphor-green); text-transform: uppercase; font-weight: 700;">📡 3D ART GALLERY ACCESS (DESKTOP ONLY)</h2>
         
-        <div style="border: 1px solid #ffaa00; padding: 18px; margin-bottom: 25px; background: rgba(255, 170, 0, 0.1);">
-            <p style="color: #ffaa00; margin: 0; font-size: 0.95rem; line-height: 1.5; font-weight: 700;">
+        <div style="border: 1px solid var(--amber-gold); padding: 18px; margin-bottom: 25px; background: rgba(255, 170, 0, 0.1);">
+            <p style="color: var(--amber-gold); margin: 0; font-size: 0.95rem; line-height: 1.5; font-weight: 700;">
                 <strong style="text-decoration: underline;">[ NOTE ]</strong>: These technical steps are ONLY to unlock the gallery which features a 3D Experience. The Field Briefing works on all devices.
             </p>
         </div>
 
-        <ul style="opacity: 0.95; padding-left: 0; list-style: none; font-size: 0.95rem;">
+        <!-- INSTRUCTIONS: VERTICAL ACCENT CREATES A "READING TRACK" -->
+        <ul style="opacity: 1; padding-left: 0; list-style: none; font-size: 0.95rem; border-left: 1px solid rgba(34, 238, 85, 0.2); padding-left: 15px;">
             <li style="margin-bottom: 25px;">
-                <strong style="color: #fff; display: block; margin-bottom: 6px;">📡 1. THE DUAL HANDSHAKE</strong>
-                If it redirects to home, <strong>Re-type your Encryption Key</strong> and press Enter. A second attempt usually stabilizes the link.
+                <strong style="color: #fff; display: block; margin-bottom: 6px; font-size: 1rem;">📡 1. THE DUAL HANDSHAKE</strong>
+                <span style="color: #e0ffe0;">When it redirects home, <strong>Re-type your URL password</strong> and press Enter. The second attempt should open the gallery.</span>
             </li>
             <li style="margin-bottom: 25px;">
-                <strong style="color: #fff; display: block; margin-bottom: 6px;">🌐 2. BROWSER FREQUENCY</strong>
-                Best performance: <strong>Microsoft Edge or Chrome.</strong> If the signal glitches, switch to Firefox or Safari.
+                <strong style="color: #fff; display: block; margin-bottom: 6px; font-size: 1rem;">🌐 2. BROWSER FREQUENCY</strong>
+                <span style="color: #e0ffe0;">Best performance: <strong>Microsoft Edge or Chrome.</strong> If the gallery glitches, switch to Firefox or Safari.</span>
             </li>
-            <li style="margin-bottom: 25px;">
-                <strong style="color: #fff; display: block; margin-bottom: 6px;">🌀 3. ATMOSPHERIC DISTORTION</strong>
-                If the 3D screen gets stuck, <strong>Refresh your Browser</strong> to re-sync the visual data stream.
+            <li style="margin-bottom: 10px;">
+                <strong style="color: #fff; display: block; margin-bottom: 6px; font-size: 1rem;">🌀 3. ATMOSPHERIC DISTORTION</strong>
+                <span style="color: #e0ffe0;">If the 3D screen gets stuck, <strong>Refresh your Browser</strong> and unlock gallery to re-sync visual data.</span>
             </li>
         </ul>
     </div>
+
 
     <div class="btn-container">
         <a href="https://cyber-chic.github.io/themoorearchive/" class="btn">Access Data Stream</a>
         <div class="sub-label">[ 📂 OPEN THE MANDATORY FIELD BRIEFING ]</div>
         
         <div style="margin-top: 20px; line-height: 1.7;">
-            <p style="color: #00ff41; font-size: 0.9rem; margin: 0; font-weight: 700;">
+            <p style="color: var(--phosphor-green); font-size: 0.9rem; margin: 0; font-weight: 700;">
                 📡 <span style="color: #fff;">NEW USERS:</span> Start here to uncover the experiment’s rules.
             </p>
-            <p style="color: #00ff41; font-size: 0.9rem; margin: 8px 0 0 0; font-weight: 700; border-top: 1px solid rgba(0,255,65,0.2); padding-top: 10px;">
+            <p style="color: var(--phosphor-green); font-size: 0.9rem; margin: 8px 0 0 0; font-weight: 700; border-top: 1px solid rgba(0,255,102,0.25); padding-top: 10px;">
                 🔑 <span style="color: #fff;">KEY HOLDERS:</span> Decrypt the <strong>Kindness Protocol</strong> & other required information.
             </p>
         </div>
