@@ -52,13 +52,12 @@
         .legend-item b { display: block; font-size: 1.1rem; margin-bottom: 6px; letter-spacing: 1px; }
         .legend-item span { font-size: 0.7rem; color: #B8860B; font-weight: 800; text-transform: uppercase; }
 
-        /* --- UPDATED TABLE: PUSHED CONTENT TO CENTER --- */
         .archive-table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0 15px;
             margin-bottom: 45px;
-            padding: 0 20px;
+            padding: 0 25px; /* Pushes content from edges */
         }
 
         .archive-table thead th { 
@@ -68,66 +67,66 @@
         }
 
         .archive-table td { 
-            padding: 25px 5px; /* Tight side padding to allow centered look */
+            padding: 25px 10px;
             border-top: 3px solid #000; 
             border-bottom: 3px solid #000;
             text-align: center;
             vertical-align: middle;
         }
 
-        /* Desktop Column Centering Hacks */
-        .col-ref { padding-left: 20px !important; } 
-        .col-matrix { padding-right: 20px !important; }
-
         .archive-table td:first-child { border-left: 3px solid #000; background: #f0f0f0; }
         .archive-table td:last-child { border-right: 3px solid #000; }
 
-        .id-badge { background: #000; color: #fff; padding: 5px 12px; font-size: 0.9rem; font-weight: 800; }
+        .id-badge { background: #000; color: #fff; padding: 6px 12px; font-size: 0.9rem; font-weight: 800; }
 
-        .matrix-pill {
+        /* --- UPDATED: CLOSED RECTANGLE STATUS --- */
+        .matrix-status {
             display: inline-block;
-            padding: 8px 18px;
+            padding: 10px 15px;
             font-size: 0.75rem;
             font-weight: 900;
-            border: 2px solid #000;
+            border: 3px solid #000;
             text-transform: uppercase;
+            width: 120px; /* Fixed width to keep it centered and solid */
+            box-sizing: border-box;
         }
-        .pill-secured { background: #fef9c3; color: #854d0e; border-color: #B8860B; }
-        .pill-classified { background: #fee2e2; color: #991b1b; border-color: #dc2626; }
-        .pill-broadcast { background: #dcfce7; color: #166534; border-color: #16a34a; }
+        .status-secured { background: #ffaa00; color: #000; }
+        .status-classified { background: #dc2626; color: #fff; }
 
         .btn-container { display: flex; justify-content: center; width: 100%; }
         
+        /* --- FIXED: MULTI-GALLERY BUTTON --- */
         .sector-btn {
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            display: block; /* Ensure it stays as one solid block */
             background: #000; color: #fff !important;
-            padding: 12px 20px; border: 3px solid #000;
+            padding: 15px 20px; border: 3px solid #000;
             text-decoration: none !important; text-transform: uppercase;
-            box-shadow: 4px 4px 0px #ffaa00; 
-            transition: all 0.2s ease; width: 320px; 
+            box-shadow: 5px 5px 0px #ffaa00; 
+            transition: all 0.2s ease; width: 340px; 
             box-sizing: border-box;
+            line-height: 1.4;
         }
-        .sector-btn:hover { background: #ffaa00; box-shadow: 6px 6px 0px #000; transform: translateY(-2px); }
+        .sector-btn span { display: block; } /* Keep labels stacked correctly */
+        .sector-btn .top-label { font-size: 0.85rem; font-weight: 800; margin-bottom: 2px; letter-spacing: 1px; }
+        .sector-btn .bottom-label { font-size: 0.7rem; color: #ffaa00; font-weight: 400; }
+        .sector-btn:hover { background: #ffaa00; color: #000 !important; box-shadow: 6px 6px 0px #000; transform: translateY(-2px); }
+        .sector-btn:hover .bottom-label { color: #000; }
 
-        /* --- COOL BLUE SCANNER BOX --- */
+        /* --- BLUE SCANNER BOX --- */
         .redacted-box {
-            border: 3px dashed #000; padding: 12px; width: 320px; 
+            border: 3px dashed #000; padding: 15px; width: 340px; 
             background: #111; color: #fff; font-size: 0.8rem; font-weight: 900;
             box-sizing: border-box; position: relative; overflow: hidden;
+            line-height: 1.6;
         }
-        
-        /* The Blue Scan Line */
         .redacted-box::after {
             content: "";
             position: absolute; top: 0; left: 0; width: 100%; height: 3px;
             background: #00f2ff; box-shadow: 0 0 15px #00f2ff;
-            animation: blue-scan 2s linear infinite;
+            animation: blue-scan 2.5s linear infinite;
         }
 
-        @keyframes blue-scan {
-            0% { top: -5%; }
-            100% { top: 105%; }
-        }
+        @keyframes blue-scan { 0% { top: -5%; } 100% { top: 105%; } }
 
         .protocol-tag {
             position: absolute; top: -18px; left: 30px; 
@@ -145,6 +144,7 @@
 
         /* --- MOBILE REFINEMENTS --- */
         @media (max-width: 750px) {
+            body { padding-bottom: 180px; }
             .archive-table, .archive-table thead, .archive-table tbody, .archive-table th, .archive-table td, .archive-table tr { 
                 display: block; width: 100%; box-sizing: border-box;
             }
@@ -152,11 +152,11 @@
             .archive-table td { border: none !important; padding: 12px 10px !important; }
             .archive-table tr { 
                 border: 4px solid #000; margin-bottom: 35px; 
-                box-shadow: 8px 8px 0px #ffaa00; padding: 15px 0;
+                box-shadow: 8px 8px 0px #ffaa00; padding: 20px 0;
             }
             .archive-table td:first-child { background: transparent; border-bottom: 2px solid #eee !important; margin-bottom: 10px; }
             
-            .sector-btn, .redacted-box { width: 90% !important; max-width: 300px; margin: 0 auto; }
+            .sector-btn, .redacted-box { width: 95% !important; max-width: 320px; margin: 0 auto; }
             .protocol-tag { left: 50%; transform: translateX(-50%); width: 85%; text-align: center; }
             .footer-strip { flex-direction: column !important; gap: 20px; text-align: center !important; }
             .footer-strip div { border: none !important; padding: 0 !important; width: 100%; }
@@ -199,20 +199,20 @@
             <tbody>
                 <!-- ROW 1 -->
                 <tr>
-                    <td class="col-ref"><span class="id-badge">#927411</span></td>
+                    <td><span class="id-badge">#927411</span></td>
                     <td>
                         <div class="btn-container">
-                            <a href="https://www.facebook.com/people/Free-Little-Art-Gallery-Stamford/61563771167327/" class="sector-btn">
+                            <a href="https://www.instagram.com" class="sector-btn">
                                 <span class="top-label">MULTI-GALLERY_DISTRIBUTION</span>
                                 <span class="bottom-label">[STAMFORD FLAG] | CT_2026</span>
                             </a>
                         </div>
                     </td>
-                    <td class="col-matrix"><span class="matrix-pill pill-secured">🟡 SECURED</span></td>
+                    <td><span class="matrix-status status-secured">🟡 SECURED</span></td>
                 </tr>
-                <!-- ROW 2 (REDACTED) -->
+                <!-- ROW 2 -->
                 <tr style="background: #fafafa;">
-                    <td class="col-ref"><span class="id-badge" style="background: #666;">#XXXXXX</span></td>
+                    <td><span class="id-badge" style="background: #666;">#XXXXXX</span></td>
                     <td>
                         <div class="btn-container">
                             <div class="redacted-box">
@@ -221,7 +221,7 @@
                             </div>
                         </div>
                     </td>
-                    <td class="col-matrix"><span class="matrix-pill pill-classified">🔴 CLASSIFIED</span></td>
+                    <td><span class="matrix-status status-classified">🔴 CLASSIFIED</span></td>
                 </tr>
             </tbody>
         </table>
