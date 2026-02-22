@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE MOORE ARCHIVE // FIELD LOGS</title>
+    <!-- Fixed Font Link -->
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     <style>
         body {
@@ -35,6 +36,7 @@
             box-shadow: 0 0 0 20px #D4AF37; 
             position: relative;
             margin-bottom: 50px;
+            overflow: hidden; /* Keeps the border sharp */
         }
 
         .briefing-row {
@@ -52,7 +54,18 @@
         .legend-item b { display: block; font-size: 1.1rem; margin-bottom: 6px; letter-spacing: 1px; }
         .legend-item span { font-size: 0.7rem; color: #B8860B; font-weight: 800; text-transform: uppercase; }
 
+        /* Table Container for Horizontal Scrolling */
+        .table-scroll-wrap {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 45px;
+            border: 4px solid #000;
+            box-shadow: 12px 12px 0px #000;
+            background: #fff;
+        }
+
         .btn-container { display: flex; justify-content: center; padding: 10px 0; width: 100%; }
+        
         .sector-btn {
             display: flex; flex-direction: column; align-items: center; justify-content: center;
             background: #000; color: #fff !important;
@@ -61,6 +74,7 @@
             box-shadow: 6px 6px 0px #ffaa00; 
             transition: all 0.2s ease; text-align: center; width: 340px; 
         }
+        
         .sector-btn .top-label { font-size: 0.85rem; font-weight: 800; letter-spacing: 1px; margin-bottom: 6px; }
         .sector-btn .bottom-label { font-size: 0.7rem; font-weight: 400; color: #ffaa00; letter-spacing: 1.5px; }
         .sector-btn:hover { background: #ffaa00; box-shadow: 8px 8px 0px #000; transform: scale(1.03); }
@@ -75,13 +89,29 @@
 
         .signal-glow { text-shadow: 0 0 10px currentColor; font-weight: 800; }
         .glitch-text { display: inline-block; animation: glitch-soft 0.6s infinite; color: #ffaa00; font-weight: 800; }
+        
         @keyframes glitch-soft { 0%, 100% { transform: translate(0); text-shadow: 1px 1px #ff00ff, -1px -1px #00ffff; } }
         @keyframes pulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+        @keyframes scan-line { 0% { opacity: 0.3; } 50% { opacity: 1; } 100% { opacity: 0.3; } }
 
-        @media (max-width: 600px) {
+        /* --- MOBILE ADJUSTMENTS --- */
+        @media (max-width: 650px) {
             body { padding: 40px 10px 160px 10px; }
-            .briefing-row { flex-direction: column; gap: 20px; }
-            .sector-btn { width: 100%; }
+            
+            /* Stack the briefing status bars */
+            .briefing-row { flex-direction: column; gap: 25px; padding: 30px 0; }
+            .legend-item { border: none !important; }
+
+            /* Shrink the dossier header */
+            .dossier-box h2 { font-size: 1.2rem !important; padding: 10px 20px !important; }
+
+            /* Stack the three footer columns at the bottom */
+            .footer-info { flex-direction: column !important; gap: 25px; text-align: center !important; }
+            .footer-info > div { border: none !important; padding: 10px 0 !important; }
+            .footer-info span { text-align: center !important; width: 100%; }
+
+            /* Ensure buttons don't break page width */
+            .sector-btn, .redacted-box { width: 100% !important; max-width: 280px; }
         }
     </style>
 </head>
@@ -90,13 +120,14 @@
 <div class="dossier-box">
     <div style="padding: 60px 40px 30px 40px;">
         
+        <!-- HEADER -->
         <div style="display: flex; justify-content: center; margin-bottom: 2.5rem;">
             <h2 style="margin: 0; background: #ffaa00; border: 4px solid #000; color: #000; display: inline-block; padding: 14px 28px; font-size: 1.6rem; font-weight: 800; text-transform: uppercase; box-shadow: 8px 8px 0px #000; text-align: center;">
                 MANIFEST // FIELD LOGS
             </h2>
         </div>
 
-        <!-- UPDATED TACTICAL LABELS -->
+        <!-- TACTICAL LABELS -->
         <div class="briefing-row">
             <div class="legend-item">
                 <b class="signal-glow" style="color: #16a34a;">🟢 BROADCAST</b>
@@ -112,6 +143,7 @@
             </div>
         </div>
 
+        <!-- PROTOCOL TEXT -->
         <div style="background: #fdfdfd; border: 4px solid #000; padding: 35px; margin-bottom: 45px; position: relative; border-left: 20px solid #000;">
             <div class="protocol-tag">Operational_Protocol_v.15</div>
             <p style="margin: 0; font-size: 1.05rem; line-height: 2.2; color: #222; font-weight: 500;">
@@ -121,7 +153,8 @@
             </p>
         </div>
 
-        <div style="border: 4px solid #000; box-shadow: 12px 12px 0px #000; background: #fff; overflow-x: auto; margin-bottom: 45px;">
+        <!-- TABLE SECTION -->
+        <div class="table-scroll-wrap">
             <table style="width: 100%; border-collapse: collapse; font-size: 1rem; min-width: 700px; table-layout: fixed;">
                 <thead>
                     <tr style="background: #000; color: #fff; text-transform: uppercase;">
@@ -131,11 +164,12 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- ROW 1 -->
                     <tr>
                         <td style="padding: 30px; border-bottom: 4px solid #000; font-weight: 900; color: #000; text-align: center;">#927411</td>
                         <td style="padding: 30px; border-bottom: 4px solid #000; text-align: center;">
                             <div class="btn-container">
-                                <a href="https://www.instagram.com/freelittleartgallerystamford" class="sector-btn">
+                                <a href="https://www.instagram.com" class="sector-btn">
                                     <span class="top-label">MULTI-GALLERY_DISTRIBUTION</span>
                                     <span class="bottom-label">[STAMFORD FLAG] | CT_2026</span>
                                 </a>
@@ -145,11 +179,12 @@
                             <span class="signal-glow" style="color: #B8860B; font-size: 1rem;">🟡 SECURED</span>
                         </td>
                     </tr>
+                    <!-- ROW 2 (REDACTED) -->
                     <tr style="background: #f2f2f2;">
                         <td style="padding: 30px; border-bottom: 4px solid #000; text-align: center; font-weight: 800; color: #999;">#XXXXXX</td>
                         <td style="padding: 30px; border-bottom: 4px solid #000; text-align: center;">
                             <div class="btn-container">
-                                <div style="border: 3px dashed #000; padding: 15px; width: 340px; background: #e5e5e5; font-size: 0.8rem; font-weight: 900;">
+                                <div class="redacted-box" style="border: 3px dashed #000; padding: 15px; width: 340px; background: #e5e5e5; font-size: 0.8rem; font-weight: 900;">
                                     [REDACTED_LOCATION] <br>
                                     <span style="font-size: 0.6rem; color: #666; animation: scan-line 1.5s infinite;">DECRYPTING...</span>
                                 </div>
@@ -170,7 +205,8 @@
         </div>
     </div>
 
-    <div style="background: #000; color: #fff; padding: 25px 40px; border-top: 6px solid #ffaa00; display: flex; justify-content: space-between; align-items: center;">
+    <!-- FOOTER INFO BOX -->
+    <div class="footer-info" style="background: #000; color: #fff; padding: 25px 40px; border-top: 6px solid #ffaa00; display: flex; justify-content: space-between; align-items: center;">
         <div>
             <span style="display: block; font-size: 0.7rem; color: #ffaa00; letter-spacing: 2px; margin-bottom: 6px; font-weight: 800;">RANK_GRADE</span>
             <span style="font-size: 1.1rem; font-weight: 800; color: #fff; text-transform: uppercase;">Regional_Alpha</span>
@@ -186,6 +222,7 @@
     </div>
 </div>
 
+<!-- FIXED STATUS BAR -->
 <div class="status-tag">
     SYSTEM_STATUS: <span class="signal-glow" style="animation: pulse 2s infinite;">SIGNAL_LIVE_🟢</span>
 </div>
