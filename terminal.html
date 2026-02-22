@@ -31,6 +31,7 @@
             border: 1px solid rgba(0, 255, 65, 0.2);
             padding: 40px;
             box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+            box-sizing: border-box; /* Crucial for mobile sizing */
         }
 
         /* Restored and cleaned Header */
@@ -111,6 +112,13 @@
             box-shadow: 0 0 30px var(--phosphor-green);
             transform: translateY(-2px);
         }
+
+        /* Added one small rule to keep things from breaking on small phones */
+        @media (max-width: 600px) {
+            .glitch-header { font-size: 1.3rem; }
+            .terminal { padding: 20px; }
+            body { padding: 10px; }
+        }
     </style>
 </head>
 <body>
@@ -120,7 +128,8 @@
     <div class="header-anchor">
         <h1 class="glitch-header">>> SYSTEM_INITIALIZING: THE MOORE ARCHIVE</h1>
         <div style="height: 20px;"></div> 
-        <span style="color: #fff; background: #003311; padding: 8px 20px; font-size: 0.85rem; letter-spacing: 2px; border: 1px solid #1db954; border-radius: 2px;"> 
+        <!-- Fixed the distortion here with display: inline-block and max-width -->
+        <span style="color: #fff; background: #003311; padding: 8px 20px; font-size: 0.85rem; letter-spacing: 2px; border: 1px solid #1db954; border-radius: 2px; display: inline-block; max-width: 100%; box-sizing: border-box; line-height: 1.5;"> 
             [ ACCESS GRANTED: KEY-HOLDERS & ASPIRING AGENTS ] 
         </span>
     </div>
