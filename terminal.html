@@ -113,11 +113,22 @@
             transform: translateY(-2px);
         }
 
-        /* Added one small rule to keep things from breaking on small phones */
+        /* --- MOBILE TWEAKS ONLY --- */
         @media (max-width: 600px) {
-            .glitch-header { font-size: 1.3rem; }
-            .terminal { padding: 20px; }
-            body { padding: 10px; }
+            body { padding: 15px 10px; }
+            .terminal { padding: 25px 15px; }
+            
+            /* Add space between sections */
+            .quick-start, .alert-box, .header-anchor { margin-bottom: 50px !important; }
+            
+            /* Space out text lines so they aren't cramped */
+            p, li, span { line-height: 1.8 !important; letter-spacing: 0.5px; }
+            
+            /* Space out bullet points */
+            .tech-list li { margin-bottom: 35px; }
+            
+            /* Shrink header slightly so it doesn't crowd the top */
+            .glitch-header { font-size: 1.4rem; margin-bottom: 10px; }
         }
     </style>
 </head>
