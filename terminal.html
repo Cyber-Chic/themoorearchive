@@ -118,19 +118,37 @@
             body { padding: 15px 10px; }
             .terminal { padding: 25px 15px; }
             
-            /* Add space between sections */
-            .quick-start, .alert-box, .header-anchor { margin-bottom: 50px !important; }
+            /* MISSION BOX (GREEN) - Internal padding & item spacing */
+            .quick-start { 
+                padding: 35px 20px !important; 
+                margin-bottom: 50px !important; 
+            }
+            .quick-start li { 
+                margin-bottom: 20px !important; 
+                line-height: 1.6;
+            }
             
-            /* Space out text lines so they aren't cramped */
+            /* ALERT BOX (RED) - Internal padding */
+            .alert-box { 
+                padding: 35px 20px !important; 
+                margin-bottom: 50px !important; 
+            }
+            
+            /* HEADER SPACING */
+            .header-anchor { margin-bottom: 55px !important; }
+            .glitch-header { font-size: 1.4rem; margin-bottom: 15px; }
+            
+            /* TEXT BREATHING ROOM */
             p, li, span { line-height: 1.8 !important; letter-spacing: 0.5px; }
             
-            /* Space out bullet points */
-            .tech-list li { margin-bottom: 35px; }
-            
-            /* Shrink header slightly so it doesn't crowd the top */
-            .glitch-header { font-size: 1.4rem; margin-bottom: 10px; }
+            /* TROUBLESHOOTING LIST SPACING */
+            .tech-list { padding: 25px 15px !important; }
+            .tech-list li { margin-bottom: 40px !important; }
+
+            /* BUTTON SPACING */
+            .btn-main { width: 100%; box-sizing: border-box; text-align: center; }
         }
-    </style>
+
 </head>
 <body>
 
