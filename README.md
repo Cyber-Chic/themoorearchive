@@ -1,15 +1,47 @@
+
+---
+<div align="center">
+
 # 📡 THE MOORE ARCHIVE (TMA)
 > *“SEEKING THE QUIET SIGNAL WHERE THE DIGITAL CODE MEETS THE PHYSICAL EARTH.”*
 
 ---
 
+<br>
+
+### 🛰️[**ARCHIVE LEAKS**](https://cyber-chic.github.io/themoorearchive/logs.html)
+
+`🟢 CT_ORBIT [ACTIVE]` &nbsp; • &nbsp; `🟡 NY_ORBIT [DETECTED]` &nbsp; • &nbsp; `🔴 EU_ORBIT [CLASSIFIED]`
+
+<br>
+
+<table align="center">
+<tr>
+<td align="left">
+
+
+| 🛰️ **PRINCIPAL INVESTIGATOR** |
+| :--- |
+| <center> <img src="https://github.com/Cyber-Chic/themoorearchive/blob/main/img/GITHUB%20PROFILE%20PIC.jpeg?raw=true" width="280"> <br> **ID_SCAN: ANM-001** <br> `IMPACT: REGIONAL` • `STATUS: NOMINAL` </center> |
+
+</td>
+</tr>
+</table>
+
+<br>
+
 ### 🛰️ OPERATIONAL DATA
+
 
 | SYSTEM STATUS | MISSION TYPE | THE QUIET ECHO |
 | :--- | :--- | :--- |
 | 🟢 **NOMINAL** | 🧪 **LIVING EXPERIMENT** | 🕯️ **ANONYMOUS ACT** |
 | 📡 **SIGNAL ACTIVE** | 🧩 **SOCIAL PERFORMANCE** | 🌊 **REFRESH SIGNAL** |
 | 🔒 **VAULT SECURED** | 🗺️ **GEOSPATIAL HUNT** | 🤐 **KEEP THE SECRET** |
+
+</div>
+
+<br>
 
 ---
 
