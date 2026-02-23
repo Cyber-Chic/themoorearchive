@@ -24,60 +24,67 @@ body {
     font-family: 'JetBrains Mono', monospace !important;
 }
 
-/* --- MOBILE REPAIR PROTOCOL (TOUCHES ZERO DESKTOP SETTINGS) --- */
+/* --- FINAL MOBILE STABILIZATION (ZERO DESKTOP CHANGE) --- */
 @media (max-width: 768px) {
-    /* 1. Stack the pinned sections so they don't overlap or bulge */
+    /* 1. KEEP HEADER/FOOTER ON ONE LINE (No Zigzag) */
     .pinned-header, .pinned-footer {
-        height: auto !important;
-        flex-direction: column !important;
-        padding: 15px 0 !important;
-        gap: 10px !important;
-        justify-content: center !important;
+        flex-direction: row !important; /* Forces single line */
+        justify-content: space-around !important;
+        padding: 0 5px !important;
+        height: 60px !important;
+        gap: 2px !important;
     }
 
-    /* 2. Prevent the Dossier from being wider than the phone screen */
-    .dossier-box {
-        width: 95% !important;
-        margin-top: 180px !important; /* Space for stacked header */
-        box-sizing: border-box !important;
+    /* Shrink text in header/footer so they fit on one line */
+    .status-item b, .pinned-footer b {
+        font-size: 0.75rem !important; /* Smaller text for mobile */
+        letter-spacing: 0px !important;
+    }
+    .status-item span, .pinned-footer span {
+        font-size: 0.5rem !important;
+        display: none; /* Hides small 'ACTIVE' labels to save space */
     }
 
-    /* 3. Turn the Table into Vertical Cards so buttons don't push off-screen */
-    .archive-table, .archive-table tbody, .archive-table tr, .archive-table td {
-        display: block !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-    .archive-table thead { display: none !important; } /* Hide labels that bulge */
-    
-    .archive-table tr {
-        margin-bottom: 40px !important; /* Gap so you know which ID is which */
-        border: 2px solid #000;
-    }
-    
-    .archive-table td {
-        border: none !important;
-        padding: 20px 10px !important;
-        text-align: center !important;
+    /* Remove the bulky vertical dividers in header/footer on mobile */
+    .orbit-divider {
+        border-left: 1px solid #333 !important;
+        border-right: 1px solid #333 !important;
+        padding: 0 5px !important;
+        margin: 0 !important;
     }
 
-    /* 4. Force Buttons & Redacted Boxes to stay within the phone edges */
+    /* 2. FIX REDACTED TEXT (Match Stamford Size) */
+    .redacted-box {
+        font-size: 0.75rem !important; /* Force smaller size */
+        line-height: 1.4 !important;
+        letter-spacing: 0.5px !important;
+        padding: 10px !important;
+    }
+    .redacted-box span {
+        font-size: 0.6rem !important; /* The 'ANALYZING' text */
+    }
+
+    /* 3. STOP THE BUTTON BULGE */
     .sector-btn, .redacted-box {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important; /* This kills the bulge */
+        width: 100% !important; /* Fits to screen width */
+        max-width: 290px !important; /* Prevents touching screen edges */
+        min-width: 0 !important; /* Kills the bulge */
         margin: 0 auto !important;
         box-sizing: border-box !important;
     }
-    
-    /* 5. Center the status dividers in the header/footer */
-    .status-item.orbit-divider {
-        border-left: none !important;
-        border-right: none !important;
-        border-top: 1px solid #333 !important;
-        width: 80% !important;
+
+    /* 4. SEPARATE ROWS FOR CLARITY */
+    .archive-table, .archive-table tbody, .archive-table tr, .archive-table td {
+        display: block !important;
+        width: 100% !important;
     }
+    .archive-table tr {
+        margin-bottom: 35px !important;
+        border-bottom: 3px solid #000;
+    }
+    .archive-table thead { display: none !important; }
 }
+
     </style>
 </head>
 
@@ -176,3 +183,4 @@ body {
 
 </body>
 </html>
+
