@@ -5,58 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         /* --- GLOBAL & DESKTOP STYLES --- */
-        body { overflow-x: hidden; }
-        
-        /* SYNCED ANIMATION: Unified to 12s for perfect timing */
-        @keyframes laser-sweep {
-            0% { left: -5%; }
-            100% { left: 105%; }
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
+body { 
+    overflow-x: hidden; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; /* Keeps everything centered */
+}
 
-        /* DESKTOP BUTTON SYNC: Forces consistent width regardless of text length */
-        .sector-btn, .redacted-box {
-            min-width: 280px !important; 
-            display: inline-block !important;
-            box-sizing: border-box !important;
-        }
+/* SYNCED ANIMATION */
+@keyframes laser-sweep {
+    0% { left: -5%; }
+    100% { left: 105%; }
+}
 
-        /* --- MOBILE STACKING PROTOCOL --- */
-        @media (max-width: 768px) {
-            .pinned-header, .pinned-footer {
-                height: auto !important;
-                flex-direction: column !important;
-                padding: 15px 10px !important;
-                gap: 8px !important;
-            }
-            .body-padding {
-                padding-top: 180px !important;
-                padding-bottom: 200px !important;
-            }
-            .status-item, .orbit-divider, .footer-stat-item {
-                border-left: none !important;
-                border-right: none !important;
-                border-top: 1px solid #333 !important;
-                width: 90% !important;
-                text-align: center !important;
-            }
-            .archive-table, .archive-table tr, .archive-table td {
-                display: block !important;
-                width: 100% !important;
-            }
-            .archive-table thead { display: none !important; }
-            .archive-table td {
-                border: 3px solid #000 !important;
-                margin-bottom: -3px !important;
-                padding: 20px 10px !important;
-            }
-            .sector-btn, .redacted-box {
-                min-width: 100% !important; /* Stack fully on mobile */
-            }
-        }
+/* BUTTON SYNC & FONT FIX */
+.sector-btn, .redacted-box {
+    min-width: 280px !important; 
+    display: inline-block !important;
+    box-sizing: border-box !important;
+    font-family: 'JetBrains Mono', monospace !important; /* Forces font match */
+}
+
+/* --- MOBILE STACKING PROTOCOL --- */
+@media (max-width: 768px) {
+    /* 1. Fix Header/Footer */
+    .pinned-header, .pinned-footer {
+        height: auto !important;
+        flex-direction: column !important;
+        padding: 15px 10px !important;
+    }
+    
+    /* 2. Center the Dossier Box */
+    .dossier-box {
+        width: 95% !important;
+        margin: 80px auto 20px auto !important; /* Centers the main white box */
+    }
+
+    /* 3. Clarify Rows (Mobile Table Fix) */
+    .archive-table, .archive-table tbody, .archive-table tr {
+        display: block !important;
+        width: 100% !important;
+    }
+    .archive-table thead { display: none !important; }
+    
+    .archive-table tr {
+        margin-bottom: 40px !important; /* Creates a BIG gap between different logs */
+        border: 2px solid #000;
+        background: #fff;
+    }
+    
+    .archive-table td {
+        display: block !important;
+        width: 100% !important;
+        border: none !important;
+        padding: 15px !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 4. Ensure Redacted Box doesn't bulge */
+    .redacted-box {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+}
+
     </style>
 </head>
 
