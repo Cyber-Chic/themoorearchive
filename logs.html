@@ -124,24 +124,25 @@
     </style>
 <body style="background-color: #000; margin: 0; padding: 100px 15px 100px 15px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; font-family: 'JetBrains Mono', monospace; overflow-x: hidden;">
 
-<!-- PINNED HEADER (60px) -->
-<div style="background: #000; height: 60px; display: flex; justify-content: space-around; align-items: center; border-bottom: 4px solid #ffaa00; width: 100%; position: fixed; top: 0; z-index: 10000; box-shadow: 0 5px 25px rgba(255, 170, 0, 0.4);">
-    <div style="text-align: center; display: flex; align-items: center; gap: 12px;">
-        <b style="font-size: 1rem; color: #16a34a; letter-spacing: 1px; text-shadow: 0 0 8px #16a34a;">🟢 BROADCAST</b>
-        <span style="font-size: 0.65rem; color: #fff; text-transform: uppercase;">SHIPPED</span>
+<!-- GOLDEN RATIO PINNED HEADER (Balanced for Eye Comfort) -->
+<div style="background: #000; height: 60px; display: flex; justify-content: space-around; align-items: center; border-bottom: 4px solid #ffaa00; width: 100%; position: fixed; top: 0; z-index: 10000; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);">
+    <div style="text-align: center; display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1.1rem; color: #2ecc71; letter-spacing: 1px; text-shadow: 0 0 10px rgba(46, 204, 113, 0.4);">🟢 BROADCAST</b>
+        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; letter-spacing: 2px; font-weight: 400; opacity: 0.8;">SHIPPED</span>
     </div>
-    <div style="text-align: center; border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 25px; display: flex; align-items: center; gap: 12px;">
-        <b style="font-size: 1rem; color: #B8860B; letter-spacing: 1px;">🟡 DETECTED</b>
-        <span style="font-size: 0.65rem; color: #fff; text-transform: uppercase;">LEAK</span>
+    <div style="text-align: center; border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 25px; display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1.1rem; color: #f1c40f; letter-spacing: 1px; text-shadow: 0 0 10px rgba(241, 196, 15, 0.4);">🟡 DETECTED</b>
+        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; letter-spacing: 2px; font-weight: 400; opacity: 0.8;">LEAK</span>
     </div>
-    <div style="text-align: center; display: flex; align-items: center; gap: 12px;">
-        <b style="font-size: 1rem; color: #dc2626; letter-spacing: 1px;">🔴 CLASSIFIED</b>
-        <span style="font-size: 0.65rem; color: #fff; text-transform: uppercase;">ENCRYPTED</span>
+    <div style="text-align: center; display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1.1rem; color: #e74c3c; letter-spacing: 1px; text-shadow: 0 0 10px rgba(231, 76, 60, 0.4);">🔴 CLASSIFIED</b>
+        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; letter-spacing: 2px; font-weight: 400; opacity: 0.8;">ENCRYPTED</span>
     </div>
 </div>
 
-<!-- DOSSIER BOX (Optimized Border) -->
-<div class="dossier-box" style="max-width: 850px; width: 100%; background-color: #ffffff; border: 4px solid #000; outline: 10px solid #000; box-shadow: 0 0 40px rgba(212, 175, 55, 0.4); position: relative; margin-top: 20px;">
+
+<!-- DOSSIER BOX (Optimized Border & Smooth Shadow) -->
+<div class="dossier-box" style="max-width: 850px; width: 100%; background-color: #ffffff; border: 4px solid #000; outline: 10px solid #000; box-shadow: 0 0 50px rgba(212, 175, 55, 0.2); position: relative; margin-top: 20px;">
     <div style="padding: 60px 20px 30px 20px;">
         
         <div style="display: flex; justify-content: center; margin-bottom: 2.5rem;">
@@ -150,20 +151,26 @@
             </h2>
         </div>
 
-        <!-- PROTOCOL BOX -->
-        <div style="background: #fdfdfd; border: 4px solid #000; margin-bottom: 45px; position: relative; border-left: 20px solid #000; box-shadow: 10px 10px 0px #000;">
-            <div style="position: absolute; top: -18px; left: 20px; background: #ffaa00; color: #000; padding: 4px 15px; font-weight: 900; border: 4px solid #000; z-index: 50; font-size: 0.85rem; text-transform: uppercase;">
-                Operational_Protocol_v.15
-            </div>
-            <div style="padding: 45px 30px 35px 30px;">
-                <p style="margin: 0; font-size: 1rem; line-height: 2.2; color: #222; font-weight: 500;">
-                    <span style="color: #000; font-weight: 900;">>> Sector_Rule:</span> Leak Gallery Distributions by Sector. <br>
-                    <span style="color: #000; font-weight: 900;">>> Calibration:</span> Each Curation active until 100% Saturation. <br>
-                    <span style="color: #000; font-weight: 900;">>> Signal_Note:</span> Detected leaks factor into calibration. <br>
-                    <span style="color: #000; font-weight: 900;">>> Lateral_Signals:</span> Limited Edition "Leaks" may trigger at random.
-                </p>
-            </div>
-        </div>
+<!-- UPDATED PROTOCOL BOX -->
+<div style="background: #fdfdfd; border: 4px solid #000; margin-bottom: 45px; position: relative; border-left: 20px solid #000; box-shadow: 10px 10px 0px #000;">
+    
+    <div style="position: absolute; top: -18px; left: 20px; background: #ffaa00; color: #000; padding: 4px 15px; font-weight: 900; border: 4px solid #000; z-index: 50; font-size: 0.85rem; text-transform: uppercase;">
+        Operational_Protocol_v.15
+    </div>
+
+    <div style="padding: 45px 30px 35px 30px;">
+        <p style="margin: 0; font-size: 1rem; line-height: 2.2; color: #222; font-weight: 500;">
+            <span style="color: #000; font-weight: 900;">>> Sector_Rule:</span> Leak Gallery Distributions by Sector. <br>
+            <span style="color: #000; font-weight: 900;">>> Saturation:</span> Each Curation active until 100% Signal. <br>
+            <span style="color: #000; font-weight: 900;">>> Lateral_Signals:</span> Limited Edition "Leaks" may trigger at random.
+        </p>
+        <!-- NEW FOOTNOTE -->
+        <p style="margin-top: 15px; margin-bottom: 0; font-size: 0.75rem; color: #666; font-style: italic; font-weight: 700;">
+            * Note: Detected leaks factor into saturation.
+        </p>
+    </div>
+</div>
+
 
         <table class="archive-table" style="width: 100%; border-collapse: separate; border-spacing: 0 15px;">
             <thead>
@@ -221,26 +228,27 @@
             </div>
         </div>
         <div style="padding: 10px; text-align: center; background: #111; border-top: 1px solid #333;">
-            <span style="font-size: 0.7rem; color: #ffaa00; font-weight: 900; letter-spacing: 3px;">SYSTEM_STATUS: <span style="color: #16a34a;">SIGNAL_LIVE_🟢</span></span>
+            <span style="font-size: 0.7rem; color: #ffaa00; font-weight: 900; letter-spacing: 3px;">SYSTEM_STATUS: <span style="color: #2ecc71; text-shadow: 0 0 5px rgba(46, 204, 113, 0.4);">SIGNAL_LIVE_🟢</span></span>
         </div>
     </div>
 </div>
 
-<!-- PINNED FOOTER (60px) -->
-<div class="status-tag" style="background: #000; border-top: 4px solid #ffaa00; height: 60px; display: flex; justify-content: space-around; align-items: center; position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; box-shadow: 0 -5px 25px rgba(255, 170, 0, 0.4);">
+<!-- SMOOTH PINNED FOOTER (60px) -->
+<div class="status-tag" style="background: #000; border-top: 4px solid #ffaa00; height: 60px; display: flex; justify-content: space-around; align-items: center; position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.8);">
     <div style="text-align: center; display: flex; align-items: center; gap: 10px;">
-        <b style="font-size: 1rem; color: #16a34a; letter-spacing: 1px;">🟢 CT_ORBIT</b>
-        <span style="font-size: 0.65rem; color: #fff; text-transform: uppercase;">ACTIVE</span>
+        <b style="font-size: 1rem; color: #2ecc71; letter-spacing: 1.5px; text-shadow: 0 0 10px rgba(46, 204, 113, 0.4);">🟢 CT_ORBIT</b>
+        <span style="font-size: 0.65rem; color: #888; text-transform: uppercase; letter-spacing: 1px;">ACTIVE</span>
     </div>
-    <div style="text-align: center; border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 20px; display: flex; align-items: center; gap: 10px;">
-        <b style="font-size: 1rem; color: #B8860B; letter-spacing: 1px;">🟡 NY_ORBIT</b>
-        <span style="font-size: 0.65rem; color: #fff; text-transform: uppercase;">PENDING</span>
+    <div style="text-align: center; border-left: 1px solid #222; border-right: 1px solid #222; padding: 0 20px; display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1rem; color: #f1c40f; letter-spacing: 1.5px; text-shadow: 0 0 10px rgba(241, 196, 15, 0.4);">🟡 NY_ORBIT</b>
+        <span style="font-size: 0.65rem; color: #888; text-transform: uppercase; letter-spacing: 1px;">PENDING</span>
     </div>
     <div style="text-align: center; display: flex; align-items: center; gap: 10px;">
-        <b style="font-size: 1rem; color: #dc2626; letter-spacing: 1px;">🔴 EU_ORBIT</b>
-        <span style="font-size: 0.65rem; color: #fff; text-transform: uppercase;">FUTURE</span>
+        <b style="font-size: 1rem; color: #e74c3c; letter-spacing: 1.5px; text-shadow: 0 0 10px rgba(231, 76, 60, 0.4);">🔴 EU_ORBIT</b>
+        <span style="font-size: 0.65rem; color: #888; text-transform: uppercase; letter-spacing: 1px;">FUTURE</span>
     </div>
 </div>
 
 </body>
+
 </html>
