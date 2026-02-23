@@ -4,26 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* --- GLOBAL & DESKTOP STYLES --- */
+/* --- GLOBAL & DESKTOP STYLES (YOUR WORKING CODE) --- */
 body { 
     overflow-x: hidden; 
     display: flex; 
     flex-direction: column; 
-    align-items: center; /* Keeps everything centered */
+    align-items: center; 
 }
 
-/* SYNCED ANIMATION */
 @keyframes laser-sweep {
     0% { left: -5%; }
     100% { left: 105%; }
 }
 
-/* BUTTON SYNC & FONT FIX */
 .sector-btn, .redacted-box {
     min-width: 280px !important; 
     display: inline-block !important;
     box-sizing: border-box !important;
-    font-family: 'JetBrains Mono', monospace !important; /* Forces font match */
+    font-family: 'JetBrains Mono', monospace !important;
 }
 
 /* --- MOBILE STACKING PROTOCOL --- */
@@ -38,10 +36,10 @@ body {
     /* 2. Center the Dossier Box */
     .dossier-box {
         width: 95% !important;
-        margin: 80px auto 20px auto !important; /* Centers the main white box */
+        margin: 180px auto 20px auto !important; /* Added more top margin for stacked header */
     }
 
-    /* 3. Clarify Rows (Mobile Table Fix) */
+    /* 3. Clarify Rows */
     .archive-table, .archive-table tbody, .archive-table tr {
         display: block !important;
         width: 100% !important;
@@ -49,7 +47,7 @@ body {
     .archive-table thead { display: none !important; }
     
     .archive-table tr {
-        margin-bottom: 40px !important; /* Creates a BIG gap between different logs */
+        margin-bottom: 40px !important; 
         border: 2px solid #000;
         background: #fff;
     }
@@ -63,15 +61,22 @@ body {
         box-sizing: border-box !important;
     }
 
-    /* 4. Ensure Redacted Box doesn't bulge */
-    .redacted-box {
+    /* 4. FIX: Ensure BOTH Redacted AND Sector Buttons don't bulge */
+    .redacted-box, .sector-btn {
         width: 100% !important;
-        min-width: 0 !important;
+        min-width: 0 !important; /* This stops the bulge */
         max-width: 100% !important;
         margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Center the button container on mobile */
+    .btn-container {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
     }
 }
-
     </style>
 </head>
 
