@@ -52,6 +52,7 @@ This portal serves as the primary terminal for a global artifact hunt—a moving
 
 ---
 
+
 ### [ 🖥️ SYSTEM ARCHITECTURE ]
 **ROLE:** Principal Investigator / Creative Technologist  
 **ENGINE:** HTML5 / CSS3 / Vanilla JavaScript  
