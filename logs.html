@@ -1,151 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE MOORE ARCHIVE // FIELD LOGS</title>
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
     <style>
-        /* --- ALL HORIZONTAL SCAN CODES DELETED --- */
-        body {
-            background-color: #000000; 
-            margin: 0;
-            padding: 60px 15px 140px 15px; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .status-tag {
-            position: fixed; bottom: 0; left: 0; right: 0;
-            background: #000; color: #ffaa00; 
-            padding: 15px; border-top: 4px solid #ffaa00;
-            font-size: 1rem; font-weight: 800; text-align: center;
-            z-index: 9999; box-shadow: 0 -10px 25px rgba(255, 170, 0, 0.4);
-            letter-spacing: 3px;
-        }
-
-        .dossier-box {
-            max-width: 850px;
-            width: 100%;
-            background-color: #ffffff;
-            border: 4px solid #000;
-            outline: 10px solid #000; 
-            box-shadow: 0 0 0 20px #D4AF37; 
-            position: relative;
-            margin-bottom: 50px;
-        }
-
-        .archive-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0 15px;
-            margin-bottom: 45px;
-            padding: 0 25px; 
-        }
-
-        .archive-table thead th { 
-            background: #000; color: #fff; 
-            padding: 12px; text-transform: uppercase; 
-            font-size: 0.8rem; letter-spacing: 2px;
-        }
-
-        .archive-table td { 
-            padding: 25px 10px;
-            border-top: 3px solid #000; 
-            border-bottom: 3px solid #000;
-            text-align: center;
-            vertical-align: middle;
-        }
-
-        .archive-table td:first-child { border-left: 3px solid #000; background: #f0f0f0; }
-        .archive-table td:last-child { border-right: 3px solid #000; }
-
-        .id-badge { background: #000; color: #fff; padding: 6px 12px; font-size: 0.9rem; font-weight: 800; }
-
-        .matrix-status {
-            display: inline-block;
-            padding: 10px 15px;
-            font-size: 0.75rem;
-            font-weight: 900;
-            border: 3px solid #000;
-            text-transform: uppercase;
-            width: 120px; 
-            box-sizing: border-box;
-        }
-        .status-secured { background: #ffaa00; color: #000; }
-        .status-classified { background: #dc2626; color: #fff; }
-
-        .btn-container { display: flex; justify-content: center; width: 100%; }
-        
-        .sector-btn {
-            display: block; 
-            background: #000; color: #fff !important;
-            padding: 15px 20px; border: 3px solid #000;
-            text-decoration: none !important; text-transform: uppercase;
-            box-shadow: 5px 5px 0px #ffaa00; 
-            transition: all 0.2s ease; width: 340px; 
-            box-sizing: border-box;
-            line-height: 1.4;
-        }
-        .sector-btn span { display: block; } 
-        .sector-btn .top-label { font-size: 0.85rem; font-weight: 800; margin-bottom: 2px; letter-spacing: 1px; }
-        .sector-btn .bottom-label { font-size: 0.7rem; color: #ffaa00; font-weight: 400; }
-        .sector-btn:hover { background: #ffaa00; color: #000 !important; box-shadow: 6px 6px 0px #000; transform: translateY(-2px); }
-
-        .redacted-box {
-            border: 3px dashed #000; padding: 15px; width: 340px; 
-            background: #111; color: #fff; font-size: 0.8rem; font-weight: 900;
-            box-sizing: border-box; position: relative; overflow: hidden;
-            line-height: 1.6;
-        }
-
-        .signal-glow { text-shadow: 0 0 8px currentColor; }
-        .glitch-text { animation: glitch-soft 0.6s infinite; color: #ffaa00; }
-        
-        @keyframes laser-sweep {
-            0% { left: -5%; opacity: 0; }
-            5% { opacity: 1; }
-            95% { opacity: 1; }
-            100% { left: 105%; opacity: 0; }
-        }
-
-        @keyframes glitch-soft { 0%, 100% { transform: translate(0); text-shadow: 1px 1px #ff00ff, -1px -1px #00ffff; } }
-        @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
-
-        @media (max-width: 750px) {
-            body { padding-bottom: 180px; }
-            .archive-table td { border: none !important; padding: 12px 10px !important; }
-            .archive-table tr { border: 4px solid #000; margin-bottom: 35px; box-shadow: 8px 8px 0px #ffaa00; }
-            .sector-btn, .redacted-box { width: 95% !important; max-width: 320px; margin: 0 auto; }
+        /* MOBILE STACKING PROTOCOL */
+        @media (max-width: 768px) {
+            .pinned-header, .pinned-footer {
+                height: auto !important;
+                flex-direction: column !important;
+                padding: 15px 0 !important;
+                gap: 10px !important;
+            }
+            .body-padding {
+                padding-top: 180px !important; /* Extra space for stacked header */
+                padding-bottom: 180px !important; /* Extra space for stacked footer */
+            }
+            .status-item {
+                border: none !important;
+                padding: 5px 0 !important;
+                width: 100% !important;
+                justify-content: center !important;
+            }
+            .data-grid {
+                flex-direction: column !important;
+                gap: 25px !important;
+            }
+            .orbit-divider {
+                border: none !important;
+                border-top: 1px solid #333 !important;
+                border-bottom: 1px solid #333 !important;
+                padding: 15px 0 !important;
+                width: 80% !important;
+            }
         }
     </style>
-<body style="background-color: #000; margin: 0; padding: 100px 15px 100px 15px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; font-family: 'JetBrains Mono', monospace; overflow-x: hidden;">
+</head>
 
-<!-- SYMMETRICAL PINNED HEADER (Balanced Weight) -->
-<div style="background: #000; height: 60px; display: flex; justify-content: space-around; align-items: center; border-bottom: 4px solid #ffaa00; width: 100%; position: fixed; top: 0; z-index: 10000; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);">
-    
-    <!-- BROADCAST -->
-    <div style="text-align: center; display: flex; align-items: center; gap: 10px;">
-        <b style="font-size: 1.1rem; color: #2ecc71; letter-spacing: 1px; text-shadow: 0 0 10px rgba(46, 204, 113, 0.4);">🟢 BROADCAST</b>
-        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; letter-spacing: 2px; font-weight: 400; opacity: 0.8;">SHIPPED</span>
+<body class="body-padding" style="background-color: #000; margin: 0; padding: 100px 15px 100px 15px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; font-family: 'JetBrains Mono', monospace; overflow-x: hidden;">
+
+<!-- PINNED HEADER -->
+<div class="pinned-header" style="background: #000; height: 60px; display: flex; justify-content: space-around; align-items: center; border-bottom: 4px solid #ffaa00; width: 100%; position: fixed; top: 0; z-index: 10000; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);">
+    <div class="status-item" style="display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1.1rem; color: #2ecc71; letter-spacing: 1px;">🟢 BROADCAST</b>
+        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; opacity: 0.8;">SHIPPED</span>
     </div>
-
-    <!-- DETECTED -->
-    <div style="text-align: center; border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 25px; display: flex; align-items: center; gap: 10px;">
-        <b style="font-size: 1.1rem; color: #f1c40f; letter-spacing: 1px; text-shadow: 0 0 10px rgba(241, 196, 15, 0.4);">🟡 DETECTED</b>
-        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; letter-spacing: 2px; font-weight: 400; opacity: 0.8;">LEAK</span>
+    <div class="status-item orbit-divider" style="border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 25px; display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1.1rem; color: #f1c40f; letter-spacing: 1px;">🟡 DETECTED</b>
+        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; opacity: 0.8;">LEAK</span>
     </div>
-
-    <!-- CLASSIFIED -->
-    <div style="text-align: center; display: flex; align-items: center; gap: 10px;">
-        <b style="font-size: 1.1rem; color: #e74c3c; letter-spacing: 1px; text-shadow: 0 0 10px rgba(231, 76, 60, 0.4);">🔴 CLASSIFIED</b>
-        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; letter-spacing: 2px; font-weight: 400; opacity: 0.8;">ENCRYPTED</span>
+    <div class="status-item" style="display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1.1rem; color: #e74c3c; letter-spacing: 1px;">🔴 CLASSIFIED</b>
+        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; opacity: 0.8;">ENCRYPTED</span>
     </div>
 </div>
-
 
 <!-- OPTICALLY CENTERED DOSSIER (Final Shift) -->
 <div class="dossier-box" style="max-width: 850px; width: 100%; background-color: #ffffff; border: 4px solid #000; outline: none; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); position: relative; margin-top: 30px;">
@@ -253,22 +160,24 @@
 </div>
 
 
-<!-- SYMMETRICAL PINNED FOOTER (60px) -->
-<div style="background: #000; border-top: 4px solid #ffaa00; height: 60px; display: flex; justify-content: space-around; align-items: center; position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.8); box-sizing: border-box;">
-    <div style="text-align: center; display: flex; align-items: center; gap: 10px;">
-        <b style="font-size: 1.1rem; color: #2ecc71; letter-spacing: 1px; text-shadow: 0 0 10px rgba(46, 204, 113, 0.4);">🟢 CT_ORBIT</b>
-        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; letter-spacing: 2px; font-weight: 400; opacity: 0.8;">ACTIVE</span>
+<!-- PLACE THIS AT THE VERY BOTTOM OF YOUR FILE, RIGHT ABOVE </body> -->
+<div class="pinned-footer" style="background: #000 !important; border-top: 4px solid #ffaa00 !important; height: 60px !important; display: flex !important; justify-content: space-around !important; align-items: center !important; position: fixed !important; bottom: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 999999 !important; box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.8) !important; box-sizing: border-box !important;">
+    
+    <div style="display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1.1rem; color: #2ecc71; letter-spacing: 1px;">🟢 CT_ORBIT</b>
+        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; opacity: 0.8;">ACTIVE</span>
     </div>
-    <div style="text-align: center; border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 25px; display: flex; align-items: center; gap: 10px;">
-        <b style="font-size: 1.1rem; color: #f1c40f; letter-spacing: 1px; text-shadow: 0 0 10px rgba(241, 196, 15, 0.4);">🟡 NY_ORBIT</b>
-        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; letter-spacing: 2px; font-weight: 400; opacity: 0.8;">PENDING</span>
+
+    <div style="border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 25px; display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1.1rem; color: #f1c40f; letter-spacing: 1px;">🟡 NY_ORBIT</b>
+        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; opacity: 0.8;">PENDING</span>
     </div>
-    <div style="text-align: center; display: flex; align-items: center; gap: 10px;">
-        <b style="font-size: 1.1rem; color: #e74c3c; letter-spacing: 1px; text-shadow: 0 0 10px rgba(231, 76, 60, 0.4);">🔴 EU_ORBIT</b>
-        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; letter-spacing: 2px; font-weight: 400; opacity: 0.8;">FUTURE</span>
+
+    <div style="display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1.1rem; color: #e74c3c; letter-spacing: 1px;">🔴 EU_ORBIT</b>
+        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; opacity: 0.8;">FUTURE</span>
     </div>
+
 </div>
 
 </body>
-
-</html>
