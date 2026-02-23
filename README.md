@@ -11,7 +11,7 @@
 
 ### 🛰️[**ARCHIVE LEAKS**](https://cyber-chic.github.io/themoorearchive/logs.html)
 
-`🟢 CT_ORBIT [ACTIVE]` &nbsp; • &nbsp; `🟡 NY_ORBIT [DETECTED]` &nbsp; • &nbsp; `🔴 EU_ORBIT [CLASSIFIED]`
+`🟢 CT_ORBIT [ACTIVE]` &nbsp;<br>   &nbsp;`🟡 NY_ORBIT [DETECTED]` &nbsp;<br> &nbsp; `🔴 EU_ORBIT [CLASSIFIED]`
 
 <br>
 
