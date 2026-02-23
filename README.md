@@ -20,9 +20,9 @@
 <td align="left">
 
 
-| 🛰️ **PRINCIPAL INVESTIGATOR** |
+| 🛰️ **KEY_ID: #TMA-001** |
 | :--- |
-| <center> <img src="https://github.com/Cyber-Chic/themoorearchive/blob/main/img/GITHUB%20PROFILE%20PIC.jpeg?raw=true" width="280"> <br> **ID_SCAN: ANM-001** <br> `IMPACT: REGIONAL` • `STATUS: NOMINAL` </center> |
+| <center> <img src="https://github.com/Cyber-Chic/themoorearchive/raw/main/img/Key%20in%20Case_TMA.jpeg?raw=true" width="280"> <br>**ARCHIVE INFO:** <br> `IMPACT: REGIONAL` • `SIGNAL: NOMINAL🟢` </center> |
 
 </td>
 </tr>
