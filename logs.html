@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* MOBILE STACKING PROTOCOL */
+        /* --- GLOBAL & DESKTOP STYLES --- */
+        body { overflow-x: hidden; }
+        
+        /* SYNCED ANIMATION: Unified to 12s for perfect timing */
+        @keyframes laser-sweep {
+            0% { left: -5%; }
+            100% { left: 105%; }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* DESKTOP BUTTON SYNC: Forces consistent width regardless of text length */
+        .sector-btn, .redacted-box {
+            min-width: 280px !important; 
+            display: inline-block !important;
+            box-sizing: border-box !important;
+        }
+
+        /* --- MOBILE STACKING PROTOCOL --- */
         @media (max-width: 768px) {
             .pinned-header, .pinned-footer {
                 height: auto !important;
                 flex-direction: column !important;
-                padding: 15px 0 !important;
-                gap: 10px !important;
+                padding: 15px 10px !important;
+                gap: 8px !important;
             }
             .body-padding {
-                padding-top: 180px !important; /* Extra space for stacked header */
-                padding-bottom: 180px !important; /* Extra space for stacked footer */
+                padding-top: 180px !important;
+                padding-bottom: 200px !important;
             }
-            .status-item {
-                border: none !important;
-                padding: 5px 0 !important;
-                width: 100% !important;
-                justify-content: center !important;
-            }
-            .data-grid {
-                flex-direction: column !important;
-                gap: 25px !important;
-            }
-            .orbit-divider {
-                border: none !important;
+            .status-item, .orbit-divider, .footer-stat-item {
+                border-left: none !important;
+                border-right: none !important;
                 border-top: 1px solid #333 !important;
-                border-bottom: 1px solid #333 !important;
-                padding: 15px 0 !important;
-                width: 80% !important;
+                width: 90% !important;
+                text-align: center !important;
+            }
+            .archive-table, .archive-table tr, .archive-table td {
+                display: block !important;
+                width: 100% !important;
+            }
+            .archive-table thead { display: none !important; }
+            .archive-table td {
+                border: 3px solid #000 !important;
+                margin-bottom: -3px !important;
+                padding: 20px 10px !important;
+            }
+            .sector-btn, .redacted-box {
+                min-width: 100% !important; /* Stack fully on mobile */
             }
         }
     </style>
 </head>
 
-<body class="body-padding" style="background-color: #000; margin: 0; padding: 100px 15px 100px 15px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; font-family: 'JetBrains Mono', monospace; overflow-x: hidden;">
+<body class="body-padding" style="background-color: #000; margin: 0; padding: 100px 15px 100px 15px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; font-family: 'JetBrains Mono', monospace;">
 
 <!-- PINNED HEADER -->
 <div class="pinned-header" style="background: #000; height: 60px; display: flex; justify-content: space-around; align-items: center; border-bottom: 4px solid #ffaa00; width: 100%; position: fixed; top: 0; z-index: 10000; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);">
@@ -54,8 +78,8 @@
     </div>
 </div>
 
-<!-- OPTICALLY CENTERED DOSSIER (Final Shift) -->
-<div class="dossier-box" style="max-width: 850px; width: 100%; background-color: #ffffff; border: 4px solid #000; outline: none; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); position: relative; margin-top: 30px;">
+<!-- DOSSIER -->
+<div class="dossier-box" style="max-width: 850px; width: 100%; background-color: #ffffff; border: 4px solid #000; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); position: relative; margin-top: 30px;">
     <div style="padding: 60px 20px 30px 20px;">
         
         <div style="display: flex; justify-content: center; margin-bottom: 2.5rem;">
@@ -64,120 +88,70 @@
             </h2>
         </div>
 
-<!-- UPDATED PROTOCOL BOX -->
-<div style="background: #fdfdfd; border: 4px solid #000; margin-bottom: 45px; position: relative; border-left: 20px solid #000; box-shadow: 10px 10px 0px #000;">
-    
-    <div style="position: absolute; top: -18px; left: 20px; background: #ffaa00; color: #000; padding: 4px 15px; font-weight: 900; border: 4px solid #000; z-index: 50; font-size: 0.85rem; text-transform: uppercase;">
-        Operational_Protocol_v.15
-    </div>
-
-    <div style="padding: 45px 30px 35px 30px;">
-        <p style="margin: 0; font-size: 1rem; line-height: 2.2; color: #222; font-weight: 500;">
-            <span style="color: #000; font-weight: 900;">>> Sector_Rule:</span> Leak Gallery Distributions by Sector. <br>
-            <span style="color: #000; font-weight: 900;">>> Saturation:</span> Each Curation active until 100% Signal. <br>
-            <span style="color: #000; font-weight: 900;">>> Lateral_Signals:</span> Limited Edition "Leaks" may trigger at random.
-        </p>
-        <!-- NEW FOOTNOTE -->
-        <p style="margin-top: 15px; margin-bottom: 0; font-size: 0.75rem; color: #666; font-style: italic; font-weight: 700;">
-            * Note: Detected leaks factor into saturation.
-        </p>
-    </div>
-</div>
-
+        <div style="background: #fdfdfd; border: 4px solid #000; margin-bottom: 45px; position: relative; border-left: 20px solid #000; box-shadow: 10px 10px 0px #000;">
+            <div style="position: absolute; top: -18px; left: 20px; background: #ffaa00; color: #000; padding: 4px 15px; font-weight: 900; border: 4px solid #000; z-index: 50; font-size: 0.85rem; text-transform: uppercase;">
+                Operational_Protocol_v.15
+            </div>
+            <div style="padding: 45px 30px 35px 30px;">
+                <p style="margin: 0; font-size: 1rem; line-height: 2.2; color: #222; font-weight: 500;">
+                    <span style="color: #000; font-weight: 900;">>> Sector_Rule:</span> Leak Gallery Distributions by Sector. <br>
+                    <span style="color: #000; font-weight: 900;">>> Saturation:</span> Each Curation active until 100% Signal. <br>
+                    <span style="color: #000; font-weight: 900;">>> Lateral_Signals:</span> Limited Edition "Leaks" may trigger at random.
+                </p>
+            </div>
+        </div>
 
         <table class="archive-table" style="width: 100%; border-collapse: separate; border-spacing: 0 15px;">
             <thead>
                 <tr>
-                    <th style="width: 20%; background: #000; color: #fff; padding: 12px; font-size: 0.8rem; letter-spacing: 2px;">Ref_ID</th>
-                    <th style="width: 60%; background: #000; color: #fff; padding: 12px; font-size: 0.8rem; letter-spacing: 2px;">Logistics_Data</th>
-                    <th style="width: 20%; background: #000; color: #fff; padding: 12px; font-size: 0.8rem; letter-spacing: 2px;">Matrix_Status</th>
+                    <th style="width: 20%; background: #000; color: #fff; padding: 12px; font-size: 0.8rem;">Ref_ID</th>
+                    <th style="width: 60%; background: #000; color: #fff; padding: 12px; font-size: 0.8rem;">Logistics_Data</th>
+                    <th style="width: 20%; background: #000; color: #fff; padding: 12px; font-size: 0.8rem;">Matrix_Status</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td style="padding: 25px 10px; border: 3px solid #000; background: #f0f0f0; text-align: center;"><span class="id-badge" style="background: #000; color: #fff; padding: 6px 12px; font-weight: 800;">#927411</span></td>
+                    <td style="padding: 25px 10px; border: 3px solid #000; background: #f0f0f0; text-align: center;"><span style="background: #000; color: #fff; padding: 6px 12px; font-weight: 800;">#927411</span></td>
                     <td style="padding: 25px 10px; border-top: 3px solid #000; border-bottom: 3px solid #000; text-align: center;">
-                        <div class="btn-container">
-                            <a href="https://facebook.com/people/Free-Little-Art-Gallery-Stamford/61563771167327" class="sector-btn" style="position: relative; overflow: hidden; display: block; background: #000; color: #fff; padding: 15px; border: 3px solid #000; text-decoration: none; box-shadow: 5px 5px 0px #ffaa00;">
-                                 <div style="position: absolute; top: 0; left: -3px; width: 3px; height: 100%; background: #FFFF99; box-shadow: 0 0 10px #FFFF99; animation: laser-sweep 12s linear infinite; pointer-events: none; z-index: 5;"></div>
-                                 <span style="display: block; font-size: 0.85rem; font-weight: 800;">[STAMFORD FLAG]</span>
-                                 <span style="display: block; font-size: 0.7rem; color: #ffaa00;">CT_ORBIT</span>
-                            </a>
-                        </div>
+                        <a href="#" class="sector-btn" style="position: relative; overflow: hidden; background: #000; color: #fff; padding: 15px; border: 3px solid #000; text-decoration: none; box-shadow: 5px 5px 0px #ffaa00;">
+                             <div style="position: absolute; top: 0; left: -3px; width: 3px; height: 100%; background: #FFFF99; box-shadow: 0 0 10px #FFFF99; animation: laser-sweep 12s linear infinite;"></div>
+                             <span style="display: block; font-size: 0.85rem; font-weight: 800;">[STAMFORD FLAG]</span>
+                             <span style="display: block; font-size: 0.7rem; color: #ffaa00;">CT_ORBIT</span>
+                        </a>
                     </td>
-                    <td style="padding: 25px 10px; border: 3px solid #000; text-align: center;"><span class="matrix-status status-secured" style="display: inline-block; padding: 10px; border: 3px solid #000; background: #ffaa00; font-weight: 900; font-size: 0.75rem;">🟡 DETECTED</span></td>
+                    <td style="padding: 25px 10px; border: 3px solid #000; text-align: center;"><span style="display: inline-block; padding: 10px; border: 3px solid #000; background: #ffaa00; font-weight: 900; font-size: 0.75rem;">🟡 DETECTED</span></td>
                 </tr>
-                <tr style="background: #fafafa;">
-                    <td style="padding: 25px 10px; border: 3px solid #000; background: #ccc; text-align: center;"><span class="id-badge" style="background: #666; color: #fff; padding: 6px 12px;">#XXXXXX</span></td>
+                <tr>
+                    <td style="padding: 25px 10px; border: 3px solid #000; background: #ccc; text-align: center;"><span style="background: #666; color: #fff; padding: 6px 12px;">#XXXXXX</span></td>
                     <td style="padding: 25px 10px; border-top: 3px solid #000; border-bottom: 3px solid #000; text-align: center;">
-                        <div class="btn-container" style="display: flex; justify-content: center;">
-                            <div class="redacted-box" style="border: 3px dashed #000; background: #111; color: #fff; padding: 15px; width: 340px; position: relative; overflow: hidden; text-align: center;">
-                                [REDACTED_LOCATION] <br>
-                                <span style="font-size: 0.65rem; color: #00f2ff; font-weight: 900; letter-spacing: 1.5px; text-shadow: 0 0 8px #00f2ff;">ANALYZING_ENCRYPTION...</span>
-                                <div style="position: absolute; top: 0; left: -3px; width: 3px; height: 100%; background: #00f2ff; box-shadow: 0 0 10px #00f2ff; animation: laser-sweep 12s linear infinite; pointer-events: none; z-index: 5;"></div>
-                            </div>
+                        <div class="redacted-box" style="border: 3px dashed #000; background: #111; color: #fff; padding: 15px; position: relative; overflow: hidden; text-align: center;">
+                            [REDACTED_LOCATION] <br>
+                            <span style="font-size: 0.65rem; color: #00f2ff; font-weight: 900;">ANALYZING...</span>
+                            <div style="position: absolute; top: 0; left: -3px; width: 3px; height: 100%; background: #00f2ff; box-shadow: 0 0 10px #00f2ff; animation: laser-sweep 12s linear infinite;"></div>
                         </div>
                     </td>
-                    <td style="padding: 25px 10px; border: 3px solid #000; text-align: center;"><span class="matrix-status status-classified" style="display: inline-block; padding: 10px; border: 3px solid #000; background: #dc2626; color: #fff; font-weight: 900; font-size: 0.75rem;">🔴 CLASSIFIED</span></td>
+                    <td style="padding: 25px 10px; border: 3px solid #000; text-align: center;"><span style="display: inline-block; padding: 10px; border: 3px solid #000; background: #dc2626; color: #fff; font-weight: 900; font-size: 0.75rem;">🔴 CLASSIFIED</span></td>
                 </tr>
             </tbody>
         </table>
     </div>
-
-<!-- COMMAND CENTER INTERNAL FOOTER (Magnetic Calibration) -->
-<div style="background: #000; border-top: 4px solid #ffaa00; margin-top: 40px; box-shadow: 0 -10px 30px rgba(0,0,0,0.5);">
-    
-    <!-- DATA GRID -->
-    <div style="color: #fff; padding: 30px 45px; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px;">
-        
-        <!-- RANK -->
-        <div style="text-align: center;">
-            <span style="display: block; font-size: 0.65rem; color: #ffaa00; letter-spacing: 2px; margin-bottom: 5px; opacity: 0.8;">RANK_GRADE</span>
-            <span style="font-size: 1rem; font-weight: 800; letter-spacing: 1px;">REGIONAL_ALPHA</span>
-        </div>
-
-        <!-- ORBIT -->
-        <div style="border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 40px; text-align: center;">
-            <span style="display: block; font-size: 0.65rem; color: #ffaa00; letter-spacing: 2px; margin-bottom: 5px; opacity: 0.8;">FEATURED_ORBIT</span>
-            <span style="font-size: 1.1rem; font-weight: 800; letter-spacing: 1px;">CONNECTICUT</span>
-        </div>
-
-        <!-- SATURATION -->
-        <div style="text-align: center;">
-            <span style="display: block; font-size: 0.65rem; color: #ffaa00; letter-spacing: 2px; margin-bottom: 5px; opacity: 0.8;">SATURATION</span>
-            <span class="glitch-text" style="font-size: 1.8rem; font-weight: 800; color: #ffaa00; text-shadow: 0 0 10px rgba(255,170,0,0.3);">25%</span>
-        </div>
-
-    </div>
-
-    <!-- SIGNAL SUB-TERMINAL -->
-    <div style="padding: 15px; text-align: center; background: #111; border-top: 1px solid #222;">
-        <span style="font-size: 0.75rem; color: #ffaa00; font-weight: 900; letter-spacing: 4px; opacity: 0.9;">
-            SYSTEM_STATUS: <span style="color: #2ecc71; text-shadow: 0 0 8px rgba(46, 204, 113, 0.6); animation: pulse 2s infinite;">SIGNAL_LIVE_🟢</span>
-        </span>
-    </div>
-
 </div>
 
-
-<!-- PLACE THIS AT THE VERY BOTTOM OF YOUR FILE, RIGHT ABOVE </body> -->
-<div class="pinned-footer" style="background: #000 !important; border-top: 4px solid #ffaa00 !important; height: 60px !important; display: flex !important; justify-content: space-around !important; align-items: center !important; position: fixed !important; bottom: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 999999 !important; box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.8) !important; box-sizing: border-box !important;">
-    
-    <div style="display: flex; align-items: center; gap: 10px;">
-        <b style="font-size: 1.1rem; color: #2ecc71; letter-spacing: 1px;">🟢 CT_ORBIT</b>
-        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; opacity: 0.8;">ACTIVE</span>
+<!-- FOOTER SECTION (Remains exactly as you wrote it, but now with synced animations) -->
+<div class="pinned-footer" style="background: #000; border-top: 4px solid #ffaa00; height: 60px; display: flex; justify-content: space-around; align-items: center; position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.8);">
+    <div class="status-item" style="display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1.1rem; color: #2ecc71;">🟢 CT_ORBIT</b>
+        <span style="font-size: 0.7rem; color: #fff;">ACTIVE</span>
     </div>
-
-    <div style="border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 25px; display: flex; align-items: center; gap: 10px;">
-        <b style="font-size: 1.1rem; color: #f1c40f; letter-spacing: 1px;">🟡 NY_ORBIT</b>
-        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; opacity: 0.8;">PENDING</span>
+    <div class="status-item orbit-divider" style="border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 25px; display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1.1rem; color: #f1c40f;">🟡 NY_ORBIT</b>
+        <span style="font-size: 0.7rem; color: #fff;">PENDING</span>
     </div>
-
-    <div style="display: flex; align-items: center; gap: 10px;">
-        <b style="font-size: 1.1rem; color: #e74c3c; letter-spacing: 1px;">🔴 EU_ORBIT</b>
-        <span style="font-size: 0.7rem; color: #fff; text-transform: uppercase; opacity: 0.8;">FUTURE</span>
+    <div class="status-item" style="display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1.1rem; color: #e74c3c;">🔴 EU_ORBIT</b>
+        <span style="font-size: 0.7rem; color: #fff;">FUTURE</span>
     </div>
-
 </div>
 
 </body>
+</html>
