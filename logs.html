@@ -6,6 +6,7 @@
     <title>THE MOORE ARCHIVE // FIELD LOGS</title>
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     <style>
+        /* --- ALL HORIZONTAL SCAN CODES DELETED --- */
         body {
             background-color: #000000; 
             margin: 0;
@@ -37,27 +38,12 @@
             margin-bottom: 50px;
         }
 
-        .briefing-row {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 45px;
-            padding: 25px 0;
-            background-color: #1a1a1a;
-            border-top: 5px solid #000;
-            border-bottom: 5px solid #000;
-            box-shadow: inset 0 2px 0px 0px #B8860B, inset 0 -2px 0px 0px #B8860B;
-        }
-
-        .legend-item { text-align: center; flex: 1; }
-        .legend-item b { display: block; font-size: 1.1rem; margin-bottom: 6px; letter-spacing: 1px; }
-        .legend-item span { font-size: 0.7rem; color: #B8860B; font-weight: 800; text-transform: uppercase; }
-
         .archive-table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0 15px;
             margin-bottom: 45px;
-            padding: 0 25px; /* Pushes content from edges */
+            padding: 0 25px; 
         }
 
         .archive-table thead th { 
@@ -79,7 +65,6 @@
 
         .id-badge { background: #000; color: #fff; padding: 6px 12px; font-size: 0.9rem; font-weight: 800; }
 
-        /* --- UPDATED: CLOSED RECTANGLE STATUS --- */
         .matrix-status {
             display: inline-block;
             padding: 10px 15px;
@@ -87,7 +72,7 @@
             font-weight: 900;
             border: 3px solid #000;
             text-transform: uppercase;
-            width: 120px; /* Fixed width to keep it centered and solid */
+            width: 120px; 
             box-sizing: border-box;
         }
         .status-secured { background: #ffaa00; color: #000; }
@@ -95,9 +80,8 @@
 
         .btn-container { display: flex; justify-content: center; width: 100%; }
         
-        /* --- FIXED: MULTI-GALLERY BUTTON --- */
         .sector-btn {
-            display: block; /* Ensure it stays as one solid block */
+            display: block; 
             background: #000; color: #fff !important;
             padding: 15px 20px; border: 3px solid #000;
             text-decoration: none !important; text-transform: uppercase;
@@ -106,66 +90,58 @@
             box-sizing: border-box;
             line-height: 1.4;
         }
-        .sector-btn span { display: block; } /* Keep labels stacked correctly */
+        .sector-btn span { display: block; } 
         .sector-btn .top-label { font-size: 0.85rem; font-weight: 800; margin-bottom: 2px; letter-spacing: 1px; }
         .sector-btn .bottom-label { font-size: 0.7rem; color: #ffaa00; font-weight: 400; }
         .sector-btn:hover { background: #ffaa00; color: #000 !important; box-shadow: 6px 6px 0px #000; transform: translateY(-2px); }
-        .sector-btn:hover .bottom-label { color: #000; }
 
-        /* --- BLUE SCANNER BOX --- */
         .redacted-box {
             border: 3px dashed #000; padding: 15px; width: 340px; 
             background: #111; color: #fff; font-size: 0.8rem; font-weight: 900;
             box-sizing: border-box; position: relative; overflow: hidden;
             line-height: 1.6;
         }
-        .redacted-box::after {
-            content: "";
-            position: absolute; top: 0; left: 0; width: 100%; height: 3px;
-            background: #00f2ff; box-shadow: 0 0 15px #00f2ff;
-            animation: blue-scan 2.5s linear infinite;
-        }
-
-        @keyframes blue-scan { 0% { top: -5%; } 100% { top: 105%; } }
-
-        .protocol-tag {
-            position: absolute; top: -18px; left: 30px; 
-            background: #ffaa00; color: #000; 
-            font-size: 0.9rem; padding: 4px 15px; 
-            font-weight: 800; text-transform: uppercase; 
-            border: 3px solid #000; z-index: 10;
-        }
 
         .signal-glow { text-shadow: 0 0 8px currentColor; }
         .glitch-text { animation: glitch-soft 0.6s infinite; color: #ffaa00; }
         
+        @keyframes laser-sweep {
+            0% { left: -5%; opacity: 0; }
+            5% { opacity: 1; }
+            95% { opacity: 1; }
+            100% { left: 105%; opacity: 0; }
+        }
+
         @keyframes glitch-soft { 0%, 100% { transform: translate(0); text-shadow: 1px 1px #ff00ff, -1px -1px #00ffff; } }
         @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
 
-        /* --- MOBILE REFINEMENTS --- */
         @media (max-width: 750px) {
             body { padding-bottom: 180px; }
-            .archive-table, .archive-table thead, .archive-table tbody, .archive-table th, .archive-table td, .archive-table tr { 
-                display: block; width: 100%; box-sizing: border-box;
-            }
-            .archive-table thead { display: none; }
             .archive-table td { border: none !important; padding: 12px 10px !important; }
-            .archive-table tr { 
-                border: 4px solid #000; margin-bottom: 35px; 
-                box-shadow: 8px 8px 0px #ffaa00; padding: 20px 0;
-            }
-            .archive-table td:first-child { background: transparent; border-bottom: 2px solid #eee !important; margin-bottom: 10px; }
-            
+            .archive-table tr { border: 4px solid #000; margin-bottom: 35px; box-shadow: 8px 8px 0px #ffaa00; }
             .sector-btn, .redacted-box { width: 95% !important; max-width: 320px; margin: 0 auto; }
-            .protocol-tag { left: 50%; transform: translateX(-50%); width: 85%; text-align: center; }
-            .footer-strip { flex-direction: column !important; gap: 20px; text-align: center !important; }
-            .footer-strip div { border: none !important; padding: 0 !important; width: 100%; }
         }
     </style>
-</head>
-<body>
+<body style="background-color: #000; margin: 0; padding: 100px 15px 100px 15px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; font-family: 'JetBrains Mono', monospace; overflow-x: hidden;">
 
-<div class="dossier-box">
+<!-- PINNED HEADER (60px) -->
+<div style="background: #000; height: 60px; display: flex; justify-content: space-around; align-items: center; border-bottom: 4px solid #ffaa00; width: 100%; position: fixed; top: 0; z-index: 10000; box-shadow: 0 5px 25px rgba(255, 170, 0, 0.4);">
+    <div style="text-align: center; display: flex; align-items: center; gap: 12px;">
+        <b style="font-size: 1rem; color: #16a34a; letter-spacing: 1px; text-shadow: 0 0 8px #16a34a;">🟢 BROADCAST</b>
+        <span style="font-size: 0.65rem; color: #fff; text-transform: uppercase;">SHIPPED</span>
+    </div>
+    <div style="text-align: center; border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 25px; display: flex; align-items: center; gap: 12px;">
+        <b style="font-size: 1rem; color: #B8860B; letter-spacing: 1px;">🟡 DETECTED</b>
+        <span style="font-size: 0.65rem; color: #fff; text-transform: uppercase;">LEAK</span>
+    </div>
+    <div style="text-align: center; display: flex; align-items: center; gap: 12px;">
+        <b style="font-size: 1rem; color: #dc2626; letter-spacing: 1px;">🔴 CLASSIFIED</b>
+        <span style="font-size: 0.65rem; color: #fff; text-transform: uppercase;">ENCRYPTED</span>
+    </div>
+</div>
+
+<!-- DOSSIER BOX (Optimized Border) -->
+<div class="dossier-box" style="max-width: 850px; width: 100%; background-color: #ffffff; border: 4px solid #000; outline: 10px solid #000; box-shadow: 0 0 40px rgba(212, 175, 55, 0.4); position: relative; margin-top: 20px;">
     <div style="padding: 60px 20px 30px 20px;">
         
         <div style="display: flex; justify-content: center; margin-bottom: 2.5rem;">
@@ -174,88 +150,97 @@
             </h2>
         </div>
 
-        <div class="briefing-row">
-            <div class="legend-item"><b class="signal-glow" style="color: #16a34a;">🟢 BROADCAST</b><span>ART DISPATCHED</span></div>
-            <div class="legend-item" style="border-left: 1px solid #333; border-right: 1px solid #333;"><b class="signal-glow" style="color: #B8860B;">🟡 SECURED</b><span>GALLERY CONFIRMED</span></div>
-            <div class="legend-item"><b class="signal-glow" style="color: #dc2626;">🔴 CLASSIFIED</b><span>LOCATION HIDDEN</span></div>
+        <!-- PROTOCOL BOX -->
+        <div style="background: #fdfdfd; border: 4px solid #000; margin-bottom: 45px; position: relative; border-left: 20px solid #000; box-shadow: 10px 10px 0px #000;">
+            <div style="position: absolute; top: -18px; left: 20px; background: #ffaa00; color: #000; padding: 4px 15px; font-weight: 900; border: 4px solid #000; z-index: 50; font-size: 0.85rem; text-transform: uppercase;">
+                Operational_Protocol_v.15
+            </div>
+            <div style="padding: 45px 30px 35px 30px;">
+                <p style="margin: 0; font-size: 1rem; line-height: 2.2; color: #222; font-weight: 500;">
+                    <span style="color: #000; font-weight: 900;">>> Sector_Rule:</span> Leak Gallery Distributions by Sector. <br>
+                    <span style="color: #000; font-weight: 900;">>> Calibration:</span> Each Curation active until 100% Saturation. <br>
+                    <span style="color: #000; font-weight: 900;">>> Signal_Note:</span> Detected leaks factor into calibration. <br>
+                    <span style="color: #000; font-weight: 900;">>> Lateral_Signals:</span> Limited Edition "Leaks" may trigger at random.
+                </p>
+            </div>
         </div>
 
-        <div style="background: #fdfdfd; border: 4px solid #000; padding: 40px 30px; margin-bottom: 45px; position: relative; border-left: 20px solid #000;">
-            <div class="protocol-tag">Operational_Protocol_v.15</div>
-            <p style="margin: 0; font-size: 1rem; line-height: 2.2; color: #222; font-weight: 500;">
-                <span style="color: #000; font-weight: 900;">>> Sector_Rule:</span> Annual Multi-Gallery Distributions (CT_2026). <br>
-                <span style="color: #000; font-weight: 900;">>> Calibration:</span> Curations active until 100% Saturation. <br>
-                <span style="color: #000; font-weight: 900;">>> Lateral_Signals:</span> Limited Edition "Leaks" may trigger at random.
-            </p>
-        </div>
-
-        <table class="archive-table">
+        <table class="archive-table" style="width: 100%; border-collapse: separate; border-spacing: 0 15px;">
             <thead>
                 <tr>
-                    <th style="width: 20%;">Ref_ID</th>
-                    <th style="width: 60%;">Logistics_Data</th>
-                    <th style="width: 20%;">Matrix_Status</th>
+                    <th style="width: 20%; background: #000; color: #fff; padding: 12px; font-size: 0.8rem; letter-spacing: 2px;">Ref_ID</th>
+                    <th style="width: 60%; background: #000; color: #fff; padding: 12px; font-size: 0.8rem; letter-spacing: 2px;">Logistics_Data</th>
+                    <th style="width: 20%; background: #000; color: #fff; padding: 12px; font-size: 0.8rem; letter-spacing: 2px;">Matrix_Status</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- ROW 1 -->
                 <tr>
-                    <td><span class="id-badge">#927411</span></td>
-                    <td>
+                    <td style="padding: 25px 10px; border: 3px solid #000; background: #f0f0f0; text-align: center;"><span class="id-badge" style="background: #000; color: #fff; padding: 6px 12px; font-weight: 800;">#927411</span></td>
+                    <td style="padding: 25px 10px; border-top: 3px solid #000; border-bottom: 3px solid #000; text-align: center;">
                         <div class="btn-container">
-                            <a href="https://www.facebook.com/people/Free-Little-Art-Gallery-Stamford/61563771167327/" class="sector-btn">
-                                <span class="top-label">MULTI-GALLERY_DISTRIBUTION</span>
-                                <span class="bottom-label">[STAMFORD FLAG] | CT_2026</span>
+                            <a href="https://facebook.com/people/Free-Little-Art-Gallery-Stamford/61563771167327" class="sector-btn" style="position: relative; overflow: hidden; display: block; background: #000; color: #fff; padding: 15px; border: 3px solid #000; text-decoration: none; box-shadow: 5px 5px 0px #ffaa00;">
+                                 <div style="position: absolute; top: 0; left: -3px; width: 3px; height: 100%; background: #FFFF99; box-shadow: 0 0 10px #FFFF99; animation: laser-sweep 12s linear infinite; pointer-events: none; z-index: 5;"></div>
+                                 <span style="display: block; font-size: 0.85rem; font-weight: 800;">[STAMFORD FLAG]</span>
+                                 <span style="display: block; font-size: 0.7rem; color: #ffaa00;">CT_ORBIT</span>
                             </a>
                         </div>
                     </td>
-                    <td><span class="matrix-status status-secured">🟡 SECURED</span></td>
+                    <td style="padding: 25px 10px; border: 3px solid #000; text-align: center;"><span class="matrix-status status-secured" style="display: inline-block; padding: 10px; border: 3px solid #000; background: #ffaa00; font-weight: 900; font-size: 0.75rem;">🟡 DETECTED</span></td>
                 </tr>
-                <!-- ROW 2 -->
                 <tr style="background: #fafafa;">
-                    <td><span class="id-badge" style="background: #666;">#XXXXXX</span></td>
-                    <td>
-                        <div class="btn-container">
-                            <div class="redacted-box">
+                    <td style="padding: 25px 10px; border: 3px solid #000; background: #ccc; text-align: center;"><span class="id-badge" style="background: #666; color: #fff; padding: 6px 12px;">#XXXXXX</span></td>
+                    <td style="padding: 25px 10px; border-top: 3px solid #000; border-bottom: 3px solid #000; text-align: center;">
+                        <div class="btn-container" style="display: flex; justify-content: center;">
+                            <div class="redacted-box" style="border: 3px dashed #000; background: #111; color: #fff; padding: 15px; width: 340px; position: relative; overflow: hidden; text-align: center;">
                                 [REDACTED_LOCATION] <br>
-                                <span style="font-size: 0.6rem; color: #00f2ff; font-weight: 900; letter-spacing: 1px;">ANALYZING_ENCRYPTION...</span>
+                                <span style="font-size: 0.65rem; color: #00f2ff; font-weight: 900; letter-spacing: 1.5px; text-shadow: 0 0 8px #00f2ff;">ANALYZING_ENCRYPTION...</span>
+                                <div style="position: absolute; top: 0; left: -3px; width: 3px; height: 100%; background: #00f2ff; box-shadow: 0 0 10px #00f2ff; animation: laser-sweep 12s linear infinite; pointer-events: none; z-index: 5;"></div>
                             </div>
                         </div>
                     </td>
-                    <td><span class="matrix-status status-classified">🔴 CLASSIFIED</span></td>
+                    <td style="padding: 25px 10px; border: 3px solid #000; text-align: center;"><span class="matrix-status status-classified" style="display: inline-block; padding: 10px; border: 3px solid #000; background: #dc2626; color: #fff; font-weight: 900; font-size: 0.75rem;">🔴 CLASSIFIED</span></td>
                 </tr>
             </tbody>
         </table>
-
-        <div style="text-align: center; margin-bottom: 15px; padding: 0 20px;">
-            <p style="font-size: 0.85rem; color: #000; font-weight: 900; letter-spacing: 1px; border-top: 2px solid #eee; padding-top: 20px; text-transform: uppercase;">
-                "Dispatch records are permanent. Possession unverified until Ping."
-            </p>
-        </div>
     </div>
 
-    <div class="footer-strip" style="background: #000; color: #fff; padding: 25px 40px; border-top: 6px solid #ffaa00; display: flex; justify-content: space-between; align-items: center;">
-        <div>
-            <span style="display: block; font-size: 0.65rem; color: #ffaa00; letter-spacing: 2px; margin-bottom: 4px;">RANK_GRADE</span>
-            <span style="font-size: 1rem; font-weight: 800;">REGIONAL_ALPHA</span>
+    <!-- COMMAND CENTER INTERNAL FOOTER -->
+    <div style="background: #000; border-top: 6px solid #ffaa00;">
+        <div style="color: #fff; padding: 25px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div>
+                <span style="display: block; font-size: 0.65rem; color: #ffaa00; letter-spacing: 2px;">RANK_GRADE</span>
+                <span style="font-size: 0.9rem; font-weight: 800;">REGIONAL_ALPHA</span>
+            </div>
+            <div style="border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 40px; text-align: center;">
+                <span style="display: block; font-size: 0.65rem; color: #ffaa00; letter-spacing: 2px;">FEATURED_ORBIT</span>
+                <span style="font-size: 1rem; font-weight: 800;">CONNECTICUT</span>
+            </div>
+            <div style="text-align: right;">
+                <span style="display: block; font-size: 0.65rem; color: #ffaa00; letter-spacing: 2px;">SATURATION</span>
+                <span class="glitch-text" style="font-size: 1.4rem; font-weight: 800; color: #ffaa00;">25%</span>
+            </div>
         </div>
-        <div style="border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 40px;">
-            <span style="display: block; font-size: 0.65rem; color: #ffaa00; letter-spacing: 2px; margin-bottom: 4px;">FEATURED_SECTOR</span>
-            <span style="font-size: 1.1rem; font-weight: 800;">CONNECTICUT</span>
-        </div>
-        <div>
-            <span style="display: block; font-size: 0.65rem; color: #ffaa00; letter-spacing: 2px; margin-bottom: 4px;">CALIBRATION</span>
-            <span class="glitch-text" style="font-size: 1.8rem; line-height: 1; font-weight: 800;">25%</span>
+        <div style="padding: 10px; text-align: center; background: #111; border-top: 1px solid #333;">
+            <span style="font-size: 0.7rem; color: #ffaa00; font-weight: 900; letter-spacing: 3px;">SYSTEM_STATUS: <span style="color: #16a34a;">SIGNAL_LIVE_🟢</span></span>
         </div>
     </div>
 </div>
 
-<div class="status-tag">
-    SYSTEM_STATUS: <span class="signal-glow" style="animation: pulse 2s infinite; color: #16a34a;">SIGNAL_LIVE_🟢</span>
+<!-- PINNED FOOTER (60px) -->
+<div class="status-tag" style="background: #000; border-top: 4px solid #ffaa00; height: 60px; display: flex; justify-content: space-around; align-items: center; position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; box-shadow: 0 -5px 25px rgba(255, 170, 0, 0.4);">
+    <div style="text-align: center; display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1rem; color: #16a34a; letter-spacing: 1px;">🟢 CT_ORBIT</b>
+        <span style="font-size: 0.65rem; color: #fff; text-transform: uppercase;">ACTIVE</span>
+    </div>
+    <div style="text-align: center; border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 20px; display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1rem; color: #B8860B; letter-spacing: 1px;">🟡 NY_ORBIT</b>
+        <span style="font-size: 0.65rem; color: #fff; text-transform: uppercase;">PENDING</span>
+    </div>
+    <div style="text-align: center; display: flex; align-items: center; gap: 10px;">
+        <b style="font-size: 1rem; color: #dc2626; letter-spacing: 1px;">🔴 EU_ORBIT</b>
+        <span style="font-size: 0.65rem; color: #fff; text-transform: uppercase;">FUTURE</span>
+    </div>
 </div>
 
 </body>
 </html>
-
-
-
