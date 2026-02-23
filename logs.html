@@ -24,57 +24,58 @@ body {
     font-family: 'JetBrains Mono', monospace !important;
 }
 
-/* --- MOBILE STACKING PROTOCOL --- */
+/* --- MOBILE REPAIR PROTOCOL (TOUCHES ZERO DESKTOP SETTINGS) --- */
 @media (max-width: 768px) {
-    /* 1. Fix Header/Footer */
+    /* 1. Stack the pinned sections so they don't overlap or bulge */
     .pinned-header, .pinned-footer {
         height: auto !important;
         flex-direction: column !important;
-        padding: 15px 10px !important;
-    }
-    
-    /* 2. Center the Dossier Box */
-    .dossier-box {
-        width: 95% !important;
-        margin: 180px auto 20px auto !important; /* Added more top margin for stacked header */
+        padding: 15px 0 !important;
+        gap: 10px !important;
+        justify-content: center !important;
     }
 
-    /* 3. Clarify Rows */
-    .archive-table, .archive-table tbody, .archive-table tr {
-        display: block !important;
-        width: 100% !important;
-    }
-    .archive-table thead { display: none !important; }
-    
-    .archive-table tr {
-        margin-bottom: 40px !important; 
-        border: 2px solid #000;
-        background: #fff;
-    }
-    
-    .archive-table td {
-        display: block !important;
-        width: 100% !important;
-        border: none !important;
-        padding: 15px !important;
-        text-align: center !important;
+    /* 2. Prevent the Dossier from being wider than the phone screen */
+    .dossier-box {
+        width: 95% !important;
+        margin-top: 180px !important; /* Space for stacked header */
         box-sizing: border-box !important;
     }
 
-    /* 4. FIX: Ensure BOTH Redacted AND Sector Buttons don't bulge */
-    .redacted-box, .sector-btn {
+    /* 3. Turn the Table into Vertical Cards so buttons don't push off-screen */
+    .archive-table, .archive-table tbody, .archive-table tr, .archive-table td {
+        display: block !important;
         width: 100% !important;
-        min-width: 0 !important; /* This stops the bulge */
+        box-sizing: border-box !important;
+    }
+    .archive-table thead { display: none !important; } /* Hide labels that bulge */
+    
+    .archive-table tr {
+        margin-bottom: 40px !important; /* Gap so you know which ID is which */
+        border: 2px solid #000;
+    }
+    
+    .archive-table td {
+        border: none !important;
+        padding: 20px 10px !important;
+        text-align: center !important;
+    }
+
+    /* 4. Force Buttons & Redacted Boxes to stay within the phone edges */
+    .sector-btn, .redacted-box {
+        width: 100% !important;
         max-width: 100% !important;
+        min-width: 0 !important; /* This kills the bulge */
         margin: 0 auto !important;
         box-sizing: border-box !important;
     }
     
-    /* Center the button container on mobile */
-    .btn-container {
-        display: flex !important;
-        justify-content: center !important;
-        width: 100% !important;
+    /* 5. Center the status dividers in the header/footer */
+    .status-item.orbit-divider {
+        border-left: none !important;
+        border-right: none !important;
+        border-top: 1px solid #333 !important;
+        width: 80% !important;
     }
 }
     </style>
