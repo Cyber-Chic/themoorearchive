@@ -28,67 +28,95 @@ body {
 body { overflow-x: hidden; display: flex; flex-direction: column; align-items: center; }
 @keyframes laser-sweep { 0% { left: -5%; } 100% { left: 105%; } }
 
-/* --- MOBILE BUTTON REPAIR ONLY --- */
-@media screen and (max-width: 768px) {
-    
-    /* 1. Transform Table into vertical cards */
+/* --- MOBILE DOOSIER REVISION (MOBILE ONLY) --- */
+@media (max-width: 768px) {
+    /* 1. Header/Footer: Dot on Left + Stacked Labels */
+    .pinned-header, .pinned-footer {
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        height: 75px !important;
+        padding-left: 0 !important;
+    }
+    .status-item, .pinned-footer > div {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important; 
+        gap: 2px !important;
+    }
+    .status-item b, .pinned-footer b {
+        font-size: 0.8rem !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    .status-item span, .pinned-footer span {
+        display: block !important;
+        font-size: 0.55rem !important;
+        color: #888 !important;
+        padding-left: 18px !important; 
+    }
+
+    /* 2. Table & Button "Card" Setup */
     .archive-table, .archive-table tbody, .archive-table tr { display: block !important; width: 100% !important; }
     .archive-table thead, .archive-table td:first-child, .archive-table td:last-child { display: none !important; }
-    .archive-table td { display: block !important; padding: 40px 10px !important; }
+    .archive-table td { display: block !important; padding: 40px 15px !important; }
 
-    /* 2. THE BUTTON CARD: Forces centering and black background */
+    /* 3. CENTERED BLACK BUTTONS + ENCAPSULATED CORNERS */
     .sector-btn, .redacted-box {
         width: 100% !important;
         max-width: 300px !important;
         height: 100px !important;
         background: #000 !important;
         color: #fff !important;
-        border: 3px solid #fff !important; /* White border for the card */
+        border: 3px solid #fff !important;
         margin: 0 auto !important;
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
         position: relative !important;
-        overflow: hidden !important; /* Clips the badges flush to the border */
+        overflow: hidden !important; 
+        
         font-family: 'JetBrains Mono', monospace !important;
         font-size: 0.85rem !important;
         font-weight: 800 !important;
         text-transform: uppercase !important;
     }
 
-    /* Remove extra redacted text */
     .redacted-box span, .redacted-box br { display: none !important; }
 
-    /* 3. ID CORNER: Pinned flush to top-left with black enclosure */
+    /* 4. Position ID INSIDE Top-Left Corner with BLACK BORDER */
     .sector-btn::before, .redacted-box::before {
         position: absolute;
-        top: -1px; left: -1px; /* Slight overlap to ensure NO GAP */
-        background: #fff; color: #000;
+        top: 0; 
+        left: 0; 
+        background: #fff;
+        color: #000;
         padding: 4px 10px;
         font-size: 0.6rem;
         font-weight: 900;
-        border-right: 3px solid #000 !important; 
-        border-bottom: 3px solid #000 !important; 
+        /* Enclosing the badge with black lines */
+        border-right: 2px solid #000;
+        border-bottom: 2px solid #000;
         z-index: 10;
     }
     .sector-btn::before { content: "#927411"; }
     .redacted-box::before { content: "#XXXXXX"; }
 
-    /* 4. STATUS CORNER: Pinned flush to bottom-right with black enclosure */
+    /* 5. Position Status INSIDE Bottom-Right Corner with BLACK BORDER */
     .sector-btn::after, .redacted-box::after {
         position: absolute;
-        bottom: -1px; right: -1px; /* Slight overlap to ensure NO GAP */
+        bottom: 0; 
+        right: 0; 
         padding: 5px 12px;
         font-size: 0.6rem;
         font-weight: 900;
-        border-left: 3px solid #000 !important; 
-        border-top: 3px solid #000 !important; 
+        /* Enclosing the badge with black lines */
+        border-left: 2px solid #000;
+        border-top: 2px solid #000;
         z-index: 10;
     }
     .sector-btn::after { content: "🟡 DETECTED"; background: #ffaa00; color: #000; }
     .redacted-box::after { content: "🔴 CLASSIFIED"; background: #dc2626; color: #fff; }
 }
-
     </style>
 </head>
 
@@ -187,4 +215,5 @@ body { overflow-x: hidden; display: flex; flex-direction: column; align-items: c
 
 </body>
 </html>
+
 
