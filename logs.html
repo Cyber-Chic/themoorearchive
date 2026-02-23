@@ -24,72 +24,79 @@ body {
     font-family: 'JetBrains Mono', monospace !important;
 }
 
-/* --- FINAL MOBILE DOOSIER PROTOCOL --- */
+/* --- GLOBAL & DESKTOP STYLES (NO CHANGES) --- */
+body { overflow-x: hidden; display: flex; flex-direction: column; align-items: center; }
+@keyframes laser-sweep { 0% { left: -5%; } 100% { left: 105%; } }
+
+/* --- MOBILE DOOSIER REVISION (MOBILE ONLY) --- */
 @media (max-width: 768px) {
-    /* 1. Header/Footer: Labels under each word */
+    /* 1. Header/Footer: Dot on Left + Stacked Labels */
     .pinned-header, .pinned-footer {
         flex-direction: row !important;
         justify-content: space-around !important;
         height: 75px !important;
+        padding-left: 0 !important;
     }
     .status-item, .pinned-footer > div {
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important;
+        align-items: flex-start !important; /* Align everything left for the dot look */
         gap: 2px !important;
     }
+    .status-item b, .pinned-footer b {
+        font-size: 0.8rem !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    /* Grey label remains under word */
     .status-item span, .pinned-footer span {
         display: block !important;
         font-size: 0.55rem !important;
         color: #888 !important;
+        padding-left: 18px !important; /* Aligns under the word, past the dot */
     }
 
-    /* 2. Table to Card Conversion */
+    /* 2. Table & Button "Card" Setup */
     .archive-table, .archive-table tbody, .archive-table tr { display: block !important; width: 100% !important; }
     .archive-table thead, .archive-table td:first-child, .archive-table td:last-child { display: none !important; }
-    .archive-table td { display: block !important; padding: 40px 10px !important; }
+    .archive-table td { display: block !important; padding: 40px 15px !important; }
 
-    /* 3. SYNCED BLACK BUTTONS (Identical Twins) */
+    /* 3. CENTERED BLACK BUTTONS + VISIBLE CORNERS */
     .sector-btn, .redacted-box {
         width: 100% !important;
         max-width: 300px !important;
-        height: 100px !important; /* Fixed height for both */
-        background: #000 !important; /* Back to Black */
-        color: #fff !important; /* White Text */
-        border: 3px solid #fff !important; /* White Border for contrast on black body */
-        margin: 0 auto !important;
+        height: 100px !important;
+        background: #000 !important;
+        color: #fff !important;
+        border: 3px solid #fff !important;
+        margin: 0 auto !important; /* Centers the button */
         display: flex !important;
-        flex-direction: column !important;
         justify-content: center !important;
         align-items: center !important;
-        text-align: center !important;
         position: relative !important;
+        overflow: visible !important; /* FIX: Makes corner info visible again */
         
-        /* Font Matching */
         font-family: 'JetBrains Mono', monospace !important;
         font-size: 0.85rem !important;
         font-weight: 800 !important;
-        letter-spacing: 1px !important;
         text-transform: uppercase !important;
     }
 
-    /* Hide the 'Analyzing' and other sub-text inside Redacted */
-    .redacted-box span, .redacted-box br {
-        display: none !important;
-    }
+    /* Remove extra text from Redacted button */
+    .redacted-box span, .redacted-box br { display: none !important; }
 
     /* 4. Position ID in Top-Left Corner */
     .sector-btn::before, .redacted-box::before {
         position: absolute;
-        top: -12px;
-        left: -8px;
-        background: #fff; /* High contrast on black button */
+        top: -15px;
+        left: -10px;
+        background: #fff;
         color: #000;
-        padding: 2px 8px;
+        padding: 3px 8px;
         font-size: 0.65rem;
         font-weight: 900;
         border: 2px solid #000;
-        z-index: 100;
+        z-index: 999;
     }
     .sector-btn::before { content: "#927411"; }
     .redacted-box::before { content: "#XXXXXX"; }
@@ -97,13 +104,13 @@ body {
     /* 5. Position Status in Bottom-Right Corner */
     .sector-btn::after, .redacted-box::after {
         position: absolute;
-        bottom: -12px;
-        right: -8px;
+        bottom: -15px;
+        right: -10px;
         padding: 4px 10px;
         font-size: 0.65rem;
         font-weight: 900;
         border: 2px solid #000;
-        z-index: 100;
+        z-index: 999;
     }
     .sector-btn::after { content: "🟡 DETECTED"; background: #ffaa00; color: #000; }
     .redacted-box::after { content: "🔴 CLASSIFIED"; background: #dc2626; color: #fff; }
