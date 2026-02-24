@@ -144,6 +144,83 @@ body { overflow-x: hidden; display: flex; flex-direction: column; align-items: c
     }
 }
 
+/* --- THE FINAL STABILIZER: RESTORING HIGH-TECH --- */
+
+/* 1. RESTORE THE BUTTON IMPACT (Desktop & Mobile) */
+.sector-btn, .redacted-box {
+    min-width: 280px !important;
+    display: inline-block !important;
+    background: #000 !important;
+    color: #fff !important;
+    padding: 15px !important;
+    border: 3px solid #000 !important;
+    box-shadow: 5px 5px 0px #ffaa00 !important; /* The signature shadow */
+    font-family: 'JetBrains Mono', monospace !important;
+    font-weight: 800 !important;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none !important;
+}
+
+/* 2. FIX THE DESKTOP GAP (HUD STRIP) */
+.hud-strip {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 20px !important; /* Restores the horizontal spacing */
+    margin-bottom: 30px !important;
+}
+
+/* 3. MOBILE SAFETY (Stacking without breaking) */
+@media (max-width: 768px) {
+    .hud-strip {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+    .hud-pipe { display: none !important; } /* Hides pipes on mobile only */
+    
+    .sector-btn, .redacted-box {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 320px !important;
+    }
+}
+
+/* --- FINAL ALIGNMENT: THE GAP & THE FONT --- */
+
+/* 1. RESTORE GAP BETWEEN PROTOCOL BOX & TABLE */
+.protocol-box, [style*="margin-bottom: 45px"] {
+    margin-bottom: 80px !important; /* Forces the gap back between box and Ref_ID */
+}
+
+/* 2. FIX REDACTED FONT SIZE (Shrink from bulky to high-tech) */
+.redacted-box {
+    font-size: 0.8rem !important; /* Smaller, sharper look */
+    line-height: 1.4 !important;
+}
+
+.redacted-box span {
+    font-size: 0.65rem !important; /* The 'ANALYZING' sub-text */
+    letter-spacing: 1px;
+}
+
+/* 3. ENSURE TABLE HEADERS DON'T BULGE */
+.archive-table th {
+    padding: 15px 10px !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- MOBILE SPECIFIC GAP --- */
+@media screen and (max-width: 768px) {
+    .protocol-box, [style*="margin-bottom: 45px"] {
+        margin-bottom: 50px !important; /* Slightly smaller gap for phones */
+    }
+}
+
+
+
     </style>
 </head>
 
@@ -179,15 +256,26 @@ body { overflow-x: hidden; display: flex; flex-direction: column; align-items: c
             <div style="position: absolute; top: -18px; left: 20px; background: #ffaa00; color: #000; padding: 4px 15px; font-weight: 900; border: 4px solid #000; z-index: 50; font-size: 0.85rem; text-transform: uppercase;">
                 Operational_Protocol_v.15
             </div>
-            <div style="padding: 45px 30px 35px 30px;">
-                <p style="margin: 0; font-size: 1rem; line-height: 2.2; color: #222; font-weight: 500;">
-                    <bold>IMPACT: REGIONAL | SECTOR CONNECTICUT | SATURATION 25% |</bold> <br><br>
-                    <span style="color: #000; font-weight: 900;">>> Sector_Rule:</span> Leak Gallery Distributions by Sector. <br>
-                    <span style="color: #000; font-weight: 900;">>> Saturation:</span> Each Curation active until 100% saturation <br>
-                    <span style="color: #000; font-weight: 900;">>> Lateral_Signals:</span> Limited Edition "Leaks" may trigger at random.
-                    <br><br><i>*Detected leaks factor into saturation.</i>
-            </div>
-        </div>
+<div style="padding: 45px 30px 35px 30px;">
+    <!-- THE HUD STRIP (Desktop: Row | Mobile: Stacked List) -->
+    <div class="hud-strip" style="background: #fafafa; border: 1px dashed #ccc; padding: 12px; margin-bottom: 30px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 1px;">
+        <span style="white-space: nowrap;"><b>IMPACT:</b> REGIONAL</span>
+        <span class="hud-pipe" style="color:#ccc; padding: 0 5px;">|</span> 
+        <span style="white-space: nowrap;"><b>SECTOR:</b> CONNECTICUT</span>
+        <span class="hud-pipe" style="color:#ccc; padding: 0 5px;">|</span> 
+        <span style="white-space: nowrap;"><b>SATURATION:</b> <span style="color: #ffaa00;">25%</span></span>
+    </div>
+
+    <!-- THE RULES SECTION -->
+    <div style="font-size: 1rem; line-height: 2.2; color: #222; font-weight: 500;">
+        <span style="color: #000; font-weight: 900;">>> Sector_Rule:</span> Leak Gallery Distributions by Sector. <br>
+        <span style="color: #000; font-weight: 900;">>> Saturation:</span> Each Curation active until 100% saturation. <br>
+        <span style="color: #000; font-weight: 900;">>> Lateral_Signals:</span> Limited Edition "Leaks" may trigger at random.
+        <br><br>
+        <i style="font-size: 0.85rem; color: #666; font-weight: 700;">*Detected leaks factor into saturation.</i>
+    </div>
+</div>
+<br>
 
         <table class="archive-table" style="width: 100%; border-collapse: separate; border-spacing: 0 15px;">
             <thead>
@@ -260,3 +348,4 @@ body { overflow-x: hidden; display: flex; flex-direction: column; align-items: c
      - Change CSS to background: #2ecc71;
   ===========================================================
 -->
+
