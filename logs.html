@@ -36,10 +36,6 @@ body { overflow-x: hidden; display: flex; flex-direction: column; align-items: c
         justify-content: space-around !important;
         height: 75px !important;
         padding-left: 0 !important;
-            /* Hide the pipes on mobile so stats can stack vertically */
-    .hud-pipe { display: none !important; }
-    .hud-strip { flex-direction: column !important; align-items: center !important; gap: 5px !important; }
-
     }
     .status-item, .pinned-footer > div {
         display: flex !important;
@@ -184,26 +180,14 @@ body { overflow-x: hidden; display: flex; flex-direction: column; align-items: c
                 Operational_Protocol_v.15
             </div>
             <div style="padding: 45px 30px 35px 30px;">
-                
-    <!-- THE HUD STRIP (Desktop: Row | Mobile: Stacked List) -->
-    <div class="hud-strip" style="background: #fafafa; border: 1px dashed #ccc; padding: 12px; margin-bottom: 30px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 1px;">
-        <span style="white-space: nowrap;"><b>IMPACT:</b> REGIONAL</span>
-        <span class="hud-pipe" style="color:#ccc; padding: 0 5px;">|</span> 
-        <span style="white-space: nowrap;"><b>SECTOR:</b> CONNECTICUT</span>
-        <span class="hud-pipe" style="color:#ccc; padding: 0 5px;">|</span> 
-        <span style="white-space: nowrap;"><b>SATURATION:</b> <span style="color: #ffaa00;">25%</span></span>
-    </div>
-
-    <!-- THE RULES SECTION -->
-    <div style="font-size: 1rem; line-height: 2.2; color: #222; font-weight: 500;">
-        <span style="color: #000; font-weight: 900;">>> Sector_Rule:</span> Leak Gallery Distributions by Sector. <br>
-        <span style="color: #000; font-weight: 900;">>> Saturation:</span> Each Curation active until 100% saturation. <br>
-        <span style="color: #000; font-weight: 900;">>> Lateral_Signals:</span> Limited Edition "Leaks" may trigger at random.
-        <br><br>
-        <i style="font-size: 0.85rem; color: #666; font-weight: 700;">*Detected leaks factor into saturation.</i>
-    </div>
-</div>
-
+                <p style="margin: 0; font-size: 1rem; line-height: 2.2; color: #222; font-weight: 500;">
+                    <bold>IMPACT: REGIONAL | SECTOR CONNECTICUT | SATURATION 25% |</bold> <br><br>
+                    <span style="color: #000; font-weight: 900;">>> Sector_Rule:</span> Leak Gallery Distributions by Sector. <br>
+                    <span style="color: #000; font-weight: 900;">>> Saturation:</span> Each Curation active until 100% saturation <br>
+                    <span style="color: #000; font-weight: 900;">>> Lateral_Signals:</span> Limited Edition "Leaks" may trigger at random.
+                    <br><br><i>*Detected leaks factor into saturation.</i>
+            </div>
+        </div>
 
         <table class="archive-table" style="width: 100%; border-collapse: separate; border-spacing: 0 15px;">
             <thead>
@@ -276,9 +260,3 @@ body { overflow-x: hidden; display: flex; flex-direction: column; align-items: c
      - Change CSS to background: #2ecc71;
   ===========================================================
 -->
-
-
-
-
-
-
