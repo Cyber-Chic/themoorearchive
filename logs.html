@@ -142,33 +142,8 @@ body { overflow-x: hidden; display: flex; flex-direction: column; align-items: c
         overflow: hidden !important;
         position: relative !important;
     }
-
-    /* --- CALIBRATION PULSE & MOBILE FIX --- */
-@keyframes glitch-pulse {
-    0%, 100% { opacity: 1; text-shadow: 0 0 10px #ffaa00; }
-    50% { opacity: 0.7; text-shadow: 0 0 20px #ffaa00; }
 }
 
-.glitch-text {
-    animation: glitch-pulse 2s infinite ease-in-out;
-}
-
-@media (max-width: 768px) {
-    /* Stack the items on mobile */
-    [style*="justify-content: space-around"] {
-        flex-direction: column !important;
-        gap: 20px !important;
-    }
-    /* Fix the middle sector lines on mobile */
-    [style*="border-left: 1px solid #333"] {
-        border-left: none !important;
-        border-right: none !important;
-        border-top: 1px solid #333 !important;
-        border-bottom: 1px solid #333 !important;
-        padding: 15px 0 !important;
-        width: 80% !important;
-    }
-}
     </style>
 </head>
 
@@ -205,7 +180,7 @@ body { overflow-x: hidden; display: flex; flex-direction: column; align-items: c
     
     <div>
         <span style="display: block; font-size: 0.6rem; color: #ffaa00; letter-spacing: 2px;">IMPACT</span>
-        <b style="font-size: 0.9rem; text-transform: uppercase;">REGIONAL</b>
+        <b style="font-size: 0.9rem; text-transform: uppercase;">REGIONAL_ALPHA</b>
     </div>
 
     <div style="border-left: 1px solid #333; border-right: 1px solid #333; padding: 0 20px;">
@@ -226,10 +201,10 @@ body { overflow-x: hidden; display: flex; flex-direction: column; align-items: c
             </div>
             <div style="padding: 45px 30px 35px 30px;">
                 <p style="margin: 0; font-size: 1rem; line-height: 2.2; color: #222; font-weight: 500;">
+                    | <bold>IMPACT: REGIONAL | SECTOR CONNECTICUT | SATURATION 25% |</bold> <br>
                     <span style="color: #000; font-weight: 900;">>> Sector_Rule:</span> Leak Gallery Distributions by Sector. <br>
                     <span style="color: #000; font-weight: 900;">>> Saturation:</span> Each Curation active until 100% Signal. <br>
-                    <span style="color: #000; font-weight: 900;">>> Lateral_Signals:</span> Limited Edition "Leaks" may trigger at random.
-                </p>
+                    <span style="color: #000; font-weight: 900;">>> Lateral_Signals:</span> Limited Edition "Leaks" may trigger at random
             </div>
         </div>
 
@@ -287,8 +262,3 @@ body { overflow-x: hidden; display: flex; flex-direction: column; align-items: c
 
 </body>
 </html>
-
-
-
-
-
