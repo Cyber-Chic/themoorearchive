@@ -8,7 +8,7 @@
 ---
 
 
-### 🛰️ SYSTEM STATUS: KEY IN TRANSIT!
+### 🛰️ SYSTEM STATUS: KEY IN TRANSIT
 > **ARTIFACT:** #TMA-001 (The Moore Key)  
 > **ORIGIN:** Connecticut, USA 📍  
 > **DESTINATION:** Signal Origin (Seattle, WA) 🏁  
