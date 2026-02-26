@@ -7,9 +7,21 @@
 
 ---
 
+
+### 🛰️ SYSTEM STATUS: KEY IN TRANSIT
+> **ARTIFACT:** #TMA-001 (The Moore Key)  
+> **ORIGIN:** Connecticut, USA 📍  
+> **DESTINATION:** Signal Origin (Seattle, WA) 🏁  
+> **ESTIMATED ARRIVAL:** Next Week (Pending Regional Snow Delays ❄️)  
+> **CURRENT PHASE:** [ ▓▓▓▓░░░░░░ ] DEPLOYING...
+
+
+
+---
+
 <br>
 
-### 🛰️[**ARCHIVE LEAKS**](https://cyber-chic.github.io/themoorearchive/logs.html)
+### 🛰️[**THE ARCHIVES PHYSICAL ART LEAKS**](https://cyber-chic.github.io/themoorearchive/logs.html)
 
 `🟢 CT_ORBIT [ACTIVE]` &nbsp;<br>   &nbsp;`🟡 NY_ORBIT [DETECTED]` &nbsp;<br> &nbsp; `🔴 EU_ORBIT [CLASSIFIED]`
 
@@ -22,7 +34,7 @@
 
 | 🛰️ **KEY_ID: #TMA-001** |
 | :--- |
-| <center> <img src="https://github.com/Cyber-Chic/themoorearchive/raw/main/img/Key%20in%20Case_TMA.jpeg?raw=true" width="280"> <br>**ARCHIVE INFO:** <br> `IMPACT: REGIONAL` • `SIGNAL: NOMINAL🟢` </center> |
+| <center> <img src="https://github.com/Cyber-Chic/themoorearchive/raw/main/img/Key%20in%20Case_TMA.jpeg?raw=true" width="280"> <br>**ARCHIVE INFO:** <br> `IMPACT: NATIONAL` • `SIGNAL: NOMINAL🟢` </center> |
 
 </td>
 </tr>
@@ -75,18 +87,6 @@ The Archive is a **decoupled subsystem** designed to bridge physical artifacts w
 | :---: | :---: | :---: |
 | <img src="https://github.com/Cyber-Chic/themoorearchive/blob/main/img/Key%20Front_TMA.jpeg?raw=true" width="320" style="image-rendering: smooth; display: block; border: 1px solid #eee;"> | <img src="https://github.com/Cyber-Chic/themoorearchive/raw/main/img/Key%20Back_TMA.jpeg?raw=true" width="320" style="display: block; border: 1px solid #eee;"> | <img src="https://github.com/Cyber-Chic/themoorearchive/raw/main/img/Key%20in%20Case_TMA.jpeg?raw=true" width="320" style="display: block; border: 1px solid #eee;"> |
 | **[SIGNAL_FACE]** | **[ENCRYPTION_KEY]** | **[STABILIZATION_CASE]** |
-
----
-
-### 🛰️ SYSTEM STATUS: IN TRANSIT
-> **ARTIFACT:** #TMA-001 (The Moore Key)  
-> **ORIGIN:** Connecticut, USA 📍  
-> **DESTINATION:** Signal Origin (Seattle, WA) 🏁  
-> **ESTIMATED ARRIVAL:** Next Week (Pending Regional Snow Delays ❄️)  
-> **CURRENT PHASE:** [ ▓▓▓▓░░░░░░ ] DEPLOYING...
-
-***
-
 
 ---
 
