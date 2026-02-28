@@ -13,7 +13,7 @@
 > **ORIGIN:** Connecticut, USA 📍  
 > **DESTINATION:** Signal Origin (Seattle, WA) 🏁  
 > **ESTIMATED ARRIVAL:** Next Week (Pending Regional Snow Delays ❄️)  
-> **CURRENT PHASE:** [ ▓▓▓▓░░░░░░ ] DEPLOYING...
+> **CURRENT PHASE:** [ ▓▓▓▓░░░░░░ ] [**Orbiting Into Geocaching Network**](https://www.geocaching.com/track/details.aspx?tracker=TBB8P4T)
 
 
 
