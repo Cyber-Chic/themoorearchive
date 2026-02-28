@@ -83,23 +83,21 @@ body { overflow-x: hidden; display: flex; flex-direction: column; align-items: c
 
     .redacted-box span, .redacted-box br { display: none !important; }
 
-    /* 4. Position ID INSIDE Top-Left Corner with BLACK BORDER */
-    .sector-btn::before, .redacted-box::before {
-        position: absolute;
-        top: 0; 
-        left: 0; 
-        background: #fff;
-        color: #000;
-        padding: 4px 10px;
-        font-size: 0.6rem;
-        font-weight: 900;
-        /* Enclosing the badge with black lines */
-        border-right: 2px solid #000;
-        border-bottom: 2px solid #000;
-        z-index: 10;
-    }
-    .sector-btn::before { content: "#927411"; }
-    .redacted-box::before { content: "#XXXXXX"; }
+    /* 4. This tells the phone: 'Look at the HTML for the ID number' */
+.sector-btn::before, .redacted-box::before {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    background: #fff;
+    color: #000;
+    padding: 4px 10px;
+    font-size: 0.6rem;
+    font-weight: 900;
+    border-right: 3px solid #000 !important;
+    border-bottom: 3px solid #000 !important;
+    z-index: 10;
+    content: attr(data-id) !important; /* <--- CHANGE THIS LINE */
+}
 
     /* 5. Position Status INSIDE Bottom-Right Corner with BLACK BORDER */
     .sector-btn::after, .redacted-box::after {
@@ -388,6 +386,7 @@ body { overflow-x: hidden; display: flex; flex-direction: column; align-items: c
   5. - Write new button id im text. After that: update button data id example: data-id="#927411
   ===========================================================
 -->
+
 
 
 
