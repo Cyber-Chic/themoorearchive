@@ -23,7 +23,7 @@
 
 ### 🛰️[**THE ARCHIVES PHYSICAL ART LEAKS**](https://cyber-chic.github.io/themoorearchive/logs.html)
 
-`🟢 CT_ORBIT [ACTIVE]` &nbsp;<br>   &nbsp;`🟡 NY_ORBIT [DETECTED]` &nbsp;<br> &nbsp; `🔴 EU_ORBIT [CLASSIFIED]`
+`🟢 NY_ORBIT [ACTIVE]` &nbsp;<br>   &nbsp;`🟡 US_ORBITS [LOCATING...]` &nbsp;<br> &nbsp; `🔴 EU_ORBITS [CLASSIFIED]`
 
 <br>
 
