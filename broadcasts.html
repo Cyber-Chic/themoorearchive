@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archive Protocol | Status</title>
     <style>
-        /* Black Page Background */
         body {
             background-color: #000000;
             color: #000000;
@@ -18,15 +17,14 @@
             padding: 20px;
         }
 
-        /* White Box with Black Border */
         .card {
             background: #ffffff;
             max-width: 420px;
             padding: 40px;
-            border: 4px solid #000000; /* Bold Black Border */
-            border-radius: 0; /* Sharp corners for a more formal look */
+            border: 5px solid #000000; 
+            border-radius: 0; 
             text-align: center;
-            box-shadow: 10px 10px 0px rgba(255,255,255,0.1); /* Subtle depth */
+            box-shadow: 15px 15px 0px rgba(255,255,255,0.1); 
         }
 
         .status-badge {
@@ -52,12 +50,11 @@
         p {
             font-size: 1rem;
             line-height: 1.6;
-            color: #222222; /* Darker, readable text */
+            color: #1a1a1a; 
             margin-bottom: 30px;
             text-align: left;
         }
 
-        /* Bold Black Button */
         .btn {
             display: block;
             background: #000000;
@@ -68,11 +65,14 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.2s ease;
+            border: 2px solid #000;
         }
 
         .btn:hover {
-            background: #333333;
-            transform: translateY(-2px);
+            background: #fff;
+            color: #000;
+            transform: translate(4px, -4px);
+            box-shadow: -6px 6px 0px #000;
         }
 
         .footer {
@@ -80,7 +80,7 @@
             font-size: 0.75rem;
             color: #666666;
             line-height: 1.4;
-            border-top: 1px solid #eeeeee;
+            border-top: 2px solid #000;
             padding-top: 20px;
         }
     </style>
@@ -88,32 +88,30 @@
 <body>
 
 <div class="card">
-    <div class="status-badge">📡 Project Status: Silent</div>
+    <div class="status-badge">📡 Terminal Mode: Outgoing Only</div>
     <h1>The Moore Archive</h1>
     
     <p>
-        <strong>@themoorearchive</strong> is the archive's private IG account and broadcast hub. The bio hosts updates regarding the location of archival artifacts.
+        <strong>@themoorearchive</strong> acts as a ghost frequency—a private broadcast hub for the Archive's movements. 
         <br><br>
-        If you found a physical "leak" or the <strong>#TMA-001 Key</strong>, please tag the account in your post—this serves as my notification that it's been found.
+        If you have recovered an artifact, you are invited to <strong>tag the account</strong> in your field report. This allows your find to resonate within the wider geocaching network, signaling to other seekers that the hunt remains active.
     </p>
 
-    <a href="https://www.instagram.com/TheMooreArchive" class="btn">View Brodcast Hub</a>
+    <a href="https://www.instagram.com/TheMooreArchive" class="btn" target="_blank">View Broadcast Hub</a>
 
     <div class="footer">
         <div style="color: #000; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">
             🤍 The Kindness Protocol
         </div>
-        <div style="font-style: italic; margin-bottom: 20px; color: #444;">
-            Finding a "leak" or the <strong>#TMA-001 Key</strong> is an invitation to complete the cycle. If you find something, we ask that you perform one <strong>anonymous act of kindness</strong>. 
+        <div style="font-style: italic; margin-bottom: 20px; color: #1a1a1a;">
+            The Archive survives on honor. Finding the <strong>#TMA-001 Key</strong> is an invitation to perform one <strong>anonymous act of kindness</strong> to keep the signal pure. 
         </div>
 
-        <hr style="border: 0; border-top: 1px solid DARKGRAY; margin-bottom: 15px;">
-        
-        <div style="font-size: 0.8rem; color: #666;">
-            <strong>*NOTE:</strong> This account is a <strong>silent terminal.</strong> It remains private, <strong>does not accept follow requests,</strong> and is not monitored for social interaction.
+        <div style="font-size: 0.8rem; color: #444; background: #f0f0f0; padding: 15px; border: 1px dashed #000;">
+            <strong>*TERMINAL NOTE:</strong> This is a <strong>silent receiver.</strong> The account is private, does not monitor DMs, and <strong>does not accept follow requests.</strong> It exists only to be tagged, not to be followed.
         </div>
     </div>
+</div>
 
 </body>
-</html>
 </html>
