@@ -7,7 +7,7 @@
     <style>
         body {
             background-color: #000000;
-            color: #000000;
+            color: #f2f2f2;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             display: flex;
             justify-content: center;
@@ -15,100 +15,134 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px;
+            -webkit-font-smoothing: antialiased;
         }
 
         .card {
-            background: #ffffff;
-            max-width: 420px;
-            padding: 40px;
-            border: 5px solid #000000; 
-            border-radius: 0; 
+            background: #000000;
+            width: 100%;
+            max-width: 360px; 
+            padding: 55px 35px;
             text-align: center;
-            box-shadow: 15px 15px 0px rgba(255,255,255,0.1); 
+            border: 5px solid #f2f2f2;
+            outline: 1px solid #000000;
+            outline-offset: -3px;
+            box-sizing: border-box;
         }
 
-        .status-badge {
-            background: #000000;
-            color: #ffffff;
-            padding: 6px 14px;
-            font-size: 0.7rem;
-            font-weight: bold;
+        .protocol-badge {
+            background: #f2f2f2;
+            color: #000000;
+            padding: 4px 10px;
+            font-size: 0.6rem;
+            font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
             display: inline-block;
             margin-bottom: 25px;
         }
 
         h1 {
-            font-size: 1.4rem;
-            margin: 0 0 20px 0;
+            font-size: 1.3rem;
+            margin: 0 0 25px 0;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 3px;
             font-weight: 900;
+            display: block;
         }
 
-        p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #1a1a1a; 
+        .system-bar {
+            background: #f2f2f2;
+            color: #000000;
+            font-size: 0.7rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: 10px;
             margin-bottom: 30px;
-            text-align: left;
+            display: block;
+        }
+
+        /* UPDATED FOR NEW WORDING */
+        .body-text {
+            font-size: 0.88rem; 
+            line-height: 1.85; /* Slightly increased for the new longer sentence */
+            color: #d1d1d1; 
+            font-weight: 500;
+            letter-spacing: 0.015em; /* Added a tiny bit of air for readability */
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .body-text strong {
+            color: #f2f2f2;
+            font-weight: 800;
         }
 
         .btn {
             display: block;
             background: #000000;
-            color: #ffffff;
+            color: #f2f2f2;
             text-decoration: none;
-            padding: 18px;
+            padding: 15px;
+            font-size: 0.75rem;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.2s ease;
-            border: 2px solid #000;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            border: 2px solid #f2f2f2;
+            transition: 0.15s;
         }
 
         .btn:hover {
-            background: #fff;
-            color: #000;
-            transform: translate(4px, -4px);
-            box-shadow: -6px 6px 0px #000;
+            background: #f2f2f2;
+            color: #000000;
         }
 
         .footer {
-            margin-top: 30px;
+            margin-top: 45px;
+            padding-top: 30px;
+            border-top: 2px solid #f2f2f2;
+        }
+
+        .kindness-title {
+            font-size: 0.65rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .kindness-text {
             font-size: 0.75rem;
-            color: #666666;
-            line-height: 1.4;
-            border-top: 2px solid #000;
-            padding-top: 20px;
+            font-style: italic;
+            color: #999999;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <div class="status-badge">📡 Terminal Mode: Outgoing Only</div>
+    <div class="protocol-badge">📡 Dual-Protocol Initialized</div>
+    
     <h1>The Moore Archive</h1>
     
-    <p>
-        <strong>@themoorearchive</strong> acts as a ghost frequency—a private broadcast hub for the Archive's movements. 
-        <br><br>
-        If you have recovered an artifact, you are invited to <strong>tag the account</strong> in your field report. This allows your find to resonate within the wider geocaching network, signaling to other seekers that the hunt remains active.
-    </p>
+    <span class="system-bar">Archive Retrieval Instructions</span>
 
-    <a href="https://www.instagram.com/TheMooreArchive" class="btn" target="_blank">View Broadcast Hub</a>
+    <div class="body-text">
+        The Archive operates across two hubs. <strong>@themoorearchive</strong> on Instagram acts as a silent receiver. This is a <strong>private account</strong>—it does not accept followers or monitor DMs. It exists only to <strong>share bio updates</strong> & to be <strong>tagged in field reports</strong> to signal the hunt is active.
+        <br><br>
+        All official artifact IDs, haikus, and permanent field logs are recorded in the <strong>Master Registry</strong> on Artgram.
+    </div>
+
+    <a href="https://www.instagram.com/TheMooreArchive" class="btn" target="_blank">Tag the Signal (Instagram)</a>
+    <a href="https://www.artgram.co/angiealamoore" class="btn" target="_blank">View Field Logs (Artgram)</a>
 
     <div class="footer">
-        <div style="color: #000; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">
-            🤍 The Kindness Protocol
-        </div>
-        <div style="font-style: italic; margin-bottom: 20px; color: #1a1a1a;">
-            The Archive survives on honor. Finding the <strong>#TMA-001 Key</strong> is an invitation to perform one <strong>anonymous act of kindness</strong> to keep the signal pure. 
-        </div>
-
-        <div style="font-size: 0.8rem; color: #444; background: #f0f0f0; padding: 15px; border: 1px dashed #000;">
-            <strong>*TERMINAL NOTE:</strong> This is a <strong>silent receiver.</strong> The account is private, does not monitor DMs, and <strong>does not accept follow requests.</strong> It exists only to be tagged, not to be followed.
+        <div class="kindness-title">🤍 The Kindness Protocol</div>
+        <div class="kindness-text">
+            Interacting with the signal is an invitation to perform one <strong>anonymous act of kindness</strong> to keep the frequency pure. 
         </div>
     </div>
 </div>
