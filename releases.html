@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Moore Archive | Official Book Release</title>
+    <style>
+        :root {
+            --gold: #c5a059; /* Prestigious Muted Gold */
+            --ink: #0a0a0a;
+            --paper: #fcfcfc;
+            --gray: #888;
+        }
+
+        body {
+            background-color: var(--ink);
+            color: var(--paper);
+            font-family: 'Times New Roman', serif; /* Classic, prestigious feel */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* THE GALLERY HEADER */
+        header {
+            width: 100%;
+            padding: 8vh 0;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .prestige-badge {
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 5px 15px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            font-weight: 400;
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* THE BOOK SPOTLIGHT */
+        .book-spotlight {
+            max-width: 900px;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .book-image-frame {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 40px;
+            border: 10px solid #1a1a1a;
+            padding: 20px;
+            background: #000;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+        }
+
+        .book-image-frame img {
+            width: 100%;
+            display: block;
+            filter: grayscale(20%);
+        }
+
+        .description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ccc;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            font-style: italic;
+        }
+
+        /* THE VENUE GRID */
+        .venue-section {
+            width: 100%;
+            background: var(--paper);
+            color: var(--ink);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .venue-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 50px;
+            border-bottom: 2px solid var(--ink);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .venue-row {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+            font-family: 'Helvetica', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .state { font-weight: 900; color: var(--gold); }
+        .location { font-weight: 400; color: var(--ink); }
+
+        /* THE LINKS TERMINAL */
+        .links-terminal {
+            width: 100%;
+            padding: 100px 0;
+            background: #050505;
+            text-align: center;
+        }
+
+        .link-box {
+            display: inline-block;
+            text-align: left;
+            border-left: 1px solid var(--gold);
+            padding-left: 30px;
+            margin: 20px;
+        }
+
+        .link-title {
+            color: var(--gold);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .link-url a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .link-url a:hover {
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+
+        footer {
+            padding: 40px;
+            font-size: 0.7rem;
+            color: #444;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="prestige-badge">Limited Master Edition</div>
+    <h1>The Moore Archive: Literary Dispatches</h1>
+</header>
+
+<section class="book-spotlight">
+    <div class="book-image-frame">
+        <!-- REPLACE WITH YOUR ACTUAL IMAGE URL -->
+        <img src="https://via.placeholder.com" alt="Official Signed Book">
+    </div>
+    <div class="description">
+        "I’m focused on building a global readership, starting with curated releases in Micro-Libraries and independent Galleries across the nation. Each artifact is hand-signed and integrated into the living signal."
+    </div>
+</section>
+
+<section class="venue-section">
+    <div class="venue-container">
+        <h2>Official Placement Logs</h2>
+        
+        <div class="venue-row">
+            <span class="state">WASHINGTON</span>
+            <span class="location">Geocaching HQ // GCK25B (Pending)</span>
+        </div>
+
+        <div class="venue-row">
+            <span class="state">CONNECTICUT</span>
+            <span class="location">Danbury Free Art Gallery (Confirmed)</span>
+        </div>
+
+        <div class="venue-row">
+            <span class="state">NEW YORK</span>
+            <span class="location">Location Pending</span>
+        </div>
+
+        <div class="venue-row">
+            <span class="state">TEXAS</span>
+            <span class="location">Location Pending</span>
+        </div>
+    </div>
+</section>
+
+<section class="links-terminal">
+    <div class="link-box">
+        <div class="link-title">Literary Portfolio</div>
+        <div class="link-url"><a href="https://poetry.blog" target="_blank">poetry.blog</a></div>
+    </div>
+
+    <div class="link-box">
+        <div class="link-title">Literary Research</div>
+        <div class="link-url"><a href="https://github.com" target="_blank">poetry-through-play // GitHub</a></div>
+    </div>
+
+    <div class="link-box">
+        <div class="link-title">The Master Registry</div>
+        <div class="link-url"><a href="https://artgram.co" target="_blank">artgram.co/themoorearchive</a></div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 The Moore Archive // The signal survives on honor.
+</footer>
+
+</body>
+</html>
