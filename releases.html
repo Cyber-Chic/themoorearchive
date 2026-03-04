@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Moore Archive | Master Registry 2026</title>
 <style>
+    /* GLOBAL FIX: Prevents layout breaking */
+    * { box-sizing: border-box; }
+
     :root {
         --gold: #c5a059;       
         --light-gold: #f3e5ab; 
@@ -77,21 +80,14 @@
         .venue-container { transform: translateX(0); padding: 0 15px; }
         .venue-row { flex-direction: column; align-items: center; text-align: center; padding: 25px 0; }
         .state { width: 100%; text-align: center; margin-bottom: 5px; }
-        
         .location { width: 100%; justify-content: center; text-align: center; font-size: 0.95rem; display: block; }
-        
-        /* FIXES THE ID + BRACKET SPLIT */
         .id-wrapper { display: inline-block; white-space: nowrap; margin-left: 5px; }
-
-        /* FIXES TERMINAL BUTTON DISTORTION */
-        .terminal-gateway { padding: 40px 20px; box-sizing: border-box; }
-        .terminal-button { width: 90%; max-width: 300px; padding: 15px 0; font-size: 0.75rem; display: inline-block; box-sizing: border-box; }
-        
+        .terminal-gateway { padding: 40px 20px; }
+        .terminal-button { width: 90%; max-width: 300px; padding: 15px 0; font-size: 0.75rem; display: inline-block; }
         .links-terminal { flex-direction: column; align-items: center; gap: 15px; }
-        .badge-content { width: 280px; box-sizing: border-box; }
+        .badge-content { width: 280px; }
     }
 </style>
-
 </head>
 <body>
 
@@ -102,7 +98,7 @@
 
 <section class="book-spotlight">
     <div class="book-image-frame">
-        <img src="https://github.com/Cyber-Chic/themoorearchive/blob/main/img/Book_Cover.jpeg?raw=true" alt="Official Signed Book">
+        <img src="https://github.com" alt="Master Edition Registry Exhibit 001 - Hand-Signed Cover Art">
     </div>
     <div class="description">
         "The archive is fostering a global readership, starting with curated releases in Micro-Libraries and independent Galleries across the nation. Each artifact is hand-signed and integrated into the living signal."
@@ -110,11 +106,9 @@
 </section>
 
 <section class="venue-section">
-    <!-- TITLE IS OUTSIDE THE NUDGED CONTAINER -->
     <h2>The National Gallery Registry</h2> 
 
     <div class="venue-container">
-        <!-- THE LIST IS INSIDE AND WILL BE NUDGED -->
         <div class="venue-row">
             <span class="state">CONNECTICUT</span>
             <span class="location">
@@ -123,29 +117,30 @@
             </span>
         </div>
 
-<div class="venue-row">
-    <span class="state">WASHINGTON</span>
-    <span class="location">
-        <span class="beacon"></span> 
-        Curation in Progress
-    </span>
-</div>
+        <div class="venue-row">
+            <span class="state">WASHINGTON</span>
+            <span class="location">
+                <span class="beacon"></span> 
+                Curation in Progress
+            </span>
+        </div>
 
-<div class="venue-row">
-    <span class="state">NEW YORK</span>
-    <span class="location">
-        <span class="beacon"></span> 
-        Curation in Progress
-    </span>
-</div>
+        <div class="venue-row">
+            <span class="state">NEW YORK</span>
+            <span class="location">
+                <span class="beacon"></span> 
+                Curation in Progress
+            </span>
+        </div>
 
-<div class="venue-row">
-    <span class="state">CALIFORNIA</span>
-    <span class="location">
-        <span class="beacon"></span> 
-        Curation in Progress
-    </span>
-</div>
+        <div class="venue-row">
+            <span class="state">CALIFORNIA</span>
+            <span class="location">
+                <span class="beacon"></span> 
+                Curation in Progress
+            </span>
+        </div>
+    </div> <!-- FIXED: Added missing closing div for venue-container -->
 </section>
 
 <section class="links-terminal">
