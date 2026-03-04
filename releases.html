@@ -156,13 +156,56 @@
 
         footer { width: 100%; padding: 60px 0; font-size: 0.75rem; color: #888; letter-spacing: 2px; text-transform: uppercase; text-align: center; }
 
-        @media screen and (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            .venue-row { flex-direction: column; align-items: center; text-align: center; }
-            .state, .location { text-align: center; margin: 5px 0; }
-            .links-terminal { flex-direction: column; align-items: center; }
-            .badge-content { width: 280px; box-sizing: border-box; }
-        }
+/* MOBILE-SAFE RESPONSIVE REGISTRY */
+@media screen and (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+
+    /* Title Fix: Allows the long title to shrink to fit the screen width */
+    .venue-section h2 { 
+        font-size: 1.4rem; 
+        white-space: normal; 
+        letter-spacing: 4px;
+        padding: 0 10px 10px 10px;
+    }
+
+    /* List Fix: Removes the "Nudge" and the fixed widths */
+    .venue-container { 
+        transform: translateX(0); 
+        padding: 0 20px;
+    }
+
+    .venue-row { 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        padding: 25px 0;
+    }
+
+    .state { 
+        width: 100%; 
+        text-align: center; 
+        margin-bottom: 8px; 
+        font-size: 1.1rem;
+    }
+
+    /* Location Fix: Removes the 450px wall so it fits the phone */
+    .location { 
+        width: 100%; 
+        justify-content: center; 
+        text-align: center; 
+        padding-left: 0;
+        font-size: 0.95rem;
+    }
+
+    /* Center the Beacon and ID on mobile */
+    .beacon { margin-right: 8px; }
+    .location a { margin-left: 5px; font-size: 0.6rem; }
+
+    /* Link Badges: Stacked and Full-Width */
+    .links-terminal { flex-direction: column; align-items: center; }
+    .badge-content { width: 280px; box-sizing: border-box; padding: 12px 0; }
+}
+
 
 /* THE SIGNAL ANIMATION - RESTORED */
 @keyframes gold-glow { 
