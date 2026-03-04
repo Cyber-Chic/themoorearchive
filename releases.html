@@ -207,18 +207,36 @@
 }
 
     /* ==========================================
-       2. MOBILE-ONLY OVERRIDES (Only for small screens)
+       2. MOBILE-ONLY OVERRIDES
        ========================================== */
     @media screen and (max-width: 600px) {
         h1 { font-size: 1.8rem; letter-spacing: 1px; }
         .book-image-frame { max-width: 300px; padding: 10px; border: 5px solid #1a1a1a; }
         .description { font-size: 1rem; line-height: 1.6; }
+        
+        /* VENUE LOGS MOBILE */
         .venue-row { flex-direction: column; align-items: flex-start; text-align: left; }
         .location { margin-top: 5px; font-size: 0.75rem; }
-        .link-box { display: block; width: fit-content; margin: 20px auto; padding-left: 20px; }
-        .terminal-button { padding: 12px 25px; font-size: 0.7rem; letter-spacing: 2px; }
-    }
         
+        /* THE ALIGNMENT FIX */
+        .links-terminal { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; /* Centers the whole group */
+            padding: 60px 0;
+        }
+
+        .link-box { 
+            display: block; 
+            width: 250px; /* Forces all gold bars to the same starting line */
+            margin: 15px 0; 
+            padding-left: 20px; 
+            text-align: left; /* Keeps text aligned against the bar */
+        }
+
+        .terminal-button { padding: 12px 25px; font-size: 0.7rem; letter-spacing: 2px; width: 80%; box-sizing: border-box; }
+    }
+
     </style>
 </head>
 <body>
