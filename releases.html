@@ -4,223 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Moore Archive | Master Registry 2026</title>
-    <style>
-        :root {
-            --gold: #c5a059;       /* Muted Bronze */
-            --light-gold: #f3e5ab; /* Champagne Pop */
-            --ink: #0a0a0a;
-            --paper: #fcfcfc;
-        }
+   <style>
+    :root {
+        --gold: #c5a059;       
+        --light-gold: #f3e5ab; 
+        --ink: #0a0a0a;
+        --paper: #fcfcfc;
+    }
 
-        body {
-            background-color: var(--ink);
-            color: var(--paper);
-            font-family: 'Times New Roman', serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            -webkit-font-smoothing: antialiased;
-        }
+    body {
+        background-color: var(--ink);
+        color: var(--paper);
+        font-family: 'Times New Roman', serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        -webkit-font-smoothing: antialiased;
+    }
 
-        /* HEADER */
-        header { width: 100%; padding: 8vh 0; text-align: center; border-bottom: 1px solid #333; }
-        .prestige-badge { border: 1px solid var(--gold); color: var(--light-gold); padding: 12px 30px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 4px; display: inline-block; font-weight: 700; margin-bottom: 20px; }
-        h1 { font-size: clamp(2rem, 8vw, 3.5rem); font-weight: 400; margin: 0; letter-spacing: 2px; text-transform: uppercase; }
+    /* HEADER & BOOK */
+    header { width: 100%; padding: 8vh 0; text-align: center; border-bottom: 1px solid #333; }
+    .prestige-badge { border: 1px solid var(--gold); color: var(--light-gold); padding: 12px 30px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 4px; display: inline-block; font-weight: 700; margin-bottom: 20px; }
+    h1 { font-size: clamp(2rem, 8vw, 3.5rem); font-weight: 400; margin: 0; letter-spacing: 2px; text-transform: uppercase; }
+    .book-spotlight { width: 100%; max-width: 900px; padding: 80px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .book-image-frame { width: 100%; max-width: 500px; margin-bottom: 50px; border: 10px solid #1a1a1a; padding: 20px; background: #000; box-shadow: 0 30px 60px rgba(0,0,0,0.8); }
+    .book-image-frame img { width: 100%; display: block; filter: grayscale(10%); }
+    .description { font-size: 1.25rem; line-height: 2; color: #d1d1d1; max-width: 650px; margin: 0 auto; font-style: italic; }
 
-        /* BOOK SPOTLIGHT */
-        .book-spotlight { width: 100%; max-width: 900px; padding: 80px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; }
-        .book-image-frame { width: 100%; max-width: 500px; margin-bottom: 50px; border: 10px solid #1a1a1a; padding: 20px; background: #000; box-shadow: 0 30px 60px rgba(0,0,0,0.8); }
-        .book-image-frame img { width: 100%; display: block; filter: grayscale(10%); }
-        .description { font-size: 1.25rem; line-height: 2; color: #d1d1d1; max-width: 650px; margin: 0 auto; font-style: italic; }
+    /* MASTER REGISTRY SECTION */
+    .venue-section { width: 100%; background: var(--paper); color: var(--ink); padding: 120px 0; text-align: center; overflow-x: hidden; }
+    .venue-section h2 { font-size: clamp(1.8rem, 5vw, 2.6rem); text-transform: uppercase; letter-spacing: 7px; margin-bottom: 60px; color: var(--gold); border-bottom: 3px solid var(--gold); padding-bottom: 15px; display: inline-block; white-space: nowrap; }
+    
+    /* THE DESKTOP NUDGE */
+    .venue-container { max-width: 950px; margin: 0 auto; padding: 0 40px; transform: translateX(8%); }
+    .venue-row { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #ddd; padding: 35px 0; }
+    .state { font-weight: 900; color: var(--gold); text-align: left; letter-spacing: 3px; font-family: 'Helvetica', sans-serif; font-size: 1.2rem; flex-shrink: 0; width: 180px; }
+    
+    /* THE DESKTOP LOCATION WALL */
+    .location { font-weight: 400; color: #444; width: 480px; display: flex; align-items: center; justify-content: flex-start; font-size: 1.1rem; letter-spacing: 1px; text-align: left; font-family: 'Helvetica', sans-serif; text-transform: uppercase; }
+    .location a { color: var(--gold); text-decoration: none; font-family: 'Courier New', monospace; font-size: 0.65rem; margin-left: 10px; border-bottom: 1px solid rgba(197, 160, 89, 0.2); white-space: nowrap; }
 
-        /* 1. THE SECTION (Handles the White Background) */
-        .venue-section { 
-            width: 100%; 
-            background: var(--paper); 
-            color: var(--ink); 
-            padding: 120px 0; 
-            text-align: center; /* THIS FORCES THE TITLE TO STAY CENTERED */
-            overflow-x: hidden; 
-        }
-        
-        /* 2. THE TITLE (Locked to Center) */
-        .venue-section h2 { 
-            font-size: clamp(1.8rem, 5vw, 2.6rem); 
-            text-transform: uppercase; 
-            letter-spacing: 7px; 
-            margin-bottom: 60px; 
-            color: var(--gold); 
-            border-bottom: 3px solid var(--gold);
-            padding-bottom: 15px;
-            display: inline-block;
-            white-space: nowrap;
-        }
+    /* BEACON */
+    .beacon { display: inline-block; width: 8px; height: 8px; background-color: #f3e5ab; border-radius: 50%; margin-right: 18px; box-shadow: 0 0 10px #c5a059; animation: gold-glow 2.5s ease-in-out infinite; flex-shrink: 0; }
+    @keyframes gold-glow { 0% { opacity: 0.3; transform: scale(0.9); } 50% { opacity: 1; transform: scale(1.1); box-shadow: 0 0 15px #f3e5ab; } 100% { opacity: 0.3; transform: scale(0.9); } }
 
-        /* 3. THE LIST CONTAINER (This is the ONLY part that nudges) */
-        .venue-container { 
-            max-width: 950px; 
-            margin: 0 auto; 
-            padding: 0 40px; 
-            transform: translateX(8%); /* ONLY THE LIST SHIFTS RIGHT */
-        }
+    /* BADGES & HUB */
+    .links-terminal { width: 100%; padding: 100px 20px; background: #050505; text-align: center; display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; }
+    .link-badge { text-decoration: none; }
+    .badge-content { border: 1px solid var(--gold); color: var(--light-gold); padding: 15px 40px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 5px; font-weight: 700; transition: all 0.4s ease; }
+    .link-badge:hover .badge-content { background: var(--gold); color: var(--ink); box-shadow: 0 0 25px rgba(197, 160, 89, 0.4); }
 
-        .venue-row { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: flex-start; 
-            border-bottom: 1px solid #ddd; 
-            padding: 35px 0; 
-        }
+    /* MANIFESTO & TERMINAL */
+    .manifesto-vault { width: 100%; padding: 80px 0; background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); display: flex; justify-content: center; align-items: center; }
+    .manifesto-card { max-width: 580px; padding: 50px 40px; background: #0d0d0d; border: 1px solid rgba(255,255,255,0.1); text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
+    .protocol-title { font-family: 'Courier New', monospace; color: var(--light-gold); font-size: 0.65rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 25px; display: block; opacity: 0.8; }
+    .manifesto-text { font-family: 'Times New Roman', serif; font-size: 1.05rem; line-height: 1.8; color: #efefef; font-style: italic; }
+    .manifesto-text span { display: block; margin-bottom: 20px; }
+    .terminal-gateway { padding: 100px 0; text-align: center; background: #050505; width: 100%; }
+    .terminal-button { text-decoration: none; border: 1px solid var(--gold); color: var(--light-gold); padding: 18px 50px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 5px; font-weight: 700; font-family: 'Courier New', monospace; transition: 0.4s; }
+    .terminal-button:hover { background: var(--light-gold); color: var(--ink); }
+    footer { width: 100%; padding: 60px 0; font-size: 0.75rem; color: #888; letter-spacing: 2px; text-transform: uppercase; text-align: center; }
 
-        .state { 
-            font-weight: 900; 
-            color: var(--gold); 
-            text-align: left; 
-            letter-spacing: 3px;
-            font-family: 'Helvetica', sans-serif;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
+    /* ==========================================
+       MOBILE OVERRIDES - PROTECT THE DESKTOP WALL
+       ========================================== */
+    @media screen and (max-width: 600px) {
+        .venue-container { transform: translateX(0); padding: 0 20px; }
+        .venue-row { flex-direction: column; align-items: center; text-align: center; padding: 25px 0; }
+        .state { width: 100%; text-align: center; margin-bottom: 8px; font-size: 1.1rem; }
         .location { 
-            font-weight: 400; 
-            color: #444; 
-            width: 450px; /* This creates your straight vertical wall */
-            display: flex; 
-            flex-wrap: wrap; 
-            align-items: center; 
-            justify-content: flex-start; 
-            font-size: 1.1rem; 
-            letter-spacing: 1px;
-            text-align: left;
-            font-family: 'Helvetica', sans-serif;
-            text-transform: uppercase;
+            width: 100%; 
+            justify-content: center; 
+            text-align: center; 
+            padding-left: 0;
+            font-size: 0.9rem;
         }
-
-/* TARGETS ONLY THE ID LINK INSIDE THE LOCATION */
-.location a {
-    font-size: 0.65rem; 
-    font-weight: normal; /* Back to light/elegant */
-    color: var(--gold);
-    text-decoration: none;
-    font-family: 'Courier New', monospace;
-    margin-left: 10px;
-    letter-spacing: 2px;
-    opacity: 0.8;
-    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
-    transition: 0.3s;
-    /* ... keep your other styles ... */
-    white-space: nowrap; /* THIS LOCKS THE ID ON ONE LINE */
-    display: inline-block; /* Helps maintain the "Badge" feel on mobile */
-}
-
-        .location a:hover {
-            opacity: 1;
-            color: var(--light-gold);
-            border-bottom: 1px solid var(--light-gold);
-        }
-
-
-        .beacon { 
-            display: inline-block; 
-            width: 8px; 
-            height: 8px; 
-            background-color: #f3e5ab; 
-            border-radius: 50%; 
-            margin-right: 18px; 
-            box-shadow: 0 0 10px #c5a059; 
-            animation: gold-glow 2.5s ease-in-out infinite; 
-            flex-shrink: 0;
-        }
-
-
-        /* HUB & BADGES */
-        .links-terminal { width: 100%; padding: 100px 20px; background: #050505; text-align: center; display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; }
-        .link-badge { text-decoration: none; }
-        .badge-content { border: 1px solid var(--gold); color: var(--light-gold); padding: 15px 40px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 5px; font-weight: 700; transition: all 0.4s ease; }
-        .link-badge:hover .badge-content { background: var(--gold); color: var(--ink); box-shadow: 0 0 25px rgba(197, 160, 89, 0.4); }
-
-        /* MANIFESTO WITH PROTOCOL TITLES */
-        .manifesto-vault { width: 100%; padding: 80px 0; background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); display: flex; justify-content: center; align-items: center; }
-        .manifesto-card { max-width: 580px; padding: 50px 40px; background: #0d0d0d; border: 1px solid rgba(255,255,255,0.1); text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
-        
-        .protocol-title { font-family: 'Courier New', monospace; color: var(--light-gold); font-size: 0.65rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 25px; display: block; opacity: 0.8; }
-        
-        .manifesto-text { font-family: 'Times New Roman', serif; font-size: 1.05rem; line-height: 1.8; color: #efefef; font-style: italic; }
-        .manifesto-text span { display: block; margin-bottom: 20px; }
-
-        /* TERMINAL GATEWAY */
-        .terminal-gateway { padding: 100px 0; text-align: center; background: #050505; width: 100%; }
-        .terminal-button { text-decoration: none; border: 1px solid var(--gold); color: var(--light-gold); padding: 18px 50px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 5px; font-weight: 700; font-family: 'Courier New', monospace; transition: 0.4s; }
-        .terminal-button:hover { background: var(--light-gold); color: var(--ink); }
-
-        footer { width: 100%; padding: 60px 0; font-size: 0.75rem; color: #888; letter-spacing: 2px; text-transform: uppercase; text-align: center; }
-
-/* MOBILE-SAFE RESPONSIVE REGISTRY - FINAL CALIBRATION */
-@media screen and (max-width: 600px) {
-    h1 { font-size: 1.8rem; }
-
-    .venue-section h2 { 
-        font-size: 1.4rem; 
-        white-space: normal; 
-        padding: 0 20px 15px 20px;
+        /* Mobile-only fix for ID wrapping */
+        .id-wrapper { display: inline-block; white-space: nowrap; margin-left: 5px; }
+        .links-terminal { flex-direction: column; align-items: center; }
+        .badge-content { width: 280px; box-sizing: border-box; }
     }
+</style>
 
-    .venue-container { transform: translateX(0); padding: 0 15px; }
-
-    .venue-row { 
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
-        padding: 25px 0;
-    }
-
-    .state { width: 100%; text-align: center; margin-bottom: 5px; }
-
-    /* FORCES THE ID AND BRACKETS TO STAY BONDED */
-    .id-wrapper {
-        display: inline-block;
-        white-space: nowrap;
-        margin-left: 5px;
-    }
-
-    /* ALLOWS THE MAIN GALLERY NAME TO WRAP IF NEEDED, BUT NOT THE ID */
-    .location { 
-        width: 100%; 
-        display: block; /* Changes from flex to block for natural wrapping */
-        text-align: center; 
-        font-size: 0.9rem;
-        white-space: normal; /* Allows "Danbury Free Art Gallery" to wrap to 2 lines */
-    }
-
-
-    /* FIXES TERMINAL BUTTON DISTORTION */
-    .terminal-gateway { padding: 40px 20px; width: 100%; box-sizing: border-box; }
-    .terminal-button { 
-        width: 90%; 
-        max-width: 300px;
-        padding: 15px 0; /* Vertical padding only to prevent side squishing */
-        font-size: 0.75rem; 
-        letter-spacing: 3px; 
-        display: inline-block;
-        box-sizing: border-box; /* Forces border to stay inside the width */
-    }
-
-    .links-terminal { flex-direction: column; align-items: center; gap: 15px; }
-    .badge-content { width: 280px; box-sizing: border-box; padding: 12px 0; }
-}
-
-
-/* THE SIGNAL ANIMATION - RESTORED */
-@keyframes gold-glow { 
-    0% { opacity: 0.3; transform: scale(0.9); } 
-    50% { opacity: 1; transform: scale(1.1); box-shadow: 0 0 15px #f3e5ab; } 
-    100% { opacity: 0.3; transform: scale(0.9); } 
-}
-
-    </style>
 </head>
 <body>
 
