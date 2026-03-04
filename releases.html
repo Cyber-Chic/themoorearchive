@@ -179,14 +179,22 @@
 
     .state { width: 100%; text-align: center; margin-bottom: 5px; }
 
-    /* THIS LOCKS THE ID AND BRACKETS TOGETHER */
+    /* FORCES THE ID AND BRACKETS TO STAY BONDED */
+    .id-wrapper {
+        display: inline-block;
+        white-space: nowrap;
+        margin-left: 5px;
+    }
+
+    /* ALLOWS THE MAIN GALLERY NAME TO WRAP IF NEEDED, BUT NOT THE ID */
     .location { 
         width: 100%; 
-        justify-content: center; 
+        display: block; /* Changes from flex to block for natural wrapping */
         text-align: center; 
-        font-size: 0.95rem;
-        white-space: nowrap; /* Prevents the ID and brackets from splitting */
+        font-size: 0.9rem;
+        white-space: normal; /* Allows "Danbury Free Art Gallery" to wrap to 2 lines */
     }
+
 
     /* FIXES TERMINAL BUTTON DISTORTION */
     .terminal-gateway { padding: 40px 20px; width: 100%; box-sizing: border-box; }
@@ -234,15 +242,15 @@
     <!-- TITLE IS OUTSIDE THE NUDGED CONTAINER -->
     <h2>The National Gallery Registry</h2> 
 
-    <div class="venue-container">
-        <!-- THE LIST IS INSIDE AND WILL BE NUDGED -->
-        <div class="venue-row">
-            <span class="state">CONNECTICUT</span>
-            <span class="location">
-                <span class="beacon"></span> 
-                Danbury Free Art Gallery (<a href="https://www.artgram.co/a/the-moore-archive-art-leak-id-972411-8fatz8" target="_blank" style="color:inherit;">ID_972411</a>)
-            </span>
-        </div>
+<div class="venue-row">
+    <span class="state">CONNECTICUT</span>
+    <span class="location">
+        <span class="beacon"></span> 
+        Danbury Free Art Gallery 
+        <span class="id-wrapper">(<a href="https://www.artgram.co/a/the-moore-archive-art-leak-id-972411-8fatz8" target="_blank">ID_972411</a>)</span>
+    </span>
+</div>
+
 
 <div class="venue-row">
     <span class="state">WASHINGTON</span>
