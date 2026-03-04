@@ -165,6 +165,47 @@
             letter-spacing: 2px;
             text-transform: uppercase;
         }
+
+        /* THE TERMINAL GATEWAY */
+.terminal-gateway {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.terminal-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace; /* Tech feel */
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.terminal-button:hover {
+    background: var(--gold);
+    color: var(--ink);
+    box-shadow: 0 0 20px rgba(197, 160, 89, 0.4);
+}
+
+.terminal-button::before {
+    content: " [ SYSTEM ACCESS ] ";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.5rem;
+    opacity: 0.5;
+    letter-spacing: 2px;
+}
+
     </style>
 </head>
 <body>
@@ -226,6 +267,12 @@
         <div class="link-url"><a href="https://www.artgram.co/themooresignal" target="_blank">artgram.co/themooresignal</a></div>
     </div>
 </section>
+
+<div class="terminal-gateway">
+    <a href="https://cyber-chic.github.io/themoorearchive/terminal" class="terminal-button">
+        Back to Moore Archive Terminal
+    </a>
+</div>
 
 <footer>
     &copy; 2026 The Moore Archive // The signal survives on honor.
