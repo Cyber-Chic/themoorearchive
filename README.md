@@ -12,7 +12,7 @@
 > **ARTIFACT:** #TMA-001 (The Moore Key)  
 > **ORIGIN:** Connecticut, USA 📍  
 > **LANDING ZONE:** Geocaching HQ (Seattle, WA) 🏁  
-> **STATUS:** [ ▓▓▓▓░░░░░░ ] **Orbiting** the [**Global Geocaching Network**](https://www.geocaching.com/track/details.aspx?tracker=TBB8P4T) 🌍
+> **STATUS:** [ ▓▓▓▓▓▓▓▓▓▓ ]  **Orbiting** the [**Global Geocaching Network**](https://www.geocaching.com/track/details.aspx?tracker=TBB8P4T) 🌍
 
 
 
