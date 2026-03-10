@@ -11,9 +11,8 @@
 ### 🛰️ SYSTEM STATUS: KEY IN TRANSIT
 > **ARTIFACT:** #TMA-001 (The Moore Key)  
 > **ORIGIN:** Connecticut, USA 📍  
-> **DESTINATION:** Signal Origin (Seattle, WA) 🏁  
-> **ESTIMATED ARRIVAL:** Next Week (Pending Regional Snow Delays ❄️)  
-> **CURRENT PHASE:** [ ▓▓▓▓░░░░░░ ] **Orbiting Into** [**Global Geocaching Network**](https://www.geocaching.com/track/details.aspx?tracker=TBB8P4T) 🌍
+> **LANDING ZONE:** Geocaching HQ (Seattle, WA) 🏁  
+> **STATUS:** [ ▓▓▓▓░░░░░░ ] **Orbiting** the [**Global Geocaching Network**](https://www.geocaching.com/track/details.aspx?tracker=TBB8P4T) 🌍
 
 
 
