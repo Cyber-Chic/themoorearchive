@@ -33,7 +33,7 @@
 
 | 🛰️ **KEY_ID: #TMA-001** |
 | :--- |
-| <center> <img src="https://github.com/Cyber-Chic/themoorearchive/raw/main/img/Key%20in%20Case_TMA.jpeg?raw=true" width="280"> <br>**ARCHIVE INFO:** <br> `IMPACT: NATIONAL` • `SIGNAL: NOMINAL🟢` </center> |
+| <center> <img src="img/Key_in_Case_TMA.jpeg" width="280"> <br>**ARCHIVE INFO:** <br> `IMPACT: NATIONAL` • `SIGNAL: NOMINAL🟢` </center> |
 
 </td>
 </tr>
