@@ -96,7 +96,7 @@ $$S = \frac{K}{V}$$
 
 | VIEW: FRONT | VIEW: BACK | VIEW: INTERIOR |
 | :---: | :---: | :---: |
-| <img src="https://github.com/Cyber-Chic/themoorearchive/blob/main/img/Key%20Front_TMA.jpeg?raw=true" width="320" style="image-rendering: smooth; display: block; border: 1px solid #eee;"> | <img src="https://github.com/Cyber-Chic/themoorearchive/raw/main/img/Key%20Back_TMA.jpeg?raw=true" width="320" style="display: block; border: 1px solid #eee;"> | <img src="https://github.com/Cyber-Chic/themoorearchive/raw/main/img/Key%20in%20Case_TMA.jpeg?raw=true" width="320" style="display: block; border: 1px solid #eee;"> |
+| <img src="https://cyber-chic.github.io/themoorearchive/img/Key_Front_TMA.jpeg" width="320" style="image-rendering: smooth; display: block; border: 1px solid #eee;"> | <img src="https://cyber-chic.github.io/themoorearchive/img/Key_Back_TMA.jpeg" width="320" style="display: block; border: 1px solid #eee;"> | <img src="img/Key_in_Case_TMA.jpeg" width="320" style="display: block; border: 1px solid #eee;"> |
 | **[SIGNAL_FACE]** | **[ENCRYPTION_KEY]** | **[STABILIZATION_CASE]** |
 
 ---
