@@ -27,6 +27,56 @@
         -webkit-font-smoothing: antialiased;
     }
 
+        /* RESTORED ITALIC ARCHIVE STYLE */
+    .description { 
+        font-size: 1.15rem; 
+        line-height: 2.1; 
+        color: #d1d1d1; 
+        max-width: 800px; 
+        margin: 0 auto; 
+        text-align: center;
+        font-family: 'Times New Roman', serif;
+        font-style: italic !important; /* RE-ACTIVATED ITALICS */
+    }
+
+    .artifact-link {
+        color: var(--gold);
+        text-decoration: none;
+        font-weight: 700;
+        font-style: italic !important; /* MATCHES PARAGRAPH */
+        position: relative;
+        transition: all 0.4s ease;
+        display: inline-block;
+        padding: 0 2px;
+        /* THE SHIMMER LAYER */
+        background: linear-gradient(120deg, transparent 0%, transparent 40%, rgba(243, 229, 171, 0.4) 50%, transparent 60%, transparent 100%);
+        background-size: 200% 100%;
+        background-repeat: no-repeat;
+        background-position: 150% 0;
+    }
+
+    .artifact-link:hover {
+        color: var(--light-gold);
+        background-position: -50% 0;
+        text-shadow: 0 0 10px rgba(197, 160, 89, 0.4);
+    }
+
+    /* Subtle Gold Underline */
+    .artifact-link::after {
+        content: '';
+        position: absolute;
+        width: 0; height: 1px;
+        bottom: 1px; left: 50%;
+        background: var(--gold);
+        transition: all 0.5s ease;
+    }
+
+    .artifact-link:hover::after {
+        width: 100%;
+        left: 0;
+    }
+
+
     /* HEADER */
     header { width: 100%; padding: 8vh 0; text-align: center; border-bottom: 1px solid #333; }
     .prestige-badge { border: 1px solid var(--gold); color: var(--light-gold); padding: 12px 30px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 4px; display: inline-block; font-weight: 700; margin-bottom: 20px; }
@@ -100,12 +150,20 @@
     <div class="book-image-frame">
         <img src="./img/Book_Cover.jpeg" alt="Master Edition Registry Exhibit 001 - Hand-Signed Cover Art">
     </div>
-    <div class="description">
-<p class="description" style="font-size: 1.1rem; margin-bottom: 40px; font-style: normal; font-family: 'Times New Roman', serif;">
-    The Archive operates through a series of quiet releases—hand-signed artifacts placed within <strong style="color: var(--gold);">Micro-Libraries</strong> and <strong style="color: var(--gold);">Boutique Galleries</strong> across the public landscape. While some artifacts are <strong style="color: var(--gold);">Publicly Cataloged</strong> in partnership with specific venues, others remain <strong style="color: var(--gold);">Anonymized Placements</strong> to be found by those who search. Because we prioritize the poetry of discovery, the work exists independently of formal curation.
-</p>
+<div class="description">
+    <p>
+        The Archive operates through a series of quiet releases—hand-signed artifacts placed within 
+        <a href="https://littlefreelibrary.org/" class="artifact-link">Micro-Libraries</a>, 
+        <a href="https://freelittleartgalleries.art/" class="artifact-link">Boutique Galleries</a>, and alternative public spaces. 
+        While some artifacts are 
+        <a href="https://www.artgram.co/a/the-moore-archive-key-tma-001-w2yBfP" class="artifact-link">Publicly Cataloged</a> 
+        in partnership with specific venues, others remain 
+        <a href="YOUR_ARTGRAM_LINK" class="artifact-link">Anonymized Placements</a> 
+        to be found by those who search. Because we prioritize the poetry of discovery, 
+        the work exists independently of formal curation.
+    </p>
+</div>
 
-    </div>
 </section>
 
 <section class="venue-section">
