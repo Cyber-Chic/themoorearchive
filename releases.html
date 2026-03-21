@@ -8,24 +8,35 @@
     /* GLOBAL FIX: Prevents layout breaking */
     * { box-sizing: border-box; }
 
-    :root {
-        --gold: #c5a059;       
-        --light-gold: #f3e5ab; 
-        --ink: #0a0a0a;
-        --paper: #fcfcfc;
-    }
+:root {
+    --gold: #c5a059;       
+    --light-gold: #f3e5ab; 
+    --ink: #0d0d0d; /* Changed from #030303 to a deeper, richer onyx */
+    --paper: #fdfdfd; /* A soft bone-white to reduce eye strain */
+}
 
-    body {
-        background-color: var(--ink);
-        color: var(--paper);
-        font-family: 'Times New Roman', serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        -webkit-font-smoothing: antialiased;
-    }
+body {
+    background-color: var(--ink);
+    /* SUBTLE GRAIN: This removes the "dead space" feel and adds texture */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://w3.org id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    color: var(--paper);
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* SURGICAL ADDITION: Add a soft aura behind the book to break up the void */
+.book-image-frame { 
+    border: 1px solid #222; /* Thinner, more elegant border */
+    padding: 20px; 
+    background: #000; 
+    box-shadow: 0 40px 100px rgba(0,0,0,0.9), 0 0 80px rgba(197, 160, 89, 0.05); 
+}
+
 
         /* RESTORED ITALIC ARCHIVE STYLE */
     .description { 
@@ -137,6 +148,192 @@
         .links-terminal { flex-direction: column; align-items: center; gap: 15px; }
         .badge-content { width: 280px; }
     }
+
+ /* NEWS FEATURE EDITORIAL STYLES */
+.briefing-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for desktop story feel */
+    gap: 80px;
+    align-items: start;
+}
+
+.news-header {
+    grid-column: 1 / -1; /* Spans full width */
+    text-align: left;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+}
+
+.news-header h3 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1;
+    margin: 0;
+    text-transform: none;
+    letter-spacing: -2px;
+}
+
+.feature-lead {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: var(--light-gold);
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    grid-column: 1 / -1;
+    max-width: 900px;
+    margin-bottom: 40px;
+}
+
+.story-column {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+.story-column h4 {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    margin-top: 0;
+}
+
+.pull-quote {
+    grid-column: 2;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    color: #fff;
+    border-left: 4px solid var(--gold);
+    padding-left: 30px;
+    margin: 40px 0;
+}
+
+.highlight-box {
+    grid-column: 1 / -1;
+    background: #111;
+    padding: 60px;
+    margin: 80px 0;
+    border: 1px solid #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* THE EDITORIAL DIVIDER */
+.chapter-divider {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.chapter-line {
+    flex-grow: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    opacity: 0.5;
+}
+
+.chapter-marker {
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+
+/* Mobile Fix for Feature */
+@media (max-width: 900px) {
+    .briefing-section { grid-template-columns: 1fr; gap: 40px; padding: 60px 20px; }
+    .pull-quote { grid-column: 1; font-size: 1.6rem; }
+}
+
+/* SPECIAL FEATURE: THE BRIEFING VAULT */
+.story-vault {
+    max-width: 800px;
+    margin: 60px auto; /* Reduced margin to keep lines tight */
+    padding: 100px 80px; /* More internal breathing room */
+    background: #fdfdfd; 
+    color: #1a1a1a; 
+    box-shadow: 0 40px 100px rgba(0,0,0,0.7), inset 0 0 0 1px rgba(197, 160, 89, 0.1);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    position: relative;
+    z-index: 5;
+    /* High-end editorial typography */
+    line-height: 2.2;
+    font-family: 'Times New Roman', serif;
+}
+
+/* THE GILDED STORY VAULT - STRUCTURE RESTORED */
+.story-vault {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 90px 70px;
+    background: #fdfdfd; 
+    color: #1a1a1a; 
+    box-shadow: 0 40px 100px rgba(0,0,0,0.7), inset 0 0 0 1px rgba(197, 160, 89, 0.1);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    position: relative;
+    z-index: 5;
+    line-height: 2.1; 
+    font-family: 'Times New Roman', serif;
+    letter-spacing: 0.015rem; 
+}
+
+/* THE PRONOUNCED CONNECTORS */
+.story-vault::before, .story-vault::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 50px;
+    background: var(--gold);
+    transform: translateX(-50%);
+}
+.story-vault::before { top: -25px; }
+.story-vault::after { bottom: -25px; }
+
+.story-vault h3 {
+    font-family: 'Bodoni Moda', serif;
+    color: var(--gold);
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 3px double var(--gold); 
+    padding-bottom: 20px;
+    line-height: 1.2;
+}
+
+.story-vault h4 {
+    font-family: 'Bodoni Moda', serif;
+    color: var(--gold);
+    font-size: 1.4rem;
+    margin: 40px 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* TOP DESCRIPTION - CLEANED UP */
+.description p {
+    color: #c0c0c0; 
+    line-height: 2;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: italic !important;
+}
+
+
 </style>
 </head>
 <body>
@@ -148,7 +345,7 @@
 
 <section class="book-spotlight">
     <div class="book-image-frame">
-        <img src="./img/Book_Cover.jpeg" alt="Master Edition Registry Exhibit 001 - Hand-Signed Cover Art">
+        <img src="https://cyber-chic.github.io/themoorearchive/img/Book_Cover.jpeg" alt="Master Edition Registry Exhibit 001 - Hand-Signed Cover Art">
     </div>
     
 <div class="description">
@@ -165,14 +362,73 @@
     </p>
 </div>
 
+
 </section>
+
+<!-- THE BREAK -->
+<div class="chapter-divider">
+    <div class="chapter-line"></div>
+    <div class="chapter-marker">THE BRIEFING // 001</div>
+    <div class="chapter-line"></div>
+</div>
+
+<section class="story-vault">
+    <h3>The Moore Archive // Tactical Neighborhood Deployment</h3>
+    
+    <h4>The Core Objective:</h4>
+    <p>
+        <span style="float: left; font-size: 5rem; line-height: 0.7; padding: 10px 12px 0 0; color: var(--gold); font-family: 'Bodoni Moda', serif;">M</span>
+        y name is <strong>Angela N. Moore</strong>—artist, archivist, and strategist. <em>The Moore Archive</em> was established to transform the mundane neighborhood walk into a high-stakes quest. We utilize Free Little Art Galleries as <strong>"secret drop points"</strong>—physical intersections for artifacts that bridge the digital divide. These boutique venues are more than galleries; they are essential nodes for the creative impulse.
+    </p>
+
+    <h4>The "Leaks" (Authenticated Artifacts):</h4>
+    <p>Within these nodes, I "leak" permanent collectibles for the vigilant to claim. The inventory includes hand-signed poetry books and the <strong>Truth, 30% Off</strong> series—comics designed to navigate the complexities of social development. Occasionally, the Archive deploys original poems on limited-edition art reprints. Each artifact is a "labor of love," gifted to those who prioritize the hunt.</p>
+
+    <h4>The Encryption Key (Geocaching Protocol):</h4>
+    <p>The Archive’s primary instrument is the <strong>Encryption Key</strong>—a singular metallic card circulating via the Geocaching network. It is a transient object; it belongs solely to the hunt. Upon discovery, the holder utilizes the reverse-side code to access a hidden virtual gallery. Following a 14-day hold, the protocol requires the seeker to <strong>redeploy</strong> the Key into a new treasure coordinate.</p>
+
+    <h4>The Signal Ethos:</h4>
+    <p>The Archive survives on honor. I invite finders to reciprocate by performing one anonymous act of kindness. This creates a ripple effect of wonder—a silent signal of goodwill that sustains the community long after the artifact is found.</p>
+
+    <!-- THE FANCY CHAPTER DIVIDER RESTORED -->
+    <div class="chapter-divider" style="margin: 80px auto 40px auto; max-width: 100%;">
+        <div class="chapter-line"></div>
+        <div class="chapter-marker" style="font-size: 0.6rem; letter-spacing: 6px;">DEPLOYMENT</div>
+        <div class="chapter-line"></div>
+    </div>
+
+    <div style="text-align: center; padding-bottom: 20px;">
+        <h4 style="margin-top: 0; letter-spacing: 4px; font-family: 'Bodoni Moda', serif; color: var(--gold);">JOIN THE HUNT</h4>
+        
+        <p style="font-style: italic; font-size: 1.15rem; color: #444; margin-bottom: 25px; max-width: 650px; margin: 0 auto;">
+            The signal is live. Consult the <strong>National Registry</strong> below for official drops, or utilize the 
+            <a href="https://cyber-chic.github.io/themoorearchive/logs" 
+               class="artifact-link" 
+               style="color: var(--gold); text-decoration: none; font-weight: 700; transition: color 0.3s ease;"
+               onmouseover="this.style.color='#8b6d31'; this.style.textDecoration='underline';" 
+               onmouseout="this.style.color='var(--gold)'; this.style.textDecoration='none';">
+               Field Intelligence Log
+            </a> 
+            to detect future deployments.
+        </p>
+
+        <!-- THE TERMINAL BRIDGE -->
+        <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2.5px; color: #999; border-top: 1px solid #eee; padding-top: 30px; max-width: 450px; margin: 30px auto 0 auto;">
+            For the full project overview and archival protocols, proceed to the 
+            <strong style="color: var(--gold);">Moore Archive Terminal</strong> at the base of this record.
+        </p>
+    </div>
+</section>
+
+
+
+
+
 
 <section class="venue-section">
     <h2>The National Gallery Registry</h2> 
-
     <div class="venue-container">
-
-        <!-- WASHINGTON ENTRIES -->
+        <!-- WASHINGTON -->
         <div class="venue-row">
             <span class="state">WASHINGTON</span>
             <span class="location">
@@ -181,8 +437,7 @@
                 <a href="https://www.artgram.co/a/the-moore-archive-key-tma-001-w2yBfP" target="_blank">[VIEW ARTIFACT]</a>
             </span>
         </div>
-
-        <!-- CONNECTICUT ENTRIES -->
+        <!-- CONNECTICUT -->
         <div class="venue-row">
             <span class="state">CONNECTICUT</span>
             <span class="location">
@@ -191,37 +446,53 @@
                 <a href="https://www.artgram.co/a/the-moore-archive-art-leak-id-972411-8fatz8" target="_blank">[VIEW ARTIFACT]</a>
             </span>
         </div>
-
-        <!-- CALIFORNIA ENTRIES -->
+        <!-- CALIFORNIA -->
         <div class="venue-row">
             <span class="state">CALIFORNIA</span>
-            <span class="location">
-                <span class="beacon"></span> 
-                Curation in Progress
-            </span>
+            <span class="location"><span class="beacon"></span> Curation in Progress</span>
         </div>
-
-        <!-- NEW YORK ENTRIES -->
+        <!-- NEW YORK -->
         <div class="venue-row">
             <span class="state">NEW YORK</span>
-            <span class="location">
-                <span class="beacon"></span> 
-                Curation in Progress
-            </span>
+            <span class="location"><span class="beacon"></span> Curation in Progress</span>
         </div>
     </div>
 </section>
     
+<section class="links-terminal">
+    <a href="https://angies.poetry.blog" class="link-badge" target="_blank">
+        <div class="badge-content">Literary Portfolio</div>
+    </a>
+    <a href="https://github.com/Cyber-Chic/poetry-through-play/tree/main" class="link-badge" target="_blank">
+        <div class="badge-content">Literary Research</div>
+    </a>
+    <a href="https://www.artgram.co/themooresignal" class="link-badge" target="_blank">
+        <div class="badge-content">The Master Registry</div>
+    </a>
+
 <div class="terminal-gateway">
     <a href="https://cyber-chic.github.io/themoorearchive/terminal" class="terminal-button">
         Back to Moore Archive Terminal
     </a>
 </div>
+</section>
+
+
+
+<section class="manifesto-vault">
+    <div class="manifesto-card">
+        <span class="protocol-title">The Press // Media Protocol</span>
+        <div class="manifesto-text">
+            <span>"While media coverage and archival transmission are authorized, the Archive centers its mission on the organic discovery of hand-signed artifacts within the public landscape."</span>
+            <span>"Participants are invited to document findings as part of the living record, though the signal is sustained through discovery alone."</span>
+        </div>
+    </div>
+</section>
+
 
 <footer>
     &copy; 2026 The Moore Archive // The signal survives on honor.
 </footer>
 
 </body>
-</html>
 </html>
