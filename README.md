@@ -83,13 +83,32 @@ The Archive is a **decoupled subsystem** designed to bridge physical artifacts w
 
 *   **AESTHETIC:** Neo-Brutalism. A "Museum Cardstock" palette optimized for high-contrast focus.
 *   **CORE LOGIC:** The **"Positive Zero" Principle**. It is hypothesized that Signal Integrity (S) reaches its highest potential as Visibility (V) approaches zero.
-    <br><br> **Formula:**  
-$$S = \frac{K}{V}$$  
-<br>*(Where **S** is Signal Integrity, **K** is Kindness, and **V** is Visibility)* <br><br>
 *   **THE PROTOCOL:** Participation requires a **"Signal Refresh."** To stabilize the Archive’s frequency, one anonymous act of kindness must be performed for every artifact found or month held.
 *   **RESEARCH INQUIRY:** A [Geospatial Performance Study](https://www.researchgate.net/publication/400971211_The_Moore_Archive_TMA_An_Inquiry_into_Digital-Physical_Handshake_Protocols_and_Geospatial_Signal_Persistence) into how "Intentional Friction" and decentralized, human-tethered networks can maintain signal integrity without digital surveillance.
 
 ---
+
+### [ 🧪 THE INQUIRY: POSITIVE ZERO IN PRACTICE ]
+**The Archive serves as an independent field test for the Positive Zero Theory: an exploration of the inverse relationship between the visibility of an act and its intrinsic signal strength.**
+
+> ## $S = \frac{K}{V}$
+> *Where **Signal Integrity (S)** reaches its highest potential as **Public Visibility (V)** approaches zero.*
+
+**The Calculus of Kindness:**  
+
+As **$V \to 0$**, the value of **$S$** tends toward **Infinity**. This suggests that **Signal Integrity ($S$)** grows infinitely higher each time an individual commits a **Quiet Act of Kindness ($K$)** without the requirement of **Public Visibility ($V$).**
+
+*   **The Moore Archive (TMA) Protocol (Geospatial):** A separate literary and art application. TMA utilizes ["Art Leaks"](https://cyber-chic.github.io/themoorearchive/releases) and the **Geocaching Protocol** to trigger the Positive Zero loop—encouraging finders to perform an anonymous act of kindness in exchange for the discovery.
+
+*   **[Pretty Coinz Protocol](https://cyber-chic.github.io/prettycoinz/info) (Numismatic):** Testing the formula through the release of [Ben’s Bells Kindness Coins](https://bensbells.org/coins/). These are quietly distributed to honor genuine acts of kindness, ensuring the signal **($S$)** remains high as public visibility **($V$)** remains at zero.
+
+> [!NOTE]
+> **TECHNICAL PROVENANCE:** This model originates from the *“Beal’s Conjecture vs. Positive Zero”* inquiry (Refereed Proceedings: CMC3). While traditional number theory treats division by zero as undefined, this protocol utilizes the **Limit ($V \to 0$)** to map the "Moral Singularity" of anonymous intent—defining **Positive Zero** as a state of maximum purity rather than an absence of value.
+
+
+---
+
+
 
 ### 🛠️ PHYSICAL ARTIFACT SPECIFICATIONS: #TMA-001
 > **"Bridging digital code with the weight of the hand."**
@@ -98,6 +117,16 @@ $$S = \frac{K}{V}$$
 | :---: | :---: | :---: |
 | <img src="https://cyber-chic.github.io/themoorearchive/img/Key_Front_TMA.jpeg" width="320" style="image-rendering: smooth; display: block; border: 1px solid #eee;"> | <img src="https://cyber-chic.github.io/themoorearchive/img/Key_Back_TMA.jpeg" width="320" style="display: block; border: 1px solid #eee;"> | <img src="img/Key_in_Case_TMA.jpeg" width="320" style="display: block; border: 1px solid #eee;"> |
 | **[SIGNAL_FACE]** | **[ENCRYPTION_KEY]** | **[STABILIZATION_CASE]** |
+
+---
+
+### [ 🔍 VERIFICATION & INSTITUTIONAL RECORD ]
+**The Moore Archive is supported by a decade of refereed research and recognized mathematical inquiry.**
+
+*   **Protocols (ResearchGate):** [The Moore Archive (TMA): An Inquiry into Digital-Physical Handshake Protocols](https://www.researchgate.net/publication/400971211)
+*   **Refereed Proceedings (CMC3):** [Beal's Conjecture vs “Positive Zero”, Fight](https://www.cmc3.org/conferences/past/2015/spring/presentations/angela_moore_paper.pdf)
+*   **Academic Conference (MAA):** [MAA 100th Anniversary MathFest (PDF p. 153)](https://maa.org/wp-content/uploads/2025/02/MF15-Abstracts.pdf)
+*   **The Milli Award (Westfair):** [Recognition for "innovative refutation" of Beals Conjecture](https://lifeasahuman.com/2015/mind-spirit/inspirational/a-milli-award-for-the-million-dollar-question-beals-conjecture-the-once-in-a-million-journey-of-angela-moore/)
 
 ---
 
