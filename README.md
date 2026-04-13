@@ -96,9 +96,9 @@ The Archive is a **decoupled subsystem** designed to bridge physical artifacts w
 **The Calculus of Kindness:**  
 As **$V \to 0$**, the value of **$S$** tends toward **Infinity**. This suggests that **Signal Integrity ($S$)** grows infinitely higher each time an individual commits a **Quiet Act of Kindness ($K$)** without the requirement of **Public Visibility ($V$).**
 
-*   **The Moore Archive (TMA) Protocol (Geospatial):** A separate literary and art application. TMA utilizes ["Art Leaks"](https://github.io) and the **Geocaching Protocol** to trigger the Positive Zero loop—encouraging finders to perform an anonymous act of kindness in exchange for the discovery.
+*   **The Moore Archive (TMA) Protocol (Geospatial):** A separate literary and art application. TMA utilizes ["Art Leaks"](https://cyber-chic.github.io/themoorearchive/releases) and the **Geocaching Protocol** to trigger the Positive Zero loop—encouraging finders to perform an anonymous act of kindness in exchange for the discovery.
 
-*   **[Pretty Coinz Protocol](https://github.io) (Numismatic):** Testing the formula through the release of [Ben’s Bells Kindness Coins](https://bensbells.org). These are quietly distributed to honor genuine acts of kindness, ensuring the signal **($S$)** remains high as public visibility **($V$)** remains at zero.
+*   **[Pretty Coinz Protocol](https://cyber-chic.github.io/prettycoinz/info) (Numismatic):** Testing the formula through the release of [Ben’s Bells Kindness Coins](https://bensbells.org/coins/). These are quietly distributed to honor genuine acts of kindness, ensuring the signal **($S$)** remains high as public visibility **($V$)** remains at zero.
 
 > [!NOTE]
 > **TECHNICAL PROVENANCE:** This protocol originates from the Principal Investigator's refereed inquiry, *“Beal’s Conjecture vs. Positive Zero”* (CMC3 Proceedings). While traditional number theory treats division by zero as undefined, this model adopts the **IEEE 754 standard**, which allows division by **Positive Zero (+0)** to result in **Positive Infinity ($+\infty$)**. 
