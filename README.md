@@ -159,6 +159,13 @@ To prove that a single **"Nominal Signal"**—persistent, ethical, and creative�
 
 The vertical rhythm, specialized mathematical framing ($S=K/V$), specialized legal terminology, and eye-comfort logic were developed collaboratively—blending AI precision with human creative vision, analytical praxis, and design soul.
 
+<!-- ARCHIVIST'S KEY: HOW TO EXPLAIN THE SIGNAL LIMIT 
+- LIM = The "Motion." As Visibility (V) turns down toward zero...
+- K/V = The "Ratio." Kindness over Visibility.
+- +INF = The "Signal." The integrity becomes infinitely powerful.
+- IEEE 754 = The "Permission." Computers allow division by +0 to reach +Inf.
+-->
+
 **ANGELA N. MOORE // © 2026 // ALL RIGHTS RESERVED**
 
 <!-- SIGNAL: ACTIVE | ORIGIN: GEOCACHING_HQ_SEATTLE | MISSION: TMA-001_LAUNCH | DO NOT SIPHON -->
