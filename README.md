@@ -80,17 +80,20 @@ As of **March 9, 2026**, the formal tracking study for #TMA-001 is concluded. Ar
 *   **THE PROTOCOL:** Participation requires a **"Signal Refresh."** To stabilize the Archive’s frequency, one anonymous act of kindness must be performed for every artifact found.
 *   **RESEARCH INQUIRY:** A [Geospatial Performance Study](https://www.researchgate.net/publication/400971211_The_Moore_Archive_TMA_An_Inquiry_into_Digital-Physical_Handshake_Protocols_and_Geospatial_Signal_Persistence) into how decentralized, human-tethered networks maintain integrity without surveillance.
 
+
 ---
 
 ### [ 🔍 VERIFICATION & INSTITUTIONAL RECORD ]
-**The Moore Signal Archive is supported by a decade of refereed research and recognized mathematical inquiry.**
+**The Moore Signal Archive is anchored by a decade of independent research and recreational mathematical inquiry.**
 
+*   **Refereed Proceedings (CMC3):** [Beal's Conjecture vs “Positive Zero”, Fight](https://www.cmc3.org/conferences/past/2015/spring/presentations/angela_moore_paper.pdf)  
+    > *Note: Formal record of the 19th Annual Conference Archive // Vetted `CIRCA_2015`*
 *   **Protocols (ResearchGate):** [The Moore Archive (TMA): An Inquiry into Digital-Physical Handshake Protocols](https://www.researchgate.net/publication/400971211)
-*   **Refereed Proceedings (CMC3):** [Beal's Conjecture vs “Positive Zero”, Fight](https://www.cmc3.org/conferences/past/2015/spring/presentations/angela_moore_paper.pdf)
 *   **Academic Conference (MAA):** [MAA 100th Anniversary MathFest (PDF p. 153)](https://maa.org/wp-content/uploads/2025/02/MF15-Abstracts.pdf)
-*   **The Milli Award (Westfair):** [Recognition for "innovative refutation" of Beals Conjecture](https://lifeasahuman.com/2015/mind-spirit/inspirational/a-milli-award-for-the-million-dollar-question-beals-conjecture-the-once-in-a-million-journey-of-angela-moore/)
+*   **The Milli Award (Westfair):** [Recognition for "innovative refutation" of Beal's Conjecture](https://lifeasahuman.com/2015/mind-spirit/inspirational/a-milli-award-for-the-million-dollar-question-beals-conjecture-the-once-in-a-million-journey-of-angela-moore/)
 
 ---
+
 
 ### [ 🛰️ ARCHIVE_HUB ]
 **The Moore Signal Archive Creative Ecosystem.**  
