@@ -5,95 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TMA-001 // STABILIZATION_REPORT</title>
     <style>
-        :root {
-            --bg: #0a0a0a;
-            --text: #e0e0e0;
-            --accent: #00ff41; /* Terminal Green */
-            --border: #333;
-        }
+  :root {
+    --bg: #0a0a0a;
+    --text: #e0e0e0;
+    --accent: #00ff41; /* Terminal Green */
+    --border: #333;
+}
 
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Courier New', Courier, monospace;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-        }
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 10px; /* Reduced for mobile edge-to-edge */
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+}
 
-        .terminal {
-            max-width: 800px;
-            width: 100%;
-            border: 1px solid var(--border);
-            padding: 40px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            position: relative;
-        }
+.terminal {
+    max-width: 800px;
+    width: 100%;
+    border: 1px solid var(--border);
+    padding: 20px; /* Reduced base padding */
+    box-sizing: border-box; /* Crucial for mobile sizing */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    position: relative;
+    margin-top: 10px;
+}
 
-        .header {
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
+.header {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
 
-        .status-blink {
-            color: var(--accent);
-            animation: blink 1.5s infinite;
-        }
+/* Make headers shrink slightly on mobile */
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.2rem; }
 
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
+.status-blink {
+    color: var(--accent);
+    animation: blink 1.5s infinite;
+}
 
-        h1, h2 {
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 0;
-        }
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
-        .log-section {
-            margin-bottom: 40px;
-            border-left: 3px solid var(--border);
-            padding-left: 20px;
-        }
+.log-section {
+    margin-bottom: 30px;
+    border-left: 2px solid var(--border);
+    padding-left: 15px;
+}
 
-        .label {
-            color: var(--accent);
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
+.label {
+    color: var(--accent);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
 
-        .footer {
-            margin-top: 50px;
-            font-size: 0.8rem;
-            border-top: 1px solid var(--border);
-            padding-top: 20px;
-            display: flex;
-            justify-content: space-between;
-        }
+.footer {
+    margin-top: 40px;
+    font-size: 0.75rem;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    gap: 20px;
+    align-items: center;
+}
 
-        a {
-            color: var(--accent);
-            text-decoration: none;
-            border: 1px solid var(--accent);
-            padding: 5px 10px;
-            transition: all 0.3s;
-        }
+a {
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    padding: 8px 15px;
+    transition: all 0.3s;
+    text-align: center;
+    width: fit-content;
+}
 
-        a:hover {
-            background: var(--accent);
-            color: var(--bg);
-        }
+a:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
 
-        .glitch {
-            font-style: italic;
-            opacity: 0.7;
-        }
+.glitch {
+    font-style: italic;
+    opacity: 0.7;
+    word-wrap: break-word; /* Prevents long quotes from breaking layout */
+}
+
+/* --- MOBILE SPECIFIC FIXES --- */
+@media (min-width: 600px) {
+    body { padding: 20px; }
+    .terminal { padding: 40px; }
+    .footer { flex-direction: row; justify-content: space-between; }
+    h1 { font-size: 2rem; }
+}
+
     </style>
 </head>
 <body>
