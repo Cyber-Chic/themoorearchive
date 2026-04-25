@@ -1,19 +1,17 @@
 <div align="center">
 
 # 📡 THE MOORE SIGNAL ARCHIVE
-> **PRINCIPAL INVESTIGATOR: ANGELA N. MOORE**  
-> **JURISDICTION: GLASTONBURY, CT**
-> *“TO ARCHITECT A LIFE WHERE DATA HAS A SOUL, AND SCIENCE HAS A SIGNATURE.”*
+**PRINCIPAL INVESTIGATOR: ANGELA N. MOORE**  
+*“TO ARCHITECT A LIFE WHERE DATA HAS A SOUL, AND SCIENCE HAS A SIGNATURE.”*
 
 ---
 
 ### 🛰️ SYSTEM STATUS: EXPERIMENT CONCLUDED
-> **ARTIFACT:** #TMA-001 (The Moore Key)  
-> **ORIGIN:** Connecticut, USA 📍  
-> **LANDING ZONE:** Geocaching HQ (Seattle, WA) 🏁  
-> **STATUS:** [ ▓▓▓▓▓▓▓▓▓▓ ]  **ARCHIVED** | [**NATIONAL SUCCESS**](https://cyber-chic.github.io/themoorearchive/stabilization-001) 🌍
+**ARTIFACT:** #TMA-001 (The Moore Key) | **STATUS:** [ ▓▓▓▓▓▓▓▓▓▓ ]  **ARCHIVED**
+[**NATIONAL SUCCESS**](https://cyber-chic.github.io/themoorearchive/stabilization-001) 🌍
 
 ---
+</div>
 
 > [!IMPORTANT]
 > ### 🛡️ SOVEREIGN ADVISORY
@@ -23,6 +21,9 @@
 > **LIABILITY:** Participation in any Archive discovery is strictly voluntary. Physical artifacts (books/art) are provided "as-is" for community stewardship. The Archive assumes no liability for the discovery, handling, or transport of retired signals. 
 > **DECOUPLING:** While tethered by the *Positive Zero* theory, all public literary dispatches are decoupled from private internal research studies.
 
+<br>
+
+<div align="center">
 ---
 
 <br>
@@ -76,8 +77,8 @@ As of **March 9, 2026**, the formal tracking study for #TMA-001 is concluded. Ar
 **ROLE:** Principal Investigator / Creative Technologist  
 **STATUS:** 📁 ARCHIVED / NOMINAL
 
-*   **CORE LOGIC:** The **"Positive Zero" Principle**. It is hypothesized that Signal Integrity (S) reaches its highest potential as Visibility (V) approaches zero ($S = K/V$).
-*   **THE PROTOCOL:** Participation requires a **"Signal Refresh."** To stabilize the Archive’s frequency, one anonymous act of kindness must be performed for every artifact found.
+*   **CORE LOGIC:** The **"Positive Zero" Principle**. It is hypothesized that Signal Integrity (S) reaches its highest potential as Public Visibility (V) approaches zero ($S = K/V$).
+*   **THE PROTOCOL:** Participation requires a **"Signal Refresh."** To stabilize the Archive’s frequency, one anonymous act of Kindness (K) must be performed for every artifact found.
 *   **RESEARCH INQUIRY:** A [Geospatial Performance Study](https://www.researchgate.net/publication/400971211_The_Moore_Archive_TMA_An_Inquiry_into_Digital-Physical_Handshake_Protocols_and_Geospatial_Signal_Persistence) into how decentralized, human-tethered networks maintain integrity without surveillance.
 
 
@@ -112,7 +113,13 @@ As of **March 9, 2026**, the formal tracking study for #TMA-001 is concluded. Ar
 
 <div align="center">
 
-**ANGELA N. MOORE // SIGNAL STATUS: 🟢 NOMINAL**  
-**DISCLAIMER:** *This is a proprietary research inquiry managed by **The Moore Signal Archive**. All content is for educational and artistic purposes only.*
+### 🛰️ SIGNAL STATUS: 🟢 NOMINAL
+**PRINCIPAL INVESTIGATOR: ANGELA N. MOORE**
 
-> *“I want to live as though I traveled back in time... To this very moment. And take in all the beauty I couldn’t see the first time around.”*
+> [!CAUTION]
+> **LEGAL DISCLOSURE:** Proprietary research managed by **The Moore Signal Archive**. Distributed for **educational, non-commercial, and artistic inquiry**. The Archive assumes no liability for field discovery.
+
+*“I want to live as though I traveled back in time... To this very moment.”*
+
+</div>
+
