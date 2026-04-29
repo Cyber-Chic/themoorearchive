@@ -2,7 +2,7 @@
 
 # 📡 THE MOORE SIGNAL ARCHIVE
 **PRINCIPAL INVESTIGATOR: ANGELA N. MOORE**  
-*“TO ARCHITECT A LIFE WHERE DATA HAS A SOUL, AND SCIENCE HAS A SIGNATURE.”*
+*“I want to live as though I traveled back in time... To this very moment.”*
 
 ---
 
@@ -15,9 +15,9 @@
 
 > [!IMPORTANT]
 > ### 🛡️ SOVEREIGN ADVISORY
-> **The Moore Signal Archive** is a creative research entity. 
+> **The Moore Signal Archive LLC** is a creative research entity. 
 > 
-> **LEGAL STATUS:** This archive and the *TMA Art Leaks* protocol are proprietary initiatives of **The Moore Signal Archive**. 
+> **LEGAL STATUS:** This archive and the *TMA Art Leaks* protocol are proprietary initiatives of **The Moore Signal Archive LLC**. 
 > **LIABILITY:** Participation in any Archive discovery is strictly voluntary. Physical artifacts (books/art) are provided "as-is" for community stewardship. The Archive assumes no liability for the discovery, handling, or transport of retired signals. 
 > **DECOUPLING:** While tethered by the *Positive Zero* theory, all public literary dispatches are decoupled from private internal research studies.
 
@@ -58,7 +58,7 @@
 ---
 
 ### [ 📁 THE FIELD BRIEFING ]
-**The Moore Archive is a living experiment designed to bridge the gap between digital patterns and the physical earth.**
+**The Moore Archive TMA is a living experiment designed to bridge the gap between digital patterns and the physical earth.**
 
 As of **March 9, 2026**, the formal tracking study for #TMA-001 is concluded. Artifacts found hereafter are **Legacy Dispatches**—hand-signed poetry books and art gifted to the community to maintain the **Cycle of Honor**.
 
@@ -81,6 +81,9 @@ As of **March 9, 2026**, the formal tracking study for #TMA-001 is concluded. Ar
 *   **THE PROTOCOL:** Participation requires a **"Signal Refresh."** To stabilize the Archive’s frequency, one anonymous act of Kindness (K) must be performed for every artifact found.
 *   **RESEARCH INQUIRY:** A [Geospatial Performance Study](https://www.researchgate.net/publication/400971211_The_Moore_Archive_TMA_An_Inquiry_into_Digital-Physical_Handshake_Protocols_and_Geospatial_Signal_Persistence) into how decentralized, human-tethered networks maintain integrity without surveillance.
 
+> [!NOTE]
+> **TECHNICAL PROVENANCE:** This protocol adopts the **IEEE 754 standard**, which allows division by **Positive Zero (+0)** to result in **Positive Infinity (+∞)**. In this framework, as the public visibility (**V**) of a kind act approaches zero, the internal signal integrity (**S**) becomes infinitely more powerful. 
+
 
 ---
 
@@ -97,7 +100,7 @@ As of **March 9, 2026**, the formal tracking study for #TMA-001 is concluded. Ar
 
 
 ### [ 🛰️ ARCHIVE_HUB ]
-**The Moore Signal Archive Creative Ecosystem.**  
+**The Moore Signal Archive LLC Creative Ecosystem.**  
 *Bridging the gap between digital code and physical reality.*
 
 **Inquiries are accepted for the following specialized engagements:**
@@ -117,7 +120,7 @@ As of **March 9, 2026**, the formal tracking study for #TMA-001 is concluded. Ar
 **PRINCIPAL INVESTIGATOR: ANGELA N. MOORE**
 
 > [!CAUTION]
-> **LEGAL DISCLOSURE:** Proprietary research managed by **The Moore Signal Archive**. Distributed for **educational, non-commercial, and artistic inquiry**. The Archive assumes no liability for field discovery.
+> **LEGAL DISCLOSURE:** Proprietary research managed by **The Moore Signal Archive LLC**. Distributed for **educational, non-commercial, and artistic inquiry**. The Archive assumes no liability for field discovery.
 
 *“I want to live as though I traveled back in time... To this very moment.”*
 
