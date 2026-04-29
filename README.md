@@ -13,12 +13,15 @@
 </div>
 
 > [!IMPORTANT]
-> ### 🛡️ SOVEREIGN ADVISORY
+> ### 🛡️ SOVEREIGN ADVISORY: EXPERIMENT CONCLUDED
 > **The Moore Signal Archive LLC** is a creative research entity. 
 > 
-> **LEGAL STATUS:** The Moore Archive TMA and the *TMA Art Leaks* protocol are proprietary initiatives of **The Moore Signal Archive LLC**. 
-> **LIABILITY:** Participation in any Archive discovery is strictly voluntary. Physical artifacts (books/art) are provided "as-is" for community stewardship. The Archive assumes no liability for the discovery, handling, or transport of retired signals. 
-> **DECOUPLING:** While tethered by the *Positive Zero* theory, all public literary dispatches are decoupled from private internal research studies.
+> **LIABILITY SHIELD:** The formal #TMA-001 study is ARCHIVED. All artifacts—including the retired trackable and ongoing **Legacy Art Gifts**—are provided **"as-is"** for passive community stewardship. Participation is strictly voluntary. You agree to **release, indemnify, and hold harmless** The Moore Signal Archive LLC from all liability, including claims of **negligence**, arising from any interaction.
+>
+> **SAFETY PROTOCOL:** Seekers assume all risks. **DO NOT TRESPASS OR PLACE ARTIFACTS IN HAZARDOUS LOCATIONS.** The Archive prioritizes intellectual discovery over physical risk.
+
+
+
 
 <br>
 
