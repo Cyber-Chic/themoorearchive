@@ -2,7 +2,7 @@
 
 # 📡 THE MOORE SIGNAL ARCHIVE
 **PRINCIPAL INVESTIGATOR: ANGELA N. MOORE**  
-*“I want to live as though I traveled back in time... To this very moment.”*
+*“I WANT TO LIVE AS THOUGH I TRAVELED BACK IN TIME...TO THIS VERY MOMENT.”*
 
 ---
 
