@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📡 THE MOORE SIGNAL ARCHIVE
+# 📡 THE MOORE ARCHIVE TMA
 **PRINCIPAL INVESTIGATOR: ANGELA N. MOORE**  
 *“I WANT TO LIVE AS THOUGH I TRAVELED BACK IN TIME...TO THIS VERY MOMENT.”*
 
@@ -17,7 +17,7 @@
 > ### 🛡️ SOVEREIGN ADVISORY
 > **The Moore Signal Archive LLC** is a creative research entity. 
 > 
-> **LEGAL STATUS:** This archive and the *TMA Art Leaks* protocol are proprietary initiatives of **The Moore Signal Archive LLC**. 
+> **LEGAL STATUS:** The Moore Archive TMA and the *TMA Art Leaks* protocol are proprietary initiatives of **The Moore Signal Archive LLC**. 
 > **LIABILITY:** Participation in any Archive discovery is strictly voluntary. Physical artifacts (books/art) are provided "as-is" for community stewardship. The Archive assumes no liability for the discovery, handling, or transport of retired signals. 
 > **DECOUPLING:** While tethered by the *Positive Zero* theory, all public literary dispatches are decoupled from private internal research studies.
 
