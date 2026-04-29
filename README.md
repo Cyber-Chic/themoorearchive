@@ -40,7 +40,7 @@
 
 | 🛰️ **KEY_ID: #TMA-001** |
 | :--- |
-| <center> <img src="img/Key_in_Case_TMA.jpeg" width="280"> <br>**ARCHIVE INFO:** <br> `IMPACT: NATIONAL` • `SIGNAL: STABILIZED🟢` </center> |
+| <center> <img src="img/Key_in_Case_TMA.jpeg" width="280"> <br>**ARCHIVE INFO:** <br> `IMPACT: NATIONAL` • `SIGNAL: ARCHIVED🟢` </center> |
 
 <br>
 
