@@ -23,7 +23,24 @@
 >
 > **SAFETY PROTOCOL:** Seekers assume all risks. **DO NOT TRESPASS OR PLACE ARTIFACTS IN HAZARDOUS LOCATIONS.** The Archive prioritizes intellectual discovery over physical risk.
 
+---
 
+### 📡 [ MSVI_LOG ] // SYSTEM AUDIT DATA
+**AUDIT TYPE: INDEPENDENT INQUIRY**
+
+> [!TIP]
+> **FIELD NOTE:** This repository serves as a verified Node in the Moore Signal Archive LLC. It tracks the persistence of a specific research signal across digital and physical frameworks.
+
+
+
+| ARCHIVAL METRIC | SYSTEM DATA |
+| :--- | :--- |
+| **RESEARCH_NODE** | [ ARCHIVED_STUDY ] |
+| **AUDIT_SEVERITY** | 🔵 INFORMATIONAL |
+| **DATA_INTEGRITY** | VETTED (LLC_FRAMEWORK) |
+| **PI_CREDENTIALS** | NYT_AD / MILLI_AWARD |
+
+---
 
 
 <br>
