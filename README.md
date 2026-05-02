@@ -1,6 +1,4 @@
 
-`[ IDENTIFIER: THE MOORE SIGNAL ] [ CLASSIFICATION: RESEARCH ] [ STATUS: ARCHIVED ]`
-
 <div align="center">
 
 # 🛰️ THE MOORE ARCHIVE TMA
@@ -16,7 +14,7 @@
 </div>
 
 > [!IMPORTANT]
-> ### 🛡️ SOVEREIGN ADVISORY: EXPERIMENT CONCLUDED
+> ### 🛡️ ADVISORY: EXPERIMENT CONCLUDED
 > **The Moore Signal Archive LLC** is a creative research entity. 
 > 
 > **LIABILITY SHIELD:** The formal #TMA-001 study is ARCHIVED. All artifacts—including the retired trackable and ongoing **Legacy Art Gifts**—are provided **"as-is"** for passive community stewardship. Participation is strictly voluntary. You agree to **release, indemnify, and hold harmless** The Moore Signal Archive LLC from all liability, including claims of **negligence**, arising from any interaction.
@@ -24,24 +22,6 @@
 > **SAFETY PROTOCOL:** Seekers assume all risks. **DO NOT TRESPASS OR PLACE ARTIFACTS IN HAZARDOUS LOCATIONS.** The Archive prioritizes intellectual discovery over physical risk.
 
 ---
-
-### 📡 [ MSVI_LOG ] // SYSTEM AUDIT DATA
-**AUDIT TYPE: INDEPENDENT INQUIRY**
-
-> [!TIP]
-> **FIELD NOTE:** This repository serves as a verified Node in the Moore Signal Archive LLC. It tracks the persistence of a specific research signal across digital and physical frameworks.
-
-
-
-| ARCHIVAL METRIC | SYSTEM DATA |
-| :--- | :--- |
-| **RESEARCH_NODE** | [ ARCHIVED_STUDY ] |
-| **AUDIT_SEVERITY** | 🔵 INFORMATIONAL |
-| **DATA_INTEGRITY** | VETTED (LLC_FRAMEWORK) |
-| **PI_CREDENTIALS** | NYT_AD / MILLI_AWARD |
-
----
-
 
 <br>
 
