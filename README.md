@@ -5,61 +5,51 @@
 ---
 
 ### 🛰️ STATUS: [ ▓▓▓▓▓▓▓▓▓▓ ] STABILIZED
-**[NATIONAL SUCCESS: VIEW ARCHIVAL LOG](https://cyber-chic.github.io/themoorearchive/stabilization-001)** 🌍
+**SIGNAL STATUS: 🟢 NOMINAL** | **PROTOCOL: PASSIVE DISCOVERY**
 
 ---
 
-### [ 🖥️ SYSTEM ARCHITECTURE ]
-**The Moore Archive TMA is a geospatial performance study bridging digital code and physical reality.**
+### [ 🧪 RESEARCH OVERVIEW ]
+The Moore Archive (TMA) is an interdisciplinary **geospatial social-performance study** exploring the intersection of digital code and physical reality. The active research phase has successfully **STABILIZED**, transitioning into a self-sustaining community "Quiet Signal."
 
-*   **CORE LOGIC:** The **"Positive Zero" Principle**. Integrity ($S$) reaches its highest potential as Public Visibility ($V$) approaches zero ($S = K/V$).
-*   **THE PROTOCOL:** Participation requires a **"Signal Refresh."** Finders are invited to perform one anonymous act of Kindness ($K$) for every artifact found to honor the signal.
-*   **TECHNICAL PROVENANCE:** This protocol adopts the **IEEE 754 standard**, allowing division by **Positive Zero (+0)** to result in **Positive Infinity (+∞)**.
-
----
-
-### [ 🧪 RESEARCH DATA & ART LEAKS ]
-*The Archive manages the quiet distribution of authenticated artifacts (poetry and art) into public nodes.*
-
-<br>
-
-
-| 🛰️ **KEY_ID: #TMA-001** | SYSTEM STATUS | MISSION TYPE |
-| :--- | :--- | :--- |
-| <center> <img src="img/Key_in_Case_TMA.jpeg" width="250"> </center> | 📁 **STABILIZED** | 🧪 **SOCIAL PERFORMANCE** |
-| `SIGNAL: NOMINAL🟢` | 📡 **LEGACY SIGNAL** | 🕯️ **ANONYMOUS ACT** |
+#### 📡 THE PROTOCOL: "THE QUIET ECHO"
+The Archive is anchored by a cycle of honor. Participants (Navigators) are invited to perform **one anonymous act of kindness** for every artifact encountered. This "Signal Refresh" is a voluntary contribution to the integrity of the loop.
 
 ---
 
-### [ 🔍 VERIFICATION & INSTITUTIONAL RECORD ]
-**The Moore Signal Archive is anchored by a decade of independent research and recreational mathematical inquiry.**
+### [ 🔭 ARTIFACT CLASSIFICATIONS ]
+The Archive consists of physical artifacts currently in circulation. Interaction with these items is entirely self-directed:
 
-*   **Refereed Proceedings (CMC3):** [Beal's Conjecture vs “Positive Zero”, Fight](https://www.cmc3.org/conferences/past/2015/spring/presentations/angela_moore_paper.pdf)  
-    > *Note: Formal record of the 19th Annual Conference Archive // Vetted `CIRCA_2015`*
-*   **Protocols (ResearchGate):** [The Moore Archive (TMA): An Inquiry into Digital-Physical Handshake Protocols](https://www.researchgate.net/publication/400971211)
-*   **Academic Conference (MAA):** [MAA 100th Anniversary MathFest (PDF p. 153)](https://maa.org/wp-content/uploads/2025/02/MF15-Abstracts.pdf)
-*   **The Milli Award (Westfair):** [Recognition for "innovative refutation" of Beal's Conjecture](https://lifeasahuman.com/2015/mind-spirit/inspirational/a-milli-award-for-the-million-dollar-question-beals-conjecture-the-once-in-a-million-journey-of-angela-moore/)
+1.  **THE ENCRYPTION KEY:** A physical artifact roaming via the Geocaching network. 
+    *   **Functionality:** A code engraved on the object may be used to access a digital gallery.
+    *   **Access:** Entering `Emaze.me/TMA/[CODE]` into a desktop browser initiates the handshake. 
+    *   **Note:** If the initial "Ping" redirects, re-entering the URL may be required to stabilize the frequency.
+2.  **ART & LITERARY LEAKS:** Permanent collectibles occasionally placed in **FLAGs** (Free Little Art Galleries). These are intended as community gifts—yours to claim if discovered.
 
 ---
 
-### [ 🛡️ ADMINISTRATIVE PROVENANCE ]
+### [ 🛡️ NAVIGATOR DIRECTIVES ]
+*   **The 14-Day Cycle:** To keep the signal active, it is requested that the Key be redeployed within 14 days of discovery. 
+*   **Digital Integrity:** To preserve the experience for others, participants are encouraged to keep codes and landmarks confidential in status reports.
+*   **Stewardship:** This project is a decentralized, living experiment. The community provides the movement; the Archivist provides the platform.
+
+> [!IMPORTANT]
+> **[ ⏳ ANCHOR KIND MEMORY ]**
+> *This is a Stateless Terminal. Use this moment to mentally anchor your anonymous act of kindness. No data is captured; the signal is internal.*
+
+---
+
+### [ ⚖️ ADMINISTRATIVE PROVENANCE & LIABILITY ]
 **The Moore Signal Archive LLC (CT)**
-
-**DISCLAIMER:** This is a non-commercial creative research inquiry. All artifacts are provided "as-is" for community stewardship. Participation is voluntary and at-will. The Archive assumes no liability for the discovery or movement of retired signals. Signal survives on honor.
-
-**➡️ CONTACT:** [themoorearchive@proton.me](mailto:themoorearchive@proton.me)  
 **OFFICE:** 2389 Main St, Ste 100, Glastonbury, CT 06033
 
+**DISCLAIMER:** This is a non-commercial creative research inquiry. Participation is entirely voluntary. **By engaging with this project, you assume all liability for your own safety, terrain evaluation, and compliance with local laws.** The Archivist and The Moore Signal Archive LLC assume no responsibility for the conduct of third-party navigators, property boundaries, or the placement of artifacts. 
+
+**➡️ CONTACT:** [themoorearchive@proton.me](mailto:themoorearchive@proton.me)
 
 ---
 
 <div align="center">
-
-### 🛰️ SIGNAL STATUS: 🟢 NOMINAL
-**PRINCIPAL INVESTIGATOR: ANGELA N. MOORE**
-
-> [!CAUTION]
-> **LEGAL DISCLOSURE:** Proprietary research managed by **The Moore Signal Archive LLC**. Distributed for **educational, non-commercial, and artistic inquiry**. The Archive assumes no liability for field discovery.
 
 *“I want to live as though I traveled back in time... To this very moment.”*
 
