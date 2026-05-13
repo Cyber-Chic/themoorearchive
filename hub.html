@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Moore Signal Archive | Hub Terminal</title>
+    <!-- IMPORTING THE INSTITUTIONAL FONTS -->
+    <link href="googleapis.com" rel="stylesheet">
+    
+    <style>
+        /* GLOBAL RESET & VARIABLES */
+        * { box-sizing: border-box; }
+
+        :root {
+            --neon-blue: #00e5ff;
+            --bg-black: #050505;
+            --midnight: #0a0e14;
+            --text-slate: #cbd5e0;
+        }
+
+        body {
+            background: radial-gradient(circle at center, #0d1117 0%, #050505 100%);
+            background-color: var(--midnight); 
+            background-attachment: fixed;
+            color: #d1d1d1; 
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+        }
+
+        /* LIGHTS UP VISUAL GLAMOUR ENGINE */
+        .hero-img, .exhibit-frame img, .logo-frame img {
+            filter: brightness(0.8) contrast(1.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .hero-img:hover, .exhibit-frame img:hover, .logo-frame img:hover {
+            filter: brightness(1.2) contrast(1.2);
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.35);
+        }
+
+        /* HEADER & NEOCLASSICAL TYPOGRAPHY */
+        header { 
+            width: 100%; 
+            padding: 80px 0 60px; 
+            text-align: center; 
+            background: #000;
+            border-bottom: 1px solid rgba(0, 229, 255, 0.15); 
+        }
+
+        .name-brand { 
+            font-family: 'Libre Baskerville', serif; 
+            font-size: 0.7rem; 
+            color: var(--neon-blue); 
+            letter-spacing: 9px; 
+            text-transform: uppercase; 
+            margin-bottom: 25px; 
+            display: inline-block;
+            font-weight: 700;
+            text-shadow: 0 0 1px rgba(0, 229, 255, 0.4); 
+        }
+
+        h1 { 
+            font-family: 'Libre Baskerville', serif; 
+            font-size: clamp(1.4rem, 4vw, 1.8rem); 
+            color: #fff; 
+            margin: 0; 
+            letter-spacing: 7px; 
+            text-transform: uppercase; 
+            font-weight: 500;
+            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+        }
+
+        /* HERO EXHIBIT */
+        .hero-exhibit {
+            margin-top: 40px; 
+            padding: 40px 20px; 
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .hero-exhibit img {
+            width: 100%;
+            max-width: 380px; 
+            border-radius: 50%;
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            padding: 25px; 
+            background: radial-gradient(circle, rgba(0, 229, 255, 0.05) 0%, transparent 75%);
+            box-shadow: 0 0 40px rgba(0, 229, 255, 0.15);
+            animation: anchorPulse 4s infinite ease-in-out;
+            transition: all 0.5s ease;
+        }
+
+        @keyframes anchorPulse {
+            0%, 100% { box-shadow: 0 0 35px rgba(0, 229, 255, 0.12); transform: scale(1); }
+            50% { box-shadow: 0 0 55px rgba(0, 229, 255, 0.3); transform: scale(1.01); }
+        }
+
+        /* CONTAINER ELEMENTS */
+        .container { width: 100%; max-width: 760px; padding: 0 24px; }
+
+        .section-title { 
+            font-family: 'Libre Baskerville', serif; 
+            font-size: 1.1rem; 
+            color: rgba(0, 229, 255, 0.85); 
+            font-weight: 700; 
+            border-left: 4px solid rgba(0, 229, 255, 0.6); 
+            padding: 12px 0 12px 20px; 
+            margin: 80px 0 40px; 
+            text-transform: uppercase;
+            letter-spacing: 5px; 
+            width: 100%; 
+            border-bottom: 1px solid rgba(0, 229, 255, 0.15); 
+            background: linear-gradient(to right, rgba(0, 229, 255, 0.08), transparent);
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+        }
+
+        .body-text { 
+            font-size: 1.15rem; 
+            color: var(--text-slate); 
+            line-height: 1.85; 
+            letter-spacing: 0.015em; 
+            margin-bottom: 55px;  
+            text-align: left; 
+            font-style: italic; 
+            border-left: 3px solid rgba(0, 229, 255, 0.35); 
+            padding-left: 25px;
+            overflow-wrap: break-word;
+        }
+
+        .body-text strong { color: #ffffff; font-weight: 700; text-shadow: 0 0 10px rgba(255, 255, 255, 0.15); }
+
+        .sub-label { 
+            font-family: 'Space Mono', monospace; 
+            font-size: 0.75rem; 
+            color: #4682b4; 
+            letter-spacing: 4px; 
+            text-transform: uppercase; 
+            margin: 0 0 12px 0; 
+            display: block;
+            font-weight: bold;
+        }
+
+        .highlight { background: rgba(0, 229, 255, 0.12); padding: 2px 6px; border-radius: 2px; }
+
+        /* THE INDEPENDENT EXHIBIT STACK */
+        .exhibit-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            width: 100%;
+            margin-bottom: 60px;
+        }
+
+        .exhibit-frame {
+            width: 100%;
+            background: #000;
+            border: 1px solid rgba(0, 229, 255, 0.15);
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .exhibit-frame.landscape img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            object-fit: contain;
+            background: #000;
+        }
+
+        .exhibit-frame.portrait img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            aspect-ratio: 3 / 4;
+            object-fit: contain;
+            background: #000;
+            margin: 0 auto;
+        }
+
+        .exhibit-caption {
+            display: block;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--neon-blue);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .logo-frame {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .logo-frame img {
+            width: 50% !important;
+            max-width: 200px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50% !important;
+            border: 1px solid rgba(0, 229, 255, 0.2);
+        }
+
+        /* SHIMMERING LINK INTERACTION HUB - AUTOMATED 2X2 TO 1 MATRIX */
+        .link-hub { 
+            width: 100%; 
+            padding: 100px 24px; 
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 800px;
+            margin: 80px auto 0;
+            background: linear-gradient(135deg, #000 30%, rgba(0, 229, 255, 0.08) 50%, #000 70%);
+            background-size: 200% 200%;
+            animation: signal-shimmer 8s ease-in-out infinite;
+            border-top: 1px solid rgba(0, 229, 255, 0.2);
+        }
+
+        @keyframes signal-shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .archive-btn { 
+            text-decoration: none; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            border: 1px solid rgba(0, 229, 255, 0.3); 
+            background: #000; 
+            padding: 45px 30px; 
+            transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+            position: relative; 
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .archive-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(0, 229, 255, 0.1), transparent);
+            transition: 0.7s;
+        }
+
+        .archive-btn:hover::before { left: 100%; }
+
+        .archive-btn:hover { 
+            border-color: var(--neon-blue); 
+            background: #080808; 
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+            transform: translateY(-3px); 
+        }
+
+        .archive-btn span { font-size: 0.75rem; color: var(--neon-blue); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; }
+        .archive-btn strong { font-family: 'Libre Baskerville', serif; color: #ffffff; font-size: 1rem; letter-spacing: 2px; font-weight: 400; text-align: center; }
+
+        /* THE MASTER TERMINAL FOOTER DECK */
+        .terminal-footer { 
+            width: 100%; 
+            text-align: center; 
+            padding: 80px 20px 60px; 
+            background: #000; 
+            border-top: 1px solid #111; 
+        }
+
+        .releases-marquee {
+            color: #666; 
+            text-decoration: none; 
+            font-size: 0.75rem; 
+            letter-spacing: 4px; 
+            text-transform: uppercase; 
+            display: block; 
+            width: 100%; 
+            white-space: nowrap; 
+            overflow-x: auto; 
+            line-height: 2.5; 
+            padding: 0 20px; 
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .releases-marquee:hover { color: #888; }
+
+        .admin-note { 
+            width: 90%; 
+            max-width: 550px; 
+            margin: 60px auto 12px; 
+            padding: 15px; 
+            border: 1px solid rgba(0, 229, 255, 0.3); 
+            background: rgba(0, 229, 255, 0.03); 
+            border-radius: 4px; 
+            text-align: center; 
+            font-family: 'Space Mono', monospace; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+        }
+
+        /* --- MOBILE SCREEN CALIBRATION --- */
+        @media screen and (max-width: 768px) {
+            header { padding: 50px 15px 40px; }
+            h1 { font-size: 1.3rem; letter-spacing: 4px; }
+            
+            .hero-exhibit { padding: 20px 10px; }
+            .hero-exhibit img { max-width: 260px; padding: 15px; }
+
+            .exhibit-frame.portrait img { max-width: 100%; }
+
+            .section-title { font-size: 1rem; letter-spacing: 3px; padding-left: 15px; }
+            .body-text { font-size: 1.1rem; line-height: 1.8; padding-left: 18px; }
+            
+            .link-hub { 
+                grid-template-columns: 1fr; 
+                padding: 60px 24px; 
+                gap: 20px; 
+            }
+            .archive-btn { padding: 35px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="name-brand">Angela N. Moore \\ AWARD-WINNING STRATEGIST</div>
+        <h1>THE MOORE SIGNAL ARCHIVE</h1>
+    </header>
+
+    <!-- FLOATING STARFIELD SPECIMEN MASK -->
+    <section class="hero-exhibit">
+        <div class="exhibit-box">
+            <span class="sub-label">// The Archive Core</span>
+            <img src="https://avatars.githubusercontent.com/u/99448276?v=4" class="hero-img" alt="Primary Starfield Curation Anchor">
+        </div>
+    </section>
+
+    <div class="container">
+
+        <span class="sub-label">Overview</span>
+        <div class="body-text">
+            Welcome to <strong style="color: #ffffff;">The Moore Signal Archive</strong>, an independent research hub dedicated to exploring a diverse collection of creative inquiries—ranging from NASA exoplanet data to the poetry of human perception.
+        </div>
+
+        <div class="section-title">01 // PRESS & ACCOLADES</div>
+
+        <span class="sub-label">National Media Feature</span>
+        <div class="body-text">
+            My strategic automation of background operations, which preserved dedicated time for creative and independent passions, was highlighted within a <strong>New York Times National Advertising Campaign</strong> series.
+        </div>
+
+        <span class="sub-label">Award Spotlight</span>
+        <div class="body-text">
+            Recipient of the <strong>Westfair Business Journals Milli Award</strong> for independent conceptual studies and the innovative deployment of social awareness comics designed to illustrate systemic challenges.
+        </div>
+
+        <div class="section-title">02 // Visual Snapshots</div>
+        
+        <div class="exhibit-stack">
+            <div class="exhibit-frame landscape">
+                <img src="https://github.com/user-attachments/assets/b0c0777d-e1e1-4ee2-83af-b013611796dc" alt="NYT National Campaign Feature">
+                <span class="exhibit-caption">// Feature: New York Times National Campaign</span>
+            </div>
+            
+            <div class="exhibit-frame portrait">
+                <img src="https://github.com/user-attachments/assets/0fede972-9d1f-4ae2-93b7-89f9e529a0a7" alt="Westfair Milli Award Presentation">
+                <span class="exhibit-caption">// Feature: Westfair Milli Award Ceremony</span>
+            </div>
+        </div>
+
+        <div class="section-title">03 // Summit Operations</div>
+
+        <span class="sub-label">Flagship Event // CT Tech Week</span>
+        <div class="body-text">
+            This serves as the permanent archival log for our signature presentation during <span class="highlight">CT Tech Week</span>, an elite statewide summit for technology visionaries.
+        </div>
+
+        <div class="logo-frame">
+            <img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=1,background=white,quality=75,width=400,height=400/uploads/sk/3aa5973b-6ab5-475b-9e6f-4958e8c7b567.png" alt="CT Tech Week Summit Logo">
+        </div>
+
+    </div>
+
+    <!-- SHIMMERING LINK INTERACTION CONTAINER NODE - BALANCED 2X2 ASYMMETRIC GRID -->
+    <section class="link-hub">
+        
+        <a href="https://github.com/cyber-chic" class="archive-btn" target="_blank">
+            <span>Terminal 01</span>
+            <strong>Central GitHub Repository Index</strong>
+        </a>
+
+        <a href="https://emaze.me/nasa" class="archive-btn" target="_blank">
+            <span>Terminal 02</span>
+            <strong>NASA Planetary Science Hub</strong>
+        </a>
+
+        <a href="https://luma.com/q0lm15pz" class="archive-btn" target="_blank">
+            <span>Terminal 03</span>
+            <strong>CT Tech Week Official Session Archive</strong>
+        </a>
+
+        <a href="https://cyber-chic.github.io/themoorearchive/releases" class="archive-btn" target="_blank">
+            <span>Terminal 04</span>
+            <strong>The Moore Archive Artifact Hunt</strong>
+        </a>
+
+    </section>
+
+    <!-- FULLY BACKED REPOSITORAL FOOTER DECK -->
+    <footer class="terminal-footer">
+        <a class="releases-marquee" href="https://angies.poetry.blog" target="_blank">
+            <span style="color: #00e5ff; font-weight: bold;">VIEW ARCHIVED LITERARY PORTFOLIO //</span> 
+            © 2026 THE MOORE SIGNAL ARCHIVE // THE SIGNAL SURVIVES ON HONOR.
+        </a>
+
+        <!-- CLICKABLE SECURE EMAIL BUTTON - OPTIMIZED FOR BOOKING CONVERSIONS -->
+        <a href="mailto:themoorearchive@proton.me" class="admin-note" style="text-decoration: none; display: block; transition: all 0.3s ease;">
+            <span style="color: #00e5ff !important; font-weight: bold; font-size: 0.85rem; text-shadow: 0 0 2px rgba(0,229,255,0.2);">SECURE EMAIL TRANSMISSION:</span> 
+            <span style="color: #fff !important; text-shadow: 0 0 8px rgba(0, 229, 255, 0.6); font-size: 0.85rem;">themoorearchive@proton.me</span> <span style="color: #00e5ff !important; font-weight: bold;">//</span> 
+            <span style="color: #00e5ff !important; font-weight: bold; font-size: 0.85rem; text-shadow: 0 0 2px rgba(0,229,255,0.2);">BOOKINGS:</span> <span style="color: #fff !important; text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); font-size: 0.85rem;">REQUEST</span>
+        </a>
+
+        <!-- PRONOUNCED COMPACT CORPORATE ADDRESS IN STEEL SLATE -->
+        <div style="font-family: 'Space Mono', monospace; font-size: 0.75rem; color: #475569; margin-top: 30px; letter-spacing: 2px; text-transform: uppercase; line-height: 1.8;">
+            // OUR COMPANY LEDGER: THE MOORE SIGNAL ARCHIVE LLC //<br>
+            <span style="color: #64748b; font-weight: bold; letter-spacing: 2.5px;">OFFICE ADDRESS: 2389 MAIN ST, STE 100, GLASTONBURY, CT 06033</span>
+        </div>
+    </footer>
+
+</body>
+</html>
