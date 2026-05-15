@@ -285,6 +285,14 @@
             box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
         }
 
+        /* 🔒 THE FIX: LOCK DOWN FOCUS AND ACTIVE STATES TO PREVENT WHITE FLASHES */
+        .submit-btn:focus, .submit-btn:active, .submit-btn:visited {
+            outline: none;
+            background: transparent;
+            color: #fff !important;
+            border-color: var(--neon-blue) !important;
+        }
+
         /* SHIMMERING LINK INTERACTION HUB */
         .link-hub { 
             width: 100%; 
