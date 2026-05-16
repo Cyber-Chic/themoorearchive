@@ -411,15 +411,21 @@
             border-top: 1px dashed rgba(255, 255, 255, 0.05); 
             padding-top: 30px;
         }
-
-        /* 📱 CRITICAL MOBILE SMOOTH CALIBRATION INTERFACE (UPDATED FOR MAXIMUM BREATHING ROOM) */
+        /* 📱 CRITICAL MOBILE SMOOTH CALIBRATION INTERFACE (FINAL POLISH MATRIX) */
         @media screen and (max-width: 680px) {
             header { 
                 padding: 45px 15px 35px; 
             }
             
+            /* TOP TEXT LINE: Scales perfectly down to prevent wrapping */
+            .name-brand {
+                font-size: 0.65rem;
+                letter-spacing: 2.5px;
+                margin-bottom: 15px;
+            }
+            
             h1 {
-                letter-spacing: 4px; /* Softens title compression on small mobile */
+                letter-spacing: 4px;
             }
 
             .hero-exhibit img { 
@@ -427,31 +433,49 @@
                 padding: 12px; 
             }
             
-            /* Section Title Fix: Prevents harsh wrapping and line stacking */
+            /* Section Titles: Safe tracking and sizing for single-line fit */
             .section-title { 
                 font-size: 0.85rem; 
-                letter-spacing: 5px; 
+                letter-spacing: 4px; 
                 padding: 10px 0 10px 12px;
                 margin: 65px 0 35px; 
+            }
+
+            /* Main Labels: Cleans up the 'Corporate Bookings' subhead wrap */
+            .sub-label {
+                font-size: 0.68rem;
+                letter-spacing: 2px;
+                margin-bottom: 10px;
             }
 
             /* Body Text Decompression */
             .body-text { 
                 padding-left: 15px; 
                 margin-bottom: 55px; 
-                font-size: 0.98rem; /* Marginally smaller to instantly reduce text density */
-                line-height: 1.9; /* Expanded line leading to add visual luxury */
+                font-size: 0.98rem; 
+                line-height: 1.9; 
             }
 
-            /* System List Breathing Room Overhaul */
+            /* Available for Keynotes Subhead: Smooth single-line fit */
+            .body-text strong[style*="font-size: 1.05rem"] {
+                font-size: 0.95rem !important;
+                letter-spacing: 0.5px !important;
+            }
+
+            /* System List Breathing Room */
             .system-list {
                 font-size: 0.72rem;
-                line-height: 2.4; /* Opens up the vertical distance between speaking topics */
+                line-height: 2.4; 
                 letter-spacing: 0.5px;
                 margin: 30px 0;
             }
 
-            /* Image Framework Rebalancing */
+            /* SECTION 2 FLYER RESIZE: Downscaled for a high-end, premium aesthetic */
+            .exhibit-frame.portrait img[src*="sk/3aa5973b"] {
+                max-width: 260px !important;
+            }
+
+            /* Framework Spacing */
             .exhibit-frame { 
                 padding: 12px; 
                 margin: 25px 0; 
@@ -463,7 +487,22 @@
                 margin-top: 12px;
             }
             
-            /* Interactive Hub Buffer Expansion */
+            /* Booking Card Content Wrap Fix */
+            .booking-card { 
+                padding: 25px 15px; 
+                margin: 30px 0 50px;
+            }
+            
+            .booking-card p {
+                font-size: 0.95rem !important; /* Prevents the catchy intro from wrapping heavily */
+            }
+
+            .booking-card p span {
+                font-size: 0.75rem !important;
+                letter-spacing: 1.5px !important;
+            }
+            
+            /* Interactive Hub Buffer */
             .link-hub { 
                 grid-template-columns: 1fr; 
                 padding: 60px 20px; 
@@ -479,11 +518,6 @@
                 font-size: 0.88rem;
             }
             
-            .booking-card { 
-                padding: 25px 15px; 
-                margin: 30px 0 50px;
-            }
-            
             .terminal-footer { 
                 padding: 60px 20px 40px; 
             }
@@ -496,7 +530,6 @@
             }
         }
 
-    </style>
 </head>
 <body>
 
