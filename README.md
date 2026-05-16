@@ -22,7 +22,7 @@ The Archive consists of physical artifacts currently in circulation. Interaction
 
 1.  **THE ENCRYPTION KEY:** A physical artifact roaming via the Geocaching network. 
     *   **Functionality:** A code engraved on the object may be used to access a digital gallery.
-    *   **Access:** Entering `Emaze.me/TMA/[CODE]` into a desktop browser initiates the handshake. 
+    *   **Access:** Entering `https://linktr.ee/THECODE` into a desktop browser initiates the handshake. 
     *   **Note:** If the initial "Ping" redirects, re-entering the URL may be required to stabilize the frequency.
 2.  **ART & LITERARY LEAKS:** Permanent collectibles occasionally placed in **FLAGs** (Free Little Art Galleries). These are intended as community gifts—yours to claim if discovered.
 
