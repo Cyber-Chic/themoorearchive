@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE MOORE ARCHIVE // DASHBOARD</title>
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    
+    <!-- IMPORTING JETBRAINS MONO FOR THE MONOSPACE COMMAND ENGINE -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --phosphor-green: #00ff41;
@@ -25,13 +30,13 @@
         }
 
         .terminal {
-            max-width: 1000px; /* Made bigger as requested */
+            max-width: 850px; /* Condensed down to 850px to reduce empty visual bloat */
             width: 100%;
             background: var(--panel-bg);
             border: 1px solid rgba(0, 255, 65, 0.2);
             padding: 40px;
             box-shadow: 0 0 50px rgba(0, 0, 0, 1);
-            box-sizing: border-box; /* Crucial for mobile sizing */
+            box-sizing: border-box;
         }
 
         /* Restored and cleaned Header */
@@ -43,33 +48,34 @@
         }
 
         .glitch-header {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: #fff;
             text-shadow: 0 0 15px var(--phosphor-green);
             margin: 0;
+            letter-spacing: 1px;
         }
 
         /* Summary Box */
         .quick-start {
-            background: rgba(34, 238, 85, 0.03);
-            border: 2px solid var(--phosphor-green);
+            background: rgba(34, 238, 85, 0.02);
+            border: 1px solid var(--phosphor-green);
             padding: 30px;
             margin-bottom: 40px;
         }
 
         .section-title {
             color: #fff;
-            font-size: 1.1rem;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border-bottom: 1px solid var(--phosphor-green);
+            border-bottom: 1px solid rgba(0, 255, 65, 0.3);
             padding-bottom: 10px;
             margin-top: 0;
         }
 
         /* Alert Box */
         .alert-box {
-            background: rgba(255, 68, 68, 0.1);
+            background: rgba(255, 68, 68, 0.08);
             border: 1px solid #ff4444;
             padding: 25px;
             margin-bottom: 40px;
@@ -79,19 +85,22 @@
         /* Troubleshooting Section */
         .tech-list {
             background: #000;
-            border: 1px solid rgba(34, 238, 85, 0.2);
+            border: 1px solid rgba(34, 238, 85, 0.15);
             padding: 30px;
             list-style: none;
             border-left: 4px solid var(--phosphor-green);
+            margin: 0 0 25px 0;
         }
 
-        .tech-list li { margin-bottom: 25px; }
-        .tech-list strong { color: #fff; font-size: 1.1rem; display: block; margin-bottom: 5px; }
+        .tech-list li { margin-bottom: 30px; }
+        .tech-list li:last-child { margin-bottom: 0; }
+        .tech-list strong { color: #fff; font-size: 1rem; display: block; margin-bottom: 6px; letter-spacing: 0.5px; }
+        .tech-list span { font-size: 0.9rem; line-height: 1.6; display: block; }
 
         /* Button Pulse */
         @keyframes pulse {
             0% { box-shadow: 0 0 5px rgba(0, 255, 65, 0.4); }
-            50% { box-shadow: 0 0 25px rgba(0, 255, 65, 0.8); }
+            50% { box-shadow: 0 0 20px rgba(0, 255, 65, 0.7); }
             100% { box-shadow: 0 0 5px rgba(0, 255, 65, 0.4); }
         }
 
@@ -100,11 +109,13 @@
             text-decoration: none;
             background-color: var(--phosphor-green);
             color: #000;
-            padding: 18px 36px;
+            padding: 16px 32px;
             font-weight: bold;
             text-transform: uppercase;
             transition: 0.2s;
             animation: pulse 2s infinite;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
         }
 
         .btn-main:hover {
@@ -118,35 +129,30 @@
             body { padding: 15px 10px; }
             .terminal { padding: 25px 15px; }
             
-            /* MISSION BOX (GREEN) - Internal padding & item spacing */
             .quick-start { 
-                padding: 35px 20px !important; 
-                margin-bottom: 50px !important; 
+                padding: 25px 20px !important; 
+                margin-bottom: 40px !important; 
             }
             .quick-start li { 
-                margin-bottom: 20px !important; 
+                margin-bottom: 15px !important; 
                 line-height: 1.6;
+                font-size: 0.9rem;
             }
             
-            /* ALERT BOX (RED) - Internal padding */
             .alert-box { 
-                padding: 35px 20px !important; 
-                margin-bottom: 50px !important; 
+                padding: 25px 20px !important; 
+                margin-bottom: 40px !important; 
             }
             
-            /* HEADER SPACING */
-            .header-anchor { margin-bottom: 55px !important; }
-            .glitch-header { font-size: 1.4rem; margin-bottom: 15px; }
+            .header-anchor { margin-bottom: 40px !important; }
+            .glitch-header { font-size: 1.2rem; margin-bottom: 10px; }
             
-            /* TEXT BREATHING ROOM */
-            p, li, span { line-height: 1.8 !important; letter-spacing: 0.5px; }
+            p, li, span { line-height: 1.7 !important; }
             
-            /* TROUBLESHOOTING LIST SPACING */
-            .tech-list { padding: 25px 15px !important; }
-            .tech-list li { margin-bottom: 40px !important; }
+            .tech-list { padding: 20px 15px !important; }
+            .tech-list li { margin-bottom: 30px !important; }
 
-            /* BUTTON SPACING */
-            .btn-main { width: 100%; box-sizing: border-box; text-align: center; }
+            .btn-main { width: 100%; box-sizing: border-box; text-align: center; padding: 15px 10px; }
         }
      </style>
 </head>
@@ -156,9 +162,8 @@
     <!-- HEADER -->
     <div class="header-anchor">
         <h1 class="glitch-header">>> SYSTEM_INITIALIZING: THE MOORE ARCHIVE</h1>
-        <div style="height: 20px;"></div> 
-        <!-- Fixed the distortion here with display: inline-block and max-width -->
-        <span style="color: #fff; background: #003311; padding: 8px 20px; font-size: 0.85rem; letter-spacing: 2px; border: 1px solid #1db954; border-radius: 2px; display: inline-block; max-width: 100%; box-sizing: border-box; line-height: 1.5;"> 
+        <div style="height: 15px;"></div> 
+        <span style="color: #fff; background: #003311; padding: 8px 16px; font-size: 0.8rem; letter-spacing: 1.5px; border: 1px solid #1db954; border-radius: 2px; display: inline-block; max-width: 100%; box-sizing: border-box; line-height: 1.4;"> 
             [ ACCESS GRANTED: KEY-HOLDERS & ASPIRING AGENTS ] 
         </span>
     </div>
@@ -166,60 +171,54 @@
     <!-- QUICK-START -->
     <div class="quick-start">
         <h3 class="section-title">[ ⚡ ] MISSION BRIEFING</h3>
-        <ul style="list-style: none; padding: 0; margin-top: 20px; font-size: 1rem; line-height: 1.8;">
-            <li><strong style="color: #fff;">01. THE MISSION:</strong> A real-world scavenger hunt for hidden art and secret kindness.</li>
-            <li><strong style="color: #fff;">02. THE GOAL:</strong> Find a physical "Key" hidden in the world; submit code twice to access gallery.</li>
-            <li><strong style="color: #fff;">03. THE RULES:</strong> Stay safe, move the Key to a new spot, and perform one secret act of kindness.</li>
+        <ul style="list-style: none; padding: 0; margin-top: 20px; font-size: 0.95rem; line-height: 1.8;">
+            <li style="margin-bottom: 12px;"><strong style="color: var(--phosphor-green);">01. THE MISSION:</strong> A real-world scavenger hunt for hidden art and secret kindness.</li>
+            <li style="margin-bottom: 12px;"><strong style="color: var(--phosphor-green);">02. THE GOAL:</strong> Locate a physical "Key" roaming the wild and use its alphanumeric code to initialize the transmission pathway.</li>
+            <li><strong style="color: var(--phosphor-green);">03. THE RULES:</strong> Move the Key to a new geocache, log the trajectory, and execute one anonymous act of kindness.</li>
         </ul>
 
-        <div style="text-align: center; padding: 30px 0 10px 0;">
-            <a href="https://cyber-chic.github.io/themoorearchive" class="btn-main">> ACCESS DATA STREAM</a>
-            <p style="margin-top: 20px; font-size: 0.85rem; opacity: 0.6; color: var(--phosphor-green);">
-                >> Scroll for full Technical Briefing.
-            </p>
+        <!-- NEW CLEAN TWO-BUTTON ROUTING SYSTEM -->
+        <div style="text-align: center; padding: 35px 0 10px 0; display: flex; flex-direction: column; gap: 15px; align-items: center;">
+            <a href="https://cyber-chic.github.io/themoorearchive/" class="btn-main" style="width: 100%; max-width: 480px;">> ACCESS HUB MAIN DATA STREAM</a>
+            <a href="https://linktr.ee" target="_blank" rel="noopener" class="btn-main" style="width: 100%; max-width: 480px; background-color: transparent; border: 1px solid var(--phosphor-green); color: #fff; animation: none;">> DEPLOY GATEWAY: linktr.ee/THECODE</a>
         </div>
     </div>
 
     <!-- ALERT -->
     <div class="alert-box">
-        <span style="color: #ff4444; font-size: 1.1rem; letter-spacing: 2px; display: block; margin-bottom: 10px; font-weight: bold;">
+        <span style="color: #ff4444; font-size: 1rem; letter-spacing: 2px; display: block; margin-bottom: 8px; font-weight: bold; text-transform: uppercase;">
             ⚠️ HARDWARE LOCK: MOBILE INCOMPATIBLE
         </span>
-        <span style="color: #ffffff; font-size: 0.95rem; line-height: 1.5;">
-            The 3D Gallery <strong>cannot</strong> be unlocked on mobile devices.<br>
-            <small style="opacity: 0.7;">[MOBILE USERS: ONLY GRANTED ACCESS TO DATA STREAM]</small>
+        <span style="color: #ffffff; font-size: 0.9rem; line-height: 1.5;">
+            The 3D presentation matrix requires a desktop terminal interface to unlock.<br>
+            <small style="opacity: 0.7; display: block; margin-top: 4px;">[MOBILE NAVIGATORS: RESTRICTED TO CENTRAL DATA STREAM PORT]</small>
         </span>
     </div>
 
-    <!-- TROUBLESHOOTING -->
-    <div style="border: 1px solid var(--amber-gold); padding: 20px; margin-bottom: 25px; background: rgba(255, 170, 0, 0.05); text-align: center;">
-        <p style="color: var(--amber-gold); margin: 0; font-size: 1rem; font-weight: bold; letter-spacing: 1px;">
-          DECRYPTION ERRORS? READ TROUBLESHOOTING PROTOCOLS:
+    <!-- TROUBLESHOOTING SEPARATOR HEADLINE -->
+    <div style="border: 1px solid var(--amber-gold); padding: 15px; margin-bottom: 25px; background: rgba(255, 170, 0, 0.03); text-align: center;">
+        <p style="color: var(--amber-gold); margin: 0; font-size: 0.9rem; font-weight: bold; letter-spacing: 1px; text-transform: uppercase;">
+          DECRYPTION ERRORS? READ THE OVERRIDE PROTOCOLS:
         </p>
     </div>
 
+    <!-- CLEANED & UN-CLUTTERED PROTOCOL LIST -->
     <ul class="tech-list">
         <li>
-            <strong>📡 1. THE DUAL HANDSHAKE</strong>
-            <span style="opacity: 0.9;">When redirected home, <strong>re-type your password</strong> and press Enter. The second attempt bypasses the security shield.</span>
+            <strong>📡 1. THE DUAL-HANDSHAKE TERMINAL PROTOCOL</strong>
+            <span>Once the portal redirects to /home, <strong>replace /home with your Key code</strong> in the browser bar and press Enter to unlock the vault.</span>
         </li>
         <li>
-            <strong>🌐 2. BROWSER FREQUENCY</strong>
-            <span style="opacity: 0.9;">Optimized for <strong>Chrome or Edge</strong>. If visuals glitch, switch browsers to re-stabilize the signal.</span>
+            <strong>🌐 2. SYSTEM PORT FREQUENCY</strong>
+            <span>The 3D engine is optimized exclusively for <strong>Chrome or Edge</strong> desktop architectures. If visual elements warp or experience atmospheric distortion, reload the terminal link using these platforms.</span>
         </li>
         <li>
-            <strong>🌀 3. ATMOSPHERIC DISTORTION</strong>
-            <span style="opacity: 0.9;">If the 3D rendering freezes, <strong>Refresh your Browser</strong> and re-unlock to sync visual data.</span>
+            <strong>🌀 3. DATA RE-STABILIZATION</strong>
+            <span>If the transmission stream freezes during data synthesis, perform a hard <strong>Refresh on your Browser (Ctrl+F5)</strong> to re-sync local telemetry and establish a secure connection loop.</span>
         </li>
     </ul>
 
-    <div style="text-align: center; margin-top: 40px; opacity: 0.3; font-size: 0.7rem;">
-        END OF BRIEFING // ARCHIVE REF: 0x882-MOORE
-    </div>
 </div>
-<script>
-    console.log("%c>> SYSTEM ALERT: Agent detected.", "color: #00ff41; font-weight: bold; font-size: 1.2rem;");
-    console.log("Welcome to the Moore Archive. Your curiosity is noted.");
-</script>
+
 </body>
 </html>
