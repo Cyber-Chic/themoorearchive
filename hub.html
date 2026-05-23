@@ -712,145 +712,75 @@
         
         <p style="margin-bottom: 15px;">This active initiative archives limited-edition literary artifacts placed in public spaces worldwide.</p>
         
-        <!-- DE-DENSIFIED NARRATIVE ROUTING -->
         <div style="font-family: 'Space Mono', monospace; font-size: 0.8rem; line-height: 1.8; color: #cbd5e0; margin-bottom: 25px; padding-left: 5px;">
             📍 <strong style="color: var(--neon-blue);">NEW YORK LOG:</strong> Hand-signed poetry book released inside the Buffalo Free Little Art Gallery.<br>
             🌍 <strong style="color: var(--neon-blue);">GLOBAL MATRIX:</strong> Multi-state expansion tracking via Connecticut, Washington, and Ohio.<br>
             🔄 <strong style="color: var(--neon-blue);">ACTUAL PARAMETER:</strong> Traveling prints grant exclusive virtual access to those forwarding anonymous kindness.
         </div>
 
-        <!-- CAROUSEL TRACK WINDOW WITH INTEGRATED STYLES & LOOP MARQUEE -->
         <div class="tma-carousel-window" style="width: 100%; overflow: hidden; position: relative; padding: 15px 0;">
-            
             <style>
-                .tma-carousel-track {
-                    display: flex;
-                    gap: 25px;
-                    width: max-content;
-                    animation: tmaMarquee 55s linear infinite; 
-                    will-change: transform;
-                    /* 🔒 FORCES BROWSER CHIP TO COMPUTE MOTION - STOPS FIREFOX SHUDDER & TEXT BLUR */
-                    transform: translate3d(0, 0, 0);
-                    backface-visibility: hidden;
-                    -webkit-backface-visibility: hidden;
-                }
-                .tma-carousel-window:hover .tma-carousel-track {
-                    animation-play-state: paused;
-                }
-                .tma-card-specimen {
-                    flex: 0 0 380px; /* 🔒 WIDER CONTAINER: Gives tiny handwritten text breathing room */
-                    background: #000;
-                    border: 1px solid rgba(0, 229, 255, 0.25);
-                    border-radius: 4px;
-                    padding: 20px;
-                    text-align: center;
-                    box-shadow: 0 0 15px rgba(0, 229, 255, 0.15), inset 0 0 10px rgba(0, 229, 255, 0.05);
-                    transition: border 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-                }
-                .tma-card-specimen:hover {
-                    border-color: var(--neon-blue);
-                    transform: translateY(-4px);
-                    box-shadow: 0 0 25px rgba(0, 229, 255, 0.4), inset 0 0 15px rgba(0, 229, 255, 0.1);
-                }
-                .tma-card-specimen img {
-                    width: 100%;
-                    height: 320px; /* 🔒 TALLER DISPLAY: Prevents browser scaling compression from blurring text */
-                    object-fit: contain; 
-                    background: #050505; 
-                    border-radius: 2px;
-                    display: block;
-                    margin: 0 auto;
-                    /* 🔒 SUBPIXEL TEXT-OPTIMIZATION OVERRIDES */
-                    image-rendering: -webkit-optimize-contrast;
-                    image-rendering: optimizeQuality;
-                    filter: contrast(1.07) brightness(1.02);
-                }
-                @keyframes tmaMarquee {
-                    0% { transform: translate3d(0, 0, 0); }
-                    100% { transform: translate3d(calc(-50% - 12.5px), 0, 0); } 
+                .tma-carousel-track { display: flex; gap: 25px; width: max-content; animation: tmaMarquee 90s linear infinite; will-change: transform; transform: translate3d(0, 0, 0); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+                .tma-carousel-window:hover .tma-carousel-track { animation-play-state: paused; }
+                .tma-card-specimen { flex: 0 0 380px; background: #000; border: 1px solid rgba(0, 229, 255, 0.25); border-radius: 4px; padding: 20px; text-align: center; box-shadow: 0 0 15px rgba(0, 229, 255, 0.15), inset 0 0 10px rgba(0, 229, 255, 0.05); transition: border 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; }
+                .tma-card-specimen:hover { border-color: var(--neon-blue); transform: translateY(-4px); box-shadow: 0 0 25px rgba(0, 229, 255, 0.4), inset 0 0 15px rgba(0, 229, 255, 0.1); }
+                .tma-card-specimen img { width: 100%; height: 320px; object-fit: contain; background: #050505; border-radius: 2px; display: block; margin: 0 auto; image-rendering: -webkit-optimize-contrast; image-rendering: optimizeQuality; filter: contrast(1.07) brightness(1.02); }
+                @keyframes tmaMarquee { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
+                @media (max-width: 768px) {
+                    .tma-carousel-track { animation: tmaMarquee 140s linear infinite; gap: 20px; }
+                    .tma-card-specimen { flex: 0 0 310px; }
+                    .tma-card-specimen img { height: 260px; }
                 }
             </style>
 
-            <!-- CONTAINER PLACEMENT (Duplicated content ensures zero-gap visual loop) -->
             <div class="tma-carousel-track">
-                
-                <!-- CARD 01: THE TRAVELING PIECE -->
+                <!-- CARD 01 -->
                 <div class="tma-card-specimen">
                     <a href="https://cyber-chic.github.io/themoorearchive/releases" style="text-decoration: none; color: inherit; display: block;">
                         <img src="img/Key_in_Case_TMA.jpeg" alt="Active Traveling Art Piece">
-                        <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">
-                            // PROJECT SCOPE // View Archive<br>
-                            Artifact migration mapping across a global landscape.
-                        </span>
+                        <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">// PROJECT SCOPE // View Archive<br>Artifact migration mapping across a global landscape.</span>
                     </a>
                 </div>
-
-                <!-- CARD 02: THE NEW YORK FEATURE -->
+                <!-- CARD 02 -->
                 <div class="tma-card-specimen">
                     <img src="img/bflag3.jpeg" alt="New York Placement">
-                    <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">
-                        // REGIONAL DROP // New York Gift<br>
-                        Official drop containing hand-signed custom poetry book artwork.
-                    </span>
+                    <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">// REGIONAL DROP // New York Gift<br>Official drop containing hand-signed custom poetry book artwork.</span>
                 </div>
-
-                <!-- CARD 03: ARTGRAM CHRONICLE -->
+                <!-- CARD 03 -->
                 <div class="tma-card-specimen">
                     <img src="https://s3.us-east-005.backblazeb2.com/artgram-co/artworks/f7w554OyoJiyFkXFeakN13VdZdcP11gwC6GQVnUj.webp" alt="Original Illustrations">
-                    <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">
-                        // CREATIVE RECORD // Original Illustration<br>
-                        Custom hand-drawn art and narrative tracking metric.
-                    </span>
+                    <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">// CREATIVE RECORD // Original Illustration<br>Custom hand-drawn art and narrative tracking metric.</span>
                 </div>
-
-                <!-- CARD 04: SPECIMEN MATRIX EXTENSION -->
+                <!-- CARD 04 -->
                 <div class="tma-card-specimen">
                     <img src="https://avatars.githubusercontent.com/u/99448276?v=4" alt="Archive Core Curation Node">
-                    <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">
-                        // DATA NODE // Core Starfield<br>
-                        System mapping integration and peripheral data streams.
-                    </span>
+                    <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">// DATA NODE // Core Starfield<br>System mapping integration and peripheral data streams.</span>
                 </div>
 
-                <!-- 🔄 DUPLICATED CORE SET TO CREATE SEAMLESS INFINITE LOOP TRANSIT -->
+                <!-- 🔄 DUPLICATED TRANZIT SET FOR SEAMLESS LOOP -->
                 <div class="tma-card-specimen">
                     <a href="https://cyber-chic.github.io/themoorearchive/releases" style="text-decoration: none; color: inherit; display: block;">
                         <img src="img/Key_in_Case_TMA.jpeg" alt="Active Traveling Art Piece">
-                        <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">
-                            // PROJECT SCOPE // View Archive<br>
-                            Artifact migration mapping across a global landscape.
-                        </span>
+                        <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">// PROJECT SCOPE // View Archive<br>Artifact migration mapping across a global landscape.</span>
                     </a>
                 </div>
-
                 <div class="tma-card-specimen">
                     <img src="img/bflag3.jpeg" alt="New York Placement">
-                    <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">
-                        // REGIONAL DROP // New York Gift<br>
-                        Official drop containing hand-signed custom poetry book artwork.
-                    </span>
+                    <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">// REGIONAL DROP // New York Gift<br>Official drop containing hand-signed custom poetry book artwork.</span>
                 </div>
-
                 <div class="tma-card-specimen">
                     <img src="https://s3.us-east-005.backblazeb2.com/artgram-co/artworks/f7w554OyoJiyFkXFeakN13VdZdcP11gwC6GQVnUj.webp" alt="Original Illustrations">
-                    <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">
-                        // CREATIVE RECORD // Original Illustration<br>
-                        Custom hand-drawn art and narrative tracking metric.
-                    </span>
+                    <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">// CREATIVE RECORD // Original Illustration<br>Custom hand-drawn art and narrative tracking metric.</span>
                 </div>
-
                 <div class="tma-card-specimen">
                     <img src="https://avatars.githubusercontent.com/u/99448276?v=4" alt="Archive Core Curation Node">
-                    <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">
-                        // DATA NODE // Core Starfield<br>
-                        System mapping integration and peripheral data streams.
-                    </span>
+                    <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">// DATA NODE // Core Starfield<br>System mapping integration and peripheral data streams.</span>
                 </div>
-
             </div>
         </div>
 
     </div>
+</div>
 </div>
 
         <!-- ZERO-LIABILITY TERMINAL DATA DIRECTIVE HUB -->
