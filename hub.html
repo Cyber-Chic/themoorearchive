@@ -641,7 +641,7 @@
             </div>
         </div>
 
-        <!-- =================================================== -->
+<!-- =================================================== -->
 <!-- // THE MOORE SIGNAL ARCHIVE // GLOBAL TREASURE HUNT -->
 <!-- =================================================== -->
 <div>
@@ -654,7 +654,7 @@
         <div style="font-family: 'Space Mono', monospace; font-size: 0.8rem; line-height: 1.8; color: #cbd5e0; margin-bottom: 25px; padding-left: 5px;">
             📍 <strong style="color: var(--neon-blue);">NEW YORK LOG:</strong> Hand-signed poetry book released inside the Buffalo Free Little Art Gallery.<br>
             🌍 <strong style="color: var(--neon-blue);">GLOBAL MATRIX:</strong> Multi-state expansion tracking via Connecticut, Washington, and Ohio.<br>
-            🔄 <strong style="color: var(--neon-blue);">ACTUAL PARAMETER:</strong> Traveling print grants exclusive virtual access to those forwarding anonymous kindness.
+            🔄 <strong style="color: var(--neon-blue);">ACTUAL PARAMETER:</strong> Traveling prints grant exclusive virtual access to those forwarding anonymous kindness.
         </div>
 
         <!-- CAROUSEL TRACK WINDOW WITH INTEGRATED STYLES & LOOP MARQUEE -->
@@ -665,14 +665,19 @@
                     display: flex;
                     gap: 20px;
                     width: max-content;
-                    animation: tmaMarquee 35s linear infinite; /* Adjusted speed slightly for the 4-card weight */
+                    animation: tmaMarquee 55s linear infinite; /* 🔒 SLOWED DOWN: Graceful terminal drift speed */
+                    /* 🔒 FIXED: Eliminates left/right image wiggling and shaking artifacts in Firefox & Safari */
+                    will-change: transform;
+                    transform: translate3d(0, 0, 0);
+                    backface-visibility: hidden;
+                    -webkit-backface-visibility: hidden;
                 }
                 /* Pauses the loop entirely when a potential collaborator hovers to read */
                 .tma-carousel-window:hover .tma-carousel-track {
                     animation-play-state: paused;
                 }
                 .tma-card-specimen {
-                    flex: 0 0 320px; /* 🔒 EXPANDED: Larger cards protect image asset integrity */
+                    flex: 0 0 320px; 
                     background: #000;
                     border: 1px solid rgba(0, 229, 255, 0.25);
                     border-radius: 4px;
@@ -688,19 +693,21 @@
                 }
                 .tma-card-specimen img {
                     width: 100%;
-                    height: 260px; /* 🔒 EXPANDED: Taller vertical space prevents squishing */
+                    height: 260px; 
                     object-fit: contain; 
                     background: #050505; 
                     border-radius: 2px;
                     display: block;
                     margin: 0 auto;
-                    /* 🔒 FIXED: Smooth subpixel sampling removes graininess from large files */
-                    image-rendering: auto; 
+                    /* 🔒 FIXED: Digital filter wrapper sharpens muddy mid-res image boundaries natively */
+                    filter: contrast(1.05) brightness(1.02);
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: auto;
                     -webkit-font-smoothing: antialiased;
                 }
                 @keyframes tmaMarquee {
-                    0% { transform: translateX(0); }
-                    100% { transform: translateX(calc(-50% - 10px)); } /* Perfect structural loop point */
+                    0% { transform: translate3d(0, 0, 0); }
+                    100% { transform: translate3d(calc(-50% - 10px), 0, 0); } /* Subpixel fluid animation loop */
                 }
             </style>
 
@@ -747,8 +754,8 @@
 
                 <!-- 🔄 DUPLICATED CORE SET TO CREATE SEAMLESS INFINITE LOOP TRANSIT -->
                 <div class="tma-card-specimen">
-                    <a href="https://s3.us-east-005.backblazeb2.com/artgram-co/covers/1ce28abee1540137.webp" style="text-decoration: none; color: inherit; display: block;">
-                        <img src="img/Key_in_Case_TMA.jpeg">
+                    <a href="img/Key_in_Case_TMA.jpeg" style="text-decoration: none; color: inherit; display: block;">
+                        <img src="https://github.com/Cyber-Chic/themoorearchive/blob/main/img/Key_in_Case_TMA.jpeg?raw=true" alt="Active Traveling Art Piece">
                         <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">
                             // PROJECT SCOPE // View Archive<br>
                             Artifact migration mapping across a global landscape.
@@ -773,7 +780,7 @@
                 </div>
 
                 <div class="tma-card-specimen">
-                    <img src="https://githubusercontent.com" alt="Archive Core Curation Node">
+                    <img src="https://avatars.githubusercontent.com/u/99448276?v=4" alt="Archive Core Curation Node">
                     <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">
                         // DATA NODE // Core Starfield<br>
                         System mapping integration and peripheral data streams.
@@ -785,6 +792,7 @@
 
     </div>
 </div>
+
 
 
         <!-- ZERO-LIABILITY TERMINAL DATA DIRECTIVE HUB -->
