@@ -4,7 +4,7 @@
 
 ---
 
-### 🛰️ STATUS: [ ▓▓▓▓▓▓▓▓▓▓ ] STABILIZED
+### 🛰️ STATUS: [ ▓▓▓▓▓▓▓ ] STABILIZED
 **SIGNAL STATUS: 🟢 NOMINAL** | **PROTOCOL: PASSIVE DISCOVERY**
 
 ---
