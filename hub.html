@@ -669,14 +669,14 @@
             🔄 <strong style="color: var(--neon-blue);">ACTUAL PARAMETER:</strong> Traveling print grants exclusive virtual access to those forwarding anonymous kindness.
         </div>
 
-        <!-- 🚀 EDGE-TO-EDGE FLUID VIEWPORT CASING -->
-        <div style="width: 100%; position: relative; margin-top: 30px; display: flex; align-items: center; justify-content: center; padding: 0 40px; box-sizing: border-box;">
+        <!-- 🚀 EDGE-TO-EDGE FLUID VIEWPORT CASING WITH RESPONSE FIREWALL -->
+        <div style="width: 100%; position: relative; margin-top: 30px; display: flex; align-items: center; justify-content: center; padding: 0 40px; box-sizing: border-box; min-width: 0; overflow: hidden;">
             
             <!-- LEFT NAVIGATION KEY BOUNDARY -->
-            <button onclick="tmaPrev()" style="position: absolute; left: 0; z-index: 100; background: #000; border: 1px solid rgba(0, 229, 255, 0.4); color: var(--neon-blue); font-family: 'Space Mono', monospace; font-size: 0.8rem; padding: 12px 10px; cursor: pointer; border-radius: 2px; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 0 10px rgba(0,0,0,0.8);">◄</button>
+            <button onclick="tmaPrev()" style="position: absolute; left: 0; z-index: 100; background: #000; border: 1px solid rgba(0, 229, 255, 0.4); color: var(--neon-blue); font-family: 'Space Mono', monospace; font-size: 0.8rem; padding: 12px 10px; cursor: pointer; border-radius: 2px; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 0 10px rgba(0,0,0,0.8); -webkit-user-select: none; user-select: none;">◄</button>
 
             <!-- VIEWPORT WINDOW -->
-            <div class="tma-carousel-window" style="width: 100%; overflow: hidden; position: relative; border-radius: 4px;">
+            <div class="tma-carousel-window" style="width: 100%; overflow: hidden; position: relative; border-radius: 4px; min-width: 0;">
                 <style>
                     .tma-carousel-track { 
                         display: flex; 
@@ -693,6 +693,7 @@
                         padding: 20px; 
                         text-align: center; 
                         transition: border 0.3s ease, box-shadow 0.3s ease; 
+                        box-sizing: border-box;
                     }
                     .tma-card-specimen:hover { 
                         border-color: var(--neon-blue); 
@@ -708,10 +709,14 @@
                         margin: 0 auto; 
                         filter: contrast(1.07) brightness(1.02); 
                     }
+                    
+                    /* 🔒 RESPONSIVE RATIO & WIDTH FIREWALL FOR MOBILE TOUCH LAYOUTS */
                     @media (max-width: 768px) {
                         .tma-carousel-track { gap: 15px; }
-                        .tma-card-specimen { flex: 0 0 260px; padding: 15px; }
-                        .tma-card-specimen img { height: 220px; }
+                        /* 🚀 Dynamic mathematical hard lock: adjusts item footprint relative to phone size */
+                        .tma-card-specimen { flex: 0 0 calc(100vw - 120px) !important; max-width: 340px; padding: 15px; }
+                        /* 🚀 Hard fix: prevents height distortion by locking image boundaries into clean squares */
+                        .tma-card-specimen img { width: 100%; height: auto !important; aspect-ratio: 1 / 1 !important; }
                     }
                 </style>
                 
@@ -719,7 +724,7 @@
                     <!-- CARD 01 -->
                     <div class="tma-card-specimen">
                         <a href="https://cyber-chic.github.io/themoorearchive/releases" style="text-decoration: none; color: inherit; display: block;">
-                            <img src="img/Key_in_Case_TMA.jpeg" alt="Traveling Artifacts">
+                            <img src="img/Key_in_Case_TMA.jpeg" alt="Traveling Art Pieces">
                             <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">// PROJECT SCOPE // <br>View artifacts migrating across a global landscape.</span>
                         </a>
                     </div>
@@ -738,11 +743,10 @@
                         </a>
                     </div>
                 </div>
-
             </div>
 
-            <!-- RIGHT NAVIGATION KEY BOUNDARY (RESTORED 🚀) -->
-            <button onclick="tmaNext()" style="position: absolute; right: 0; z-index: 100; background: #000; border: 1px solid rgba(0, 229, 255, 0.4); color: var(--neon-blue); font-family: 'Space Mono', monospace; font-size: 0.8rem; padding: 12px 10px; cursor: pointer; border-radius: 2px; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 0 10px rgba(0,0,0,0.8);">►</button>
+            <!-- RIGHT NAVIGATION KEY BOUNDARY -->
+            <button onclick="tmaNext()" style="position: absolute; right: 0; z-index: 100; background: #000; border: 1px solid rgba(0, 229, 255, 0.4); color: var(--neon-blue); font-family: 'Space Mono', monospace; font-size: 0.8rem; padding: 12px 10px; cursor: pointer; border-radius: 2px; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 0 10px rgba(0,0,0,0.8); -webkit-user-select: none; user-select: none;">►</button>
 
         </div>
     </div>
@@ -756,7 +760,7 @@
         const cards = document.querySelectorAll('.tma-card-specimen');
         if (!track || cards.length === 0) return;
         
-        const cardWidth = cards[0].offsetWidth; // Fixed array target element logic
+        const cardWidth = cards[0].getBoundingClientRect().width; 
         const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
         
         const moveAmount = tmaIndex * (cardWidth + gap);
@@ -774,6 +778,7 @@
     }
     window.addEventListener('resize', updateTmaCarousel);
 </script>
+
 
 
         <!-- SECURE EXHIBITION REGISTRY INTAKE SECTION -->
