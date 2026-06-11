@@ -3,944 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Moore Signal Archive | Hub Terminal</title>
-    
-    <!-- IMPORTING THE INSTITUTIONAL FONTS -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    
+    <title>THE MOORE SIGNAL ARCHIVE</title>
     <style>
-        /* GLOBAL RESET & VARIABLES */
-        * { 
-            box-sizing: border-box; 
+        :root {
+            --bg-color: #000000;
+            --text-main: #ffffff;
+            --text-muted: #888888;
+            --accent: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        :root {
-            --neon-blue: #00e5ff;
-            --bg-black: #050505;
-            --midnight: #0a0e14;
-            --text-slate: #cbd5e0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            background: radial-gradient(circle at center, #0d1117 0%, #050505 100%);
-            background-color: var(--midnight); 
-            background-attachment: fixed;
-            color: #d1d1d1; 
-            font-family: 'Times New Roman', serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            letter-spacing: -0.01em;
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 520px;
+            width: 100%;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            -webkit-font-smoothing: antialiased;
-            min-height: 100vh;
-            overflow-x: hidden;
+            gap: 56px;
         }
 
-        /* LIGHTS UP VISUAL GLAMOUR ENGINE */
-        .hero-img, .exhibit-frame img {
-            filter: brightness(0.8) contrast(1.1);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            max-width: 100%;
-            height: auto;
+        /* Header Layout */
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
 
-        .hero-img:hover, .exhibit-frame img:hover {
-            filter: brightness(1.2) contrast(1.2);
-            transform: scale(1.01);
-            box-shadow: 0 0 30px rgba(0, 229, 255, 0.35);
-        }
-
-        /* HEADER & NEOCLASSICAL TYPOGRAPHY */
-        header { 
-            width: 100%; 
-            padding: 80px 20px 60px; 
-            text-align: center; 
-            background: #000;
-            border-bottom: 1px solid rgba(0, 229, 255, 0.15); 
-        }
-
-        .name-brand { 
-            font-family: 'Space Mono', monospace; 
-            font-size: 0.7rem; 
-            color: var(--neon-blue); 
-            letter-spacing: 4px; 
-            text-transform: uppercase; 
-            margin-bottom: 20px; 
-            display: inline-block;
-            font-weight: 700;
-            text-shadow: 0 0 1px rgba(0, 229, 255, 0.4); 
-            line-height: 1.4;
-        }
-
-        h1 { 
-            font-family: 'Libre Baskerville', serif; 
-            font-size: clamp(1.4rem, 5vw, 2.2rem); 
-            color: #fff; 
-            margin: 0; 
-            letter-spacing: 6px; 
-            text-transform: uppercase; 
-            font-weight: 500;
-            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
-            line-height: 1.3;
-        }
-
-        /* HERO EXHIBIT */
-        .hero-exhibit {
-            margin-top: 40px; 
-            padding: 20px; 
-            text-align: center;
-            position: relative;
-            z-index: 10;
-            width: 100%;
-        }
-
-        .hero-exhibit img {
-            width: 100%;
-            max-width: 280px; 
-            border-radius: 50%;
-            border: 1px solid rgba(0, 229, 255, 0.2);
-            padding: 20px; 
-            background: radial-gradient(circle, rgba(0, 229, 255, 0.05) 0%, transparent 75%);
-            box-shadow: 0 0 40px rgba(0, 229, 255, 0.15);
-            animation: anchorPulse 4s infinite ease-in-out;
-            transition: all 0.5s ease;
-        }
-
-        @keyframes anchorPulse {
-            0%, 100% { box-shadow: 0 0 35px rgba(0, 229, 255, 0.12); transform: scale(1); }
-            50% { box-shadow: 0 0 55px rgba(0, 229, 255, 0.3); transform: scale(1.01); }
-        }
-
-        /* CONTAINER ELEMENTS */
-        .container { 
-            width: 100%; 
-            max-width: 760px; 
-            padding: 0 24px; 
-        }
-
-        /* CALIBRATED HIGH-END SECTION BREAKS */
-        .section-title { 
-            font-family: 'Libre Baskerville', serif; 
-            font-size: clamp(0.95rem, 3vw, 1.1rem); 
-            color: rgba(0, 229, 255, 0.85); 
-            font-weight: 700; 
-            border-left: 4px solid rgba(0, 229, 255, 0.6); 
-            padding: 12px 0 12px 16px; 
-            margin: 80px 0 40px; 
+        h1 {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            letter-spacing: 4px; 
-            width: 100%; 
-            border-bottom: 1px solid rgba(0, 229, 255, 0.15); 
-            background: linear-gradient(to right, rgba(0, 229, 255, 0.08), transparent);
-            text-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
         }
 
-        /* STRUCTURAL EXTRA WHITESPACE ADDITION */
-        .body-text { 
-            font-size: clamp(1.05rem, 2.5vw, 1.15rem); 
-            color: var(--text-slate); 
-            line-height: 1.8; 
-            letter-spacing: 0.015em; 
-            margin-bottom: 60px; 
-            padding-bottom: 10px; 
-            text-align: left; 
-            border-left: 3px solid rgba(0, 229, 255, 0.35); 
-            padding-left: 20px;
-            overflow-wrap: break-word;
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 13.5px;
+            line-height: 1.6;
         }
 
-        .body-text.italicized {
-            font-style: italic;
-        }
-
-        .body-text strong { color: #ffffff; font-weight: 700; text-shadow: 0 0 10px rgba(255, 255, 255, 0.15); }
-
-        .sub-label { 
-            font-family: 'Space Mono', monospace; 
-            font-size: 0.75rem; 
-            color: #4682b4; 
-            letter-spacing: 3px; 
-            text-transform: uppercase; 
-            margin: 0 0 14px 0; 
-            display: block;
-            font-weight: bold;
-        }
-
-        .highlight { background: rgba(0, 229, 255, 0.12); padding: 2px 6px; border-radius: 2px; }
-
-        /* THE INDEPENDENT EXHIBIT STACK */
-        .exhibit-frame {
+        /* Image Display Grid */
+        .image-frame {
             width: 100%;
-            background: #000;
-            border: 1px solid rgba(0, 229, 255, 0.15);
-            border-radius: 4px;
-            padding: 20px; 
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .exhibit-frame img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            background: #000;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .exhibit-frame.landscape img { aspect-ratio: 16 / 9; }
-        .exhibit-frame.portrait img { max-width: 400px; }
-
-        .exhibit-caption {
-            display: block;
-            font-family: 'Space Mono', monospace;
-            font-size: 0.7rem;
-            color: var(--neon-blue);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-top: 15px;
-            font-weight: bold;
-            line-height: 1.4;
-        }
-
-        /* INTERACTING LIST METADATA BLOCK */
-        .system-list {
-            color: #fff; 
-            font-family: 'Space Mono', monospace; 
-            font-size: clamp(0.75rem, 2.2vw, 0.8rem); 
-            display: block; 
-            line-height: 2.2; 
-            letter-spacing: 0.5px; 
-            margin: 25px 0;
-        }
-
-        /* ZERO-LIABILITY TERMINAL MAILTO BOOKING FORM */
-        .booking-card {
-            background: #000;
-            border: 1px solid rgba(0, 229, 255, 0.2);
-            border-radius: 4px;
-            padding: 30px;
-            margin: 40px 0 60px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            font-family: 'Space Mono', monospace;
-            font-size: 0.75rem;
-            color: var(--neon-blue);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            background: #050505;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 2px;
-            padding: 12px 15px;
-            color: #fff;
-            font-family: 'Space Mono', monospace;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--neon-blue);
-            box-shadow: 0 0 10px rgba(0, 229, 255, 0.15);
-        }
-
-        .submit-btn {
-            width: 100%;
-            background: transparent;
-            border: 1px solid var(--neon-blue);
-            color: #fff;
-            font-family: 'Space Mono', monospace;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            padding: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: bold;
-        }
-
-        .submit-btn:hover {
-            background: rgba(0, 229, 255, 0.08);
-            box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
-        }
-
-        /* 🔒 THE FIX: LOCK DOWN FOCUS AND ACTIVE STATES TO PREVENT WHITE FLASHES */
-        .submit-btn:focus, .submit-btn:active, .submit-btn:visited {
-            outline: none;
-            background: transparent;
-            color: #fff !important;
-            border-color: var(--neon-blue) !important;
-        }
-
-        /* SHIMMERING LINK INTERACTION HUB */
-        .link-hub { 
-            width: 100%; 
-            padding: 80px 24px; 
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px; 
-            max-width: 800px;
-            margin: 60px auto 0; 
-            background: linear-gradient(135deg, #000 30%, rgba(0, 229, 255, 0.08) 50%, #000 70%);
-            background-size: 200% 200%;
-            animation: signal-shimmer 8s ease-in-out infinite;
-            border-top: 1px solid rgba(0, 229, 255, 0.2);
-        }
-
-        @keyframes signal-shimmer {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .archive-btn { 
-            text-decoration: none; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            justify-content: center; 
-            border: 1px solid rgba(0, 229, 255, 0.3); 
-            background: #000; 
-            padding: 40px 20px; 
-            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
-            position: relative; 
+            aspect-ratio: 16 / 9;
             overflow: hidden;
+            border-radius: 2px;
+        }
+
+        .image-frame img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(110%);
         }
 
-        .archive-btn::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: linear-gradient(120deg, transparent, rgba(0, 229, 255, 0.1), transparent);
-            transition: 0.7s;
+        /* Structural Layout Blocks */
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
         }
 
-        .archive-btn:hover::before { left: 100%; }
-
-        .archive-btn:hover { 
-            border-color: var(--neon-blue); 
-            background: #080808; 
-            box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
-            transform: translateY(-3px); 
+        .section-label {
+            font-family: "SF Mono", Monaco, Consolas, monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border-bottom: 1px dashed #222222;
+            padding-bottom: 8px;
         }
 
-        .archive-btn span { font-size: 0.75rem; color: var(--neon-blue); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; font-family: 'Space Mono', monospace; }
-        .archive-btn strong { font-family: 'Libre Baskerville', serif; color: #ffffff; font-size: 0.95rem; letter-spacing: 1px; font-weight: 400; text-align: center; line-height: 1.4; }
-
-        /* THE MASTER TERMINAL FOOTER DECK */
-        .terminal-footer { 
-            width: 100%; 
-            text-align: center; 
-            padding: 80px 24px 60px; 
-            background: #000; 
-            border-top: 1px solid #111; 
+        .matrix-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
         }
 
-        .releases-marquee {
-            color: #555; 
-            text-decoration: none; 
-            font-size: 0.75rem; 
-            letter-spacing: 3px; 
-            text-transform: uppercase; 
-            display: block; 
-            width: 100%; 
-            white-space: nowrap; 
-            overflow-x: auto; 
-            line-height: 2.5; 
-            padding: 0 20px; 
-            -webkit-overflow-scrolling: touch;
-            margin-bottom: 40px;
-            will-change: transform;
+        .matrix-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
 
-        .releases-marquee::-webkit-scrollbar { height: 3px; }
-        .releases-marquee::-webkit-scrollbar-track { background: #000; }
-        .releases-marquee::-webkit-scrollbar-thumb { background: rgba(0, 229, 255, 0.2); border-radius: 2px; }
-        .releases-marquee:hover { color: #777; }
+        .item-header {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
 
-        .admin-note { 
-            display: inline-block;
-            width: 100%; 
-            max-width: 580px; 
-            margin: 0 auto; 
-            padding: 22px 20px; 
-            border: 1px solid rgba(0, 229, 255, 0.25); 
-            background: rgba(0, 229, 255, 0.02); 
-            border-radius: 4px; 
-            text-align: center; 
+        .item-title {
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+        }
+
+        .item-meta {
+            font-family: "SF Mono", Monaco, Consolas, monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .item-description {
+            color: var(--text-muted);
+            font-size: 13.5px;
+            line-height: 1.6;
+        }
+
+        /* Minimal Plain-Text Ledger Block */
+        .ledger-text {
+            font-family: "SF Mono", Monaco, Consolas, monospace;
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        .ledger-text strong {
+            color: var(--text-main);
+        }
+
+        /* Sleek Button Target */
+        .action-button {
+            display: block;
+            width: 100%;
+            background-color: var(--accent);
+            color: #000000;
+            text-align: center;
+            padding: 15px;
+            font-family: "SF Mono", Monaco, Consolas, monospace;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: opacity 0.15s ease;
+            margin-top: 12px;
+            border-radius: 2px;
         }
 
-        .admin-note span {
-            font-family: 'Space Mono', monospace;
-            font-size: clamp(0.75rem, 2.2vw, 0.85rem);
+        .action-button:hover {
+            opacity: 0.85;
         }
 
-        .company-ledger {
-            font-family: 'Space Mono', monospace; 
-            font-size: 0.7rem; 
-            color: #475569; 
-            margin-top: 50px; 
-            letter-spacing: 2px; 
-            text-transform: uppercase; 
-            line-height: 1.8; 
-            border-top: 1px dashed rgba(255, 255, 255, 0.05); 
-            padding-top: 30px;
-        }
-        /* 📱 CRITICAL MOBILE SMOOTH CALIBRATION INTERFACE (FINAL POLISH MATRIX) */
-        @media screen and (max-width: 680px) {
-            header { 
-                padding: 45px 15px 35px; 
-            }
-            
-            /* TOP TEXT LINE: Scales perfectly down to prevent wrapping */
-            .name-brand {
-                font-size: 0.65rem;
-                letter-spacing: 2.5px;
-                margin-bottom: 15px;
-            }
-            
-            h1 {
-                letter-spacing: 4px;
-            }
-
-            .hero-exhibit img { 
-                max-width: 200px; 
-                padding: 12px; 
-            }
-            
-            /* Section Titles: Safe tracking and sizing for single-line fit */
-            .section-title { 
-                font-size: 0.85rem; 
-                letter-spacing: 4px; 
-                padding: 10px 0 10px 12px;
-                margin: 65px 0 35px; 
-            }
-
-            /* Main Labels: Cleans up the 'Corporate Bookings' subhead wrap */
-            .sub-label {
-                font-size: 0.68rem;
-                letter-spacing: 2px;
-                margin-bottom: 10px;
-            }
-
-            /* Body Text Decompression */
-            .body-text { 
-                padding-left: 15px; 
-                margin-bottom: 55px; 
-                font-size: 0.98rem; 
-                line-height: 1.9; 
-            }
-
-            /* Available for Keynotes Subhead: Smooth single-line fit */
-            .body-text strong[style*="font-size: 1.05rem"] {
-                font-size: 0.95rem !important;
-                letter-spacing: 0.5px !important;
-            }
-
-            /* System List Breathing Room */
-            .system-list {
-                font-size: 0.72rem;
-                line-height: 2.4; 
-                letter-spacing: 0.5px;
-                margin: 30px 0;
-            }
-
-            /* SECTION 2 FLYER RESIZE: Downscaled for a high-end, premium aesthetic */
-            .exhibit-frame.portrait img[src*="sk/3aa5973b"] {
-                max-width: 260px !important;
-            }
-
-            /* Framework Spacing */
-            .exhibit-frame { 
-                padding: 12px; 
-                margin: 25px 0; 
-            }
-            
-            .exhibit-caption {
-                font-size: 0.65rem;
-                letter-spacing: 1.5px;
-                margin-top: 12px;
-            }
-            
-            /* Booking Card Content Wrap Fix */
-            .booking-card { 
-                padding: 25px 15px; 
-                margin: 30px 0 50px;
-            }
-            
-            .booking-card p {
-                font-size: 0.95rem !important; /* Prevents the catchy intro from wrapping heavily */
-            }
-
-            .booking-card p span {
-                font-size: 0.75rem !important;
-                letter-spacing: 1.5px !important;
-            }
-            
-            /* Interactive Hub Buffer */
-            .link-hub { 
-                grid-template-columns: 1fr; 
-                padding: 60px 20px; 
-                gap: 16px; 
-                margin-top: 50px; 
-            }
-            
-            .archive-btn { 
-                padding: 32px 15px; 
-            }
-            
-            .archive-btn strong {
-                font-size: 0.88rem;
-            }
-            
-            .terminal-footer { 
-                padding: 60px 20px 40px; 
-            }
-            
-            .company-ledger {
-                margin-top: 35px;
-                padding-top: 20px;
-                font-size: 0.65rem;
-                letter-spacing: 2px;
-            }
+        footer {
+            font-family: "SF Mono", Monaco, Consolas, monospace;
+            font-size: 10px;
+            color: #555555;
+            line-height: 1.8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 16px;
         }
 
-</style>
+        footer a {
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px solid #333333;
+            transition: border-color 0.15s ease;
+        }
+
+        footer a:hover {
+            border-bottom-color: var(--text-main);
+        }
+    </style>
 </head>
 <body>
 
-<header role="banner">
-    <!-- FIX: Converted backslashes to forward slashes for branding continuity -->
-    <div class="name-brand">Angela N. Moore // CREATIVE TECHNOLOGIST</div>
-    <h1>THE MOORE SIGNAL ARCHIVE</h1>
-</header>
+    <div class="container">
 
-    <!-- FLOATING VISUAL ANCHOR -->
-    <section class="hero-exhibit" aria-label="Archive Core Visual Anchor">
-        <div class="exhibit-box">
-            <!-- FIX: Streamlined title to clearly signal business intent -->
-            <span class="sub-label">// Event Curation & Interactive Exhibits</span>
-            <img src="https://avatars.githubusercontent.com/u/99448276?v=4" class="hero-img" alt="Research & Curation Hub">
-        </div>
-    </section>
+        <!-- HEADER SECTION -->
+        <header>
+            <h1>The Moore Signal Archive</h1>
+            <p class="subtitle">I curate interactive exhibits that seamlessly blend original poetry with real-world space data for global audiences.</p>
+        </header>
 
-    <main class="container">
-
-        <div>
-            <span class="sub-label">Overview</span>
-            <div class="body-text italicized">
-                Welcome to <strong>The Moore Signal Archive</strong>. I design and host interactive, interdisciplinary pop-up exhibits that bridge data science with contemporary poetry and art.
-            </div>
+        <!-- ELEVATED IMAGE SPOTLIGHT -->
+        <div class="image-frame">
+            <img src="https://github.com/user-attachments/assets/b0c0777d-e1e1-4ee2-83af-b013611796dc" alt="The Moore Signal Archive - New York Times Feature Campaign">
         </div>
 
-        <!-- CORPORATE BOOKINGS // GALLERY EXHIBITS & INQUIRIES -->
-        <div>
-            <span class="sub-label">Corporate Bookings // Interactive Exhibits</span>
-            <div class="body-text" style="border-left-color: var(--neon-blue); padding-top: 15px;">
-                
-                <!-- STAGE PRESENTATION EXHIBIT -->
-                <div class="exhibit-frame portrait" style="margin-bottom: 25px;">
-                    <img src="https://github.com/user-attachments/assets/0fede972-9d1f-4ae2-93b7-89f9e529a0a7" alt="Milli Award Stage Presentation">
-                    <span class="exhibit-caption">
-                        // Presentation: Motivational Address // Life As a Human Magazine
-                    </span>
-                </div>
-
-<strong style="color: var(--neon-blue); text-transform: uppercase; letter-spacing: 1px; font-size: 1.05rem; display: block; margin-bottom: 12px;">
-    [ THE EXHIBITIONS ]
-</strong>
-<p style="margin: 0 0 20px 0; font-size: 14px; line-height: 1.5; color: #cbd5e1;">
-    I curate interactive exhibits that seamlessly blend original poetry with real-world space data for global audiences.
-</p>
-
-<!-- SYMMETRICAL UNCAPPED MATRIX -->
-<div class="system-list" style="line-height: 1.6; margin-bottom: 25px; margin-top: 20px; font-size: 14px; text-align: left;">
-    <!-- PACKAGE 01 -->
-    <div style="margin-bottom: 20px;">
-        🌌 <strong>THE SPACE EXHIBIT</strong> 
-        <span style="color: var(--neon-blue); font-size: 11.5px; font-weight: bold; display: block; margin: 2px 0;">[ Limited Access • Featured Studio Exhibition ]</span>
-        <span style="color: #cbd5e1; display: block; line-height: 1.4;">
-            An interactive display featuring NASA photography, 3D universe maps, cosmic poetry, and hands-on citizen science research.
-        </span>
-    </div>
-    <!-- PACKAGE 02 -->
-    <div style="margin-bottom: 5px;">
-        🪐 <strong>THE COMBINED EXHIBIT</strong> 
-        <span style="color: var(--neon-blue); font-size: 11.5px; font-weight: bold; display: block; margin: 2px 0;">[ Full Access • Featured Summit Presentation ]</span>
-        <span style="color: #cbd5e1; display: block; line-height: 1.4;">
-            This premier option pairs the interactive space exhibit with an integrated overview of my global community treasure hunt.
-        </span>
-    </div>
-</div>
-
-<span style="color: #64748b; font-family: 'Space Mono', monospace; font-size: 0.7rem; display: block; letter-spacing: 1px; border-top: 1px dashed rgba(0, 229, 255, 0.15); padding-top: 15px; text-transform: uppercase; font-weight: bold;">
-    ► CURATORIAL PARAMETERS
-</span>
-<span style="color: #475569; font-family: 'Space Mono', monospace; font-size: 0.65rem; display: block; letter-spacing: 0.5px; margin-top: 10px; font-style: italic; line-height: 1.4;">
-    // Note: Independent citizen science tracking utilizing open public domain resources; not officially affiliated with or endorsed by NASA.
-</span>
-
-    </div>
-</div>
-
-   
-
-              <!-- =================================================== -->
-    <!-- 01 // PRESS & CREDENTIALS -->
-    <!-- =================================================== -->
-    <div>
-        <div class="section-title">01 // PRESS & CREDENTIALS</div>
-
-        <!-- NATIONAL MEDIA FEATURE -->
-        <span class="sub-label">National Media Feature</span>
-        <div class="body-text" style="padding-top: 15px;">
-            <p>My unique approach to pursuing my creative passions was featured in a national <strong>New York Times ad campaign</strong> alongside my artwork.</p>
-            <div class="exhibit-frame landscape" style="margin-top: 15px;">
-                <img src="https://github.com/user-attachments/assets/b0c0777d-e1e1-4ee2-83af-b013611796dc" alt="NYT National Campaign Feature">
-                <span class="exhibit-caption">// New York Times Campaign Feature</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- AWARD SPOTLIGHT -->
-    <div>
-        <span class="sub-label">Award Spotlight</span>
-        <div class="body-text" style="padding-top: 15px;">
-            <p>Recipient of the Westfair Business Journal's <strong>Milli Award</strong>. Recognized for independent research and impactful, purpose-driven art.</p>
-            <div class="exhibit-frame portrait" style="padding: 25px; margin-top: 15px;">
-                <img src="https://media.muckrack.com/groups/icons/westfaironline.jpeg" alt="Westfair Milli Award Presentation" style="max-width: 180px; border-radius: 4px;">
-                <span class="exhibit-caption">// Credential Verification: Awarded by Westfair Business Journals</span>
-            </div>
-        </div> 
-    </div> 
-
-    <!-- FEATURED PROJECT: TWO MATCHING RECTANGLES -->
-    <div>
-        <span class="sub-label">Featured Project // FLAG</span>
-        <div class="body-text" style="padding-top: 15px;">
-            <p><strong>The Moore Archive (TMA)</strong> was highlighted as a featured project on the official Free Little Art Galleries platform.</p>
+        <!-- THE EXHIBITIONS SECTION -->
+        <section>
+            <div class="section-label">01 // Exhibition Scope</div>
             
-            <div style="display: flex; gap: 20px; justify-content: center; align-items: center; margin: 25px 0 15px 0; width: 100%; box-sizing: border-box; flex-wrap: wrap;">
-                <!-- RECTANGLE 1: FRONT -->
-                <div style="flex: 1; min-width: 260px; max-width: 290px; text-align: center;">
-                    <div style="border: 1px solid rgba(0, 229, 255, 0.25); background: #000; padding: 8px; border-radius: 4px; box-shadow: 0 0 15px rgba(0, 229, 255, 0.05);">
-                        <img src="img/Key_Front_TMA.jpeg" alt="Free Little Art Gallery Node" style="width: 100%; height: 180px; object-fit: cover; display: block; border-radius: 2px;">
+            <div class="matrix-grid">
+                <!-- MODULE 01 -->
+                <div class="matrix-item">
+                    <div class="item-header">
+                        <div class="item-title">The Space Exhibit</div>
+                        <div class="item-meta">Limited Access • Featured Studio Exhibition</div>
                     </div>
-                    <span style="font-family: 'Space Mono', monospace; font-size: 11px; color: var(--neon-blue); display: block; margin-top: 8px; font-weight: bold;">// FRONT: LANDSCAPE ART</span>
+                    <p class="item-description">An interactive display featuring NASA photography, 3D universe maps, cosmic poetry, and hands-on citizen science research.</p>
                 </div>
-                <!-- RECTANGLE 2: BACK -->
-                <div style="flex: 1; min-width: 260px; max-width: 290px; text-align: center;">
-                    <div style="border: 1px solid rgba(0, 229, 255, 0.25); background: #000; padding: 8px; border-radius: 4px; box-shadow: 0 0 15px rgba(0, 229, 255, 0.05);">
-                        <img src="img/Key_Back_TMA.jpeg" alt="Custom Curation" style="width: 100%; height: 180px; object-fit: cover; display: block; border-radius: 2px;">
+
+                <!-- MODULE 02 -->
+                <div class="matrix-item">
+                    <div class="item-header">
+                        <div class="item-title">The Combined Exhibit</div>
+                        <div class="item-meta">Full Access • Featured Summit Presentation</div>
                     </div>
-                    <span style="font-family: 'Space Mono', monospace; font-size: 11px; color: var(--neon-blue); display: block; margin-top: 8px; font-weight: bold;">// BACK: ENGRAVED INSTRUCTIONS</span>
+                    <p class="item-description">This premier option pairs the interactive space exhibit with an integrated overview of my global community treasure hunt.</p>
                 </div>
             </div>
+        </section>
 
-            <div style="text-align: center; margin-top: 10px; width: 100%;">
-                <a href="https://freelittleartgalleries.art/2026/05/the-heart-of-the-project/" target="_blank" style="text-decoration: none; color: inherit; display: inline-block;">
-                    <span class="exhibit-caption" style="color: var(--neon-blue); font-weight: bold; font-size: 12.5px; border: 1px solid rgba(0, 229, 255, 0.2); padding: 6px 16px; background: #000; border-radius: 2px; display: block;">
-                        FEATURE STORY: FULL ACCESS ONLINE 🌐
-                    </span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-        <div>
-            <div class="section-title">02 // SUMMIT OPERATIONS</div>
-
-            <span class="sub-label">Regional Event // CT Tech Week</span>
-            <div class="body-text" style="padding-top: 15px;">
-                This serves as the archival log for our presentation during <span class="highlight">CT Tech Week</span>, a statewide technology summit.
-                
-                <!-- EVENT FLYER FRAME -->
-                <div class="exhibit-frame portrait" style="background: #0a0e14; border: 1px solid rgba(0, 229, 255, 0.2); box-shadow: inset 0 0 30px rgba(0, 229, 255, 0.05);">
-                    <img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=1,background=white,quality=75,width=400,height=400/uploads/sk/3aa5973b-6ab5-475b-9e6f-4958e8c7b567.png" alt="CT Tech Week Pop-Up Research Node Flyer" style="filter: contrast(1.1); box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);">
-                    <span class="exhibit-caption" style="opacity: 0.9;">
-                        // Session Registry: Regional Event Briefing Document
-                    </span>
-                </div>
-            </div>
-        </div>
-
-
-
-<!-- =================================================== -->
-<!-- // THE MOORE SIGNAL ARCHIVE // GLOBAL TREASURE HUNT -->
-<!-- =================================================== -->
-<div>
-    <div class="section-title">// THE GLOBAL TREASURE HUNT // TMA</div>
-    <div class="body-text" style="border-left-color: var(--neon-blue); padding-top: 15px; position: relative;">
-        
-        <p style="margin-bottom: 15px;"><strong>TMA</strong> is a project I launched where I hide my <strong>limited-edition</strong> books and custom art pieces around the world.</p>
-        
-        <div style="font-family: 'Space Mono', monospace; font-size: 0.8rem; line-height: 1.8; color: #cbd5e0; margin-bottom: 25px; padding-left: 5px;">
-            📍 <strong style="color: var(--neon-blue);">NEW YORK LOG:</strong> Hand-signed poetry book released inside the Buffalo Free Little Art Gallery.<br>
-            🌍 <strong style="color: var(--neon-blue);">GLOBAL MATRIX:</strong> Trackable metallic art print traversing through CT, WA, AR, OK, OH, etc.<br>
-            🔄 <strong style="color: var(--neon-blue);">ACTUAL PARAMETER:</strong> Traveling print grants access to a vault of art & verse in exchange for quiet acts of kindness.
-        </div>
-
-        <!-- 🚀 EDGE-TO-EDGE FLUID VIEWPORT CASING WITH RESPONSE FIREWALL -->
-        <div style="width: 100%; position: relative; margin-top: 30px; display: flex; align-items: center; justify-content: center; padding: 0 40px; box-sizing: border-box; min-width: 0; overflow: hidden;">
+          <!-- BOOKING INTAKE SECTION -->
+        <section>
+            <div class="section-label">02 // Booking Inquiries & Overview</div>
             
-            <!-- LEFT NAVIGATION KEY BOUNDARY -->
-            <button onclick="tmaPrev()" style="position: absolute; left: 0; z-index: 100; background: #000; border: 1px solid rgba(0, 229, 255, 0.4); color: var(--neon-blue); font-family: 'Space Mono', monospace; font-size: 0.8rem; padding: 12px 10px; cursor: pointer; border-radius: 2px; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 0 10px rgba(0,0,0,0.8); -webkit-user-select: none; user-select: none;">◄</button>
+            <div class="ledger-text"><strong>CURRENT AVAILABILITY: LIMITED SCHEDULE</strong>
+To maintain studio focus and prioritize active creative projects, exhibition dates are highly selective. Vetted hosts may request seasonal alignment using the parameters below.
 
-            <!-- VIEWPORT WINDOW -->
-            <div class="tma-carousel-window" style="width: 100%; overflow: hidden; position: relative; border-radius: 4px; min-width: 0;">
-                <style>
-                    .tma-carousel-track { 
-                        display: flex; 
-                        gap: 25px; 
-                        width: max-content; 
-                        transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); 
-                        will-change: transform; 
-                    }
-                    .tma-card-specimen { 
-                        flex: 0 0 380px; 
-                        background: #000; 
-                        border: 1px solid rgba(0, 229, 255, 0.25); 
-                        border-radius: 4px; 
-                        padding: 20px; 
-                        text-align: center; 
-                        transition: border 0.3s ease, box-shadow 0.3s ease; 
-                        box-sizing: border-box;
-                    }
-                    .tma-card-specimen:hover { 
-                        border-color: var(--neon-blue); 
-                        box-shadow: 0 0 20px rgba(0, 229, 255, 0.2); 
-                    }
-                    .tma-card-specimen img { 
-                        width: 100%; 
-                        height: 320px; 
-                        object-fit: contain; 
-                        background: #050505; 
-                        border-radius: 2px; 
-                        display: block; 
-                        margin: 0 auto; 
-                        filter: contrast(1.07) brightness(1.02); 
-                    }
-                    
-                    /* 🔒 RESPONSIVE RATIO & WIDTH FIREWALL FOR MOBILE TOUCH LAYOUTS */
-                    @media (max-width: 768px) {
-                        .tma-carousel-track { gap: 15px; }
-                        /* 🚀 Dynamic mathematical hard lock: adjusts item footprint relative to phone size */
-                        .tma-card-specimen { flex: 0 0 calc(100vw - 120px) !important; max-width: 340px; padding: 15px; }
-                        /* 🚀 Hard fix: prevents height distortion by locking image boundaries into clean squares */
-                        .tma-card-specimen img { width: 100%; height: auto !important; aspect-ratio: 1 / 1 !important; }
-                    }
-                </style>
-                
-                <div id="tmaTrack" class="tma-carousel-track">
-                    <!-- CARD 02 -->
-                    <div class="tma-card-specimen">
-                        <a href="https://www.artgram.co/a/moore-archive-log-id-tma-xxx-5y6LFT" style="text-decoration: none; color: inherit; display: block;">
-                            <img src="img/bflag3.jpeg" alt="New York Placement">
-                            <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">// NEW YORK ARTIFACT //<br>Exhibition of poetry book with custom cover artwork.</span>
-                        </a>
-                    </div>
-                    <!-- CARD 03 -->
-                    <div class="tma-card-specimen">
-                        <a href="https://www.artgram.co/a/moore-archive-log-id-tma-xxx-5y6LFT" style="text-decoration: none; color: inherit; display: block;">
-                            <img src="https://s3.us-east-005.backblazeb2.com/artgram-co/artworks/f7w554OyoJiyFkXFeakN13VdZdcP11gwC6GQVnUj.webp" alt="Original Illustration">
-                            <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">// CREATIVE RECORD //<br>Custom hand-drawn illustration and tracking metric.</span>
-                        </a>
-                    </div>
-                                        <!-- CARD 01 -->
-                    <div class="tma-card-specimen">
-                        <a href="https://cyber-chic.github.io/themoorearchive/releases" style="text-decoration: none; color: inherit; display: block;">
-                            <img src="https://s3.us-east-005.backblazeb2.com/artgram-co/artworks/W5KKEuLV2e6XlvcnRFsktaVKryrt7RcLdJuvTE6T.webp" alt="Traveling Art Pieces">
-                            <span class="exhibit-caption" style="display: block; font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 2px; text-transform: uppercase; margin-top: 15px; font-weight: bold; line-height: 1.4;">// PROJECT SCOPE // <br>View artifacts migrating across a global landscape.</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+01. HOST ORGANIZATION / VENUE
+02. PROPOSED TIMELINE / DATE
+03. EXHIBITION FOCUS (THE SPACE EXHIBIT / THE COMBINED EXHIBIT)</div>
 
-            <!-- RIGHT NAVIGATION KEY BOUNDARY -->
-            <button onclick="tmaNext()" style="position: absolute; right: 0; z-index: 100; background: #000; border: 1px solid rgba(0, 229, 255, 0.4); color: var(--neon-blue); font-family: 'Space Mono', monospace; font-size: 0.8rem; padding: 12px 10px; cursor: pointer; border-radius: 2px; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 0 10px rgba(0,0,0,0.8); -webkit-user-select: none; user-select: none;">►</button>
-
-        </div>
-    </div>
-</div>
-
-<!-- ⚙️ COMPACT CARD ENGINE MODULE WITH INFINITE LOOP INTERFACE -->
-<script>
-    let tmaIndex = 0;
-    function updateTmaCarousel() {
-        const track = document.getElementById('tmaTrack');
-        const cards = document.querySelectorAll('.tma-card-specimen');
-        if (!track || cards.length === 0) return;
-        
-        const cardWidth = cards[0].getBoundingClientRect().width; 
-        const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
-        
-        const moveAmount = tmaIndex * (cardWidth + gap);
-        track.style.transform = `translate3d(-${moveAmount}px, 0, 0)`;
-    }
-    function tmaNext() {
-        const cards = document.querySelectorAll('.tma-card-specimen');
-        tmaIndex = (tmaIndex + 1) % cards.length;
-        updateTmaCarousel();
-    }
-    function tmaPrev() {
-        const cards = document.querySelectorAll('.tma-card-specimen');
-        tmaIndex = (tmaIndex - 1 + cards.length) % cards.length;
-        updateTmaCarousel();
-    }
-    window.addEventListener('resize', updateTmaCarousel);
-</script>
-
-
-
-<!-- SECURE EXHIBITION REGISTRY INTAKE SECTION -->
-<div>
-    <div class="section-title">03 // EVENT BOOKINGS</div>
-    <span class="sub-label">CHECK AVAILABILITY</span>
-    
-    <div class="booking-card" style="text-align: left; padding: 20px 0 10px 0;">
-        
-        <!-- UPSCALE, NEON BLUE MINIMAL HEADER -->
-        <p style="font-family: 'Space Mono', monospace; font-size: 0.85rem; color: #00e5ff; letter-spacing: 1.5px; margin-bottom: 20px; line-height: 1.6; text-align: center; text-transform: uppercase; font-weight: bold; margin-top: 0;">
-            BOOKING INQUIRIES & OVERVIEW
-            <span style="color: #ffffff; display: block; font-size: 0.75rem; letter-spacing: 2px; margin-top: 5px; font-weight: normal; text-transform: none;">
-                Current Availability: Limited Schedule 
-            </span>
-        </p>
-
-        <!-- TERMINAL INTAKE LEDGER -->
-        <div style="background: #000000; border: 1px dashed rgba(0, 229, 255, 0.3); padding: 20px; font-family: 'Space Mono', monospace; font-size: 0.75rem; color: #ffffff; line-height: 1.8; margin-bottom: 20px; border-radius: 2px; white-space: pre-wrap; overflow-x: auto;">[ Note: To maintain studio focus and prioritize active creative 
-projects, exhibition dates are highly selective. ]
-
-01. HOST ORGANIZATION / VENUE: 
-02. PROPOSED TIMELINE / DATE: 
-03. EXHIBITION FOCUS (THE SPACE EXHIBIT / THE COMBINED EXHIBIT):</div>
-
-        <!-- EXCLUSIVE SELECTION BUTTON TRIGGER -->
-        <div style="display: flex; flex-direction: column; gap: 8px; align-items: center; width: 100%;">
-            <a href="mailto:themoorearchive@proton.me" 
-               class="submit-btn" 
-               style="text-decoration: none; text-align: center; display: block; width: 100%; text-transform: uppercase; font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 1.5px; font-weight: bold; color: #00e5ff;">
-                REQUEST AN EXHIBIT
+            <!-- THE REFINED, ACTION BUTTON -->
+            <a href="mailto:themoorearchive@proton.me" class="action-button">
+                Inquire for Availability
             </a>
+        </section>
 
-            <span style="font-family: 'Space Mono', monospace; font-size: 0.65rem; color: #475569; text-transform: uppercase; letter-spacing: 1px; text-align: center; margin-top: 2px;">
-                Inquiries: <strong style="color: #64748b; font-weight: bold;">themoorearchive@proton.me</strong>
-            </span>
-        </div>
+        <!-- STYLED FOOTER META -->
+        <footer>
+            Inquiries: themoorearchive@proton.me // Glastonbury, CT<br>
+            Source Terminal: <a href="https://github.com/Cyber-Chic" target="_blank">://github.com</a><br>
+            Independent scientific inquiry utilizing open public domain resources. Not officially affiliated with or endorsed by NASA.
+        </footer>
+
+
     </div>
-</div>
-
-    </main>
-
-    <!-- ARCHIVE NAVIGATION TERMINALS -->
-    <section class="link-hub" aria-label="Archive Navigation Terminals">
-        
-        <a href="https://github.com/cyber-chic" class="archive-btn" target="_blank" rel="noopener">
-            <span>Terminal 01</span>
-            <strong>Central GitHub Repository Index</strong>
-        </a>
-
-        <a href="https://emaze.me/nasa" class="archive-btn" target="_blank" rel="noopener">
-            <span>Terminal 02</span>
-            <strong>NASA Planetary Science Hub</strong>
-        </a>
-
-        <a href="https://angies.poetry.blog/" class="archive-btn" target="_blank" rel="noopener">
-            <span>Terminal 03</span>
-            <strong>Archived Literary Portfolio</strong>
-        </a>
-
-        <a href="https://cyber-chic.github.io/themoorearchive/releases" class="archive-btn" target="_blank" rel="noopener">
-            <span>Terminal 04</span>
-            <strong>The Moore Archive Artifact Hunt</strong>
-        </a>
-
-    </section>
-
-    <!-- ARCHIVE FOOTER DECK -->
-    <footer class="terminal-footer" role="contentinfo">
-        
-        <!-- LINE 1: THE BRAND & THE ARTISTIC MOTTO -->
-        <a class="releases-marquee" href="https://bio.site/mooresignal" target="_blank" rel="noopener">
-            © 2026 THE MOORE SIGNAL ARCHIVE LLC // THE SIGNAL SURVIVES ON HONOR.
-        </a>
-
-        <!-- LINE 2: THE PHYSICAL LOCATION STAMP -->
-        <div class="company-ledger" style="margin-top: 40px; padding-top: 20px;">
-            <span style="color: #475569; font-weight: bold; letter-spacing: 2.5px;">BUSINESS OFFICE: 2389 MAIN ST, STE 100, GLASTONBURY, CT 06033</span>
-        </div>
-    </footer>
-
-</body>
-</html>
-
-
-
-
-    <!-- ARCHIVE NAVIGATION TERMINALS -->
-    <section class="link-hub" aria-label="Archive Navigation Terminals">
-        
-        <a href="https://github.com/cyber-chic" class="archive-btn" target="_blank" rel="noopener">
-            <span>Terminal 01</span>
-            <strong>Central GitHub Repository Index</strong>
-        </a>
-
-        <a href="https://emaze.me/nasa" class="archive-btn" target="_blank" rel="noopener">
-            <span>Terminal 02</span>
-            <strong>NASA Planetary Science Hub</strong>
-        </a>
-
-        <a href="https://angies.poetry.blog/" class="archive-btn" target="_blank" rel="noopener">
-            <span>Terminal 03</span>
-            <strong>Archived Literary Portfolio</strong>
-        </a>
-
-        <a href="https://cyber-chic.github.io/themoorearchive/releases" class="archive-btn" target="_blank" rel="noopener">
-            <span>Terminal 04</span>
-            <strong>The Moore Archive Artifact Hunt</strong>
-        </a>
-
-    </section>
-
-    <!-- ARCHIVE FOOTER DECK -->
-    <footer class="terminal-footer" role="contentinfo">
-        
-        <!-- LINE 1: THE BRAND & THE ARTISTIC MOTTO -->
-        <a class="releases-marquee" href="https://bio.site/mooresignal" target="_blank" rel="noopener">
-            © 2026 THE MOORE SIGNAL ARCHIVE LLC // THE SIGNAL SURVIVES ON HONOR.
-        </a>
-
-        <!-- LINE 2: THE PHYSICAL LOCATION STAMP -->
-        <div class="company-ledger" style="margin-top: 40px; padding-top: 20px;">
-            <span style="color: #475569; font-weight: bold; letter-spacing: 2.5px;">BUSINESS OFFICE: 2389 MAIN ST, STE 100, GLASTONBURY, CT 06033</span>
-        </div>
-    </footer>
 
 </body>
 </html>
