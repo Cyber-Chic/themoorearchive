@@ -1,57 +1,50 @@
-# 🛰️ THE MOORE ARCHIVE (TMA)
-### PRINCIPAL INVESTIGATOR: ANGELA N. MOORE
-**A Research Project of The Moore Signal Archive LLC**
+# THE MOORE ARCHIVE (TMA)
+**PRINCIPAL INVESTIGATOR: ANGELA N. MOORE**  
+*A Research Project of The Moore Signal Archive LLC*
 
----
+***
 
-### 🛰️ STATUS: [ ▓▓▓▓▓▓▓ ] STABILIZED
-**SIGNAL STATUS: 🟢 NOMINAL** | **PROTOCOL: PASSIVE DISCOVERY**
+*   **STATUS** — Archival Mode
+*   **SIGNAL** — Nominal
+*   **ETHOS** — Passive Discovery
 
----
+***
 
-### [ 🧪 RESEARCH OVERVIEW ]
-The Moore Archive (TMA) is an interdisciplinary **geospatial social-performance study** exploring the intersection of digital code and physical reality. The active research phase has successfully **STABILIZED**, transitioning into a self-sustaining community "Quiet Signal."
+### ARCHIVAL BRIEFING
+The Moore Archive (TMA) is an independent social-performance study exploring the intersection of digital code and physical landscape. The active research phase has formally concluded. The project now exists as a self-sustaining community "Quiet Signal."
 
-#### 📡 THE PROTOCOL: "THE QUIET ECHO"
-The Archive is anchored by a cycle of honor. Participants (Navigators) are invited to perform **one anonymous act of kindness** for every artifact encountered. This "Signal Refresh" is a voluntary contribution to the integrity of the loop.
+**THE SILENT ETHOS**  
+The project relies entirely on decentralized honor. Individuals who encounter an artifact are invited to perform one anonymous act of kindness. This quiet gesture serves as the sole energy that sustains the work.
 
----
+***
 
-### [ 🔭 ARTIFACT CLASSIFICATIONS ]
-The Archive consists of physical artifacts currently in circulation. Interaction with these items is entirely self-directed:
+### ARTIFACT MANIFEST
+The physical artifacts remaining in public circulation operate independently of formal curation:
 
-1.  **THE ENCRYPTION KEY:** A physical artifact roaming via the Geocaching network. 
-    *   **Functionality:** A code engraved on the object may be used to access a digital gallery.
-    *   **Access:** Entering `https://linktr.ee/KEYPAD` into a desktop browser initiates the handshake. 
-    *   **Note:** If the initial "Ping" redirects, re-entering the URL may be required to stabilize the frequency.
-2.  **ART & LITERARY LEAKS:** Permanent collectibles occasionally placed in **FLAGs** (Free Little Art Galleries). These are intended as community gifts—yours to claim if discovered.
+1.  **THE ENCRYPTION KEY** — A metallic artifact circulating through the Geocaching network. Engraved coordinates grant remote access to a hidden digital installation. Inputting the keypad sequence initiates the entryway. <sup>[ TERMINAL ]((https://cyber-chic.github.io/themoorearchive/terminal))</sup>  
+    *(Note: If the initial link experiences a redirect, re-entering the address will stabilize the connection.)*
+2.  **LITERARY LEAKS** — Permanent, hand-signed collectibles deployed within Free Little Art Galleries (FLAGs). These are unconditional community gifts, free to be claimed by those who prioritize the hunt.
 
----
+***
 
-### [ 🛡️ NAVIGATOR DIRECTIVES ]
-*   **The 14-Day Cycle:** To keep the signal active, it is requested that the Key be redeployed within 14 days of discovery. 
-*   **Digital Integrity:** To preserve the experience for others, participants are encouraged to keep codes and landmarks confidential in status reports.
-*   **Stewardship:** This project is a decentralized, living experiment. The community provides the movement; the Archivist provides the platform.
+### NAVIGATOR DIRECTIVES
+*   **THE 14-DAY ROTATION** — To ensure the physical artifact remains accessible to the community, handlers are requested to redeploy the Key within 14 days of discovery.
+*   **STEWARDSHIP** — To preserve the poetry of discovery for future participants, please keep tracking codes and locations confidential in public logs.
+*   **MOVEMENT** — A decentralized experiment. The community provides the physical movement; the Archive merely hosts the digital record.
 
-> [!IMPORTANT]
-> **[ ⏳ ANCHOR KIND MEMORY ]**
-> *This is a Stateless Terminal. Use this moment to mentally anchor your anonymous act of kindness. No data is captured; the signal is internal.*
+***
 
----
+### PROVENANCE & LIABILITY DISCLOSURE
+**The Moore Signal Archive LLC**  
+**BUREAU** — 2389 Main St, Ste 100, Glastonbury, CT 06033  
+**INTAKE** — themorearchive@proton.me
 
-### [ ⚖️ ADMINISTRATIVE PROVENANCE & LIABILITY ]
-**The Moore Signal Archive LLC (CT)**
-**OFFICE:** 2389 Main St, Ste 100, Glastonbury, CT 06033
+*Legal Notice: The formal active research and field study phases of this project are concluded. Physical artifacts remaining in circulation are community-driven objects moving entirely via independent public volition. Participation is completely voluntary. By interacting with any artifact or coordinate, you assume full and exclusive liability for personal safety, terrain evaluation, law compliance, and property boundaries. The Archivist and The Moore Signal Archive LLC assume zero responsibility for third-party conduct, safety hazards, or the physical placement of items.*
 
-**DISCLAIMER:** This is a non-commercial creative research inquiry. Participation is entirely voluntary. **By engaging with this project, you assume all liability for your own safety, terrain evaluation, and compliance with local laws.** The Archivist and The Moore Signal Archive LLC assume no responsibility for the conduct of third-party navigators, property boundaries, or the placement of artifacts. 
-
-**➡️ CONTACT:** [themoorearchive@proton.me](mailto:themoorearchive@proton.me)
-
----
+***
 
 <div align="center">
 
 *“I want to live as though I traveled back in time... To this very moment.”*
 
 </div>
-
