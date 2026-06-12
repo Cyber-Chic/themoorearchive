@@ -11,7 +11,7 @@
 ***
 
 ### ARCHIVAL BRIEFING
-The Moore Archive (TMA) is an independent social-performance study exploring the intersection of digital code and physical landscape. The active research phase has formally concluded. The project now exists as a self-sustaining community "Quiet Signal."
+The Moore Archive (TMA) is an independent [social-performance study](https://freelittleartgalleries.art/2026/05/the-heart-of-the-project/) exploring the intersection of digital code and physical landscape. The active research phase has formally concluded. The project now exists as a self-sustaining community "Quiet Signal."
 
 **THE SILENT ETHOS**  
 The project relies entirely on decentralized honor. Individuals who encounter an artifact are invited to perform one anonymous act of kindness. This quiet gesture serves as the sole energy that sustains the work.
@@ -21,7 +21,7 @@ The project relies entirely on decentralized honor. Individuals who encounter an
 ### ARTIFACT MANIFEST
 The physical artifacts remaining in public circulation operate independently of formal curation:
 
-1.  **THE ENCRYPTION KEY** — A metallic artifact circulating through the Geocaching network. Engraved coordinates grant remote access to a hidden digital installation. Inputting the keypad sequence initiates the entryway. <sup>[ TERMINAL ]((https://cyber-chic.github.io/themoorearchive/terminal))</sup>  
+1.  **THE ENCRYPTION KEY** — A metallic artifact circulating through the Geocaching network. Engraved coordinates grant remote access to a hidden digital installation. Inputting the keypad sequence initiates the entryway. <sup>[ TERMINAL ](https://cyber-chic.github.io/themoorearchive/terminal)</sup>  
     *(Note: If the initial link experiences a redirect, re-entering the address will stabilize the connection.)*
 2.  **LITERARY LEAKS** — Permanent, hand-signed collectibles deployed within Free Little Art Galleries (FLAGs). These are unconditional community gifts, free to be claimed by those who prioritize the hunt.
 
