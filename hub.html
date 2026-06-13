@@ -58,6 +58,37 @@
             line-height: 1.6;
         }
 
+        /* Minimalist Matrix Navigation Block */
+        .matrix-nav {
+            font-family: "SF Mono", Monaco, Consolas, monospace;
+            font-size: 11px;
+            margin-top: 4px;
+            letter-spacing: 0.05em;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .matrix-nav-label {
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 10px;
+            letter-spacing: 0.08em;
+        }
+
+        .matrix-nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            border-bottom: 1px dashed #333333;
+            width: max-content;
+            transition: color 0.15s ease, border-color 0.15s ease;
+        }
+
+        .matrix-nav a:hover {
+            color: var(--text-main);
+            border-bottom-color: var(--text-main);
+        }
+
         /* Image Display Grid */
         .image-frame {
             width: 100%;
@@ -192,7 +223,17 @@
         <header>
             <h1>The Moore Signal Archive</h1>
             <p class="subtitle">I curate interactive exhibits that seamlessly blend original poetry with real-world space data for global audiences.</p>
+            
+            <!-- STYLED MATRIX NAV -->
+<!-- STYLED MATRIX NAV -->
+<div class="matrix-nav">
+    <span class="matrix-nav-label">📡 TECHNICAL PORTFOLIO:</span>
+    <a href="https://github.com" target="_blank" style="font-size: 11px; letter-spacing: 0.04em;">github.com / [ cyber-chic ]</a>
+</div>
+
+
         </header>
+
 
         <!-- ELEVATED IMAGE SPOTLIGHT -->
         <div class="image-frame">
@@ -235,24 +276,20 @@ Exhibition dates are highly selective. If you are interested in hosting an event
 02. PROPOSED TIMELINE / DATE
 03. EXHIBITION CHOICE (THE SPACE EXHIBIT / THE COMBINED EXHIBIT)</div>
 
-            <!-- THE REFINED, POSH ACTION BUTTON -->
+            <!-- FIXED EMAIL LINK ROUTING -->
             <a href="mailto:themoorearchive@proton.me" class="action-button">
                 Inquire for Availability
             </a>
         </section>
 
-<!-- STYLED FOOTER META -->
-<footer>
-    Inquiries: <a href="mailto:themoorearchive@proton.me">themoorearchive@proton.me</a> // Glastonbury, CT<br>
-    Terminal: <a href="https://github.com/cyber-chic" target="_blank">://github.com</a><br>
-    Independent scientific inquiry utilizing open public domain resources. Not officially affiliated with or endorsed by NASA.
-</footer>
+        <!-- STYLED FOOTER META -->
+        <footer>
+            Inquiries: <a href="mailto:themoorearchive@proton.me">themoorearchive@proton.me</a> // Glastonbury, CT<br>
+            Terminal Matrix: <a href="https://github.com/cyber-chic" target="_blank">://github.com</a><br>
+            Independent data art utilizing open public domain resources. Not affiliated with NASA.
+        </footer>
 
-
-</div>
-
-</body>
-</html>
+    </div>
 
 </body>
 </html>
