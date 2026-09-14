@@ -11,7 +11,7 @@
 ***
 
 ### ARCHIVAL BRIEFING
-The Moore Archive (TMA) is an independent [social-performance study](https://freelittleartgalleries.art/2026/05/the-heart-of-the-project/) exploring the intersection of digital code and physical landscape. The active research phase has formally concluded. The project now exists as a self-sustaining community "Quiet Signal."
+The Moore Archive (TMA) is an independent [social-performance study](https://www.researchgate.net/publication/400971211_The_Moore_Archive_An_Inquiry_into_Invisible_Action_and_the_Resonance_of_Kindness) exploring the intersection of digital code and physical landscape. The active research phase has formally concluded. The project now exists as a self-sustaining community "Quiet Signal."
 
 **THE SILENT ETHOS**  
 The project relies entirely on decentralized honor. Individuals who encounter an artifact are invited to perform one anonymous act of kindness. This quiet gesture serves as the sole energy that sustains the work.
