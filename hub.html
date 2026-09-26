@@ -7,202 +7,226 @@
     <title>The Moore Signal Archive // Booking Portal</title>
     <style>
         /* PURE MINIMAL & HIGH-CONTRAST DIGITAL GALLERY CORE */
-        :root {
-            --bg-canvas: #090d10;       /* Rich, deep gallery black */
-            --bg-surface: #12181f;      /* Sleek dark charcoal surface */
-            --border-muted: #26323f;    /* Subtle, low-contrast layout borders */
-            --text-main: #f0f4f8;       /* High-visibility elegant off-white */
-            --text-muted: #8aa1b5;      /* Curated archival gray */
-            --accent-glow: #c9d1d9;     /* Polished metallic feature text */
-        }
+ /* PURE MINIMAL & HIGH-CONTRAST DIGITAL GALLERY CORE */
+/* PURE MINIMAL & HIGH-CONTRAST DIGITAL GALLERY CORE */
+:root {
+    --bg-canvas: #090d10;       /* Rich, deep gallery black */
+    --bg-surface: #12181f;      /* Sleek dark charcoal surface */
+    --border-muted: #26323f;    /* Subtle, low-contrast layout borders */
+    --text-main: #f0f4f8;       /* High-visibility elegant off-white */
+    --text-muted: #8aa1b5;      /* Curated archival gray */
+    --accent-glow: #c9d1d9;     /* Polished metallic feature text */
+}
 
-        body {
-            background-color: var(--bg-canvas);
-            color: var(--text-main);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 40px 20px;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
+body {
+    background-color: var(--bg-canvas);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
 
-        .container {
-            max-width: 680px;
-            margin: 0 auto;
-        }
+.container {
+    max-width: 680px;
+    margin: 0 auto;
+}
 
-        /* TYPOGRAPHY ARCHITECTURE */
-        header {
-            margin-bottom: 40px;
-        }
+/* TYPOGRAPHY ARCHITECTURE */
+header {
+    margin-bottom: 40px;
+}
 
-        h1 {
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            margin: 0 0 12px 0;
-            color: var(--text-main);
-        }
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0 0 12px 0;
+    color: var(--text-main);
+}
 
-        .subtitle {
-            font-size: 13.5px;
-            color: var(--text-muted);
-            margin: 0 0 20px 0;
-        }
+.subtitle {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin: 0 0 20px 0;
+}
 
-        .matrix-nav a {
-            font-family: 'SF Mono', Monaco, Consolas, monospace;
-            font-size: 12px;
-            color: var(--accent-glow);
-            text-decoration: none;
-            border-bottom: 1px dotted var(--text-muted);
-        }
+.matrix-nav a {
+    font-family: 'SF Mono', Monaco, Consolas, monospace;
+    font-size: 12px;
+    color: var(--accent-glow);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--text-muted);
+}
 
-        /* PREMIUM IMAGE ENCLOSURE (FULL VIBRANT COLOR RESTORED) */
-        .image-frame {
-            border: 1px solid var(--border-muted);
-            border-radius: 8px;
-            overflow: hidden;
-            background: var(--bg-surface);
-            margin: 30px 0;
-        }
+/* PREMIUM MAIN FEATURE HERO ENCLOSURE */
+.image-frame {
+    border: 1px solid var(--border-muted);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg-surface);
+    margin: 30px 0;
+}
 
-        .image-frame img {
-            width: 100%;
-            display: block;
-            height: auto;
-        }
+.image-frame img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
 
-        /* GRID & B2B LAYOUT BLOCKS */
-        section {
-            margin-top: 45px;
-            border-top: 1px solid var(--border-muted);
-            padding-top: 25px;
-        }
+/* FLAWLESS FULL-IMAGE STRUCTURAL PRESERVATION PLACARD */
+.card-image-box {
+    width: 100%;
+    border: 1px solid var(--border-muted);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 15px;
+    background: var(--bg-canvas);
+    display: flex;
+    justify-content: center;
+}
 
-        .section-label {
-            font-family: 'SF Mono', Monaco, Consolas, monospace;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
+.card-image-box img {
+    max-width: 100%;           /* Scale naturally within the card profile bounds */
+    height: auto;              /* Prevents forced scaling compression bugs */
+    display: block;
+    object-fit: contain;       /* Absolute safety anchor: preserves full visual frames */
+}
 
-        .matrix-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
+/* PURE UNIFORM VERTICAL STACK PATHWAY */
+section {
+    margin-top: 45px;
+    border-top: 1px solid var(--border-muted);
+    padding-top: 25px;
+}
 
-        .matrix-item {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-muted);
-            border-radius: 6px;
-            padding: 20px;
-        }
+.section-label {
+    font-family: 'SF Mono', Monaco, Consolas, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
 
-        .item-header {
-            margin-bottom: 10px;
-        }
+.matrix-grid {
+    display: flex;             /* Completely eliminates side-by-side grids */
+    flex-direction: column;    /* Locks items into a pristine vertical slate stack */
+    gap: 24px;
+}
 
-        .item-title {
-            font-size: 15px;
-            font-weight: 600;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.matrix-item {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-muted);
+    border-radius: 6px;
+    padding: 20px;
+}
 
-        .price-tag {
-            font-family: 'SF Mono', Monaco, Consolas, monospace;
-            font-size: 12px;
-            font-weight: normal;
-        }
+.item-header {
+    margin-bottom: 10px;
+}
 
-        .tier-badge {
-            color: var(--text-main);
-            background: var(--bg-canvas);
-            border: 1px solid var(--border-muted);
-            padding: 4px 10px;
-            border-radius: 4px;
-            margin-left: 8px;
-            font-size: 11px;
-        }
+.item-title {
+    font-size: 14.5px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .item-meta {
-            font-family: 'SF Mono', Monaco, Consolas, monospace;
-            font-size: 11px;
-            color: var(--text-muted);
-            margin-top: 4px;
-        }
+.price-tag {
+    font-family: 'SF Mono', Monaco, Consolas, monospace;
+    font-size: 11px;
+    font-weight: normal;
+}
 
-        .item-description, .ledger-text {
-            font-size: 13.5px;
-            color: var(--text-muted);
-            margin: 8px 0 0 0;
-        }
+.tier-badge {
+    color: var(--text-main);
+    background: var(--bg-canvas);
+    border: 1px solid var(--border-muted);
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-left: 6px;
+    font-size: 10.5px;
+    text-decoration: none;
+}
 
-        .ledger-text {
-            color: var(--text-main);
-            background: var(--bg-surface);
-            border: 1px solid var(--border-muted);
-            border-radius: 6px;
-            padding: 20px;
-        }
+.item-meta {
+    font-family: 'SF Mono', Monaco, Consolas, monospace;
+    font-size: 10.5px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
 
-        /* BUTTON ROW ALIGNMENT (PREVENTS PHONE WARPING) */
-        .button-row {
-            display: flex;
-            gap: 12px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
+.item-description, .ledger-text {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 8px 0 0 0;
+}
 
-        .action-button {
-            flex: 1;
-            min-width: 200px;
-            text-align: center;
-            background: var(--text-main);
-            color: var(--bg-canvas);
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            padding: 12px 20px;
-            border-radius: 6px;
-            border: 1px solid var(--text-main);
-            transition: opacity 0.15s ease;
-        }
+.ledger-text {
+    color: var(--text-main);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-muted);
+    border-radius: 6px;
+    padding: 20px;
+}
 
-        .action-button:hover {
-            opacity: 0.9;
-        }
+/* BUTTON PLATFORM OVERLAYS */
+.button-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
 
-        .action-button.secondary {
-            background: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--border-muted);
-        }
+.action-button {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    background: var(--text-main);
+    color: var(--bg-canvas);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: 1px solid var(--text-main);
+    transition: opacity 0.15s ease;
+}
 
-        .action-button.secondary:hover {
-            background: var(--bg-surface);
-        }
+.action-button:hover {
+    opacity: 0.9;
+}
 
-        /* FOOTER DESIGN */
-        footer {
-            margin-top: 60px;
-            border-top: 1px solid var(--border-muted);
-            padding-top: 20px;
-            font-family: 'SF Mono', Monaco, Consolas, monospace;
-            font-size: 10.5px;
-            color: var(--text-muted);
-            line-height: 1.8;
-        }
+.action-button.secondary {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-muted);
+}
 
-        footer a {
-            color: var(--text-main);
-            text-decoration: none;
-        }
+.action-button.secondary:hover {
+    background: var(--bg-surface);
+}
+
+/* FOOTER ARCHIVE MODULE */
+footer {
+    margin-top: 60px;
+    border-top: 1px solid var(--border-muted);
+    padding-top: 20px;
+    font-family: 'SF Mono', Monaco, Consolas, monospace;
+    font-size: 10.5px;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+footer a {
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+
     </style>
 </head>
 
@@ -214,17 +238,17 @@
         <header>
             <h1>The Moore Signal Archive</h1>
             <p class="subtitle">
-                An independent art studio utilizing Earth and Space as a canvas // Project debuted at the Ely Center for Contemporary Art during CT Tech Week.
+                An independent art studio using Earth and Space as a canvas // Debuted at the Ely Center for Contemporary Art during CT Tech Week.
             </p>
             
             <div class="matrix-nav">
-                <a href="https://angies.poetry.blog/" target="_blank">[ View Literary Portfolio ]</a>
+                <a href="https://poetry.blog" target="_blank">[ View Literary Portfolio ]</a>
             </div>
         </header>
 
-        <!-- IMAGE SPOTLIGHT -->
+        <!-- IMAGE SPOTLIGHT // MAIN NEW YORK TIMES FEATURE SHOWCASE PAINTING -->
         <div class="image-frame">
-            <img src="https://github.com/user-attachments/assets/b0c0777d-e1e1-4ee2-83af-b013611796dc" alt="The Moore Signal Archive // Matrix View">
+            <img src="https://github.com/user-attachments/assets/b0c0777d-e1e1-4ee2-83af-b013611796dc" alt="The Moore Signal Archive // Featured Exhibition Painting">
         </div>
         <p align="center" style="margin: -25px 0 0 0; font-family: 'SF Mono', Monaco, Consolas, monospace; font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
           <sup><i>Archival Artifact — Painting created for a New York Times advertising feature.</i></sup>
@@ -232,61 +256,69 @@
 
         <!-- THE COMMERCIAL DIRECTORY & ACQUISITIONS -->
         <section>
-            <div class="section-label">01 // Digital Tools & Physical Books</div>
+            <div class="section-label">01 // Virtual Exhibits & Books</div>
             
             <div class="matrix-grid">
-                <!-- TIER 01 -->
+                <!-- TIER 01 // VIRTUAL GALAXY EXHIBIT -->
                 <div class="matrix-item">
                     <div class="item-header">
                         <div class="item-title">
-                            3D Galaxy Visualizer
+                            Virtual Galaxy Exhibit
                             <span class="price-tag">$0.00 <a href="https://cyber-chic.github.io/cosmos/universe" target="_blank" class="tier-badge">Launch Portal</a></span>
                         </div>
-                        <div class="item-meta">Interactive Experience // Open Access</div>
+                        <div class="item-meta">Interactive Visualizer // Cosmic Engine</div>
                     </div>
-                    <p class="item-description">Explore cosmic poetry mapped over a digital deep-sky environment of procedural stars. Access to the visualizer is entirely free.</p>
+                    <p class="item-description">Explore original verse mapped over simulated deep-sky configurations. Access to the digital portal remains free to the public.</p>
+                    
+                    <div class="card-image-box">
+                        <img src="https://raw.githubusercontent.com/Cyber-Chic/cosmos/refs/heads/main/images.css/deep-space-capture.jpg" alt="Galaxy Visualizer Engine Interface">
+                    </div>
                 </div>
 
-                <!-- TIER 02 -->
+                <!-- TIER 02 // PHYSICAL VOLUMES (COMIC BOOK ANCHORS) -->
                 <div class="matrix-item">
                     <div class="item-header">
                         <div class="item-title">
                             Poetry & Art Books
                             <span class="price-tag"><a href="https://www.amazon.com/stores/author/B0GHSYZ1FL/allbooks" target="_blank" style="color: var(--text-main); text-decoration: none; border-bottom: 1px dashed var(--text-muted);">Purchase Books Here</a></span>
                         </div>
-                        <div class="item-meta">Physical Editions // Available Worldwide</div>
+                        <div class="item-meta">Physical Companions // Worldwide Stage Exhibition</div>
                     </div>
-                    <p class="item-description">Standard un-signed print editions released as part of the global project. Order your copies online to collect, or bring them to an upcoming live event to be signed.</p>
+                    <p class="item-description">Standard un-signed editions of the books featured in our global treasure hunt. Order your copies online to add to your collection.</p>
+                    
+                    <div class="card-image-box">
+                        <img src="https://angies.poetry.blog/wp-content/uploads/2022/08/image.png" alt="The Moore Signal Archive // Collection Comic Volumes and Artifact Display Layout">
+                    </div>
                 </div>
             </div>
         </section>
 
-<!-- BOOKING & FULFILLMENT // PREMIUM DIRECTORY -->
-<section>
-    <div class="section-label">02 // Live Book Signings</div>
-    
-    <div class="ledger-text">
-        <strong>BOOKING TERMS // SUBJECT TO CONFIRMATION</strong><br><br>
-        Host a book signing at your venue. Booking requires a <strong>$500.00 Curation Fee</strong> (negotiable based on scale) and a standard <strong>20-book minimum order</strong> via our <a href="https://www.amazon.com/stores/author/B0GHSYZ1FL/allbooks" target="_blank" style="color: var(--text-main); text-decoration: none; border-bottom: 1px dashed var(--text-muted);">retail catalog placement</a>. Your event includes the live signing and a curated collection of complimentary <strong>archival prints</strong> featuring work destined for outer space. Logistics and scheduling will be finalized upon submission.
-    </div>
+        <!-- BOOKING & FULFILLMENT // LIVE EVENTS (CLEAN NO-IMAGE PLACARD) -->
+        <section>
+            <div class="section-label">02 // Live Book Signings</div>
+            
+            <div class="ledger-text">
+                <strong>BOOKING TERMS // SUBJECT TO CONFIRMATION</strong><br><br>
+                Host a book signing at your venue. Booking requires a <strong>$500.00 Curation Fee</strong> (negotiable based on scale) and a standard <strong>20-book minimum order</strong> via our <a href="https://www.amazon.com/stores/author/B0GHSYZ1FL/allbooks" target="_blank" style="color: var(--text-main); text-decoration: none; border-bottom: 1px dashed var(--text-muted);">retail catalog placement</a>. Your event includes the live signing and a curated collection of complimentary <strong>archival prints</strong> featuring <a href="https://linktr.ee/themooresignal" target="_blank" style="color: var(--text-main); text-decoration: none; border-bottom: 1px dashed var(--text-muted);">work destined for outer space</a>. Logistics and scheduling will be finalized upon submission.
+            </div>
 
-    <!-- Sleek Action Execution Row -->
-    <div class="button-row">
-        <a href="mailto:themoorearchive@proton.me?subject=Archive%20Booking%20Inquiry%20-%20Exhibition%20Pop-Up" class="action-button">
-            Contact to Arrange a Signing
-        </a>
-        <a href="https://bio.site" target="_blank" class="action-button secondary">
-            Explore The Archive Workspace
-        </a>
-    </div>
-</section>
+            <!-- BUTTON MATRIX ROW -->
+            <div class="button-row">
+                <a href="mailto:themoorearchive@proton.me?subject=Archive%20Booking%20Inquiry%20-%20Exhibition%20Pop-Up" class="action-button">
+                    Contact to Arrange a Signing
+                </a>
+                <a href="https://bio.site" target="_blank" class="action-button secondary">
+                    Explore The Archive Workspace
+                </a>
+            </div>
+        </section>
 
-
+        <!-- ARCHIVAL METADATA MODULE -->
         <footer>
+            <strong>OPERATIONAL RECORD // INDEX 001-AM</strong><br />
             Inquiries: <a href="mailto:themoorearchive@proton.me">themoorearchive@proton.me</a> // Glastonbury, CT<br />
-            Exhibit History: <a href="https://www.linkedin.com/posts/promanow_cttechweek-women-innovation-ugcPost-7468021297931825152-XZgR/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAYfOpcBrnwtnS9rgebG859ruEu2Hp25ylk" target="_blank">LinkedIn Verification Record</a>
-            <br />
-            Independent data art utilizing open public domain assets. Not affiliated with, funded by, or endorsed by NASA or Zooniverse.
+            Registry Verification: <a href="https://luma.com/q0lm15pz" target="_blank">[ View CT Tech Week On-Site Record ]</a><br /><br />
+            <em>Independent data art utilizing open public domain assets. Not affiliated with, funded by, or endorsed by NASA or Zooniverse.</em>
         </footer>
 
     </div>
