@@ -1,248 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE MOORE SIGNAL ARCHIVE</title>
+    <title>The Moore Signal Archive // Booking Portal</title>
     <style>
+        /* PURE MINIMAL & HIGH-CONTRAST DIGITAL GALLERY CORE */
         :root {
-            --bg-color: #000000;
-            --text-main: #ffffff;
-            --text-muted: #888888;
-            --accent: #ffffff;
-            --border-color: #222222;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+            --bg-canvas: #090d10;       /* Rich, deep gallery black */
+            --bg-surface: #12181f;      /* Sleek dark charcoal surface */
+            --border-muted: #26323f;    /* Subtle, low-contrast layout borders */
+            --text-main: #f0f4f8;       /* High-visibility elegant off-white */
+            --text-muted: #8aa1b5;      /* Curated archival gray */
+            --accent-glow: #c9d1d9;     /* Polished metallic feature text */
         }
 
         body {
-            background-color: var(--bg-color);
+            background-color: var(--bg-canvas);
             color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            font-size: 14px;
+            margin: 0;
+            padding: 40px 20px;
             line-height: 1.6;
-            letter-spacing: -0.01em;
-            padding: 60px 20px;
-            display: flex;
-            justify-content: center;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 520px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 56px;
+            max-width: 680px;
+            margin: 0 auto;
         }
 
-        /* Header Layout */
+        /* TYPOGRAPHY ARCHITECTURE */
         header {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
+            margin-bottom: 40px;
         }
 
         h1 {
-            font-size: 15px;
+            font-size: 24px;
             font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            margin: 0 0 12px 0;
+            color: var(--text-main);
         }
 
         .subtitle {
+            font-size: 14px;
             color: var(--text-muted);
-            font-size: 13.5px;
-            line-height: 1.6;
-        }
-
-        /* Minimalist Matrix Navigation Block */
-        .matrix-nav {
-            font-family: "SF Mono", Monaco, Consolas, monospace;
-            font-size: 11px;
-            margin-top: 4px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
+            margin: 0 0 20px 0;
         }
 
         .matrix-nav a {
-            color: var(--text-muted); /* MUTED GRAY BY DEFAULT */
+            font-family: 'SF Mono', Monaco, Consolas, monospace;
+            font-size: 12px;
+            color: var(--accent-glow);
             text-decoration: none;
-            border-bottom: 1px dashed transparent; /* HIDDEN LINE BY DEFAULT */
-            width: max-content;
-            transition: color 0.15s ease, border-color 0.15s ease;
+            border-bottom: 1px dotted var(--text-muted);
         }
 
-        .matrix-nav a:hover {
-            color: var(--text-main); /* FLASHES TO WHITE TEXT */
-            border-bottom-color: var(--text-main); /* FLASHES TO WHITE DASHED LINE */
-        }
-
-        /* Image Display Grid */
+        /* PREMIUM IMAGE ENCLOSURE */
         .image-frame {
-            width: 100%;
-            aspect-ratio: 16 / 9;
+            border: 1px solid var(--border-muted);
+            border-radius: 8px;
             overflow: hidden;
-            border-radius: 2px;
-            border: 1px solid var(--border-color);
+            background: var(--bg-surface);
+            margin: 30px 0;
         }
 
         .image-frame img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(100%) contrast(110%);
+            display: block;
+            height: auto;
         }
 
-        /* Structural Layout Blocks */
+        /* GRID & B2B LAYOUT BLOCKS */
         section {
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
+            margin-top: 45px;
+            border-top: 1px solid var(--border-muted);
+            padding-top: 25px;
         }
 
         .section-label {
-            font-family: "SF Mono", Monaco, Consolas, monospace;
+            font-family: 'SF Mono', Monaco, Consolas, monospace;
             font-size: 11px;
-            color: var(--text-muted);
-            letter-spacing: 0.1em;
             text-transform: uppercase;
-            border-bottom: 1px dashed var(--border-color);
-            padding-bottom: 8px;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 20px;
         }
 
         .matrix-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
 
         .matrix-item {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-muted);
+            border-radius: 6px;
+            padding: 20px;
         }
 
         .item-header {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
+            margin-bottom: 10px;
         }
 
         .item-title {
+            font-size: 15px;
             font-weight: 600;
-            font-size: 14px;
-            letter-spacing: 0.02em;
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-        }
-
-        .price-tag {
-            font-family: "SF Mono", Monaco, Consolas, monospace;
-            font-size: 12px;
-            color: var(--text-main);
-            font-weight: 400;
-        }
-
-        .item-meta {
-            font-family: "SF Mono", Monaco, Consolas, monospace;
-            font-size: 11px;
-            color: var(--text-muted);
-            display: flex;
-            gap: 8px;
             align-items: center;
         }
 
-        .tier-badge {
-            background-color: #111111;
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-            padding: 1px 6px;
-            border-radius: 2px;
-            font-size: 9px;
-            text-transform: uppercase;
-        }
-
-        .item-description {
-            color: var(--text-muted);
-            font-size: 13.5px;
-            line-height: 1.6;
-        }
-
-        /* Minimal Plain-Text Ledger Block */
-        .ledger-text {
-            font-family: "SF Mono", Monaco, Consolas, monospace;
+        .price-tag {
+            font-family: 'SF Mono', Monaco, Consolas, monospace;
             font-size: 12px;
-            color: var(--text-muted);
-            line-height: 1.8;
-            white-space: pre-wrap;
+            font-weight: normal;
         }
 
-        .ledger-text strong {
+        .tier-badge {
             color: var(--text-main);
+            background: var(--bg-canvas);
+            border: 1px solid var(--border-muted);
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-left: 8px;
+            font-size: 11px;
         }
 
-        /* Sleek Button Target Container & Actions */
+        .item-meta {
+            font-family: 'SF Mono', Monaco, Consolas, monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .item-description, .ledger-text {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            margin: 8px 0 0 0;
+        }
+
+        .ledger-text {
+            color: var(--text-main);
+            background: var(--bg-surface);
+            border: 1px solid var(--border-muted);
+            border-radius: 6px;
+            padding: 20px;
+        }
+
+        /* BUTTON ROW ALIGNMENT (PREVENTS PHONE WARPING) */
         .button-row {
             display: flex;
-            flex-direction: column;
             gap: 12px;
-            margin-top: 12px;
+            margin-top: 20px;
+            flex-wrap: wrap;
         }
 
         .action-button {
-            display: block;
-            width: 100%;
-            background-color: var(--accent);
-            color: #000000;
+            flex: 1;
+            min-width: 200px;
             text-align: center;
-            padding: 15px;
-            font-family: "SF Mono", Monaco, Consolas, monospace;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
+            background: var(--text-main);
+            color: var(--bg-canvas);
             text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 6px;
+            border: 1px solid var(--text-main);
             transition: opacity 0.15s ease;
-            border-radius: 2px;
-        }
-
-        .action-button.secondary {
-            background-color: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
         }
 
         .action-button:hover {
-            opacity: 0.85;
+            opacity: 0.9;
         }
 
+        .action-button.secondary {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-muted);
+        }
+
+        .action-button.secondary:hover {
+            background: var(--bg-surface);
+        }
+
+        /* FOOTER DESIGN */
         footer {
-            font-family: "SF Mono", Monaco, Consolas, monospace;
-            font-size: 10px;
-            color: #555555;
+            margin-top: 60px;
+            border-top: 1px solid var(--border-muted);
+            padding-top: 20px;
+            font-family: 'SF Mono', Monaco, Consolas, monospace;
+            font-size: 10.5px;
+            color: var(--text-muted);
             line-height: 1.8;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-top: 16px;
         }
 
         footer a {
             color: var(--text-main);
             text-decoration: none;
-            border-bottom: 1px solid #333333;
-            transition: border-color 0.15s ease;
-        }
-
-        footer a:hover {
-            border-bottom-color: var(--text-main);
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
@@ -264,7 +227,7 @@
         <div class="image-frame">
             <img src="https://github.com/user-attachments/assets/b0c0777d-e1e1-4ee2-83af-b013611796dc" alt="The Moore Signal Archive // Matrix View">
         </div>
-        <p align="center" style="margin: -40px 0 0 0; font-family: 'SF Mono', Monaco, Consolas, monospace; font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+        <p align="center" style="margin: -25px 0 0 0; font-family: 'SF Mono', Monaco, Consolas, monospace; font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
           <sup><i>Archival Artifact — Painting created for a New York Times advertising feature.</i></sup>
         </p>
 
@@ -278,7 +241,7 @@
                     <div class="item-header">
                         <div class="item-title">
                             3D Galaxy Visualizer
-                            <span class="price-tag">$0.00 <a href="https://cyber-chic.github.io/cosmos/universe" target="_blank" class="tier-badge" style="text-decoration: none;">Launch Portal</a></span>
+                            <span class="price-tag">$0.00 <a href="https://cyber-chic.github.io/cosmos/universe" target="_blank" class="tier-badge">Launch Portal</a></span>
                         </div>
                         <div class="item-meta">Interactive Experience // Open Access</div>
                     </div>
@@ -290,7 +253,7 @@
                     <div class="item-header">
                         <div class="item-title">
                             Poetry & Art Books
-                            <span class="price-tag"><a href="https://www.amazon.com/stores/author/B0GHSYZ1FL/allbooks" target="_blank" style="color: var(--text-main); text-decoration: none; border-bottom: 1px dashed #666665;">Purchase Books Here</a></span>
+                            <span class="price-tag"><a href="https://www.amazon.com/stores/author/B0GHSYZ1FL/allbooks" target="_blank" style="color: var(--text-main); text-decoration: none; border-bottom: 1px dashed var(--text-muted);">Purchase Books Here</a></span>
                         </div>
                         <div class="item-meta">Physical Editions // Available Worldwide</div>
                     </div>
@@ -315,6 +278,8 @@
                 </a>
             </div>
         </section>
+
+
 
         <!-- CLEAN FOOTER META -->
         <footer>
