@@ -334,14 +334,18 @@
                 Host a book signing at your venue. Booking requires a <strong>$500.00 Curation Fee</strong> (negotiable based on scale) and a standard <strong>20-book minimum order</strong> via <a href="https://www.amazon.com/stores/author/B0GHSYZ1FL/allbooks" target="_blank" style="color: var(--text-main); text-decoration: none; border-bottom: 1px dashed var(--text-muted);">our exclusive catalog</a>. Your event includes the live signing and a curated collection of complimentary <strong>archival prints</strong> featuring work destined for <a href="https://tr.ee/P8Bv63Qkk6" target="_blank" style="color: var(--text-main); text-decoration: none; border-bottom: 1px dashed var(--text-muted);">outer space</a>. Logistics and scheduling will be finalized upon submission.
             </div>
 
+            <!-- CLEANED TWO-BUTTON PLATFORM ROW -->
             <div class="button-row">
-                <a href="mailto:themoorearchive@proton.me?subject=Archive%20Booking%20Inquiry%20-%20Exhibition%20Pop-Up" class="action-button">
-                    Contact to Arrange a Signing
+                <!-- Dual Action Link: Launches Mail App + Copies to Clipboard -->
+                <a href="mailto:themoorearchive@proton.me?subject=Archive%20Booking%20Inquiry%20-%20Exhibition%20Pop-Up" id="email-btn" onclick="copyAndNotify(event)" class="action-button">
+                    Email to Arrange a Signing
                 </a>
+
                 <a href="https://bio.site/mooresignal" target="_blank" class="action-button secondary">
                     Explore The Archive Workspace
                 </a>
-            </div>
+            </div> 
+
         </section>
 
         <!-- ARCHIVAL METADATA MODULE -->
@@ -354,6 +358,24 @@
         </footer>
 
     </div>
+
+    <script>
+    function copyAndNotify(event) {
+        // Copies the email address to clipboard immediately upon click
+        navigator.clipboard.writeText('themoorearchive@proton.me');
+        
+        // Target the main email button
+        const btn = document.getElementById('email-btn');
+        
+        // Smoothly update button text to show clipboard confirmation
+        btn.innerHTML = "[ Address Copied ]";
+        
+        // Reset the button layout back to default after 2.5 seconds
+        setTimeout(() => {
+            btn.innerHTML = "Email to Arrange a Signing";
+        }, 2500);
+    }
+    </script>
 </body>
 
 </html>
