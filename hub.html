@@ -7,226 +7,258 @@
     <title>The Moore Signal Archive // Booking Portal</title>
     <style>
         /* PURE MINIMAL & HIGH-CONTRAST DIGITAL GALLERY CORE */
- /* PURE MINIMAL & HIGH-CONTRAST DIGITAL GALLERY CORE */
-/* PURE MINIMAL & HIGH-CONTRAST DIGITAL GALLERY CORE */
-:root {
-    --bg-canvas: #090d10;       /* Rich, deep gallery black */
-    --bg-surface: #12181f;      /* Sleek dark charcoal surface */
-    --border-muted: #26323f;    /* Subtle, low-contrast layout borders */
-    --text-main: #f0f4f8;       /* High-visibility elegant off-white */
-    --text-muted: #8aa1b5;      /* Curated archival gray */
-    --accent-glow: #c9d1d9;     /* Polished metallic feature text */
-}
+        :root {
+            --bg-canvas: #06090c;       /* Absolute void black for deep gallery contrast */
+            --bg-surface: #0e1319;      /* Pure slate-charcoal obsidian surface */
+            --border-muted: #1e2936;    /* Precision laser-cut panel borders */
+            --border-glow: #384d66;     /* Interactive highlight frame */
+            --text-main: #f0f6fc;       /* Razor-sharp technical off-white */
+            --text-muted: #8b9eb0;      /* Curated telemetry silver-gray */
+            --accent-glow: #c9d1d9;     /* Polished metallic feature text */
+            --font-mono: 'SF Mono', Monaco, Consolas, 'Fira Code', monospace;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
-body {
-    background-color: var(--bg-canvas);
-    color: var(--text-main);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 40px 20px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-}
+        body {
+            background-color: var(--bg-canvas);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            margin: 0;
+            padding: 40px 24px;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            letter-spacing: -0.01em;
+        }
 
-.container {
-    max-width: 680px;
-    margin: 0 auto;
-}
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
 
-/* TYPOGRAPHY ARCHITECTURE */
-header {
-    margin-bottom: 40px;
-}
+        /* TYPOGRAPHY ARCHITECTURE */
+        header {
+            margin-bottom: 40px;
+        }
 
-h1 {
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    margin: 0 0 12px 0;
-    color: var(--text-main);
-}
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin: 0 0 12px 0;
+            color: var(--text-main);
+        }
 
-.subtitle {
-    font-size: 13.5px;
-    color: var(--text-muted);
-    margin: 0 0 20px 0;
-}
+        .subtitle {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            margin: 0 0 20px 0;
+        }
 
-.matrix-nav a {
-    font-family: 'SF Mono', Monaco, Consolas, monospace;
-    font-size: 12px;
-    color: var(--accent-glow);
-    text-decoration: none;
-    border-bottom: 1px dotted var(--text-muted);
-}
+        .matrix-nav a {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--accent-glow);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--text-muted);
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
 
-/* PREMIUM MAIN FEATURE HERO ENCLOSURE */
-.image-frame {
-    border: 1px solid var(--border-muted);
-    border-radius: 8px;
-    overflow: hidden;
-    background: var(--bg-surface);
-    margin: 30px 0;
-}
+        .matrix-nav a:hover {
+            color: var(--text-main);
+            border-bottom: 1px solid var(--text-main);
+        }
 
-.image-frame img {
-    width: 100%;
-    display: block;
-    height: auto;
-}
+        /* Fixes browser default unreadable purple link bugs */
+        a:visited {
+            color: var(--text-main) !important;
+        }
+        .tier-badge:visited, .matrix-nav a:visited {
+            color: var(--accent-glow) !important;
+        }
 
-/* FLAWLESS FULL-IMAGE STRUCTURAL PRESERVATION PLACARD */
-.card-image-box {
-    width: 100%;
-    border: 1px solid var(--border-muted);
-    border-radius: 6px;
-    overflow: hidden;
-    margin-top: 15px;
-    background: var(--bg-canvas);
-    display: flex;
-    justify-content: center;
-}
+        /* PREMIUM MAIN FEATURE HERO ENCLOSURE */
+        .image-frame {
+            border: 1px solid var(--border-muted);
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--bg-surface);
+            margin: 30px 0;
+            transition: border-color 0.3s ease;
+        }
 
-.card-image-box img {
-    max-width: 100%;           /* Scale naturally within the card profile bounds */
-    height: auto;              /* Prevents forced scaling compression bugs */
-    display: block;
-    object-fit: contain;       /* Absolute safety anchor: preserves full visual frames */
-}
+        .image-frame:hover {
+            border-color: var(--border-glow);
+        }
 
-/* PURE UNIFORM VERTICAL STACK PATHWAY */
-section {
-    margin-top: 45px;
-    border-top: 1px solid var(--border-muted);
-    padding-top: 25px;
-}
+        .image-frame img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
 
-.section-label {
-    font-family: 'SF Mono', Monaco, Consolas, monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    margin-bottom: 20px;
-}
+        /* CARD IMAGE PLACARD PROTECTION */
+        .card-image-box {
+            width: 100%;
+            border: 1px solid var(--border-muted);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-top: 15px;
+            background: var(--bg-canvas);
+            display: flex;
+            justify-content: center;
+        }
 
-.matrix-grid {
-    display: flex;             /* Completely eliminates side-by-side grids */
-    flex-direction: column;    /* Locks items into a pristine vertical slate stack */
-    gap: 24px;
-}
+        .card-image-box img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
 
-.matrix-item {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-muted);
-    border-radius: 6px;
-    padding: 20px;
-}
+        /* PURE UNIFORM VERTICAL STACK PATHWAY */
+        section {
+            margin-top: 45px;
+            border-top: 1px solid var(--border-muted);
+            padding-top: 25px;
+        }
 
-.item-header {
-    margin-bottom: 10px;
-}
+        .section-label {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
 
-.item-title {
-    font-size: 14.5px;
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .matrix-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
 
-.price-tag {
-    font-family: 'SF Mono', Monaco, Consolas, monospace;
-    font-size: 11px;
-    font-weight: normal;
-}
+        .matrix-item {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-muted);
+            border-radius: 6px;
+            padding: 20px;
+            transition: border-color 0.25s ease;
+        }
 
-.tier-badge {
-    color: var(--text-main);
-    background: var(--bg-canvas);
-    border: 1px solid var(--border-muted);
-    padding: 3px 8px;
-    border-radius: 4px;
-    margin-left: 6px;
-    font-size: 10.5px;
-    text-decoration: none;
-}
+        .matrix-item:hover {
+            border-color: var(--border-glow);
+        }
 
-.item-meta {
-    font-family: 'SF Mono', Monaco, Consolas, monospace;
-    font-size: 10.5px;
-    color: var(--text-muted);
-    margin-top: 4px;
-}
+        .item-header {
+            margin-bottom: 10px;
+        }
 
-.item-description, .ledger-text {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin: 8px 0 0 0;
-}
+        .item-title {
+            font-size: 14.5px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.ledger-text {
-    color: var(--text-main);
-    background: var(--bg-surface);
-    border: 1px solid var(--border-muted);
-    border-radius: 6px;
-    padding: 20px;
-}
+        .price-tag {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: normal;
+        }
 
-/* BUTTON PLATFORM OVERLAYS */
-.button-row {
-    display: flex;
-    gap: 12px;
-    margin-top: 25px;
-    flex-wrap: wrap;
-}
+        .tier-badge {
+            color: var(--text-main);
+            background: var(--bg-canvas);
+            border: 1px solid var(--border-muted);
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-left: 6px;
+            font-size: 10.5px;
+            text-decoration: none;
+            transition: border-color 0.2s ease;
+        }
 
-.action-button {
-    flex: 1;
-    min-width: 200px;
-    text-align: center;
-    background: var(--text-main);
-    color: var(--bg-canvas);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 12px 20px;
-    border-radius: 6px;
-    border: 1px solid var(--text-main);
-    transition: opacity 0.15s ease;
-}
+        .tier-badge:hover {
+            border-color: var(--border-glow);
+        }
 
-.action-button:hover {
-    opacity: 0.9;
-}
+        .item-meta {
+            font-family: var(--font-mono);
+            font-size: 10.5px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
 
-.action-button.secondary {
-    background: transparent;
-    color: var(--text-main);
-    border: 1px solid var(--border-muted);
-}
+        .item-description, .ledger-text {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin: 8px 0 0 0;
+            line-height: 1.6;
+        }
 
-.action-button.secondary:hover {
-    background: var(--bg-surface);
-}
+        .ledger-text {
+            color: var(--text-main);
+            background: var(--bg-surface);
+            border: 1px solid var(--border-muted);
+            border-radius: 6px;
+            padding: 20px;
+        }
 
-/* FOOTER ARCHIVE MODULE */
-footer {
-    margin-top: 60px;
-    border-top: 1px solid var(--border-muted);
-    padding-top: 20px;
-    font-family: 'SF Mono', Monaco, Consolas, monospace;
-    font-size: 10.5px;
-    color: var(--text-muted);
-    line-height: 1.8;
-}
+        /* BUTTON PLATFORM OVERLAYS */
+        .button-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
 
-footer a {
-    color: var(--text-main);
-    text-decoration: none;
-}
+        .action-button {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            background: var(--text-main);
+            color: var(--bg-canvas);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 6px;
+            border: 1px solid var(--text-main);
+            transition: opacity 0.15s ease, transform 0.15s ease;
+        }
 
+        .action-button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
 
+        .action-button.secondary {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-muted);
+        }
+
+        .action-button.secondary:hover {
+            background: var(--bg-surface);
+            border-color: var(--border-glow);
+        }
+
+        /* FOOTER ARCHIVE MODULE */
+        footer {
+            margin-top: 60px;
+            border-top: 1px solid var(--border-muted);
+            padding-top: 20px;
+            font-family: var(--font-mono);
+            font-size: 10.5px;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        footer a {
+            color: var(--text-main);
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -246,12 +278,12 @@ footer a {
             </div>
         </header>
 
-        <!-- IMAGE SPOTLIGHT // MAIN NEW YORK TIMES FEATURE SHOWCASE PAINTING -->
+        <!-- IMAGE SPOTLIGHT // MAIN NEW YORK TIMES MINI-DOC SHOWCASE PAINTING -->
         <div class="image-frame">
             <img src="https://github.com/user-attachments/assets/b0c0777d-e1e1-4ee2-83af-b013611796dc" alt="The Moore Signal Archive // Featured Exhibition Painting">
         </div>
-        <p align="center" style="margin: -25px 0 0 0; font-family: 'SF Mono', Monaco, Consolas, monospace; font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
-          <sup><i>Archival Artifact — Painting created for a New York Times advertising feature.</i></sup>
+        <p align="center" style="margin: -25px 0 0 0; font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+          <sup><i>Painting created live on camera for a New York Times ad Campaign.</i></sup>
         </p>
 
         <!-- THE COMMERCIAL DIRECTORY & ACQUISITIONS -->
@@ -275,7 +307,7 @@ footer a {
                     </div>
                 </div>
 
-                <!-- TIER 02 // PHYSICAL VOLUMES (COMIC BOOK ANCHORS) -->
+                  <!-- TIER 02 // PHYSICAL VOLUMES (COMIC BOOK ANCHORS) -->
                 <div class="matrix-item">
                     <div class="item-header">
                         <div class="item-title">
@@ -293,7 +325,7 @@ footer a {
             </div>
         </section>
 
-        <!-- BOOKING & FULFILLMENT // LIVE EVENTS (CLEAN NO-IMAGE PLACARD) -->
+        <!-- BOOKING & FULFILLMENT // LIVE EVENTS -->
         <section>
             <div class="section-label">02 // Live Book Signings</div>
             
@@ -302,7 +334,6 @@ footer a {
                 Host a book signing at your venue. Booking requires a <strong>$500.00 Curation Fee</strong> (negotiable based on scale) and a standard <strong>20-book minimum order</strong> via <a href="https://www.amazon.com/stores/author/B0GHSYZ1FL/allbooks" target="_blank" style="color: var(--text-main); text-decoration: none; border-bottom: 1px dashed var(--text-muted);">our exclusive catalog</a>. Your event includes the live signing and a curated collection of complimentary <strong>archival prints</strong> featuring work destined for <a href="https://tr.ee/P8Bv63Qkk6" target="_blank" style="color: var(--text-main); text-decoration: none; border-bottom: 1px dashed var(--text-muted);">outer space</a>. Logistics and scheduling will be finalized upon submission.
             </div>
 
-            <!-- BUTTON MATRIX ROW -->
             <div class="button-row">
                 <a href="mailto:themoorearchive@proton.me?subject=Archive%20Booking%20Inquiry%20-%20Exhibition%20Pop-Up" class="action-button">
                     Contact to Arrange a Signing
@@ -326,3 +357,4 @@ footer a {
 </body>
 
 </html>
+
