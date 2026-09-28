@@ -76,6 +76,17 @@
             color: var(--accent-glow) !important;
         }
 
+        /* GLOBAL MONOCHROME IMAGE PARADIGM */
+        img {
+            filter: grayscale(100%) contrast(108%) brightness(96%);
+            transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Subtle interactive gallery shift on hover */
+        img:hover {
+            filter: grayscale(0%) contrast(100%) brightness(100%);
+        }
+
         /* PREMIUM MAIN FEATURE HERO ENCLOSURE */
         .image-frame {
             border: 1px solid var(--border-muted);
