@@ -216,13 +216,24 @@
             padding: 20px;
         }
 
-        /* BUTTON PLATFORM OVERLAYS */
-        .button-row {
-            display: flex;
-            gap: 12px;
-            margin-top: 25px;
-            flex-wrap: wrap;
-        }
+.button-row {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Stack the actions cleanly on mobile screens */
+@media (max-width: 480px) {
+    .button-row {
+        flex-direction: column;
+    }
+    .action-button {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
 
         .action-button {
             flex: 1;
