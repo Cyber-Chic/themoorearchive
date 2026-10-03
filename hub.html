@@ -222,10 +222,48 @@
     width: 100%;
 }
 
-/* Stack the actions cleanly on mobile screens */
-@media (max-width: 480px) {
+/* ==========================================================================
+   COMPREHENSIVE RESPONSIVE DESIGN ARCHITECTURE OVERRIDES (MOBILE FIXES)
+   ========================================================================== */
+@media (max-width: 520px) {
+    /* Prevent title and button from choking each other out */
+    .item-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        line-height: 1.4;
+    }
+    
+    /* Ensure the price tag and badges snap cleanly below title */
+    .price-tag {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 2px;
+    }
+
+    /* Force buttons to maintain structural integrity without breaking text */
+    .tier-badge, .price-tag a {
+        white-space: nowrap;
+        display: inline-block;
+        padding: 5px 10px; /* Enhanced touch target padding for mobile */
+    }
+
+    /* Fix the Haiku Booking Title line wrapping and eliminate orphans */
+    .ledger-text p:first-child, 
+    .ledger-text strong {
+        font-size: 1.05em !important;
+        line-height: 1.4 !important;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
+
+    /* Keep the two primary buttons stacked and clean on small screens */
     .button-row {
         flex-direction: column;
+        gap: 12px;
     }
     .action-button {
         width: 100%;
@@ -234,53 +272,55 @@
     }
 }
 
+/* ==========================================================================
+   BASE DESKTOP BUTTON & FOOTER DESIGNS (KEEP THESE INTACT)
+   ========================================================================== */
+.action-button {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    background: var(--text-main);
+    color: var(--bg-canvas);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: 1px solid var(--text-main);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
 
-        .action-button {
-            flex: 1;
-            min-width: 200px;
-            text-align: center;
-            background: var(--text-main);
-            color: var(--bg-canvas);
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            padding: 12px 20px;
-            border-radius: 6px;
-            border: 1px solid var(--text-main);
-            transition: opacity 0.15s ease, transform 0.15s ease;
-        }
+.action-button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
 
-        .action-button:hover {
-            opacity: 0.9;
-            transform: translateY(-1px);
-        }
+.action-button.secondary {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-muted);
+}
 
-        .action-button.secondary {
-            background: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--border-muted);
-        }
+.action-button.secondary:hover {
+    background: var(--bg-surface);
+    border-color: var(--border-glow);
+}
 
-        .action-button.secondary:hover {
-            background: var(--bg-surface);
-            border-color: var(--border-glow);
-        }
+/* FOOTER ARCHIVE MODULE */
+footer {
+    margin-top: 60px;
+    border-top: 1px solid var(--border-muted);
+    padding-top: 20px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
 
-        /* FOOTER ARCHIVE MODULE */
-        footer {
-            margin-top: 60px;
-            border-top: 1px solid var(--border-muted);
-            padding-top: 20px;
-            font-family: var(--font-mono);
-            font-size: 10.5px;
-            color: var(--text-muted);
-            line-height: 1.8;
-        }
-
-        footer a {
-            color: var(--text-main);
-            text-decoration: none;
-        }
+footer a {
+    color: var(--text-main);
+    text-decoration: none;
+}
     </style>
 </head>
 
