@@ -368,8 +368,13 @@ footer a {
                                 <div style="position: relative; display: block; width: 100%; line-height: 0;">
                                     <img class="broadcast-image" src="img/NYTIMES.png" alt="The Moore Signal Archive // Featured Exhibition Painting" style="width: 100%; display: block; height: auto; filter: grayscale(100%); transition: filter 0.3s ease;">
                                     
+                                    <!-- RETRO VIDEO PLAY TRIGGER OVERLAY -->
+                                    <div class="video-play-trigger" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; background: rgba(14, 19, 25, 0.85); border: 1px solid var(--border-muted); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.25s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.4); z-index: 2;">
+                                        <span style="color: var(--text-main); font-size: 14px; margin-left: 3px; font-family: var(--font-mono);">▶</span>
+                                    </div>
+
                                     <!-- Subtle TV CRT Grid Screen Tint Overlay Effect -->
-                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(18, 24, 32, 0) 99%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(90deg, rgba(18, 24, 32, 0) 99%, rgba(0, 0, 0, 0.2) 100%); background-size: 3px 3px; pointer-events: none; opacity: 0.15;"></div>
+                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(18, 24, 32, 0) 99%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(90deg, rgba(18, 24, 32, 0) 99%, rgba(0, 0, 0, 0.2) 100%); background-size: 3px 3px; pointer-events: none; opacity: 0.15; z-index: 1;"></div>
                                 </div>
                             </div>
                         </a>
@@ -399,10 +404,18 @@ footer a {
         .special-feature-monitor:hover .broadcast-image {
             filter: grayscale(0%) contrast(100%) brightness(100%) !important;
         }
+        /* Interactive response for the new play icon overlay */
+        .special-feature-monitor:hover .video-play-trigger {
+            border-color: var(--border-glow) !important;
+            background: var(--bg-canvas) !important;
+            transform: translate(-50%, -50%) scale(1.08);
+            box-shadow: 0 0 15px var(--border-glow);
+        }
         .matrix-item:hover {
             border-color: var(--border-glow) !important;
         }
     </style>
+
 
 
         <!-- THE COMMERCIAL DIRECTORY & ACQUISITIONS -->
