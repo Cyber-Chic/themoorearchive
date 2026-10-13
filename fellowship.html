@@ -6,7 +6,6 @@
     <title>Fellowship | Moore Signal Archive</title>
     <style>
         :root {
-            /* Subtly shifted the page background to a soft, modern off-white/cool gray */
             --page-bg: #f5f7fa; 
             --card-bg: #ffffff;
             --text-color: #222222;
@@ -16,7 +15,8 @@
         }
         
         html, body {
-            height: 100%;
+            /* Changed to min-height to ensure the background stretches fully */
+            min-height: 100vh;
             margin: 0;
         }
         
@@ -25,24 +25,22 @@
             background-color: var(--page-bg);
             color: var(--text-color);
             line-height: 1.6;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; /* Kept flexbox active */
             padding: 40px 20px;
             box-sizing: border-box;
         }
         
-        /* Styled the container into a clean, floating digital card */
         .container {
             width: 100%;
-            max-width: 560px; /* Marginally narrowed for tighter, elegant text blocks */
+            max-width: 560px; 
             background-color: var(--card-bg);
             padding: 45px;
             border-radius: 12px;
             border: 1px solid var(--border-color);
-            /* An ultra-soft shadow so it feels grounded, not harsh */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); 
             box-sizing: border-box;
+            /* MAGIC TRICK: Centers vertically and horizontally, but allows scrolling if content overflows */
+            margin: auto; 
         }
         
         header {
@@ -153,6 +151,16 @@
             color: #999999; 
             letter-spacing: 0.5px; 
             margin-top: 30px;
+        }
+
+        /* Responsive Optimization: Makes internal card spacing cleaner on small mobile phones */
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+            .container {
+                padding: 25px 20px;
+            }
         }
     </style>
 </head>
