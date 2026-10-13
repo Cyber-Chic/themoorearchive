@@ -6,20 +6,23 @@
     <title>Fellowship | Moore Signal Archive</title>
     <style>
         :root {
-            --bg-color: #ffffff;
+            /* Subtly shifted the page background to a soft, modern off-white/cool gray */
+            --page-bg: #f5f7fa; 
+            --card-bg: #ffffff;
             --text-color: #222222;
             --muted-color: #666667;
-            --border-color: #dddddd;
+            --border-color: #e5e9f0;
             --accent-color: #1a5fb4;
         }
-        /* Uses flexbox to perfectly center the content vertically and horizontally on big screens */
+        
         html, body {
             height: 100%;
             margin: 0;
         }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
+            background-color: var(--page-bg);
             color: var(--text-color);
             line-height: 1.6;
             display: flex;
@@ -28,16 +31,26 @@
             padding: 40px 20px;
             box-sizing: border-box;
         }
+        
+        /* Styled the container into a clean, floating digital card */
         .container {
             width: 100%;
-            max-width: 600px;
-            margin: auto;
+            max-width: 560px; /* Marginally narrowed for tighter, elegant text blocks */
+            background-color: var(--card-bg);
+            padding: 45px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            /* An ultra-soft shadow so it feels grounded, not harsh */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); 
+            box-sizing: border-box;
         }
+        
         header {
             margin-bottom: 35px;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 20px;
         }
+        
         .company-name {
             font-size: 0.85rem;
             font-weight: 600;
@@ -46,20 +59,24 @@
             color: var(--muted-color);
             margin: 0;
         }
+        
         h1 {
             font-size: 1.6rem;
             font-weight: 500;
             margin: 5px 0 0 0;
         }
+        
         .subtitle {
             font-size: 0.95rem;
             font-style: italic;
             color: var(--muted-color);
             margin: 5px 0 0 0;
         }
+        
         section {
             margin-bottom: 30px;
         }
+        
         h2 {
             font-size: 0.95rem;
             text-transform: uppercase;
@@ -67,43 +84,62 @@
             margin-bottom: 12px;
             color: var(--accent-color);
         }
+        
         p {
             font-size: 1rem;
             margin: 0 0 15px 0;
             color: #333333;
         }
+        
         ul {
             padding-left: 20px;
             margin: 0 0 20px 0;
         }
+        
         li {
             font-size: 1rem;
             margin-bottom: 8px;
             color: #333333;
         }
+        
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 30px 0;
+        }
+        
         .footer-wrapper {
-            margin: 40px 0 20px 0; 
+            margin-top: 30px; 
             text-align: center;
         }
+        
         .quote {
             font-style: italic; 
-            margin-bottom: 20px; 
+            margin-bottom: 25px; 
             text-align: center;
+            color: #444444;
         }
+        
         .manifesto-link {
             text-align: center; 
             font-weight: bold; 
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
+        
         .manifesto-link a {
             text-transform: uppercase; 
             letter-spacing: 1px;
             color: var(--accent-color);
             text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
         }
+        
         .manifesto-link a:hover {
+            color: #0f3d7a;
             text-decoration: underline;
         }
+        
         .disclaimer {
             font-size: 0.75rem;
             color: #888888;
@@ -111,9 +147,10 @@
             margin-top: 25px;
             text-align: justify;
         }
+        
         .copyright {
-            font-size: 0.8rem; 
-            color: #777777; 
+            font-size: 0.75rem; 
+            color: #999999; 
             letter-spacing: 0.5px; 
             margin-top: 30px;
         }
