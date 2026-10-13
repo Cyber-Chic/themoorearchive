@@ -12,17 +12,26 @@
             --border-color: #dddddd;
             --accent-color: #1a5fb4;
         }
+        /* Uses flexbox to perfectly center the content vertically and horizontally on big screens */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
-            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 40px 20px;
+            box-sizing: border-box;
         }
         .container {
+            width: 100%;
             max-width: 600px;
-            margin: 0 auto;
+            margin: auto;
         }
         header {
             margin-bottom: 35px;
@@ -72,12 +81,28 @@
             margin-bottom: 8px;
             color: #333333;
         }
-        .history-box {
-            background-color: #f6f8fa;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            padding: 15px;
-            font-size: 0.95rem;
+        .footer-wrapper {
+            margin: 40px 0 20px 0; 
+            text-align: center;
+        }
+        .quote {
+            font-style: italic; 
+            margin-bottom: 20px; 
+            text-align: center;
+        }
+        .manifesto-link {
+            text-align: center; 
+            font-weight: bold; 
+            margin-bottom: 40px;
+        }
+        .manifesto-link a {
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .manifesto-link a:hover {
+            text-decoration: underline;
         }
         .disclaimer {
             font-size: 0.75rem;
@@ -85,6 +110,12 @@
             line-height: 1.4;
             margin-top: 25px;
             text-align: justify;
+        }
+        .copyright {
+            font-size: 0.8rem; 
+            color: #777777; 
+            letter-spacing: 0.5px; 
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -113,23 +144,21 @@
 
     <hr>
     
-    <div style="margin: 40px 0 20px 0; text-align: center;">
-        <p style="font-style: italic; margin-bottom: 20px; text-align: center;">
+    <div class="footer-wrapper">
+        <p class="quote">
             "Quietly lend a hand, and change the world your own powerful way!"
         </p>
-        <p style="text-align: center; font-weight: bold; margin-bottom: 40px;">
-            <a href="https://cyber-chic.github.io/themoorearchive/future" target="_blank" style="text-transform: uppercase; letter-spacing: 1px;">
+        <p class="manifesto-link">
+            <a href="https://cyber-chic.github.io/themoorearchive/future" target="_blank">
                 ✦ Read the Manifesto & Get Involved
             </a>
-            
-        </p><p class="disclaimer">
-    <em>The Fine Print:</em> This fellowship is a fully self-directed, voluntary framework—a free space for your own mind to explore and create. The Moore Signal Archive LLC provides this digital archive and its resources as-is, assuming no liability for external links, third-party platforms, or external community spin-offs. Participants guide their own journeys and assume sole responsibility for their personal actions and creative works.
-</p>
-
-<p style="font-size: 0.8rem; color: #777777; letter-spacing: 0.5px; margin-top: 30px;">
-    &copy; 2026 THE MOORE SIGNAL ARCHIVE LLC. &bull; Licensed under CC BY-NC 4.0
-</p>
-
+        </p>
+        <p class="disclaimer">
+            <em>The Fine Print:</em> This fellowship is a fully self-directed, voluntary framework—a free space for your own mind to explore and create. The Moore Signal Archive LLC provides this digital archive and its resources as-is, assuming no liability for external links, third-party platforms, or external community spin-offs. Participants guide their own journeys and assume sole responsibility for their personal actions and creative works.
+        </p>
+        <p class="copyright">
+            &copy; 2026 THE MOORE SIGNAL ARCHIVE LLC. &bull; Licensed under CC BY-NC 4.0
+        </p>
     </div>
 </div>
 
