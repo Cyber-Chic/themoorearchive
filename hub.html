@@ -362,7 +362,7 @@ footer a {
                             <div class="image-frame special-feature-monitor" style="border: 1px solid var(--border-muted); border-radius: 8px; overflow: hidden; background: #0b0f14; margin: 0 0 20px 0; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: border-color 0.25s ease;">
                                 
                                 <!-- VIDEO BROADCAST INTERFACE HEADER PANEL -->
-                                <div style="background: #0e1319; border-bottom: 1px solid var(--border-muted); padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 9px; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap; gap: 6px;">
+                                <div class="broadcast-panel-header" style="background: #0e1319; border-bottom: 1px solid var(--border-muted); padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 9px; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap; gap: 6px;">
                                     <div style="display: flex; align-items: center; gap: 6px;">
                                         <span style="width: 6px; height: 6px; background: #ff453a; border-radius: 50%; display: inline-block; animation: pulse-rec 1.5s infinite ease-in-out;"></span>
                                         <span style="color: var(--text-main); font-weight: 600;">▶ FOUNDER PROFILE // ANGELA N. MOORE</span>
@@ -421,7 +421,16 @@ footer a {
         .matrix-item:hover {
             border-color: var(--border-glow) !important;
         }
+        /* Mobile layout safeguard to gracefully align the text meta bar when it stacks */
+        @media (max-width: 480px) {
+            .broadcast-panel-header {
+                justify-content: center !important;
+                text-align: center;
+                gap: 8px !important;
+            }
+        }
     </style>
+
 
 
 
