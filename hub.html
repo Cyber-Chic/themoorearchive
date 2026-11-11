@@ -645,6 +645,30 @@ footer a {
             btn.innerHTML = "Email to Inquire";
         }, 2500);
     }
-    </script>
+
+  document.querySelectorAll('.matrix-item a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const card = this.closest('.matrix-item');
+      const img = card ? card.querySelector('img, .signal-preview-link') : null;
+      const href = this.getAttribute('href');
+      const target = this.getAttribute('target');
+
+      if (img && href && !href.startsWith('#')) {
+        e.preventDefault();
+        img.style.filter = 'none';
+        img.style.opacity = '1';
+
+        setTimeout(() => {
+          if (target === '_blank') {
+            window.open(href, '_blank', 'noopener');
+          } else {
+            window.location.href = href;
+          }
+        }, 350);
+      }
+    });
+  });
+</script>
+    
 </body>
 </html>
