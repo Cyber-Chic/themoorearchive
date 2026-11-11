@@ -451,8 +451,84 @@ footer a {
                     </div>
                 </div>
 
+                
+                <style>
+                    .signal-preview-link {
+                        background: #07090e;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        min-height: 170px;
+                        border: 1px solid #2d3748;
+                        position: relative;
+                        text-decoration: none;
+                        filter: grayscale(100%);
+                        opacity: 0.95;
+                        transition: filter 0.4s ease, opacity 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+                        overflow: hidden;
+                    }
 
-                <!-- TIER 02 // POETRY & ART BOOKS -->
+                    /* Lights up purple when hovering ANYWHERE on the card (even over text!) */
+                    .matrix-item:hover .signal-preview-link {
+                        filter: grayscale(0%);
+                        opacity: 1;
+                        border-color: #bf00ff;
+                        box-shadow: 0 0 28px rgba(191, 0, 255, 0.35);
+                    }
+
+                    .signal-preview-orb {
+                        width: 72px;
+                        height: 72px;
+                        background: radial-gradient(circle, #f3e8ff 0%, #bf00ff 42%, #000 76%);
+                        border-radius: 50%;
+                        animation: hub-pulse 4s infinite ease-in-out;
+                    }
+
+                    @keyframes hub-pulse {
+                        0%, 100% {
+                            transform: scale(0.84);
+                            opacity: 0.65;
+                            box-shadow: 0 0 22px rgba(216, 180, 254, 0.55);
+                        }
+                        50% {
+                            transform: scale(1.12);
+                            opacity: 1;
+                            box-shadow: 0 0 42px rgba(191, 0, 255, 0.95);
+                        }
+                    }
+
+                    .signal-preview-tag {
+                        font-family: 'Courier New', monospace;
+                        font-size: 0.65rem;
+                        color: #d8b4fe;
+                        letter-spacing: 2px;
+                        position: absolute;
+                        bottom: 12px;
+                        right: 14px;
+                    }
+                </style>
+
+                <!-- TIER 02 // LIVE AUDIO-POETIC BROADCAST -->
+                <div class="matrix-item">
+                    <div class="item-header">
+                        <div class="item-title">
+                            Layers of the Heart
+                            <span class="price-tag"><a href="https://cyber-chic.github.io/poetry-through-play/" target="_blank" class="tier-badge" style="white-space: nowrap;"><span style="color: #ffffff; font-weight: bold; margin-right: 6px;">[ $0.00 ]</span>Live Broadcast →</a></span>
+                        </div>
+                        <div class="item-meta">Audio-Poetic Edition / Virtual Performance</div>
+                    </div>
+                    <p class="item-description">Tune into an interactive digital anthology pairing a looping ambient frequency with contemporary haiku poetry. Select verses correspond to physical Special Editions concealed across Earth.</p>
+                    
+                    <a href="https://github.io" target="_blank" class="card-image-box signal-preview-link" aria-label="Enter Layers of the Heart Live Broadcast">
+                        <div class="signal-preview-orb"></div>
+                        <span class="signal-preview-tag">MOORE_SIGNAL // VOL. 01</span>
+                    </a>
+                </div>
+
+
+                <!-- TIER 03 // POETRY & ART BOOKS -->
                 <div class="matrix-item">
                     <div class="item-header">
                         <div class="item-title">
