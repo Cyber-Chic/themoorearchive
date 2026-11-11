@@ -76,19 +76,11 @@
             color: var(--accent-glow) !important;
         }
 
-/* GLOBAL MONOCHROME IMAGE PARADIGM */
-img {
-    filter: grayscale(100%) contrast(108%) brightness(96%);
-    transition: filter 0.35s ease;
-}
-
-/* FORCE FULL COLOR INSTANTLY ON CARD HOVER */
-.matrix-grid .matrix-item:hover img,
-.matrix-item:hover img,
-.matrix-item a:hover img {
-    filter: grayscale(0%) contrast(100%) brightness(100%) !important;
-    opacity: 1 !important;
-}
+        /* GLOBAL MONOCHROME IMAGE PARADIGM */
+        img {
+            filter: grayscale(100%) contrast(108%) brightness(96%);
+            transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
         /* Subtle interactive gallery shift on hover */
         img:hover {
