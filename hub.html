@@ -77,10 +77,19 @@
         }
 
         /* GLOBAL MONOCHROME IMAGE PARADIGM */
-        img {
-            filter: grayscale(100%) contrast(108%) brightness(96%);
-            transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+img {
+    filter: grayscale(100%) contrast(108%) brightness(96%);
+    transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* RESTORE FULL COLOR ON DESKTOP HOVER & MOBILE TAP */
+.matrix-item:hover .card-image-box img,
+.matrix-item:active .card-image-box img,
+.matrix-item:focus-within .card-image-box img {
+    filter: none !important;
+    opacity: 1 !important;
+}
+
 
         /* Subtle interactive gallery shift on hover */
         img:hover {
