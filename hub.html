@@ -77,10 +77,19 @@
         }
 
         /* GLOBAL MONOCHROME IMAGE PARADIGM */
-        img {
-            filter: grayscale(100%) contrast(108%) brightness(96%);
-            transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+img {
+    filter: grayscale(100%) contrast(108%) brightness(96%);
+    transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* RESTORE FULL COLOR ON DESKTOP HOVER & MOBILE TAP */
+.matrix-item:hover .card-image-box img,
+.matrix-item:active .card-image-box img,
+.matrix-item:focus-within .card-image-box img {
+    filter: none !important;
+    opacity: 1 !important;
+}
+
 
         /* Subtle interactive gallery shift on hover */
         img:hover {
@@ -434,28 +443,32 @@ footer a {
         <section>
             <div class="section-label">01 // Digital Platforms & Publications</div>
             
+            <style>
+                .matrix-item:hover .card-image-box img {
+                    filter: grayscale(0%);
+                    opacity: 1;
+                }
+            </style>
+
+            <div class="matrix-grid">
                 <!-- TIER 01 // VIRTUAL GALAXY EXHIBIT -->
-                <div class="matrix-item"
-                     onmouseover="this.querySelector('img').style.filter='grayscale(0%)'"
-                     onmouseout="this.querySelector('img').style.filter='grayscale(100%)'">
+                <div class="matrix-item">
                     <div class="item-header">
                         <div class="item-title">
                             From Sirius to The Sun
-                            <span class="price-tag"><a href="https://github.io" target="_blank" class="tier-badge" style="white-space: nowrap;"><span style="color: #ffffff; font-weight: bold; margin-right: 6px;">[ $0.00 ]</span>View Exhibit →</a></span>
+                            <span class="price-tag"><a href="https://cyber-chic.github.io/cosmos/universe" target="_blank" class="tier-badge" style="white-space: nowrap;"><span style="color: #ffffff; font-weight: bold; margin-right: 6px;">[ $0.00 ]</span>View Exhibit →</a></span>
                         </div>
                         <div class="item-meta">Digital Media / Cosmic Art Simulation Engine</div>
                     </div>
                     <p class="item-description">Explore an interactive digital anthology mapping research-inspired cosmic poetry over an interactive 3D starfield canvas. Select captures are destined for outer space.</p>
                     <a href="https://cyber-chic.github.io/cosmos/universe" target="_blank" style="text-decoration: none; display: block; color: inherit;">
                         <div class="card-image-box">
-                            <img src="https://raw.githubusercontent.com/Cyber-Chic/cosmos/refs/heads/main/images.css/deep-space-capture.jpg" 
-                                 alt="Galaxy Visualizer Engine Interface"
-                                 style="filter: grayscale(100%); transition: filter 0.4s ease;">
+                            <img src="https://raw.githubusercontent.com/Cyber-Chic/cosmos/refs/heads/main/images.css/deep-space-capture.jpg" alt="Galaxy Visualizer Engine Interface">
                         </div>
                     </a>
                 </div>
 
-
+                
                 <style>
                     .signal-preview-link {
                         background: #07090e;
@@ -515,26 +528,21 @@ footer a {
                 </style>
 
                 <!-- TIER 02 // LIVE AUDIO-POETIC BROADCAST -->
-                <div class="matrix-item"
-                     onmouseover="const p=this.querySelector('.signal-preview-link'); p.style.filter='grayscale(0%)'; p.style.borderColor='#bf00ff'; p.style.boxShadow='0 0 28px rgba(191, 0, 255, 0.35)';"
-                     onmouseout="const p=this.querySelector('.signal-preview-link'); p.style.filter='grayscale(100%)'; p.style.borderColor='#2d3748'; p.style.boxShadow='none';">
+                <div class="matrix-item">
                     <div class="item-header">
                         <div class="item-title">
                             Layers of the Heart
-                            <span class="price-tag"><a href="https://cyber-chic.github.io/poetry-through-play/" target="_blank" class="tier-badge" style="white-space: nowrap;"><span style="color: #8aa1b5; font-weight: normal; margin-right: 6px;">[ $0.00 ]</span>Enter Broadcast →</a></span>
+                            <span class="price-tag"><a href="https://cyber-chic.github.io/poetry-through-play/" target="_blank" class="tier-badge" style="white-space: nowrap;"><span style="color: #ffffff; font-weight: bold; margin-right: 6px;">[ $0.00 ]</span>Live Broadcast →</a></span>
                         </div>
                         <div class="item-meta">Audio-Poetic Edition / Virtual Performance</div>
                     </div>
-                    <p class="item-description">Tune into an interactive digital anthology pairing a looping ambient frequency with contemporary haiku poetry. Select verses correspond to art pieces hidden across the earth.</p>
+                    <p class="item-description">Tune into an interactive digital anthology pairing a looping ambient frequency with contemporary haiku poetry. Select verses correspond to physical Special Editions concealed across Earth.</p>
                     
-                    <a href="https://cyber-chic.github.io/poetry-through-play/" target="_blank" class="card-image-box signal-preview-link" aria-label="Enter Layers of the Heart Live Broadcast"
-                       style="background: #07090e; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 170px; border: 1px solid #2d3748; position: relative; text-decoration: none; filter: grayscale(100%); opacity: 0.95; transition: filter 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease; overflow: hidden;">
+                    <a href="https://cyber-chic.github.io/poetry-through-play/" target="_blank" class="card-image-box signal-preview-link" aria-label="Enter Layers of the Heart Live Broadcast">
                         <div class="signal-preview-orb"></div>
                         <span class="signal-preview-tag">MOORE_SIGNAL // VOL. 01</span>
                     </a>
                 </div>
-
-
 
 
                 <!-- TIER 03 // POETRY & ART BOOKS -->
@@ -630,7 +638,7 @@ footer a {
 
     </div>
 
-     <script>
+    <script>
     function copyAndNotify(event) {
         // Copies the email address to clipboard immediately upon click
         navigator.clipboard.writeText('themoorearchive@proton.me');
