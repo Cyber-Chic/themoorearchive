@@ -42,58 +42,71 @@
 
         h1 {
             font-size: 24px;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: -0.02em;
-            margin: 0 0 12px 0;
+            margin: 0 0 6px 0;
             color: var(--text-main);
         }
 
         .subtitle {
             font-size: 13.5px;
-            color: var(--text-muted);
-            margin: 0 0 20px 0;
+            color: #8b949e;
+            line-height: 1.4;
+            margin: 0 0 25px 0;
+        }
+
+        /* MASTER SYSTEM DIRECTORY NAVIGATION */
+        .matrix-nav {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 16px;
+            margin-bottom: 25px;
         }
 
         .matrix-nav a {
-            font-family: var(--font-mono);
-            font-size: 12px;
             color: var(--accent-glow);
+            letter-spacing: 0.05em;
             text-decoration: none;
+            font-weight: bold;
             border-bottom: 1px dotted var(--text-muted);
             transition: color 0.2s ease, border-color 0.2s ease;
         }
 
         .matrix-nav a:hover {
-            color: var(--text-main);
-            border-bottom: 1px solid var(--text-main);
+            color: #ff4d4d !important;
+            border-bottom: 1px solid #ff4d4d;
         }
 
-        /* Fixes browser default unreadable purple link bugs */
-        a:visited {
-            color: var(--text-main) !important;
+        /* Fixes browser default purple links WITHOUT breaking white CTA buttons */
+        a:not(.action-button):not(.footer-link):visited {
+            color: var(--text-main);
         }
         .tier-badge:visited, .matrix-nav a:visited {
-            color: var(--accent-glow) !important;
+            color: var(--accent-glow);
         }
 
         /* GLOBAL MONOCHROME IMAGE PARADIGM */
-img {
-    filter: grayscale(100%) contrast(108%) brightness(96%);
-    transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+        img {
+            filter: grayscale(100%) contrast(108%) brightness(96%);
+            transition: filter 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-/* RESTORE FULL COLOR ON DESKTOP HOVER & MOBILE TAP */
-.matrix-item:hover .card-image-box img,
-.matrix-item:active .card-image-box img,
-.matrix-item:focus-within .card-image-box img {
-    filter: none !important;
-    opacity: 1 !important;
-}
-
-
-        /* Subtle interactive gallery shift on hover */
+        /* RESTORE FULL COLOR ON DESKTOP HOVER & MOBILE TAP ACROSS ALL CARDS */
+        .matrix-item:hover .card-image-box img,
+        .matrix-item:active .card-image-box img,
+        .matrix-item:focus-within .card-image-box img,
+        .ledger-text:hover .card-image-box img,
+        .ledger-text:active .card-image-box img,
+        .special-feature-monitor:hover .broadcast-image,
+        .special-feature-monitor:active .broadcast-image,
         img:hover {
-            filter: grayscale(0%) contrast(100%) brightness(100%);
+            filter: grayscale(0%) contrast(100%) brightness(100%) !important;
+            opacity: 1 !important;
         }
 
         /* PREMIUM MAIN FEATURE HERO ENCLOSURE */
@@ -101,8 +114,10 @@ img {
             border: 1px solid var(--border-muted);
             border-radius: 8px;
             overflow: hidden;
-            background: var(--bg-surface);
-            margin: 30px 0;
+            background: #0b0f14;
+            margin: 0 0 20px 0;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             transition: border-color 0.3s ease;
         }
 
@@ -114,6 +129,18 @@ img {
             width: 100%;
             display: block;
             height: auto;
+        }
+
+        /* LIVE RECORDING DOT PULSE ANIMATION */
+        @keyframes pulse-rec {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.35;
+                transform: scale(0.85);
+            }
         }
 
         /* CARD IMAGE PLACARD PROTECTION */
@@ -133,6 +160,91 @@ img {
             height: auto;
             display: block;
             object-fit: contain;
+        }
+
+        /* LAYERS OF THE HEART // PULSING EARTH VISUALIZER */
+        .signal-preview-link {
+            background: #07090e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 170px;
+            border: 1px solid #2d3748;
+            position: relative;
+            text-decoration: none;
+            filter: grayscale(100%);
+            opacity: 0.95;
+            transition: filter 0.4s ease, opacity 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .matrix-item:hover .signal-preview-link,
+        .matrix-item:active .signal-preview-link {
+            filter: grayscale(0%);
+            opacity: 1;
+            border-color: #bf00ff;
+            box-shadow: 0 0 28px rgba(191, 0, 255, 0.35);
+        }
+
+        .signal-earth-orb {
+            width: 74px;
+            height: 74px;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(circle at 32% 30%, #38bdf8 0%, #1e1b4b 58%, #05070c 100%);
+            border: 1px solid rgba(216, 180, 254, 0.45);
+            animation: hub-earth-pulse 4s infinite ease-in-out;
+        }
+
+        .signal-earth-orb::before {
+            content: "";
+            position: absolute;
+            width: 34px;
+            height: 44px;
+            top: 12px;
+            left: 10px;
+            background: rgba(216, 180, 254, 0.72);
+            border-radius: 55% 45% 60% 40% / 45% 55% 45% 55%;
+            transform: rotate(-18deg);
+        }
+
+        .signal-earth-orb::after {
+            content: "";
+            position: absolute;
+            width: 28px;
+            height: 32px;
+            bottom: 12px;
+            right: 11px;
+            background: rgba(192, 132, 252, 0.65);
+            border-radius: 40% 60% 45% 55% / 50% 40% 60% 50%;
+            transform: rotate(22deg);
+        }
+
+        @keyframes hub-earth-pulse {
+            0%, 100% {
+                transform: scale(0.88);
+                opacity: 0.75;
+                box-shadow: 0 0 18px rgba(56, 189, 248, 0.45), inset 0 0 10px rgba(243, 232, 255, 0.35);
+            }
+            50% {
+                transform: scale(1.08);
+                opacity: 1;
+                box-shadow: 0 0 36px rgba(191, 0, 255, 0.85), inset 0 0 14px rgba(56, 189, 248, 0.55);
+            }
+        }
+
+        .signal-preview-tag {
+            font-family: 'Courier New', monospace;
+            font-size: 0.65rem;
+            color: #d8b4fe;
+            letter-spacing: 2px;
+            position: absolute;
+            bottom: 12px;
+            right: 14px;
         }
 
         /* PURE UNIFORM VERTICAL STACK PATHWAY */
@@ -210,7 +322,7 @@ img {
             margin-top: 4px;
         }
 
-        .item-description, .ledger-text {
+                .item-description, .ledger-text {
             font-size: 13px;
             color: var(--text-muted);
             margin: 8px 0 0 0;
@@ -225,206 +337,172 @@ img {
             padding: 20px;
         }
 
-.button-row {
-    display: flex;
-    gap: 12px;
-    width: 100%;
-}
-
-/* ==========================================================================
-   COMPREHENSIVE RESPONSIVE DESIGN ARCHITECTURE OVERRIDES (MOBILE FIXES)
-   ========================================================================== */
-@media (max-width: 520px) {
-    /* Prevent title and button from choking each other out */
-    .item-title {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        line-height: 1.4;
-    }
-    
-    /* Ensure the price tag and badges snap cleanly below title */
-    .price-tag {
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin-top: 2px;
-    }
-
-    /* Force buttons to maintain structural integrity without breaking text */
-    .tier-badge, .price-tag a {
-        white-space: nowrap;
-        display: inline-block;
-        padding: 5px 10px; /* Enhanced touch target padding for mobile */
-    }
-
-    /* Fix the Haiku Booking Title line wrapping and eliminate orphans */
-    .ledger-text p:first-child, 
-    .ledger-text strong {
-        font-size: 1.05em !important;
-        line-height: 1.4 !important;
-        word-break: keep-all;
-        overflow-wrap: break-word;
-    }
-
-    /* Keep the two primary buttons stacked and clean on small screens */
-    .button-row {
-        flex-direction: column;
-        gap: 12px;
-    }
-    .action-button {
-        width: 100%;
-        text-align: center;
-        box-sizing: border-box;
-    }
-}
-
-/* ==========================================================================
-   BASE DESKTOP BUTTON & FOOTER DESIGNS (KEEP THESE INTACT)
-   ========================================================================== */
-.action-button {
-    flex: 1;
-    min-width: 200px;
-    text-align: center;
-    background: var(--text-main);
-    color: var(--bg-canvas);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 12px 20px;
-    border-radius: 6px;
-    border: 1px solid var(--text-main);
-    transition: opacity 0.15s ease, transform 0.15s ease;
-}
-
-.action-button:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-}
-
-.action-button.secondary {
-    background: transparent;
-    color: var(--text-main);
-    border: 1px solid var(--border-muted);
-}
-
-.action-button.secondary:hover {
-    background: var(--bg-surface);
-    border-color: var(--border-glow);
-}
-
-/* FOOTER ARCHIVE MODULE */
-footer {
-    margin-top: 60px;
-    border-top: 1px solid var(--border-muted);
-    padding-top: 20px;
-    font-family: var(--font-mono);
-    font-size: 10.5px;
-    color: var(--text-muted);
-    line-height: 1.8;
-}
-
-footer a {
-    color: var(--text-main);
-    text-decoration: none;
-}
-        /* --- HIGH-PERFORMANCE MATRIX NAVIGATION SYSTEM --- */
-        .matrix-link {
-            letter-spacing: 0.05em;
-            text-decoration: none;
-            color: var(--text-muted) !important; /* Forces your beautiful light muted token */
-            transition: color 0.2s ease-in-out;
+        .button-row {
+            display: flex;
+            gap: 12px;
+            width: 100%;
+            flex-wrap: wrap;
         }
-        
-        /* Flawless CSS Hover State Isolation */
-        .matrix-link:hover {
-            color: var(--text-main) !important; /* Illuminates crisply on hover */
+
+        .action-button {
+            flex: 1;
+            min-width: 180px;
+            text-align: center;
+            background: var(--text-main);
+            color: var(--bg-canvas);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 6px;
+            border: 1px solid var(--text-main);
+            transition: opacity 0.15s ease, transform 0.15s ease;
+            box-sizing: border-box;
+        }
+
+        .action-button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .action-button.secondary {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-muted);
+        }
+
+        .action-button.secondary:hover {
+            background: var(--bg-surface);
+            border-color: var(--border-glow);
+        }
+
+        footer {
+            margin-top: 45px;
+            border-top: 1px dashed var(--border-muted);
+            padding-top: 20px;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        footer a.footer-link {
+            color: #ff4d4d;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(235, 40, 40, 0.4);
+        }
+
+        footer a.footer-link:hover {
+            border-bottom-style: solid;
+        }
+
+        @media (max-width: 520px) {
+            .item-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                line-height: 1.4;
+            }
+            .price-tag {
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 2px;
+            }
+            .tier-badge, .price-tag a {
+                white-space: nowrap;
+                display: inline-block;
+                padding: 5px 10px;
+            }
+            .ledger-text p:first-child,
+            .ledger-text strong {
+                font-size: 1.05em !important;
+                line-height: 1.4 !important;
+                word-break: keep-all;
+                overflow-wrap: break-word;
+            }
+            .button-row {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .action-button {
+                width: 100%;
+            }
         }
     </style>
 </head>
+
 <body>
-
     <div class="container">
-
-        <!-- HEADER SECTION // CORE STUDIO IDENTITY DEPLOYMENT -->
-        <header style="margin-bottom: 40px;">
-            <h1 style="margin-bottom: 6px; font-weight: 700; color: #f0f6fc;">The Moore Signal Archive™</h1>
-            <p class="subtitle" style="margin-bottom: 25px; color: #8b949e; line-height: 1.4;">
+        <header>
+            <h1>The Moore Signal Archive™</h1>
+            <p class="subtitle">
                 Independent Creative Studio & Boutique Press <span style="color: #30363d; opacity: 0.8; margin: 0 4px;">//</span> Debuted at the Ely Center for Contemporary Art
             </p>
-            
-            <!-- MASTER SYSTEM DIRECTORY NAVIGATION (STREAMLINED MENU BAR PARADIGM) -->
-            <div class="matrix-nav" style="font-family: var(--font-mono); font-size: 11px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; border-bottom: 1px solid #30363d; padding-bottom: 16px; margin-bottom: 25px;">
-                <a href="https://freelittleartgalleries.art/2026/05/the-heart-of-the-project/" target="_blank" style="color: #c9d1d9; letter-spacing: 0.05em; text-decoration: none; font-weight: bold; transition: color 0.2s ease;" onmouseover="this.style.color='#ff4d4d'" onmouseout="this.style.color='#c9d1d9'">[ THE ARTIFACT QUEST ]</a>
-                <span style="color: #30363d; opacity: 0.6; font-weight: 300;">//</span>
-                <a href="https://angies.poetry.blog/" target="_blank" style="color: #c9d1d9; letter-spacing: 0.05em; text-decoration: none; font-weight: bold; transition: color 0.2s ease;" onmouseover="this.style.color='#ff4d4d'" onmouseout="this.style.color='#c9d1d9'">[ LITERARY WORKS & EDITIONS ]</a>
-            </div>
 
-            <!-- SYSTEM TELEMETRY TICKER: INTERACTIVE BRIEFING FOR HUNT PARTICIPANTS -->
-            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); opacity: 0.85; border-left: 2px solid var(--border-glow); padding-left: 14px; line-height: 1.6; letter-spacing: -0.01em;">
+            <nav class="matrix-nav" aria-label="Primary Studio Directory">
+                <a href="https://freelittleartgalleries.art/2026/05/the-heart-of-the-project/" target="_blank" rel="noopener noreferrer">[ THE ARTIFACT QUEST ]</a>
+                <span style="color: #30363d; opacity: 0.6; font-weight: 300;">//</span>
+                <a href="https://angies.poetry.blog/" target="_blank" rel="noopener noreferrer">[ LITERARY WORKS & EDITIONS ]</a>
+            </nav>
+
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); opacity: 0.9; border-left: 2px solid var(--border-glow); padding-left: 14px; line-height: 1.65;">
                 <b style="color: var(--accent-glow); font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">📡 ACTIVE STUDIO MISSION //</b>
-                An independent studio and boutique press publishing and distributing curated editions ranging from contemporary literature & art to open-source STEM resources. <br style="display: block; margin-bottom: 2px;" />
-                <span style="color: var(--text-main); font-weight: 600;"><span style="color: var(--accent-glow);">[ PARADIGM ]</span> Kindness is Currency:</span> Trade a single, quiet act of goodwill for open access to the archive.
+                An independent studio and boutique press curating contemporary literature, art, and open-source STEM resources under the guiding principle: <span style="color: var(--text-main); font-weight: 600;"><span style="color: var(--accent-glow);">[ PARADIGM ]</span> Kindness is Currency</span> (trading goodwill for archive access).
             </div>
         </header>
 
-        <!-- MAIN EXHIBITION PORTAL INTERFACE -->
-
+                <!-- MAIN EXHIBITION PORTAL INTERFACE -->
         <main>
-            <section id="active-signals" style="margin-top: 45px; border-top: 1px solid var(--border-muted); padding-top: 25px;">
-                
-                <div class="matrix-grid" style="display: flex; flex-direction: column; gap: 24px;">
-                    <div class="matrix-item" style="background: var(--bg-surface); border: 1px solid var(--border-muted); border-radius: 6px; padding: 20px; transition: border-color 0.25s ease;">
-                        
-                        <!-- IMAGE SPOTLIGHT // MAIN NEW YORK TIMES MINI-DOC SHOWCASE BROADCAST -->
-                        <a href="https://www.youtube.com/watch?v=3yS19NcRQt8" target="_blank" style="text-decoration: none; display: block; color: inherit;">
-                            <div class="image-frame special-feature-monitor" style="border: 1px solid var(--border-muted); border-radius: 8px; overflow: hidden; background: #0b0f14; margin: 0 0 20px 0; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: border-color 0.25s ease;">
-                                
+            <section id="active-signals">
+                <div class="matrix-grid">
+                    <div class="matrix-item">
+
+                        <!-- IMAGE SPOTLIGHT // NEW YORK TIMES MINI-DOC BROADCAST -->
+                        <a href="https://youtu.be/3yS19NcRQt8" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block; color: inherit;">
+                            <div class="image-frame special-feature-monitor">
+
                                 <!-- VIDEO BROADCAST INTERFACE HEADER PANEL -->
                                 <div style="background: #0e1319; border-bottom: 1px solid var(--border-muted); padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 9px; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap; gap: 6px;">
                                     <div style="display: flex; align-items: center; gap: 6px;">
                                         <span style="width: 6px; height: 6px; background: #ff453a; border-radius: 50%; display: inline-block; animation: pulse-rec 1.5s infinite ease-in-out;"></span>
                                         <span style="color: var(--text-main); font-weight: 600;">▶ MINI-DOC FEATURE // ANGELA N. MOORE</span>
                                     </div>
-                                    <div style="white-space: nowrap;">SIGNAL: NYT_FEATURE // FUNDS_ON_AUTOPILOT</div>
-                                    <div style="white-space: nowrap;">TIME CODE: 00:01:21</div>
+                                    <div>SIGNAL: NYT_FEATURE // FUNDS_ON_AUTOPILOT</div>
+                                    <div>TIME CODE: 00:01:21</div>
                                 </div>
 
-<!-- CRISP BROADCAST WIDESCREEN IMAGING WITH MATTE TRANSITIONS -->
-<div style="position: relative; display: block; width: 100%; line-height: 0;">
-    <img class="broadcast-image" src="img/NYTIMES.png" alt="The Moore Signal Archive // Featured Exhibition Painting" 
-         style="width: 100%; display: block; height: auto; filter: grayscale(100%); transition: filter 0.4s ease;"
-         onmouseover="this.style.filter='grayscale(0%)'"
-         onmouseout="this.style.filter='grayscale(100%)'">
-    
-    <!-- RETRO VIDEO PLAY TRIGGER OVERLAY -->
-    <div class="video-play-trigger" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; background: rgba(14, 19, 25, 0.85); border: 1px solid var(--border-muted); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.25s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.4); z-index: 2;">
-        <span style="color: var(--text-main); font-size: 14px; margin-left: 3px; font-family: var(--font-mono);">▶</span>
-    </div>
+                                <!-- CRISP BROADCAST WIDESCREEN IMAGING -->
+                                <div style="position: relative; display: block; width: 100%; line-height: 0;">
+                                    <img class="broadcast-image" src="img/NYTIMES.png" alt="The Moore Signal Archive // Featured Exhibition Painting" style="width: 100%; display: block; height: auto;">
 
-    <!-- Subtle TV CRT Grid Screen Tint Overlay Effect -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(18, 24, 32, 0) 99%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(90deg, rgba(18, 24, 32, 0) 99%, rgba(0, 0, 0, 0.2) 100%); background-size: 3px 3px; pointer-events: none; opacity: 0.15; z-index: 1;"></div>
-</div>
+                                    <!-- RETRO VIDEO PLAY TRIGGER OVERLAY -->
+                                    <div class="video-play-trigger" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; background: rgba(14, 19, 25, 0.85); border: 1px solid var(--border-muted); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.25s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.4); z-index: 2;">
+                                        <span style="color: var(--text-main); font-size: 14px; margin-left: 3px; font-family: var(--font-mono);">▶</span>
+                                    </div>
 
-                        
+                                    <!-- Subtle TV CRT Grid Screen Tint Overlay -->
+                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(18, 24, 32, 0) 99%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(90deg, rgba(18, 24, 32, 0) 99%, rgba(0, 0, 0, 0.2) 100%); background-size: 3px 3px; pointer-events: none; opacity: 0.15; z-index: 1;"></div>
+                                </div>
+
+                            </div>
+                        </a>
+
                         <!-- HIGH-PRESTIGE EXHIBIT METADATA PLACARD BLOCK -->
                         <div class="ledger-text" style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; border-left: 2px solid var(--border-glow); padding: 12px 16px; background: var(--bg-canvas); text-align: left; color: var(--text-muted); border-radius: 4px; line-height: 1.6;">
                             <div style="font-weight: 600; color: var(--text-main); margin-bottom: 4px;">
                                 The New York Times • T Brand Studio <span style="color: var(--text-muted); opacity: 0.5; margin: 0 4px;">//</span> <span style="font-family: var(--font-sans); text-transform: none; font-size: 13px; font-style: italic; font-weight: 500;">National Ad Campaign Feature</span>
                             </div>
-                            
-                            <!-- COMPACT EDITED NARRATIVE LINE -->
+
                             <p style="font-family: var(--font-sans); text-transform: none; font-size: 13px; color: var(--text-muted); margin: 6px 0 10px 0; letter-spacing: normal; line-height: 1.45;">
                                 An independent case study exploring how financial literacy fuels creative freedom.
                             </p>
 
-                            <!-- COMPACT DATA TELEMETRY TAGS // FLEXIBLE WRAP SYSTEM SAFE FOR RESPONSIVE PHONES -->
-                            <div style="font-size: clamp(9px, 2.4vw, 10px); color: var(--text-muted); opacity: 0.85; display: flex; flex-wrap: wrap; row-gap: 4px; column-gap: 12px; text-transform: uppercase; letter-spacing: 0.02em; border-top: 1px solid var(--border-muted); padding-top: 8px; margin-top: 6px;">
-                                <div style="display: inline-block; white-space: nowrap;"><span style="color: var(--accent-glow);">[ STORY ]</span> Founder Journey // Rare Book Library Roots</div>
+                            <div style="font-size: clamp(9.5px, 2.4vw, 10px); color: var(--text-muted); opacity: 0.85; display: flex; flex-wrap: wrap; row-gap: 4px; column-gap: 12px; text-transform: uppercase; letter-spacing: 0.02em; border-top: 1px solid var(--border-muted); padding-top: 8px; margin-top: 6px;">
+                                <div><span style="color: var(--accent-glow);">[ STORY ]</span> Founder Journey // Rare Book Library Roots</div>
                                 <div style="color: var(--border-muted); opacity: 0.3;">|</div>
-                                <div style="display: inline-block; white-space: nowrap;"><span style="color: var(--accent-glow);">[ ETHOS ]</span> Financial Readiness & Time for Creative Passions</div>
+                                <div><span style="color: var(--accent-glow);">[ ETHOS ]</span> Financial Readiness & Time for Creative Passions</div>
                             </div>
                         </div>
 
@@ -433,22 +511,9 @@ footer a {
             </section>
         </main>
 
-
-
-
-
-
-
         <!-- THE COMMERCIAL DIRECTORY & ACQUISITIONS -->
         <section>
             <div class="section-label">01 // Digital Platforms & Publications</div>
-            
-            <style>
-                .matrix-item:hover .card-image-box img {
-                    filter: grayscale(0%);
-                    opacity: 1;
-                }
-            </style>
 
             <div class="matrix-grid">
                 <!-- TIER 01 // VIRTUAL GALAXY EXHIBIT -->
@@ -456,293 +521,128 @@ footer a {
                     <div class="item-header">
                         <div class="item-title">
                             From Sirius to the Sun
-                            <span class="price-tag"><a href="https://cyber-chic.github.io/cosmos/universe" target="_blank" class="tier-badge" style="white-space: nowrap;"><span style="color: #ffffff; font-weight: bold; margin-right: 6px;">[ $0.00 ]</span>View Exhibit →</a></span>
+                            <span class="price-tag"><a href="https://cyber-chic.github.io/cosmos/universe" target="_blank" rel="noopener noreferrer" class="tier-badge" style="white-space: nowrap;"><span style="color: #ffffff; font-weight: bold; margin-right: 6px;">[ $0.00 ]</span>View Exhibit →</a></span>
                         </div>
                         <div class="item-meta">Digital Media / Cosmic Art Simulation Engine</div>
                     </div>
                     <p class="item-description">Explore an interactive digital anthology mapping research-inspired cosmic poetry over an interactive 3D starfield canvas. Select captures are destined for outer space.</p>
-                    <a href="https://cyber-chic.github.io/cosmos/universe" target="_blank" style="text-decoration: none; display: block; color: inherit;">
+                    <a href="https://cyber-chic.github.io/cosmos/universe" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block; color: inherit;">
                         <div class="card-image-box">
                             <img src="https://raw.githubusercontent.com/Cyber-Chic/cosmos/refs/heads/main/images.css/deep-space-capture.jpg" alt="Galaxy Visualizer Engine Interface">
                         </div>
                     </a>
                 </div>
 
-                
-                <style>
-                    .signal-preview-link {
-                        background: #07090e;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        width: 100%;
-                        min-height: 170px;
-                        border: 1px solid #2d3748;
-                        position: relative;
-                        text-decoration: none;
-                        filter: grayscale(100%);
-                        opacity: 0.95;
-                        transition: filter 0.4s ease, opacity 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
-                        overflow: hidden;
-                    }
-
-                    /* Lights up purple when hovering ANYWHERE on the card (even over text!) */
-                    .matrix-item:hover .signal-preview-link {
-                        filter: grayscale(0%);
-                        opacity: 1;
-                        border-color: #bf00ff;
-                        box-shadow: 0 0 28px rgba(191, 0, 255, 0.35);
-                    }
-
-                    .signal-preview-orb {
-                        width: 72px;
-                        height: 72px;
-                        background: radial-gradient(circle, #f3e8ff 0%, #bf00ff 42%, #000 76%);
-                        border-radius: 50%;
-                        animation: hub-pulse 4s infinite ease-in-out;
-                    }
-
-                    @keyframes hub-pulse {
-                        0%, 100% {
-                            transform: scale(0.84);
-                            opacity: 0.65;
-                            box-shadow: 0 0 22px rgba(216, 180, 254, 0.55);
-                        }
-                        50% {
-                            transform: scale(1.12);
-                            opacity: 1;
-                            box-shadow: 0 0 42px rgba(191, 0, 255, 0.95);
-                        }
-                    }
-
-                    .signal-preview-tag {
-                        font-family: 'Courier New', monospace;
-                        font-size: 0.65rem;
-                        color: #d8b4fe;
-                        letter-spacing: 2px;
-                        position: absolute;
-                        bottom: 12px;
-                        right: 14px;
-                    }
-                </style>
-
-                <!-- TIER 02 // LIVE AUDIO-POETIC BROADCAST -->
+                                <!-- TIER 02 // LIVE AUDIO-POETIC BROADCAST -->
                 <div class="matrix-item">
                     <div class="item-header">
                         <div class="item-title">
                             Layers of the Heart
-                            <span class="price-tag"><a href="https://cyber-chic.github.io/poetry-through-play/" target="_blank" class="tier-badge" style="white-space: nowrap;"><span style="color: #ffffff; font-weight: bold; margin-right: 6px;">[ $0.00 ]</span>Live Broadcast →</a></span>
+                            <span class="price-tag"><a href="https://cyber-chic.github.io/poetry-through-play/" target="_blank" rel="noopener noreferrer" class="tier-badge" style="white-space: nowrap;"><span style="color: #ffffff; font-weight: bold; margin-right: 6px;">[ $0.00 ]</span>Live Broadcast →</a></span>
                         </div>
                         <div class="item-meta">Audio-Poetic Edition / Virtual Performance</div>
                     </div>
                     <p class="item-description">Tune into an interactive digital anthology pairing a looping ambient frequency with contemporary haiku poetry. Select verses correspond to physical Special Editions concealed across Earth.</p>
 
+                    <a href="https://cyber-chic.github.io/poetry-through-play/" target="_blank" rel="noopener noreferrer" class="card-image-box signal-preview-link" aria-label="Enter Layers of the Heart Live Broadcast">
+                        <div class="signal-earth-orb"></div>
+                        <span class="signal-preview-tag">MOORE_SIGNAL // VOL. 01</span>
+                    </a>
+                </div>
 
-<style>
-  .signal-preview-link {
-    background: #07090e;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 170px;
-    border: 1px solid #2d3748;
-    position: relative;
-    text-decoration: none;
-    filter: grayscale(100%);
-    opacity: 0.95;
-    transition: filter 0.4s ease, opacity 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
-    overflow: hidden;
-  }
-
-  .matrix-item:hover .signal-preview-link {
-    filter: grayscale(0%);
-    opacity: 1;
-    border-color: #bf00ff;
-    box-shadow: 0 0 28px rgba(191, 0, 255, 0.35);
-  }
-
-  .signal-earth-orb {
-    width: 74px;
-    height: 74px;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
-    background: radial-gradient(circle at 32% 30%, #38bdf8 0%, #1e1b4b 58%, #05070c 100%);
-    border: 1px solid rgba(216, 180, 254, 0.45);
-    animation: hub-earth-pulse 4s infinite ease-in-out;
-  }
-
-  /* Stylized Left Continent */
-  .signal-earth-orb::before {
-    content: "";
-    position: absolute;
-    width: 34px;
-    height: 44px;
-    top: 12px;
-    left: 10px;
-    background: rgba(216, 180, 254, 0.72);
-    border-radius: 55% 45% 60% 40% / 45% 55% 45% 55%;
-    transform: rotate(-18deg);
-  }
-
-  /* Stylized Right Continent */
-  .signal-earth-orb::after {
-    content: "";
-    position: absolute;
-    width: 28px;
-    height: 32px;
-    bottom: 12px;
-    right: 11px;
-    background: rgba(192, 132, 252, 0.65);
-    border-radius: 40% 60% 45% 55% / 50% 40% 60% 50%;
-    transform: rotate(22deg);
-  }
-
-  @keyframes hub-earth-pulse {
-    0%, 100% {
-      transform: scale(0.88);
-      opacity: 0.75;
-      box-shadow: 0 0 18px rgba(56, 189, 248, 0.45), inset 0 0 10px rgba(243, 232, 255, 0.35);
-    }
-    50% {
-      transform: scale(1.08);
-      opacity: 1;
-      box-shadow: 0 0 36px rgba(191, 0, 255, 0.85), inset 0 0 14px rgba(56, 189, 248, 0.55);
-    }
-  }
-
-  .signal-preview-tag {
-    font-family: 'Courier New', monospace;
-    font-size: 0.65rem;
-    color: #d8b4fe;
-    letter-spacing: 2px;
-    position: absolute;
-    bottom: 12px;
-    right: 14px;
-  }
-</style>
-
-<!-- Inside your matrix-item card -->
-<a href="https://cyber-chic.github.io/poetry-through-play/" target="_blank" class="card-image-box signal-preview-link" aria-label="Enter Layers of the Heart Live Broadcast">
-  <div class="signal-earth-orb"></div>
-  <span class="signal-preview-tag">MOORE_SIGNAL // VOL. 01</span>
-</a>
-</div>
-
-
-
-                <!-- TIER 03 // POETRY & ART BOOKS -->
+                                <!-- TIER 03 // POETRY & ART BOOKS -->
                 <div class="matrix-item">
                     <div class="item-header">
                         <div class="item-title">
                             Official Print Publication Catalog
-                            <span class="price-tag">[ SHOP ] <a href="https://www.amazon.com/stores/author/B0GHSYZ1FL/allbooks" target="_blank" class="tier-badge">Purchase Books →</a></span>
+                           <span class="price-tag"><a href="https://www.amazon.com/stores/author/B0GHSYZ1FL/allbooks" target="_blank" rel="noopener noreferrer" class="tier-badge" style="white-space: nowrap;"><span style="color: #ffffff; font-weight: bold; margin-right: 6px;">[ SHOP ]</span>Purchase Books →</a></span>
+
                         </div>
                         <div class="item-meta">Physical Companions / Worldwide Exhibition</div>
                     </div>
                     <p class="item-description">Curated books featured across our borderless treasure hunt & exhibition. Secure unsigned editions to complete your archival collection.</p>
-                    
-                    <div class="card-image-box">
-                        <img src="https://angies.poetry.blog/wp-content/uploads/2022/08/image.png" alt="The Moore Signal Archive // Collection Comic Volumes and Artifact Display Layout">
-                    </div>
+                    <a href="https://www.amazon.com/stores/author/B0GHSYZ1FL/allbooks" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block; color: inherit;">
+                        <div class="card-image-box">
+                            <img src="https://angies.poetry.blog/wp-content/uploads/2022/08/image.png" alt="The Moore Signal Archive // Collection Comic Volumes and Artifact Display Layout">
+                        </div>
+                    </a>
                 </div>
-
-
-                
+            </div>
+        </section>
 
         <!-- DIGITAL COMMISSIONS & INTERVIEW INQUIRIES -->
         <section>
             <div class="section-label">02 // Acquisitions & Professional Channels</div>
-            
+
             <div class="ledger-text">
-                <!-- POETIC MASTERPIECE ENTRY HEADLINE -->
                 <p style="margin-bottom: 12px; font-size: 1.15em; letter-spacing: -0.01em; line-height: 1.35; color: var(--text-main);">
                     <strong>TELL ME THE VALUE...OF MY WORDS WITHIN YOUR EARS // REQUEST A HAIKU</strong>
                 </p>
 
-                <!-- TELETYPE TAG SYSTEM HEADLINE -->
                 <p style="margin-top: 0; margin-bottom: 20px;">
                     <span style="font-family: var(--font-mono); font-size: 10.5px; font-weight: 600; letter-spacing: 0.06em; color: var(--text-main); background-color: rgba(240, 246, 252, 0.05); border: 1px solid var(--border-glow); padding: 4px 10px; border-radius: 4px; display: inline-block;">
                         // THE HONOR SYSTEM // PROPOSE YOUR PRICE
                     </span>
                 </p>
-                
-                <!-- CONDENSED ULTRA-MINIMAL SERVICE PROMISE -->
+
                 <p style="margin-bottom: 20px; font-size: 13.5px; line-height: 1.6;">
-                    Commission an original 3-line Haiku poem artistically mapped to a celestial target. Accepted requests include native integration into the shifting 3D Galaxy Visualizer. Selected works may be incorporated into our upcoming global and outer space exhibition. 
+                    Commission an original 3-line Haiku poem artistically mapped to a celestial target. Accepted requests include native integration into the shifting 3D Galaxy Visualizer. Selected works may be incorporated into our upcoming global and outer space exhibition.
                 </p>
 
-                <!-- FLAGSHIP EXHIBIT IMAGE PLACARD -->
-                <div class="card-image-box" style="margin-bottom: 12px; border-radius: 6px; border: 1px solid #30363d; overflow: hidden; line-height: 0;">
-                    <img src="img/rocket.jpeg" alt="Flagship Visualizer Render // Conceptual Space Simulation Frame Over Giza Pyramids" style="width: 100%; height: auto; display: block;">
-                </div>
+                <a href="https://tr.ee/P8Bv63Qkk6" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
+                    <div class="card-image-box" style="margin-bottom: 12px; border-radius: 6px; border: 1px solid #30363d; overflow: hidden; line-height: 0;">
+                        <img src="img/rocket.jpeg" alt="Flagship Visualizer Render // Conceptual Space Simulation Frame Over Giza Pyramids" style="width: 100%; height: auto; display: block;">
+                    </div>
+                </a>
 
-                <!-- PRESTIGE ORBITAL LOG LINK (PREVENTS CONFUSION / MOBILE-RESPONSIVE) -->
                 <div style="margin-bottom: 24px; font-family: var(--font-mono); font-size: 11px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; background: rgba(240, 246, 252, 0.02); border: 1px dashed var(--border-muted); padding: 8px 12px; border-radius: 4px;">
-                    <div style="color: var(--text-muted); flex: 1; min-width: 240px;">
+                    <div style="color: var(--text-muted); flex: 1; min-width: 200px;">
                         FEATURED SHOWPIECE: <span style="color: var(--text-main); font-weight: 600;">Slated to broadcast from space over the Pyramids of Giza</span>
                     </div>
-                    <a href="https://tr.ee/P8Bv63Qkk6" target="_blank" style="color: var(--text-main); text-decoration: none; border-bottom: 1px solid var(--text-main); font-weight: 600; letter-spacing: 0.05em; white-space: nowrap;">
+                    <a href="https://tr.ee/P8Bv63Qkk6" target="_blank" rel="noopener noreferrer" style="color: var(--text-main); text-decoration: none; border-bottom: 1px solid var(--text-main); font-weight: 600; letter-spacing: 0.05em; white-space: nowrap;">
                         🛰️ TRACK SHOWPIECE →
                     </a>
                 </div>
 
-
-                  <!-- CORPORATE CHANNELS & SAFETY SHIELD NOTE WITH WHITE BOLD TEXT -->
-                <p style="margin-bottom: 0; font-size: 0.9em; opacity: 0.85; line-height: 1.5; color: var(--text-muted); border-top: 1px solid var(--border-muted); padding-top: 14px;">
+                       <p style="margin-bottom: 0; font-size: 0.9em; opacity: 0.85; line-height: 1.5; color: var(--text-muted); border-top: 1px solid var(--border-muted); padding-top: 14px;">
                     <strong style="color: var(--text-main);">REGULATORY NOTE:</strong> The studio accepts select media interviews. All institutional, corporate, or educational engagement requests must be routed formally through <strong style="color: var(--text-main); font-weight: 600;">The Moore Signal Archive LLC</strong>. External organizations are required to follow proper professional channels, formal contract review, and standard compensation models.
                 </p>
             </div>
 
-            <!-- CLEANED THREE-BUTTON PLATFORM ROW -->
-            <div class="button-row" style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
-                <a href="mailto:themoorearchive@proton.me?subject=Archive%20Inquiry%20-%20Honor%20System%20Commission" id="email-btn" onclick="copyAndNotify(event)" class="action-button" style="text-decoration: none; display: inline-block;">
+            <div class="button-row" style="margin-top: 24px;">
+                <a href="mailto:themoorearchive@proton.me?subject=Archive%20Inquiry%20-%20Honor%20System%20Commission" id="email-btn" onclick="copyAndNotify(event)" class="action-button">
                     Email to Inquire
                 </a>
 
-                <a href="fellowship.html" class="action-button secondary" style="text-decoration: none; display: inline-block;">
+                <a href="fellowship.html" class="action-button secondary">
                     Fellowship Framework
                 </a>
 
-                <a href="https://github.com/cyber-chic" target="_blank" class="action-button secondary" style="text-decoration: none; display: inline-block;">
+                <a href="https://github.com/cyber-chic" target="_blank" rel="noopener noreferrer" class="action-button secondary">
                     Learn About The Studio
                 </a>
-            </div> 
+            </div>
         </section>
 
-        <!-- ARCHIVAL METADATA MODULE -->
-        <footer style="margin-top: 40px; border-top: 1px dashed var(--border-muted); padding-top: 20px; font-size: 11px; line-height: 1.6; color: var(--text-muted);">
+        <footer>
             <strong style="color: var(--text-main); font-weight: 600;">The Moore Signal Archive LLC</strong><br />
             Communications: <strong style="color: var(--text-main); font-weight: 600;">themoorearchive@proton.me</strong><br />
-            Historical Registry: <a href="https://luma.com/q0lm15pz" target="_blank" style="color: #ff4d4d; text-decoration: none; border-bottom: 1px dashed rgba(235, 40, 40, 0.4);">[ #CTTechWeek: A Pop-Up Research Node @ Ely Center ]</a> &middot; <a href="https://bio.site/mooresignal" target="_blank" style="color: #ff4d4d; text-decoration: none; border-bottom: 1px dashed rgba(235, 40, 40, 0.4);">[ Extended Studio Portal ]</a><br /><br />
-            
+            Historical Registry: <a href="https://luma.com/q0lm15pz" target="_blank" rel="noopener noreferrer" class="footer-link">[ #CTTechWeek: A Pop-Up Research Node @ Ely Center ]</a> &middot; <a href="https://bio.site/mooresignal" target="_blank" rel="noopener noreferrer" class="footer-link">[ Extended Studio Portal ]</a><br /><br />
+
             <em style="font-style: normal; opacity: 0.7; display: block; margin-top: 4px;">Independent data art utilizing open public domain assets. Not affiliated with, funded by, or endorsed by NASA or Zooniverse.</em>
         </footer>
 
     </div>
 
-
-    </div>
-
     <script>
-    function copyAndNotify(event) {
-        // Copies the email address to clipboard immediately upon click
-        navigator.clipboard.writeText('themoorearchive@proton.me');
-        
-        // Target the main email button
-        const btn = document.getElementById('email-btn');
-        
-        // Smoothly update button text to show clipboard confirmation
-        btn.innerHTML = "[ Address Copied ]";
-        
-        // Reset the button layout back to default after 2.5 seconds
-        setTimeout(() => {
-            btn.innerHTML = "Email to Inquire";
-        }, 2500);
-    }
+        function copyAndNotify(event) {
+            navigator.clipboard.writeText('themoorearchive@proton.me');
+            const btn = document.getElementById('email-btn');
+            btn.innerHTML = "[ Address Copied ]";
+            setTimeout(() => {
+                btn.innerHTML = "Email to Inquire";
+            }, 2500);
+        }
     </script>
 </body>
 </html>
