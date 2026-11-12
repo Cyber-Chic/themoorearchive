@@ -537,12 +537,101 @@ footer a {
                         <div class="item-meta">Audio-Poetic Edition / Virtual Performance</div>
                     </div>
                     <p class="item-description">Tune into an interactive digital anthology pairing a looping ambient frequency with contemporary haiku poetry. Select verses correspond to physical Special Editions concealed across Earth.</p>
-                    
-                    <a href="https://cyber-chic.github.io/poetry-through-play/" target="_blank" class="card-image-box signal-preview-link" aria-label="Enter Layers of the Heart Live Broadcast">
-                        <div class="signal-preview-orb"></div>
-                        <span class="signal-preview-tag">MOORE_SIGNAL // VOL. 01</span>
-                    </a>
-                </div>
+
+
+<style>
+  .signal-preview-link {
+    background: #07090e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 170px;
+    border: 1px solid #2d3748;
+    position: relative;
+    text-decoration: none;
+    filter: grayscale(100%);
+    opacity: 0.95;
+    transition: filter 0.4s ease, opacity 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+  }
+
+  .matrix-item:hover .signal-preview-link {
+    filter: grayscale(0%);
+    opacity: 1;
+    border-color: #bf00ff;
+    box-shadow: 0 0 28px rgba(191, 0, 255, 0.35);
+  }
+
+  .signal-earth-orb {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 32% 30%, #38bdf8 0%, #1e1b4b 58%, #05070c 100%);
+    border: 1px solid rgba(216, 180, 254, 0.45);
+    animation: hub-earth-pulse 4s infinite ease-in-out;
+  }
+
+  /* Stylized Left Continent */
+  .signal-earth-orb::before {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 44px;
+    top: 12px;
+    left: 10px;
+    background: rgba(216, 180, 254, 0.72);
+    border-radius: 55% 45% 60% 40% / 45% 55% 45% 55%;
+    transform: rotate(-18deg);
+  }
+
+  /* Stylized Right Continent */
+  .signal-earth-orb::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 32px;
+    bottom: 12px;
+    right: 11px;
+    background: rgba(192, 132, 252, 0.65);
+    border-radius: 40% 60% 45% 55% / 50% 40% 60% 50%;
+    transform: rotate(22deg);
+  }
+
+  @keyframes hub-earth-pulse {
+    0%, 100% {
+      transform: scale(0.88);
+      opacity: 0.75;
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.45), inset 0 0 10px rgba(243, 232, 255, 0.35);
+    }
+    50% {
+      transform: scale(1.08);
+      opacity: 1;
+      box-shadow: 0 0 36px rgba(191, 0, 255, 0.85), inset 0 0 14px rgba(56, 189, 248, 0.55);
+    }
+  }
+
+  .signal-preview-tag {
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    color: #d8b4fe;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 12px;
+    right: 14px;
+  }
+</style>
+
+<!-- Inside your matrix-item card -->
+<a href="https://github.io" target="_blank" class="card-image-box signal-preview-link" aria-label="Enter Layers of the Heart Live Broadcast">
+  <div class="signal-earth-orb"></div>
+  <span class="signal-preview-tag">MOORE_SIGNAL // VOL. 01</span>
+</a>
+</div>
+
 
 
                 <!-- TIER 03 // POETRY & ART BOOKS -->
