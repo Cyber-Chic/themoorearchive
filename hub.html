@@ -396,6 +396,12 @@
             border-bottom-style: solid;
         }
 
+        @media (max-width: 600px) {
+    .desktop-only-link {
+        display: none !important;
+    }
+}
+
         @media (max-width: 520px) {
             .item-title {
                 flex-direction: column;
@@ -495,7 +501,7 @@
                                 <span style="font-weight: 600; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.04em;">
                                     The New York Times • T Brand Studio
                                 </span>
-                                <a href="https://youtu.be/3yS19NcRQt8" target="_blank" rel="noopener noreferrer" style="color: var(--text-main); text-decoration: none; border-bottom: 1px solid var(--border-muted); font-size: 10px; letter-spacing: 0.05em; white-space: nowrap;">
+                                <a href="https://youtu.be/3yS19NcRQt8" target="_blank" rel="noopener noreferrer" class="desktop-only-link" style="color: var(--text-main); text-decoration: none; border-bottom: 1px solid var(--border-muted); font-size: 10px; letter-spacing: 0.05em; white-space: nowrap;">
                                     WATCH CLIP →
                                 </a>
                             </div>
