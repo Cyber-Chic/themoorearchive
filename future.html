@@ -3,108 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Moore Signal Archive // Archival Log 2026</title>
+    <title>The Moore Signal Archive — Archival Log 2026</title>
+
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --gallery-wall: #efeee9;
+            --paper-surface: #fcfbf9;
+            --ink-primary: #141413;
+            --ink-body: #2c2c2a;
+            --ink-muted: #6e6c67;
+            --hairline: #dcdad3;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #ffffff;
-            color: #000000;
-            font-family: "Courier New", Courier, monospace;
-            line-height: 1.5;
-            margin: 40px auto;
-            max-width: 650px;
-            padding: 0 20px;
+            background-color: var(--gallery-wall);
+            color: var(--ink-body);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.85;
+            margin: 0;
+            padding: 72px 24px;
+            -webkit-font-smoothing: antialiased;
         }
-        h1 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+
+        .exhibition-sheet {
+            max-width: 680px;
+            margin: 0 auto;
+            background-color: var(--paper-surface);
+            padding: 80px 76px;
+            border: 1px solid var(--hairline);
+            box-shadow: 0 24px 60px rgba(20, 20, 19, 0.04);
+        }
+
+        .catalog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.12em;
             text-transform: uppercase;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--hairline);
+            margin-bottom: 44px;
         }
-        hr {
-            border: 0;
-            border-top: 1px dashed #000000;
-            margin: 20px 0;
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 2.35rem;
+            font-weight: 400;
+            line-height: 1.18;
+            letter-spacing: -0.01em;
+            color: var(--ink-primary);
+            margin: 0 0 40px 0;
+            text-wrap: balance;
         }
-        p {
-            margin: 15px 0;
-            text-align: justify;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            margin: 12px 0;
-            padding-left: 20px;
-            text-indent: -20px;
-        }
-        a {
-            color: #000000;
-            text-decoration: underline;
-        }
-        a:hover {
-            background-color: #000000;
-            color: #ffffff;
-        }
-        .meta {
-            font-size: 0.9rem;
-            color: #555555;
-        }
-        .signature {
-            margin-top: 30px;
+
+        .salutation {
+            font-family: var(--font-display);
             font-style: italic;
+            font-size: 1.25rem;
+            color: var(--ink-primary);
+            margin-bottom: 28px;
+        }
+
+        p {
+            font-size: 0.98rem;
+            margin: 22px 0;
+            color: var(--ink-body);
+        }
+
+        /* Minimalist Index List */
+        .manifesto-list {
+            list-style: none;
+            padding: 0;
+            margin: 32px 0 40px 0;
+            border-top: 1px solid var(--hairline);
+        }
+
+        .manifesto-list li {
+            padding: 18px 0;
+            border-bottom: 1px solid var(--hairline);
+            font-size: 0.96rem;
+            line-height: 1.75;
+        }
+
+        /* Editorial Italic Serif Lead-Ins */
+        .manifesto-list strong {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.15rem;
+            letter-spacing: 0;
+            color: var(--ink-primary);
+        }
+
+
+        /* Understated Gallery Links */
+        .editorial-link {
+            color: var(--ink-primary);
+            text-decoration: none;
+            border-bottom: 1px solid #9e9b93;
+            padding-bottom: 1px;
+            transition: border-color 0.25s ease, opacity 0.25s ease;
+        }
+
+        .editorial-link:hover {
+            border-bottom-color: var(--ink-primary);
+            opacity: 0.65;
+        }
+
+        /* Museum Plate & Exhibition Label */
+        .artifact-plate {
+            margin: 52px 0;
+            padding: 0;
+        }
+
+        .frame-mat {
+            background-color: #f4f3ee;
+            padding: 28px;
+            border: 1px solid var(--hairline);
+        }
+
+        .frame-mat img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid rgba(20, 20, 19, 0.08);
+        }
+
+        .exhibition-placard {
+            margin-top: 16px;
+            padding-left: 14px;
+            border-left: 1px solid var(--ink-primary);
+        }
+
+        .placard-title {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--ink-primary);
+            margin: 0 0 2px 0;
+        }
+
+        .placard-details {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--ink-muted);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Archival Colophon / Footer */
+        .colophon {
+            margin-top: 56px;
+            padding-top: 24px;
+            border-top: 1px solid var(--hairline);
+            font-family: var(--font-mono);
+            font-size: 0.74rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.04em;
+            line-height: 1.9;
+        }
+
+        @media (max-width: 680px) {
+            body {
+                padding: 16px 12px;
+                line-height: 1.75;
+            }
+            .exhibition-sheet {
+                padding: 36px 22px;
+            }
+            .catalog-meta {
+                flex-direction: column;
+                gap: 4px;
+                margin-bottom: 32px;
+            }
+            h1 {
+                font-size: 1.85rem;
+                margin-bottom: 28px;
+            }
+            .salutation {
+                font-size: 1.15rem;
+            }
+            .frame-mat {
+                padding: 14px;
+            }
+            .colophon {
+                word-break: break-word;
+                line-height: 1.8;
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <div class="meta">
-        [ARCHIVAL LOG: 2026 // TARGET: 3026]
+    <main class="exhibition-sheet">
+        <header class="catalog-meta">
+            <span>Archival Log // 2026</span>
+            <span>Target // 3026</span>
+        </header>
+
+        <h1>An Open Letter to the&nbsp;Future</h1>
+
+        <p class="salutation">To the leaders, developers, science lovers, entrepreneurs, and quiet observers of tomorrow:</p>
+
+        <p>I founded this archive to bring us together. It was designed as a reminder that whatever path you choose, you can make the world better in your own unique way.</p>
+
+        <p>There is no single "right" way to interact with this signal:</p>
+
+        <ul class="manifesto-list">
+            <li>
+                <strong>The Digital Frontier</strong> — Volunteer your time online via open citizen science platforms like 
+                <a href="https://www.zooniverse.org/groups/2959875?start_date=2026-08-16" class="editorial-link" target="_blank" rel="nofollow noopener noreferrer">Zooniverse</a>.
+            </li>
+            <li>
+                <strong>The Physical World</strong> — Seek out the 
+                <a href="https://freelittleartgalleries.art/2026/05/the-heart-of-the-project/" class="editorial-link" target="_blank" rel="noopener noreferrer">hidden art keepsakes</a> 
+                left in quiet corners of the earth, or share your own creations.
+            </li>
+            <li>
+                <strong>The Technologist</strong> — Build upon the 
+                <a href="https://github.com/Cyber-Chic/cosmos/blob/main/photon_engines.md" class="editorial-link" target="_blank" rel="noopener noreferrer">rocket models</a>, 
+                explore our 
+                <a href="https://github.com/Cyber-Chic" class="editorial-link" target="_blank" rel="noopener noreferrer">GitHub</a>, 
+                and use the 
+                <a href="https://cyber-chic.github.io/cosmos/universe" class="editorial-link" target="_blank" rel="noopener noreferrer">visualizer app</a>.
+            </li>
+            <li>
+                <strong>The Entrepreneur</strong> — Build ambitious enterprises and master 
+                <a href="https://cyber-chic.github.io/bubblegumfinance/" class="editorial-link" target="_blank" rel="noopener noreferrer">financial literacy</a> 
+                to fuel independence and value over pure profit.
+            </li>
+            <li>
+                <strong>And So Much More</strong> — Dive into 
+                <a href="https://bio.site/mooresignal class="editorial-link" target="_blank" rel="noopener noreferrer">the archive</a>, 
+                examine the files, and carve out your own way of exploring.
+            </li>
+        </ul>
+
+
+        <!-- ARTIFACT EXHIBITION PLATE -->
+        <figure class="artifact-plate">
+            <div class="frame-mat">
+                <img src="img/spacepaintingprofile.jpg" alt="The Moore Signal Archive Spacebound Clouds Painting">
+            </div>
+            <figcaption class="exhibition-placard">
+                <p class="placard-title">Starry Journey, 2026</p>
+                <p class="placard-details">Original acrylic painting capturing the transition from the upper atmosphere into the deep cosmic void. The Moore Signal Archive.</p>
+            </figcaption>
+        </figure>
+
+        <p>This framework operates strictly on an honor system. When you take a piece of this archive or use these free resources, I hope you will pass that joy forward, but that is a quiet promise between you and the world. External systems can enforce laws, but they cannot enforce kindness—that is a choice only you can make. If you do not choose to act out of goodwill for its own sake, no mandate can force you to. I simply chose to believe in something better.</p>
+
+        <p>A thousand years from now, my hope is that this work has influenced a vast ecosystem of individuals who are profoundly proud of what they have built. Whether that means leading deep-space aerospace teams, launching ethical enterprises, or simply becoming a kinder friend, parent, or neighbor—you are part of the network.</p>
+
+        <p>True systemic change doesn't require grand, sweeping gestures. It is built on small, daily decisions to be just a little better than we were yesterday.</p>
+
+        <p>Keep the signal active. Build your future, and pass the joy forward.</p>
+
+        <footer class="colophon">
+        [LOG ENDS] // Signed, Angela N. Moore, Founder of The Moore Signal Archive (<a href="https://angies.poetry.blog/2022/10/15/the-power-of-a-nameless-face/" class="editorial-link" target="_blank">The Power of a Nameless Face</a> // <a href="https://cyber-chic.github.io/themoorearchive/hub" class="editorial-link" target="_blank">The Archive Hub</a>)
     </div>
-
-    <h1>🌌 AN OPEN LETTER TO THE FUTURE</h1>
-
-    <hr>
-
-    <p>To the leaders, developers, science lovers, entrepreneurs, and quiet observers of tomorrow:</p>
-
-    <p>I founded this archive to bring us together. It was designed as a reminder that whatever path you choose, you can make the world better in your own unique way.</p>
-
-    <p>There is no single "right" way to interact with this signal:</p>
-
-    <ul>
-        <li>&bull; <strong>The Digital Frontier:</strong> Volunteer your time online via open citizen science platforms like Zooniverse.</li>
-        <li>&bull; <strong>The Physical World:</strong> Seek out the hidden art keepsakes left in quiet corners of the earth, or share your own creations.</li>
-        <li>&bull; <strong>The Technologist:</strong> Build upon the rocket models, explore the photon tutorials, and use the visualizer code.</li>
-        <li>&bull; <strong>The Entrepreneur:</strong> Build ambitious enterprises or investment portfolios that prioritize value over pure profit.</li>
-        <li>&bull; <strong>...and so much more:</strong> Dive into the archive, examine the files, and carve out your own way of exploring.</li>
-    </ul>
-<hr>
-
-    <!-- START OF HISTORICAL ARTIFACT OVERVIEW -->
-    <div style="text-align: center; margin: 25px 0;">
-        <img src="img/spacepaintingprofile.jpg" alt="The Moore Signal Archive Spacebound Clouds Painting" style="max-width: 100%; height: auto; border: 1px solid #000000; padding: 5px;">
-        <p style="font-size: 0.85rem; color: #555555; font-style: italic; margin-top: 8px; text-align: center;">
-            [Starry Journey: Original acrylic painting capturing the transition from the upper atmosphere into the deep cosmic void]
-        </p>
-    </div>
-    <!-- END OF HISTORICAL ARTIFACT OVERVIEW -->
-
-
-    <hr>
-
-    <p>This framework operates strictly on an honor system. When you take a piece of this archive or use these free resources, I hope you will pass that joy forward, but that is a quiet promise between you and the world. External systems can enforce laws, but they cannot enforce kindness—that is a choice only you can make. If you do not choose to act out of goodwill for its own sake, no mandate can force you to. I simply chose to believe in something better.</p>
-
-    <p>A thousand years from now, my hope is that this work has influenced a vast ecosystem of individuals who are profoundly proud of what they have built. Whether that means leading deep-space aerospace teams, launching ethical enterprises, or simply becoming a kinder friend, parent, or neighbor—you are part of the network.</p>
-
-    <p>True systemic change doesn't require grand, sweeping gestures. It is built on small, daily decisions to be just a little better than we were yesterday.</p>
-
-    <p>Keep the signal active. Build your future, and pass the joy forward.</p>
-
-    <hr>
-
-    <div class="signature">
-        [LOG ENDS] // Signed, Angela N. Moore, Founder of The Moore Signal Archive (<a href="https://angies.poetry.blog/2022/10/15/the-power-of-a-nameless-face/" target="_blank">The Power of a Nameless Face</a> // <a href="https://github.com/Cyber-Chic" target="_blank">The Archive Hub</a>)
-    </div>
+</div>
 
 </body>
 </html>
